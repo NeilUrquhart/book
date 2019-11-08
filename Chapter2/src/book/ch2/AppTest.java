@@ -7,6 +7,8 @@ import book.ch1.Visit;
 public class AppTest {
 
 	public static void main(String[] args){
+		/*Problem instances from...*/
+		
 		String[] problems = {"A-n32-k5.vrp",
 				"A-n33-k5.vrp",
 				"A-n33-k6.vrp",
