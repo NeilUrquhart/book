@@ -37,14 +37,14 @@ public class Individual   {
 		for (Visit v : prob.getSolution()){
 			genotype.add((VRPVisit)v);
 		}
-		genotype = shuffle(genotype);
+		genotype = randomize(genotype);
 		phenotype = null;
 	}
 
-	private ArrayList shuffle(ArrayList list) {
+	private ArrayList randomize(ArrayList list) {
 		Random  r= rnd.getInstance().getRnd();
 		
-		for (int c=0; c < list.size()*list.size();c++) {
+		for (int c=0; c < list.size();c++) {
 			Object o = list.remove(r.nextInt(list.size()));
 			list.add(r.nextInt(list.size()),o);
 		}
