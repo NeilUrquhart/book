@@ -8,7 +8,7 @@ public class AppTest {
 
 	public static void main(String[] args){
 		/*Problem instances from...*/
-		
+
 		String[] problems = {"A-n32-k5.vrp",
 				"A-n33-k5.vrp",
 				"A-n33-k6.vrp",
@@ -82,13 +82,13 @@ public class AppTest {
 				"P-n70-k10.vrp",
 				"P-n76-k4.vrp",
 				"P-n76-k5.vrp",
-				"P-n101-k4.vrp"};
+		"P-n101-k4.vrp"};
 
 		System.out.println("Ch2 tests");
 		for (String fName : problems)
 			run("./data/"+ fName);
-			
-			
+
+
 	}
 
 	private static void run(String probName) {
@@ -96,32 +96,40 @@ public class AppTest {
 		System.out.print(probName + ",");
 
 		//Grand Tour
+		double startTime = System.currentTimeMillis();
 		NearestNTSPSolver nn = new NearestNTSPSolver();
 		((TSPProblem)myVRP).solve(nn);
 		GrandTour gt = new GrandTour();
 		myVRP.solve(gt);
 		System.out.print("GTDist," + myVRP.getDistance());		
 		System.out.print(",GTVehicles," + myVRP.getVehicles());
+		double elapsedTime = System.currentTimeMillis() - startTime;
+		System.out.print(",GTTime," + elapsedTime);
+
 
 		//ClarkeWright
+		startTime = System.currentTimeMillis();
 		ClarkeWright cwSolve = new ClarkeWright();
 		myVRP.solve(cwSolve);
 		System.out.print(",CWDist," + myVRP.getDistance());		
 		System.out.print(",CWVehicles," + myVRP.getVehicles());
-		
-		
+		elapsedTime = System.currentTimeMillis() - startTime;
+		System.out.print(",CWTime," + elapsedTime);
+
+
 		//HillClimb
 		//Repeat 10 times and avg
-		 
+
 		double bestDist = Double.MAX_VALUE;
 		int bestVehicles = Integer.MAX_VALUE;
 		double totDist=0;
 		double totVehicles =0;
+		startTime = System.currentTimeMillis();
 		for (int count = 0; count < 10; count ++){
 			RandomSingleton rnd = RandomSingleton.getInstance();
 			rnd.setSeed(count);
 			System.out.print(",rndSeed," + count);		
-			
+
 			HillClimber hcSolve = new HillClimber();
 			myVRP.solve(hcSolve);
 			System.out.print(",HCDist," + myVRP.getDistance());		
@@ -130,44 +138,52 @@ public class AppTest {
 			System.out.print(",HCVehicles," + myVRP.getVehicles());
 			totVehicles = totVehicles + myVRP.getVehicles();
 			if (myVRP.getVehicles()< bestVehicles) bestVehicles = myVRP.getVehicles();
-			
+
 		}
 		double avgDist = totDist/10;
 		double avgVehicles = totVehicles/10;
-		
+
 		System.out.print(",AVGHCDist," + avgDist);		
 		System.out.print(",AVGHCVehicles," + avgVehicles);
 		System.out.print(",BestHCDist," + bestDist);		
 		System.out.print(",BestHCVehicles," + bestVehicles);
-		
+		elapsedTime = System.currentTimeMillis() - startTime;
+		System.out.print(",HCAvgTime," + (elapsedTime/10));
+
+
 		//EA
-				//Repeat 10 times and avg
-				bestDist = Double.MAX_VALUE;
-				bestVehicles = Integer.MAX_VALUE;
-				totDist=0;
-				totVehicles =0;
-				for (int count = 0; count < 10; count ++){
-					RandomSingleton rnd = RandomSingleton.getInstance();
-					rnd.setSeed(count);	
-					System.out.print(",rndSeed," + count);		
-					EvolAlg eaSolve = new EvolAlg();
-					myVRP.solve(eaSolve);
-					System.out.print(",EADist," + myVRP.getDistance());		
-					totDist = totDist + myVRP.getDistance();
-					if (myVRP.getDistance()<bestDist) bestDist = myVRP.getDistance();
-					System.out.print(",EAVehicles," + myVRP.getVehicles());
-					totVehicles = totVehicles + myVRP.getVehicles();
-					if (myVRP.getVehicles()< bestVehicles) bestVehicles = myVRP.getVehicles();
-					
-				}
-				avgDist = totDist/10;
-				avgVehicles = totVehicles/10;
-				
-				System.out.print(",AVGEADist," + avgDist);		
-				System.out.print(",AVGEAVehicles," + avgVehicles);
-				System.out.print(",BestEADist," + bestDist);		
-				System.out.print(",BestEAVehicles," + bestVehicles);
+		startTime = System.currentTimeMillis();
+
+		//Repeat 10 times and avg
+		bestDist = Double.MAX_VALUE;
+		bestVehicles = Integer.MAX_VALUE;
+		totDist=0;
+		totVehicles =0;
+		for (int count = 0; count < 10; count ++){
+			RandomSingleton rnd = RandomSingleton.getInstance();
+			rnd.setSeed(count);	
+			System.out.print(",rndSeed," + count);		
+			EvolAlg eaSolve = new EvolAlg();
+			myVRP.solve(eaSolve);
+			System.out.print(",EADist," + myVRP.getDistance());		
+			totDist = totDist + myVRP.getDistance();
+			if (myVRP.getDistance()<bestDist) bestDist = myVRP.getDistance();
+			System.out.print(",EAVehicles," + myVRP.getVehicles());
+			totVehicles = totVehicles + myVRP.getVehicles();
+			if (myVRP.getVehicles()< bestVehicles) bestVehicles = myVRP.getVehicles();
+
+		}
+		avgDist = totDist/10;
+		avgVehicles = totVehicles/10;
+
+		System.out.print(",AVGEADist," + avgDist);		
+		System.out.print(",AVGEAVehicles," + avgVehicles);
+		System.out.print(",BestEADist," + bestDist);		
+		System.out.print(",BestEAVehicles," + bestVehicles);
+		elapsedTime = System.currentTimeMillis() - startTime;
+		System.out.print(",HCAvgTime," + (elapsedTime/10));
+
 		System.out.println();
-		
+
 	}
 }
