@@ -42,15 +42,12 @@ public class Individual   {
 	}
 
 	private ArrayList shuffle(ArrayList list) {
-		System.out.println(list.size());
 		Random  r= rnd.getInstance().getRnd();
 		
 		for (int c=0; c < list.size()*list.size();c++) {
 			Object o = list.remove(r.nextInt(list.size()));
 			list.add(r.nextInt(list.size()),o);
 		}
-		System.out.println(list.size());
-		
 		return list;
 	}
 	public void mutate() {
