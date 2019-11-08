@@ -67,22 +67,7 @@ public class CompareApp {
 				new Visit("Jenny",41.284403, 14.708812),
 				new Visit("Sonia",37.481824, 22.439730),
 				new Visit("Ann",48.980211, 84.603336)};
-		
-				TSPSolver sol = new Hybrid();
-				for (int c=0; c < cities.length; c++){ //Add cities to problem
-					problem.addVisit(cities[c]);
-				}
-				
-				problem.solve(sol);
-				Visit s  =problem.getStart();
-				System.out.println(s.getY()+","+s.getX()+",0");
-				
-				for(Visit v :problem.getSolution()) {
-					System.out.println(v.getY()+","+v.getX()+",0");
-				}
-				System.out.println(s.getY()+","+s.getX()+",0");
-				
-/*
+
 		//Solvers to be tested
 		TSPSolver[] solvers = new TSPSolver[]{new ExhaustiveTSPSolver(),new NearestNTSPSolver(), new TwoOptTSPSolver(), new Hybrid()};
 
@@ -108,7 +93,7 @@ public class CompareApp {
 				for (double d : dist) System.out.print(df.format(d)+",");
 				System.out.print("min(avg),"+df.format(min(dist))+"("+df.format(avg(dist))+")");
 			}
-		}*/
+		}
 	}
 	
 	public static double avg(double[] data) {
