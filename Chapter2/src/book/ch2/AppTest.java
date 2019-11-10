@@ -184,6 +184,5 @@ public class AppTest {
 		System.out.print(",HCAvgTime," + (elapsedTime/10));
 
 		System.out.println();
-
 	}
 }

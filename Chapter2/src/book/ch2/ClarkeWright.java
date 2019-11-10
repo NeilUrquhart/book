@@ -17,10 +17,8 @@ public class ClarkeWright extends VRPSolver {
 		ArrayList<Saving> savings = new ArrayList<Saving>();
 		for (int countX =0; countX <  super.theProblem.getSize(); countX ++){
 			Object ox = super.theProblem.getCustomers().get(countX);
-		//for (Object ox :  super.theProblem.getCustomers()){
 			for (int countY = countX +1; countY <  super.theProblem.getSize(); countY++){
 				Object oy = super.theProblem.getCustomers().get(countY);
-			//for (Object oy : super.theProblem.getCustomers()){
 				if (ox != oy){//if(countX != countY){
 					VRPVisit x = (VRPVisit)ox;//super.theProblem.getCustomers().get(countX);
 					VRPVisit y = (VRPVisit)oy;// super.theProblem.getCustomers().get(countY);
@@ -40,11 +38,7 @@ public class ClarkeWright extends VRPSolver {
 
 		}
 		Collections.sort(savings);
-		//System.out.println();
-		//for (Saving sv: savings){
-		//	System.out.println(sv.getX() +":"+sv.getY() + ":"+sv.saving);
-		//}
-		//Create default solution
+			//Create default solution
 		ArrayList<ArrayList<VRPVisit>> solution = new ArrayList<ArrayList<VRPVisit>> ();
 		for (Object oV : super.theProblem.getCustomers()){
 			ArrayList<VRPVisit> route = new ArrayList<VRPVisit>();
