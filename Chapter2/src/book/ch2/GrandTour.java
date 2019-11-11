@@ -5,30 +5,40 @@ import java.util.Collections;
 
 import book.ch1.Visit;
 
+/*
+ * Neil Urquhart 2019
+ * 
+ * This (simple) solver splits a grand tour contained in VRPSolver.theProblem into a set of sub tours
+ * that respects the capacity constraints.
+ * 
+ */
+
 public class GrandTour extends VRPSolver {
 
 	@Override
 	public void solve() {
-		// TODO Auto-generated method stub
-		//Create default solution
 		ArrayList<ArrayList<VRPVisit>> solution = new ArrayList<ArrayList<VRPVisit>> ();
-		ArrayList<VRPVisit> route = new ArrayList<VRPVisit>();
-		for (Visit v : super.theProblem.getSolution()){
-			VRPVisit vrpv = (VRPVisit)v;
-			if (vrpv.getDemand() + routeDemand(route) >  this.theProblem.getCapacity()){
-				solution.add(route);
-				route = new ArrayList<VRPVisit>();
-			}
-			route.add(vrpv);
-			
-		}
-		solution.add(route);
-		super.theProblem.setSolution(solution);
+		ArrayList<VRPVisit> currentRoute = new ArrayList<VRPVisit>();
 		
-			
+		for (Visit v : super.theProblem.getSolution()){
+			VRPVisit currentVisit = (VRPVisit)v;
+			//Can current visit be appended to the current route?
+			if (currentVisit.getDemand() + routeDemand(currentRoute) >  this.theProblem.getCapacity()){
+				//Add current route to solution and begin a new route
+				solution.add(currentRoute);
+				currentRoute = new ArrayList<VRPVisit>();
+			}
+			//Add visit to the vurrent route
+			currentRoute.add(currentVisit);
+		}
+		solution.add(currentRoute);
+		super.theProblem.setSolution(solution);
+
+
 	}
 
 	public int routeDemand(ArrayList<VRPVisit> route){
+		//Calculate the total demand for <route>
 		int demand=0;
 		for (VRPVisit visit: route){
 			demand += visit.getDemand();

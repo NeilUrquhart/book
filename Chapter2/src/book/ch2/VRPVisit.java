@@ -1,5 +1,8 @@
 package book.ch2;
-
+/*
+ * VRPVisit - extends Visit adds demand.
+ * 
+ */
 import book.ch1.Visit;
 
 public class VRPVisit extends Visit {

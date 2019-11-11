@@ -5,47 +5,38 @@ import java.util.Collections;
 
 import book.ch1.Visit;
 
+/*
+ * Neil Urquhart 2019
+ * An implementation of the Clarke and Wright savings algorithm
+ * 
+ */
 public class ClarkeWright extends VRPSolver {
 
 	@Override
 	public void solve() {
-		// TODO Auto-generated method stub
-		
-		
 		//Calculate savings
 		
-		ArrayList<Saving> savings = new ArrayList<Saving>();
+		//Create default solution - 1 vehicle per customer
+		ArrayList<ArrayList<VRPVisit>> solution = createDefaultSolution();
+		
+		ArrayList<Saving> savings = new ArrayList<Saving>();//Store savings in this list
+		
+		//Check the savings to be made for each pair of customers
 		for (int countX =0; countX <  super.theProblem.getSize(); countX ++){
-			Object ox = super.theProblem.getCustomers().get(countX);
 			for (int countY = countX +1; countY <  super.theProblem.getSize(); countY++){
-				Object oy = super.theProblem.getCustomers().get(countY);
-				if (ox != oy){//if(countX != countY){
-					VRPVisit x = (VRPVisit)ox;//super.theProblem.getCustomers().get(countX);
-					VRPVisit y = (VRPVisit)oy;// super.theProblem.getCustomers().get(countY);
-					
-					double cost = super.theProblem.getDistance(x, super.theProblem.getStart()) +
-							super.theProblem.getDistance(y, super.theProblem.getStart());
-					double direct = super.theProblem.getDistance(x,y);
-
-					double saving = cost - direct;
-					
-					if (saving > 0){
-						savings.add(new Saving(x,y,saving));
-					}
-
-				}
+				VRPVisit x = (VRPVisit)super.theProblem.getVisits().get(countX);
+				VRPVisit y = (VRPVisit)super.theProblem.getVisits().get(countY);
+				double cost = super.theProblem.getDistance(x, super.theProblem.getStart()) +super.theProblem.getDistance(y, super.theProblem.getStart());
+				double direct = super.theProblem.getDistance(x,y);
+				double saving = cost - direct;
+				savings.add(new Saving(x,y,saving));
 			}
-
-		}
-		Collections.sort(savings);
-			//Create default solution
-		ArrayList<ArrayList<VRPVisit>> solution = new ArrayList<ArrayList<VRPVisit>> ();
-		for (Object oV : super.theProblem.getCustomers()){
-			ArrayList<VRPVisit> route = new ArrayList<VRPVisit>();
-			route.add((VRPVisit)oV);
-			solution.add(route);
 		}
 		
+		//Sort the savings into the order of largest saving first
+		Collections.sort(savings);
+		
+		//Search through the savings and see which can be implemented
 		for (Saving s : savings){
 			ArrayList<VRPVisit> routeX = null, routeY =null;
 			boolean found = false;
@@ -54,42 +45,77 @@ public class ClarkeWright extends VRPSolver {
 					routeX = route;
 				if (start(route)== s.y)
 					routeY = route;	
-				
+
 			}
-			if ((routeX != null)&&(routeY != null)&&(routeX != routeY)){
-				//Check capacities
-			    //If within capacity - join the routes
-				if ((routeDemand(routeX)+ routeDemand(routeY))<=super.theProblem.getCapacity()){
-					routeX.addAll(routeY);
-					solution.remove(routeY);
-					found = true;
-				}
+			if ((routeX != null)&&(routeY != null)){
+				found = joinRoutes(solution, routeX, routeY);
 			}
-			if (!found){
+			if (!found){//Check for the reverse (y to x)
 				for (ArrayList<VRPVisit> route : solution){
 					if (end(route)==s.y)
 						routeX = route;
 					if (start(route)== s.x)
 						routeY = route;	
-					
+
 				}
-				if ((routeX != null)&&(routeY != null)&&(routeX != routeY)){
-					//Check capacities
-				    //If within capacity - join the routes
-					if ((routeDemand(routeX)+ routeDemand(routeY))<=super.theProblem.getCapacity()){
-						routeX.addAll(routeY);
-						solution.remove(routeY);
-						found = true;
-					}
+				if ((routeX != null)&&(routeY != null)){
+					joinRoutes(solution, routeX, routeY);
 				}
 			}
 		}
-		super.theProblem.setSolution(solution);
+				//test check sol
+		int size = super.theProblem.getSize();
+		ArrayList<VRPVisit> checkList = new ArrayList<VRPVisit>();
+		for (ArrayList<VRPVisit> route: solution){
+			for (VRPVisit v : route){
+				if (checkList.contains(v)){
+					System.out.println("Duplicate visit error");
+				}
+			}
+			if (routeDemand(route) > super.theProblem.getCapacity()){
+				System.out.println("Capacity error!");
+			}
+			size = size - route.size();
+		}
+		if (size != 0 )
+			System.out.println("Size error");
 		
-			
+		super.theProblem.setSolution(solution);
+	}
+
+	private boolean joinRoutes(ArrayList<ArrayList<VRPVisit>> solution,ArrayList<VRPVisit> routeX, ArrayList<VRPVisit> routeY) {
+		/*
+		 * Join route Y to the end of route X.
+		 * Return false, if join not possible due to capacities
+		 */
+		if(routeX != routeY){
+			//Check capacities
+			if ((routeDemand(routeX)+ routeDemand(routeY))<=super.theProblem.getCapacity()){
+				routeX.addAll(routeY);
+				solution.remove(routeY);
+				return true;
+			}
+		}
+		return false;
+	}
+
+	private ArrayList<ArrayList<VRPVisit>> createDefaultSolution() {
+		/*
+		 * Create a solution that has one route/vehicle per customer
+		 */
+		ArrayList<ArrayList<VRPVisit>> solution = new ArrayList<ArrayList<VRPVisit>> ();
+		for (Object oV : super.theProblem.getVisits()){
+			ArrayList<VRPVisit> route = new ArrayList<VRPVisit>();
+			route.add((VRPVisit)oV);
+			solution.add(route);
+		}
+		return solution;
 	}
 
 	public int routeDemand(ArrayList<VRPVisit> route){
+		/*
+		 * Return the total demand of the customers in <route>
+		 */
 		int demand=0;
 		for (VRPVisit visit: route){
 			demand += visit.getDemand();
@@ -97,6 +123,7 @@ public class ClarkeWright extends VRPSolver {
 		return demand;
 	}
 	public VRPVisit end(ArrayList<VRPVisit> route){
+		//Return the last customer in <route>
 		if (route.size()==0)
 			return null;
 		
@@ -104,11 +131,16 @@ public class ClarkeWright extends VRPSolver {
 	}
 	
 	public VRPVisit start(ArrayList<VRPVisit> route){
+		//Retunr the first customer in route
 		if (route.size()==0)
 			return null;
 		
 		return route.get(0);
 	}
+	
+	/*
+	 * Saving is an inner class used to hold details of specific saving between 2 visits
+	 */
     class Saving implements Comparable{
     	private VRPVisit x,y;
     	private double saving;
@@ -138,7 +170,6 @@ public class ClarkeWright extends VRPSolver {
 				return 1;
 			if (other.saving < this.saving)
 				return -1;
-			
 			return 0;
 		}
 	}

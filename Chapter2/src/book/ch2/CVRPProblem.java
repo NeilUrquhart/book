@@ -5,11 +5,18 @@ import java.util.ArrayList;
 import book.ch1.TSPProblem;
 import book.ch1.Visit;
 
-public class VRPProblem extends TSPProblem {
+/*
+ * Neil Urquhart 2019
+ * This class represents a CVRP problem.
+ * It extends the basic TSPProblem class.
+ * 
+ */
+public class CVRPProblem extends TSPProblem {
 	
 	private ArrayList<ArrayList<VRPVisit>> currentVRPSolution = new ArrayList<ArrayList<VRPVisit>> ();
-	private VRPSolver mySolver = null;
+	//Represents the colection  of routes that comprise the solution
 	private int capacity;
+	//The vehicle capacity
 	
 	public void setSolution(ArrayList<ArrayList<VRPVisit>> aVRPSolution){
 		currentVRPSolution = aVRPSolution;
@@ -34,12 +41,13 @@ public class VRPProblem extends TSPProblem {
 	}
 	
 	public double getDistance(){
-
+		//Return the total distance travelled by all of the vehicles
 		return getDistance(currentVRPSolution);
 	}
 	
 	
 	public double getDistance(ArrayList sol){
+		//Get the total distance covered by the solution in <sol>
 		ArrayList<ArrayList<VRPVisit>> solution = (ArrayList<ArrayList<VRPVisit>>) sol;
 		double dist =0;
 		for (ArrayList<VRPVisit> route: solution){
@@ -49,12 +57,12 @@ public class VRPProblem extends TSPProblem {
 		return dist;
 	}
 	
-	public ArrayList getCustomers(){
+	public ArrayList getVisits(){
 		return super.getSolution();
 	}
 	
-
 	public String toString(){
+		//Return a string representation of the solution
 		String buffer="";
 		for (ArrayList<VRPVisit> route: currentVRPSolution){
 			buffer = buffer +"Route: ";
