@@ -8,9 +8,9 @@ package book.ch2;
  */
 
 public abstract class VRPSolver {
-	protected VRPProblem theProblem;
+	protected CVRPProblem theProblem;
 	
-	public void setProblem(VRPProblem aProblem) {//aProblem represents the problem that is to be solved.
+	public void setProblem(CVRPProblem aProblem) {//aProblem represents the problem that is to be solved.
 		theProblem = aProblem;
 	}
 	
