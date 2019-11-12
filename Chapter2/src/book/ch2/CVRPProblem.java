@@ -22,6 +22,9 @@ public class CVRPProblem extends TSPProblem {
 		currentVRPSolution = aVRPSolution;
 	}
 	
+	public ArrayList<ArrayList<VRPVisit>> getCVRPSolution(){
+		return this.currentVRPSolution;
+	}
 	public int getCapacity(){
 		return capacity;
 	}
