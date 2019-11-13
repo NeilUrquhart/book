@@ -33,8 +33,6 @@ public class GrandTour extends VRPSolver {
 		}
 		solution.add(currentRoute);
 		super.theProblem.setSolution(solution);
-
-
 	}
 
 	public int routeDemand(ArrayList<VRPVisit> route){
