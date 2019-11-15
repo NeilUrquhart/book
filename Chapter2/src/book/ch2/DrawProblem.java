@@ -20,12 +20,12 @@ public class DrawProblem {
 	private static int SCALE =2;
 	public static void main(String[] args) {
 		VRPProblemFactory factory = new VRPProblemFactory();
-		CVRPProblem problem = factory.buildProblem("./data/P-n76-k4.vrp");
-		//NearestNTSPSolver nn = new NearestNTSPSolver();
-		//((TSPProblem)problem).solve(nn);
+		CVRPProblem problem = factory.buildProblem("./data/P-n20-k2.vrp");
+		NearestNTSPSolver nn = new NearestNTSPSolver();
+		((TSPProblem)problem).solve(nn);
 		//problem.solve(new GrandTour());
 		//problem.solve(new ClarkeWright());
-		writeSVG(problem,"P-n76-k4.svg");
+		writeSVG(problem,"P-n20-K2-TSP.svg");
 	}
 	
 	private static void writeSVG(CVRPProblem problem, String fName) {
