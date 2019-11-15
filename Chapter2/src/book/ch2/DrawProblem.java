@@ -18,6 +18,7 @@ import book.ch1.Visit;
  */
 public class DrawProblem {
 	private static int SCALE =2;
+	
 	public static void main(String[] args) {
 		VRPProblemFactory factory = new VRPProblemFactory();
 		CVRPProblem problem = factory.buildProblem("./data/A-n65-k9.vrp");
