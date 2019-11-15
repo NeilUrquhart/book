@@ -28,7 +28,6 @@ public class DrawProblem {
 		writeSVG(problem,"P-n76-k4.GT-final.svg");
 		problem.solve(new ClarkeWright());
 		writeSVG(problem,"P-n76-k4.CW-final.svg");
-		
 	}
 	
 	private static void writeSVG(TSPProblem problem, String fName) {//TSP 
