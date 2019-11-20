@@ -133,7 +133,6 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		System.out.print(",BestEAVehicles," + bestVehicles);
 		elapsedTime = System.currentTimeMillis() - startTime;
 		System.out.print(",EA AvgTime," + (elapsedTime/10));
-
 		System.out.println();
 	}
 }

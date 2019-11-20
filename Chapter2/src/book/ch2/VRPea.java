@@ -27,15 +27,15 @@ public class VRPea extends VRPSolver {
 	
 	@Override
 	public void solve() {
-	
 		//Reference to the best individual in the population
 		Individual bestSoFar = InitialisePopution();
 		while(evalsBudget >0) {	
+			System.out.println(evalsBudget);
 			//Create child
 			Individual child = null;
 			if (rnd.getRnd().nextDouble() < XO_RATE){
 				//Create a new Individual using recombination, randomly selecting the parents
-				child = new Individual(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));
+				child = new Individual(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));				
 			}
 			else{
 				//Create a child by copying a single parent

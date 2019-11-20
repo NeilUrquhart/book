@@ -34,7 +34,7 @@ public class DrawProblem {
 
 	}
 	
-	private static void writeSVG(TSPProblem problem, String fName) {//TSP 
+	public static void writeSVG(TSPProblem problem, String fName) {//TSP 
 		System.out.println();
 		String svg = "";
 		svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"200\" height=\"200\"> \n";
@@ -71,7 +71,7 @@ public class DrawProblem {
 		
 	}
 	
-	private static void writeSVG(CVRPProblem problem, String fName) {//CVRP
+	public static void writeSVG(CVRPProblem problem, String fName) {//CVRP
 		System.out.println();
 		String svg = "";
 		svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"200\" height=\"200\"> \n";

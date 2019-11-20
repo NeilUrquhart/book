@@ -162,4 +162,25 @@ public class Individual   {
 		}
 
 	}
+	
+	public String toString() {
+		String res="";
+		for (VRPVisit v : genotype) {
+			res = res + v.toString()+":";
+		}
+		res = res +"\n";
+		
+		if (phenotype != null) {
+			res = res+"Phenotype\n";
+			for (ArrayList<VRPVisit> route: phenotype) {
+				for (VRPVisit v : route) {
+					res = res + v.toString()+":";
+				}
+				res = res +"\n";
+				
+			}
+		}
+			
+		return res;
+	}
 }
