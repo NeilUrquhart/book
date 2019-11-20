@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="200"> 
+<rect x=" 164.0 " y=" 152.0 " height="8" width="8" fill="red"/>
+<circle cx=" 192.0 " cy=" 88.0 " r="2" fill="black"/>
+<circle cx=" 100.0 " cy=" 10.0 " r="2" fill="black"/>
+<circle cx=" 98.0 " cy=" 16.0 " r="2" fill="black"/>
+<circle cx=" 26.0 " cy=" 14.0 " r="2" fill="black"/>
+<circle cx=" 58.0 " cy=" 178.0 " r="2" fill="black"/>
+<circle cx=" 116.0 " cy=" 60.0 " r="2" fill="black"/>
+<circle cx=" 168.0 " cy=" 78.0 " r="2" fill="black"/>
+<circle cx=" 28.0 " cy=" 48.0 " r="2" fill="black"/>
+<circle cx=" 4.0 " cy=" 78.0 " r="2" fill="black"/>
+<circle cx=" 6.0 " cy=" 164.0 " r="2" fill="black"/>
+<circle cx=" 10.0 " cy=" 20.0 " r="2" fill="black"/>
+<circle cx=" 196.0 " cy=" 104.0 " r="2" fill="black"/>
+<circle cx=" 168.0 " cy=" 50.0 " r="2" fill="black"/>
+<circle cx=" 122.0 " cy=" 118.0 " r="2" fill="black"/>
+<circle cx=" 2.0 " cy=" 130.0 " r="2" fill="black"/>
+<circle cx=" 176.0 " cy=" 102.0 " r="2" fill="black"/>
+<circle cx=" 182.0 " cy=" 4.0 " r="2" fill="black"/>
+<circle cx=" 38.0 " cy=" 64.0 " r="2" fill="black"/>
+<circle cx=" 186.0 " cy=" 6.0 " r="2" fill="black"/>
+<circle cx=" 100.0 " cy=" 186.0 " r="2" fill="black"/>
+<circle cx=" 196.0 " cy=" 28.0 " r="2" fill="black"/>
+<circle cx=" 10.0 " cy=" 84.0 " r="2" fill="black"/>
+<circle cx=" 84.0 " cy=" 18.0 " r="2" fill="black"/>
+<circle cx=" 122.0 " cy=" 124.0 " r="2" fill="black"/>
+<circle cx=" 18.0 " cy=" 194.0 " r="2" fill="black"/>
+<circle cx=" 160.0 " cy=" 110.0 " r="2" fill="black"/>
+<circle cx=" 114.0 " cy=" 138.0 " r="2" fill="black"/>
+<circle cx=" 46.0 " cy=" 30.0 " r="2" fill="black"/>
+<circle cx=" 40.0 " cy=" 140.0 " r="2" fill="black"/>
+<circle cx=" 170.0 " cy=" 120.0 " r="2" fill="black"/>
+<circle cx=" 196.0 " cy=" 10.0 " r="2" fill="black"/>
+<line x1=" 164.0 " y1=" 152.0 " x2=" 114.0 " y2=" 138.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 114.0 " y1=" 138.0 " x2=" 176.0 " y2=" 102.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 176.0 " y1=" 102.0 " x2=" 192.0 " y2=" 88.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 192.0 " y1=" 88.0 " x2=" 196.0 " y2=" 104.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 196.0 " y1=" 104.0 " x2=" 170.0 " y2=" 120.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 170.0 " y1=" 120.0 " x2=" 164.0 " y2=" 152.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 164.0 " y1=" 152.0 " x2=" 168.0 " y2=" 50.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 168.0 " y1=" 50.0 " x2=" 182.0 " y2=" 4.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 182.0 " y1=" 4.0 " x2=" 186.0 " y2=" 6.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 186.0 " y1=" 6.0 " x2=" 196.0 " y2=" 10.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 196.0 " y1=" 10.0 " x2=" 196.0 " y2=" 28.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 196.0 " y1=" 28.0 " x2=" 168.0 " y2=" 78.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 168.0 " y1=" 78.0 " x2=" 160.0 " y2=" 110.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 160.0 " y1=" 110.0 " x2=" 164.0 " y2=" 152.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 164.0 " y1=" 152.0 " x2=" 116.0 " y2=" 60.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 116.0 " y1=" 60.0 " x2=" 98.0 " y2=" 16.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 98.0 " y1=" 16.0 " x2=" 100.0 " y2=" 10.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 100.0 " y1=" 10.0 " x2=" 84.0 " y2=" 18.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 84.0 " y1=" 18.0 " x2=" 46.0 " y2=" 30.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 46.0 " y1=" 30.0 " x2=" 26.0 " y2=" 14.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 26.0 " y1=" 14.0 " x2=" 10.0 " y2=" 20.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 10.0 " y1=" 20.0 " x2=" 38.0 " y2=" 64.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 38.0 " y1=" 64.0 " x2=" 122.0 " y2=" 118.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 122.0 " y1=" 118.0 " x2=" 164.0 " y2=" 152.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 164.0 " y1=" 152.0 " x2=" 28.0 " y2=" 48.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 28.0 " y1=" 48.0 " x2=" 4.0 " y2=" 78.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 4.0 " y1=" 78.0 " x2=" 10.0 " y2=" 84.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 10.0 " y1=" 84.0 " x2=" 2.0 " y2=" 130.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 2.0 " y1=" 130.0 " x2=" 40.0 " y2=" 140.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 40.0 " y1=" 140.0 " x2=" 6.0 " y2=" 164.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 6.0 " y1=" 164.0 " x2=" 18.0 " y2=" 194.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 18.0 " y1=" 194.0 " x2=" 58.0 " y2=" 178.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 58.0 " y1=" 178.0 " x2=" 100.0 " y2=" 186.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 100.0 " y1=" 186.0 " x2=" 164.0 " y2=" 152.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 164.0 " y1=" 152.0 " x2=" 122.0 " y2=" 124.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+<line x1=" 122.0 " y1=" 124.0 " x2=" 164.0 " y2=" 152.0 " style="stroke:rgb(0,0,0);stroke-width:1" />
+</svg>
