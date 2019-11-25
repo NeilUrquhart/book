@@ -102,7 +102,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 
 */
 		//Solve using the Evolutionary Algorithm
-		//As the Evolutionary Algorithm is stochastic, we repeat 10 times and report the best and average results
+		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
 			
 		double startTime = System.currentTimeMillis();
 		double bestDist = Double.MAX_VALUE;

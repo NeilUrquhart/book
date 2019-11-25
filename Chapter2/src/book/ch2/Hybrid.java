@@ -6,6 +6,8 @@ package book.ch2;
  * 
  */
 
+import java.util.ArrayList;
+
 import book.ch1.NearestNTSPSolver;
 import book.ch1.TSPProblem;
 import book.ch1.Visit;
@@ -33,7 +35,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"};
 
-		System.out.println("Ch2 tests");
+		System.out.println("Hybrid");
 		for (String fName : problems)
 			run("./data/"+ fName);
 	}
@@ -45,94 +47,35 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		CVRPProblem myVRP = VRPProblemFactory.buildProblem(probName);//Load instance from file
 		
 		System.out.print(probName + ",");
-/*
-		//Solve using the Grand Tour
-		double startTime = System.currentTimeMillis();
-		NearestNTSPSolver nn = new NearestNTSPSolver();
-		((TSPProblem)myVRP).solve(nn);
-		GrandTour gt = new GrandTour();
-		myVRP.solve(gt);
-		System.out.print("GTDist," + myVRP.getDistance());		
-		System.out.print(",GTVehicles," + myVRP.getVehicles());
-		double elapsedTime = System.currentTimeMillis() - startTime;
-		System.out.print(",GTTime," + elapsedTime);
-
 
 		//Solve using Clarke & Wright
-		startTime = System.currentTimeMillis();
-		ClarkeWright cwSolve = new ClarkeWright();
-		myVRP.solve(cwSolve);
-		System.out.print(",CWDist," + myVRP.getDistance());		
-		System.out.print(",CWVehicles," + myVRP.getVehicles());
-		elapsedTime = System.currentTimeMillis() - startTime;
-		System.out.print(",CWTime," + elapsedTime);
-
-		//Solve using the Hill Climber
-		//As the Hill Climber is stochastic, we repeat 10 times and report the best and average results
-		double bestDist = Double.MAX_VALUE;
-		int bestVehicles = Integer.MAX_VALUE;
-		double totDist=0;
-		double totVehicles =0;
-		startTime = System.currentTimeMillis();
-		for (int count = 0; count < 10; count ++){
-			RandomSingleton rnd = RandomSingleton.getInstance();
-			rnd.setSeed(count);
-			System.out.print(",rndSeed," + count);		
-
-			HillClimber hcSolve = new HillClimber();
-			myVRP.solve(hcSolve);
-			System.out.print(",HCDist," + myVRP.getDistance());		
-			totDist = totDist + myVRP.getDistance();
-			if (myVRP.getDistance()<bestDist) 
-				bestDist = myVRP.getDistance();
-			System.out.print(",HCVehicles," + myVRP.getVehicles());
-			totVehicles = totVehicles + myVRP.getVehicles();
-			if (myVRP.getVehicles()< bestVehicles) 
-				bestVehicles = myVRP.getVehicles();
-		}
-		double avgDist = totDist/10;
-		double avgVehicles = totVehicles/10;
-
-		System.out.print(",AVGHCDist," + avgDist);		
-		System.out.print(",AVGHCVehicles," + avgVehicles);
-		System.out.print(",BestHCDist," + bestDist);		
-		System.out.print(",BestHCVehicles," + bestVehicles);
-		elapsedTime = System.currentTimeMillis() - startTime;
-		System.out.print(",HCAvgTime," + (elapsedTime/10));
-
-*/
+		myVRP.solve(new ClarkeWright());
+		ArrayList<ArrayList<VRPVisit>> bestSolution = myVRP.getCVRPSolution();
+		double bestDist = myVRP.getDistance();
+		System.out.println("Clarke-Wright distance =" + bestDist);
+		
 		//Solve using the Evolutionary Algorithm
-		//As the Evolutionary Algorithm is stochastic, we repeat 10 times and report the best and average results
+		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
 			
-		double startTime = System.currentTimeMillis();
-		double bestDist = Double.MAX_VALUE;
-		int bestVehicles = Integer.MAX_VALUE;
-		double totDist=0;
-		int totVehicles =0;
 		for (int count = 0; count < 20; count ++){
 			RandomSingleton rnd = RandomSingleton.getInstance();
 			rnd.setSeed(count);	
-			System.out.print(",rndSeed," + count);		
-			VRPea eaSolve = new VRPea();
-			myVRP.solve(eaSolve);
-			System.out.print(",EADist," + myVRP.getDistance());		
-			totDist = totDist + myVRP.getDistance();
-			if (myVRP.getDistance()<bestDist) 
+			myVRP.solve(new VRPea());
+			System.out.println("EA distance =" + myVRP.getDistance());
+			if (myVRP.getDistance() < bestDist){
+				//if we have found a better solution
 				bestDist = myVRP.getDistance();
-			System.out.print(",EAVehicles," + myVRP.getVehicles());
-			totVehicles = totVehicles + myVRP.getVehicles();
-			if (myVRP.getVehicles()< bestVehicles) 
-				bestVehicles = myVRP.getVehicles();
+				bestSolution = myVRP.getCVRPSolution();
+			}
 		}
-		double avgDist = totDist/10;
-		double avgVehicles = totVehicles/10;
-
-		System.out.print(",AVGEADist," + avgDist);		
-		System.out.print(",AVGEAVehicles," + avgVehicles);
-		System.out.print(",BestEADist," + bestDist);		
-		System.out.print(",BestEAVehicles," + bestVehicles);
-		double elapsedTime = System.currentTimeMillis() - startTime;
-		System.out.print(",EA AvgTime," + (elapsedTime/10));
-		System.out.println();
+		//Print out final solution
+		System.out.println("Solution");
+		System.out.println("Total distance = " + bestDist);
+		for(ArrayList<VRPVisit> route : bestSolution){
+			for (VRPVisit v : route){
+				System.out.print(v+":");
+			}
+			System.out.println();
+		}
 	}
 }
