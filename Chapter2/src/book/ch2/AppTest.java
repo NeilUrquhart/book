@@ -45,7 +45,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		CVRPProblem myVRP = VRPProblemFactory.buildProblem(probName);//Load instance from file
 		
 		System.out.print(probName + ",");
-
+/*
 		//Solve using the Grand Tour
 		double startTime = System.currentTimeMillis();
 		NearestNTSPSolver nn = new NearestNTSPSolver();
@@ -100,16 +100,16 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		elapsedTime = System.currentTimeMillis() - startTime;
 		System.out.print(",HCAvgTime," + (elapsedTime/10));
 
-
+*/
 		//Solve using the Evolutionary Algorithm
 		//As the Evolutionary Algorithm is stochastic, we repeat 10 times and report the best and average results
 			
-		startTime = System.currentTimeMillis();
-		bestDist = Double.MAX_VALUE;
-		bestVehicles = Integer.MAX_VALUE;
-		totDist=0;
-		totVehicles =0;
-		for (int count = 0; count < 10; count ++){
+		double startTime = System.currentTimeMillis();
+		double bestDist = Double.MAX_VALUE;
+		int bestVehicles = Integer.MAX_VALUE;
+		double totDist=0;
+		int totVehicles =0;
+		for (int count = 0; count < 20; count ++){
 			RandomSingleton rnd = RandomSingleton.getInstance();
 			rnd.setSeed(count);	
 			System.out.print(",rndSeed," + count);		
@@ -124,14 +124,14 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 			if (myVRP.getVehicles()< bestVehicles) 
 				bestVehicles = myVRP.getVehicles();
 		}
-		avgDist = totDist/10;
-		avgVehicles = totVehicles/10;
+		double avgDist = totDist/10;
+		double avgVehicles = totVehicles/10;
 
 		System.out.print(",AVGEADist," + avgDist);		
 		System.out.print(",AVGEAVehicles," + avgVehicles);
 		System.out.print(",BestEADist," + bestDist);		
 		System.out.print(",BestEAVehicles," + bestVehicles);
-		elapsedTime = System.currentTimeMillis() - startTime;
+		double elapsedTime = System.currentTimeMillis() - startTime;
 		System.out.print(",EA AvgTime," + (elapsedTime/10));
 		System.out.println();
 	}

@@ -20,7 +20,7 @@ public class VRPea extends VRPSolver {
 	//Note that we use the RandomSingleton object to generate random numbers
 
 	//EA Parameters
-	private int POP_SIZE = 500;
+	private int POP_SIZE = 1000;
 	private int TOUR_SIZE = 2;
 	private double XO_RATE = 0.7;
 	private int evalsBudget = 1000000;
@@ -30,7 +30,6 @@ public class VRPea extends VRPSolver {
 		//Reference to the best individual in the population
 		Individual bestSoFar = InitialisePopution();
 		while(evalsBudget >0) {	
-			System.out.println(evalsBudget);
 			//Create child
 			Individual child = null;
 			if (rnd.getRnd().nextDouble() < XO_RATE){
