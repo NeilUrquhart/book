@@ -12,7 +12,7 @@ import book.ch1.NearestNTSPSolver;
 import book.ch1.TSPProblem;
 import book.ch1.Visit;
 
-public class Hybrid {
+public class HybridSolver {
 
 	public static void main(String[] args){
 		/*Problem instances from.
