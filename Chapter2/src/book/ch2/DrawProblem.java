@@ -23,14 +23,14 @@ public class DrawProblem {
 		VRPProblemFactory factory = new VRPProblemFactory();
 
 
-		CVRPProblem problem = factory.buildProblem("./data/A-n65-k9.vrp");
+		CVRPProblem problem = factory.buildProblem("./data/P-n20-k2.vrp");
 		NearestNTSPSolver nn = new NearestNTSPSolver();
 		((TSPProblem)problem).solve(nn);
-		writeSVG((TSPProblem)problem,"P-n76-k4.GT.svg");
-		problem.solve(new GrandTour());
-		writeSVG(problem,"P-n76-k4.GT-final.svg");
-		problem.solve(new ClarkeWright());
-		writeSVG(problem,"P-n76-k4.CW-final.svg");
+		writeSVG((TSPProblem)problem,"P-n20-k2-TSP.svg");
+		//problem.solve(new GrandTour());
+		//writeSVG(problem,"P-n76-k4.GT-final.svg");
+		//problem.solve(new ClarkeWright());
+		//writeSVG(problem,"P-n76-k4.CW-final.svg");
 
 	}
 	
