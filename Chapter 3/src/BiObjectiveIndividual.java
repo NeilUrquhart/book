@@ -23,7 +23,7 @@ public class BiObjectiveIndividual extends Individual {
 	}
 	
 	public boolean dominates(BiObjectiveIndividual other) {
-		if (other.getVehicles() )
-		
+		//True if we dominate the other
+	
 	}
 }
