@@ -56,7 +56,9 @@ public class VRPea extends VRPSolver {
 				population.remove(poor);
 				population.add(child);
 			}
+			System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
 		}
+		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
 	}
 
