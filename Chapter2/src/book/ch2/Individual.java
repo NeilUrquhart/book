@@ -22,7 +22,7 @@ public class Individual   {
 	private ArrayList<VRPVisit> genotype;
 
 	//The phenotype is a set of routes created from the genotype
-	private ArrayList<ArrayList<VRPVisit>> phenotype;
+	protected ArrayList<ArrayList<VRPVisit>> phenotype;
 
 	//THe problem being solved
 	private CVRPProblem problem;
