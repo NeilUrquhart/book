@@ -18,6 +18,12 @@ public class BiObjectiveIndividual extends Individual {
 			//If the genotype has been changed then evaluate
 			evaluate();
 		
+		//Get Dist to customers
 		return 0;
+	}
+	
+	public boolean dominates(BiObjectiveIndividual other) {
+		if (other.getVehicles() )
+		
 	}
 }
