@@ -19,13 +19,13 @@ public class Individual   {
 	private RandomSingleton rnd =RandomSingleton.getInstance();
 
 	//The genotype is a "grand tour" list of visits
-	private ArrayList<VRPVisit> genotype;
+	protected ArrayList<VRPVisit> genotype;
 
 	//The phenotype is a set of routes created from the genotype
 	protected ArrayList<ArrayList<VRPVisit>> phenotype;
 
 	//THe problem being solved
-	private CVRPProblem problem;
+	protected CVRPProblem problem;
 
 	public Individual( CVRPProblem prob) {
 		/*

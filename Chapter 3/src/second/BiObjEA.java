@@ -1,3 +1,4 @@
+package second;
 
 
 import java.util.ArrayList;
@@ -16,8 +17,8 @@ import book.ch2.VRPSolver;
  * Use Individual.check() to ensure that Individuals contain valid solutions. Advisable to turn this on when testing
  * modificatins, and comment it out when testing is completed
  */
-public class VRPea extends VRPSolver {
-	private ArrayList <Individual> population = new ArrayList<Individual>();
+public class BiObjEA extends VRPSolver {
+	private ArrayList <BiObjectiveIndividual> population = new ArrayList<BiObjectiveIndividual>();
 	//population stores our pool of potential solutions
 	private RandomSingleton rnd = RandomSingleton.getInstance();
 	//Note that we use the RandomSingleton object to generate random numbers
@@ -31,17 +32,17 @@ public class VRPea extends VRPSolver {
 	@Override
 	public void solve() {
 		//Reference to the best individual in the population
-		Individual bestSoFar = InitialisePopution();
+		BiObjectiveIndividual bestSoFar = InitialisePopution();
 		while(evalsBudget >0) {	
 			//Create child
-			Individual child = null;
+			BiObjectiveIndividual child = null;
 			if (rnd.getRnd().nextDouble() < XO_RATE){
 				//Create a new Individual using recombination, randomly selecting the parents
-				child = new Individual(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));				
+				child = new BiObjectiveIndividual(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));				
 			}
 			else{
 				//Create a child by copying a single parent
-				child = tournamentSelection(TOUR_SIZE).copy();
+				child = (BiObjectiveIndividual) tournamentSelection(TOUR_SIZE).copy();
 			}
 			child.mutate();
 			child.evaluate();
@@ -59,17 +60,18 @@ public class VRPea extends VRPSolver {
 				population.remove(poor);
 				population.add(child);
 			}
-			System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
+			//System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
 		}
 		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
+		System.out.println(bestSoFar.getVehicles() +","+ bestSoFar.getCustService());
 	}
 
-	private Individual InitialisePopution() {
+	private BiObjectiveIndividual InitialisePopution() {
 		//Initialise population with random solutions
-		Individual best = null;
+		BiObjectiveIndividual best = null;
 		for (int count=0; count < POP_SIZE; count++){
-			Individual i = new Individual(super.theProblem);
+			BiObjectiveIndividual i = new BiObjectiveIndividual(super.theProblem);
 			
 			//i.check();//Check individual contains a valid solution
 			if (best == null) 
@@ -82,12 +84,12 @@ public class VRPea extends VRPSolver {
 		return best;
 	}
 
-	private Individual tournamentSelection(int poolSize){
+	private BiObjectiveIndividual tournamentSelection(int poolSize){
 		//Return the best individual from a randomly selected pool of individuals
-		Individual bestI = null;
+		BiObjectiveIndividual bestI = null;
 		double bestFit = Double.MAX_VALUE;
 		for (int tries=0; tries < poolSize; tries++){
-			Individual i = population.get(rnd.getRnd().nextInt(population.size()));
+			BiObjectiveIndividual i = population.get(rnd.getRnd().nextInt(population.size()));
 			if (i.getDistance() < bestFit){
 				bestFit = i.getDistance();
 				bestI = i;
@@ -96,12 +98,12 @@ public class VRPea extends VRPSolver {
 		return bestI;
 	}
 
-	private Individual tournamentSelectWorst(int poolSize){
+	private BiObjectiveIndividual tournamentSelectWorst(int poolSize){
 		//Return the worst individual from a ransomly selected pool of individuals
-		Individual bestI = null;
+		BiObjectiveIndividual bestI = null;
 		double bestFit = 0;
 		for (int tries=0; tries < poolSize; tries++){
-			Individual i = population.get(rnd.getRnd().nextInt(population.size()));
+			BiObjectiveIndividual i = population.get(rnd.getRnd().nextInt(population.size()));
 			if (i.getDistance() > bestFit){
 				bestFit = i.getDistance();
 				bestI = i;

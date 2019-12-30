@@ -1,0 +1,2221 @@
+Ch2 tests
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,6857.344851095049
+./data/A-n32-k5.vrp,CUST,5,5457.466242677044
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,6939.776085629263
+./data/A-n32-k5.vrp,CUST,5,5443.4307032456745
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7294.692998191638
+./data/A-n32-k5.vrp,CUST,5,5469.803627421805
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7122.66087609205
+./data/A-n32-k5.vrp,CUST,5,5465.081908110745
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,6753.220109548578
+./data/A-n32-k5.vrp,CUST,5,5439.792772492185
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7362.775567661414
+./data/A-n32-k5.vrp,CUST,5,5465.241158160938
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7645.569072993705
+./data/A-n32-k5.vrp,CUST,5,5464.937299777086
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7042.3067955469405
+./data/A-n32-k5.vrp,CUST,5,5437.876824169825
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7082.342317353753
+./data/A-n32-k5.vrp,CUST,5,5465.028351337069
+./data/A-n32-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 784),
+./data/A-n32-k5.vrp,VEH,5,7085.488058309791
+./data/A-n32-k5.vrp,CUST,5,5457.120644859359
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,5024.46874794061
+./data/A-n33-k5.vrp,CUST,6,3447.269762119011
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,5091.681184866503
+./data/A-n33-k5.vrp,CUST,6,3460.9329755608874
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,5171.249052780409
+./data/A-n33-k5.vrp,CUST,6,3338.079018601702
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4859.207750676886
+./data/A-n33-k5.vrp,CUST,6,3432.005311743092
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,5155.28758932123
+./data/A-n33-k5.vrp,CUST,6,3584.2754711566554
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4855.1636738959505
+./data/A-n33-k5.vrp,CUST,6,3429.122740128819
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4878.707479295996
+./data/A-n33-k5.vrp,CUST,5,3793.061525079724
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4777.525405338684
+./data/A-n33-k5.vrp,CUST,6,3393.170575598891
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4795.75902812018
+./data/A-n33-k5.vrp,CUST,6,3413.8495075654328
+./data/A-n33-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 661),
+./data/A-n33-k5.vrp,VEH,5,4928.630258225916
+./data/A-n33-k5.vrp,CUST,6,3449.3947743742247
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4236.491298663458
+./data/A-n33-k6.vrp,CUST,7,2900.1415843513223
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4837.718692556254
+./data/A-n33-k6.vrp,CUST,7,2910.4831062523044
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4653.746655100013
+./data/A-n33-k6.vrp,CUST,7,2872.4319757929525
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4404.513734860314
+./data/A-n33-k6.vrp,CUST,7,2897.689747984587
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4118.447778108995
+./data/A-n33-k6.vrp,CUST,7,2872.2891218562654
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4021.984854337488
+./data/A-n33-k6.vrp,CUST,7,2899.750693074274
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4800.303784894194
+./data/A-n33-k6.vrp,CUST,7,2896.606742728455
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4516.537105206719
+./data/A-n33-k6.vrp,CUST,7,2915.559326395359
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4423.859718520383
+./data/A-n33-k6.vrp,CUST,7,2880.434653807376
+./data/A-n33-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/A-n33-k6.vrp,VEH,6,4287.810123624992
+./data/A-n33-k6.vrp,CUST,7,2870.3387409847305
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,6160.458270049605
+./data/A-n34-k5.vrp,CUST,6,4387.398703767343
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,6385.560319956565
+./data/A-n34-k5.vrp,CUST,6,4390.439056838174
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,6281.30840817366
+./data/A-n34-k5.vrp,CUST,6,4387.68169113341
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,6367.676901482171
+./data/A-n34-k5.vrp,CUST,6,4484.106847903958
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,6611.0816030820515
+./data/A-n34-k5.vrp,CUST,6,4379.286353522364
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,5884.20316212019
+./data/A-n34-k5.vrp,CUST,6,4369.775864800694
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,5883.858999641215
+./data/A-n34-k5.vrp,CUST,6,4410.767885956139
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,5960.800443447503
+./data/A-n34-k5.vrp,CUST,6,4401.871899217487
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,5861.7007866034
+./data/A-n34-k5.vrp,CUST,6,4433.529899797163
+./data/A-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 778),
+./data/A-n34-k5.vrp,VEH,5,5997.696603731538
+./data/A-n34-k5.vrp,CUST,6,4406.986441256994
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,7925.138882078247
+./data/A-n36-k5.vrp,CUST,6,5470.378523175514
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8465.263187029606
+./data/A-n36-k5.vrp,CUST,6,5479.076478665947
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8199.226862832884
+./data/A-n36-k5.vrp,CUST,6,5488.259237298385
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8250.816667530848
+./data/A-n36-k5.vrp,CUST,6,5512.477462968949
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8588.612454728605
+./data/A-n36-k5.vrp,CUST,6,5425.265719791756
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,7915.256223944557
+./data/A-n36-k5.vrp,CUST,6,5507.155258154286
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,7911.855128599439
+./data/A-n36-k5.vrp,CUST,6,5480.766507802732
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8303.03859043104
+./data/A-n36-k5.vrp,CUST,6,5484.03268663545
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8007.929338167241
+./data/A-n36-k5.vrp,CUST,6,5484.6800396837625
+./data/A-n36-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 799),
+./data/A-n36-k5.vrp,VEH,5,8096.297926475043
+./data/A-n36-k5.vrp,CUST,6,5440.826988836007
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,5641.085540111706
+./data/A-n37-k5.vrp,CUST,5,4456.4874445384285
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6129.183556008352
+./data/A-n37-k5.vrp,CUST,5,4440.735939411906
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6405.711834616359
+./data/A-n37-k5.vrp,CUST,5,4456.398208963208
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6312.459267221724
+./data/A-n37-k5.vrp,CUST,5,4452.9105997444385
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6718.202761289555
+./data/A-n37-k5.vrp,CUST,5,4430.217372444113
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6971.288309633297
+./data/A-n37-k5.vrp,CUST,5,4441.427598735943
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6347.338029204448
+./data/A-n37-k5.vrp,CUST,5,4436.046805883969
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6512.562167167529
+./data/A-n37-k5.vrp,CUST,5,4441.438252406019
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6327.877351293791
+./data/A-n37-k5.vrp,CUST,5,4449.614191185001
+./data/A-n37-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 669),
+./data/A-n37-k5.vrp,VEH,5,6441.53683925079
+./data/A-n37-k5.vrp,CUST,5,4441.363420011351
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,7277.092377966203
+./data/A-n37-k6.vrp,CUST,7,4662.046408025244
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6736.070572964355
+./data/A-n37-k6.vrp,CUST,7,4592.416765254127
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6853.954242968226
+./data/A-n37-k6.vrp,CUST,7,4622.574110222964
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,7024.010892292793
+./data/A-n37-k6.vrp,CUST,7,4627.833331656876
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,7566.498760723282
+./data/A-n37-k6.vrp,CUST,7,4637.1767753096065
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,7238.94592817625
+./data/A-n37-k6.vrp,CUST,8,4585.15332006161
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6881.899752542708
+./data/A-n37-k6.vrp,CUST,8,4329.178409694153
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6950.043340835792
+./data/A-n37-k6.vrp,CUST,8,4302.262575968818
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6610.315949181017
+./data/A-n37-k6.vrp,CUST,8,4307.232533064557
+./data/A-n37-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 949),
+./data/A-n37-k6.vrp,VEH,6,6895.57464692466
+./data/A-n37-k6.vrp,CUST,8,4317.427815756322
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6302.630934553115
+./data/A-n38-k5.vrp,CUST,6,4482.126510195416
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6819.7607280295515
+./data/A-n38-k5.vrp,CUST,6,4495.798524796146
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6825.9916663111835
+./data/A-n38-k5.vrp,CUST,6,4518.959988259691
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6389.693882481366
+./data/A-n38-k5.vrp,CUST,6,4485.808369599051
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6759.484316480594
+./data/A-n38-k5.vrp,CUST,6,4555.589108966556
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6562.029017503145
+./data/A-n38-k5.vrp,CUST,6,4512.504927232796
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6320.046080323924
+./data/A-n38-k5.vrp,CUST,6,4488.4845754898815
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6691.28715319941
+./data/A-n38-k5.vrp,CUST,6,4496.863808875155
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,7085.822084961327
+./data/A-n38-k5.vrp,CUST,6,4496.301109748169
+./data/A-n38-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 730),
+./data/A-n38-k5.vrp,VEH,5,6830.250284489587
+./data/A-n38-k5.vrp,CUST,6,4491.581826622196
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,8438.039970465741
+./data/A-n39-k5.vrp,CUST,6,5026.769892360368
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,8512.779441782008
+./data/A-n39-k5.vrp,CUST,6,4984.701939494807
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,8630.321461416417
+./data/A-n39-k5.vrp,CUST,6,5043.671716117096
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,7851.87965420311
+./data/A-n39-k5.vrp,CUST,6,4997.739097253918
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,7901.862879114301
+./data/A-n39-k5.vrp,CUST,6,5038.183414533989
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,8315.800719770517
+./data/A-n39-k5.vrp,CUST,6,5008.181970720021
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,8660.015551883376
+./data/A-n39-k5.vrp,CUST,6,4994.494263168403
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,7361.212990065434
+./data/A-n39-k5.vrp,CUST,6,5008.050745623477
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,7578.410173381884
+./data/A-n39-k5.vrp,CUST,6,5034.276197837142
+./data/A-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 822),
+./data/A-n39-k5.vrp,VEH,5,9293.409193121537
+./data/A-n39-k5.vrp,CUST,6,4997.3833178400555
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7830.609675101884
+./data/A-n39-k6.vrp,CUST,7,4408.913762538793
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7362.629956490832
+./data/A-n39-k6.vrp,CUST,7,4457.581671394832
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7414.61796386328
+./data/A-n39-k6.vrp,CUST,7,4460.834588129102
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,6609.482164539455
+./data/A-n39-k6.vrp,CUST,7,4503.075469398669
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7166.496261959182
+./data/A-n39-k6.vrp,CUST,7,4473.99266393956
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7121.4753525053875
+./data/A-n39-k6.vrp,CUST,7,4459.060640114878
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7060.6181759683095
+./data/A-n39-k6.vrp,CUST,7,4437.081200753952
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7022.838423401076
+./data/A-n39-k6.vrp,CUST,7,4413.503977126405
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,7001.132158345133
+./data/A-n39-k6.vrp,CUST,7,4421.578529647324
+./data/A-n39-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 831),
+./data/A-n39-k6.vrp,VEH,6,8082.495770780566
+./data/A-n39-k6.vrp,CUST,7,4437.655687111086
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8382.603515889767
+./data/A-n44-k7.vrp,CUST,7,5902.98039531063
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8251.810268048
+./data/A-n44-k7.vrp,CUST,7,5909.901341007858
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8584.6083635848
+./data/A-n44-k7.vrp,CUST,7,5871.2594811589215
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8366.709310960277
+./data/A-n44-k7.vrp,CUST,7,6020.094095815019
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,9173.808634645338
+./data/A-n44-k7.vrp,CUST,7,5960.745992121427
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8856.968221959205
+./data/A-n44-k7.vrp,CUST,7,5962.616536634079
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8987.762998233804
+./data/A-n44-k7.vrp,CUST,7,5960.422776433699
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8386.693869567034
+./data/A-n44-k7.vrp,CUST,7,5893.173355785135
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,8783.241080711254
+./data/A-n44-k7.vrp,CUST,7,5935.591513114512
+./data/A-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 937),
+./data/A-n44-k7.vrp,VEH,6,9056.389169340355
+./data/A-n44-k7.vrp,CUST,7,5950.458006698361
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9514.40038739416
+./data/A-n45-k6.vrp,CUST,7,6277.637160719015
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,8707.292778810783
+./data/A-n45-k6.vrp,CUST,7,6252.528394419798
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,8645.080613247297
+./data/A-n45-k6.vrp,CUST,7,6253.469150268302
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9350.075676762886
+./data/A-n45-k6.vrp,CUST,7,6272.649568985717
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,8707.284219485953
+./data/A-n45-k6.vrp,CUST,7,6267.0032310610295
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9069.653195656587
+./data/A-n45-k6.vrp,CUST,7,6266.667249637887
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9644.884779302452
+./data/A-n45-k6.vrp,CUST,7,6266.131279270027
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9638.730128875579
+./data/A-n45-k6.vrp,CUST,7,6247.828242498272
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9481.464439058682
+./data/A-n45-k6.vrp,CUST,7,6271.253629749427
+./data/A-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 944),
+./data/A-n45-k6.vrp,VEH,6,9394.329109076705
+./data/A-n45-k6.vrp,CUST,7,6265.900162557449
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9019.545888651306
+./data/A-n45-k7.vrp,CUST,8,6700.242086048282
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9591.236951623432
+./data/A-n45-k7.vrp,CUST,8,6749.890496835864
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9859.490232469185
+./data/A-n45-k7.vrp,CUST,8,6770.025612035316
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9460.324406299906
+./data/A-n45-k7.vrp,CUST,8,6839.088957221702
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9810.101236718976
+./data/A-n45-k7.vrp,CUST,8,6692.438109123846
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,10025.840926712337
+./data/A-n45-k7.vrp,CUST,8,6743.159162981438
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9721.824912850616
+./data/A-n45-k7.vrp,CUST,8,6743.114150130788
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9359.544260131699
+./data/A-n45-k7.vrp,CUST,8,6871.590243222725
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9762.666711710612
+./data/A-n45-k7.vrp,CUST,8,6706.902451522498
+./data/A-n45-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1146),
+./data/A-n45-k7.vrp,VEH,7,9122.846855587426
+./data/A-n45-k7.vrp,CUST,8,6750.734091029871
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,8216.843963574753
+./data/A-n46-k7.vrp,CUST,7,5892.92060796251
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,8782.587787368982
+./data/A-n46-k7.vrp,CUST,7,5883.81327600477
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,7742.743322359823
+./data/A-n46-k7.vrp,CUST,7,5902.361928338672
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,8288.384834684195
+./data/A-n46-k7.vrp,CUST,7,5887.098839107215
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,8371.27228998364
+./data/A-n46-k7.vrp,CUST,8,5850.864441392636
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,8135.460818445746
+./data/A-n46-k7.vrp,CUST,7,5898.433001919353
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,7819.921826205463
+./data/A-n46-k7.vrp,CUST,7,5916.417016289896
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,7925.084536196681
+./data/A-n46-k7.vrp,CUST,7,5856.76696044848
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,7469.881118017323
+./data/A-n46-k7.vrp,CUST,7,5867.870554697818
+./data/A-n46-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 914),
+./data/A-n46-k7.vrp,VEH,7,7942.74174409375
+./data/A-n46-k7.vrp,CUST,7,5959.9128214606535
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10915.47565965478
+./data/A-n48-k7.vrp,CUST,8,7604.694191855851
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,11523.390523809197
+./data/A-n48-k7.vrp,CUST,8,7713.16238006792
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10705.908101028119
+./data/A-n48-k7.vrp,CUST,8,7635.0281234281665
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,11013.966146815921
+./data/A-n48-k7.vrp,CUST,8,7634.9959094287215
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10474.086474606403
+./data/A-n48-k7.vrp,CUST,8,7683.675077737705
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,11196.271300362794
+./data/A-n48-k7.vrp,CUST,8,7641.244384513925
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10912.273918415263
+./data/A-n48-k7.vrp,CUST,8,7762.036017014556
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10967.90786439941
+./data/A-n48-k7.vrp,CUST,8,7627.564722243896
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,10699.61967697452
+./data/A-n48-k7.vrp,CUST,8,7684.311806405227
+./data/A-n48-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1073),
+./data/A-n48-k7.vrp,VEH,7,11188.775344672787
+./data/A-n48-k7.vrp,CUST,8,7693.37938242446
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,11662.203574904233
+./data/A-n53-k7.vrp,CUST,8,7676.600956606865
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,11594.216071336949
+./data/A-n53-k7.vrp,CUST,8,7702.091893867131
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,10431.506876139223
+./data/A-n53-k7.vrp,CUST,8,7694.176555652441
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,10851.19208922872
+./data/A-n53-k7.vrp,CUST,8,7678.30935974454
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,11108.564128511856
+./data/A-n53-k7.vrp,CUST,8,7645.224124378185
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,11551.172140879706
+./data/A-n53-k7.vrp,CUST,8,7646.555094683591
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,11754.741161014845
+./data/A-n53-k7.vrp,CUST,8,7692.068067060641
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,10478.353528689422
+./data/A-n53-k7.vrp,CUST,8,7706.29686346375
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,10899.064230694265
+./data/A-n53-k7.vrp,CUST,8,7695.5390088148015
+./data/A-n53-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1010),
+./data/A-n53-k7.vrp,VEH,7,10855.203663733004
+./data/A-n53-k7.vrp,CUST,8,7704.660340384278
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12120.458055173767
+./data/A-n54-k7.vrp,CUST,8,8617.743376532146
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,13174.997345691438
+./data/A-n54-k7.vrp,CUST,8,8633.145188954046
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12275.203805062818
+./data/A-n54-k7.vrp,CUST,8,8664.642825871959
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12636.997748448608
+./data/A-n54-k7.vrp,CUST,8,8636.396896272214
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12412.003739046344
+./data/A-n54-k7.vrp,CUST,8,8688.400988367746
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12859.487841926264
+./data/A-n54-k7.vrp,CUST,8,8602.966152360277
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,12393.251867197674
+./data/A-n54-k7.vrp,CUST,8,8572.033450874924
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,13531.985608527384
+./data/A-n54-k7.vrp,CUST,8,8601.480685524008
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,13046.298606721371
+./data/A-n54-k7.vrp,CUST,8,8675.036547709557
+./data/A-n54-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Best value: 1167),
+./data/A-n54-k7.vrp,VEH,7,11459.35719041419
+./data/A-n54-k7.vrp,CUST,8,8708.658202583805
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,8302.93205056216
+./data/A-n55-k9.vrp,CUST,11,5375.5953634502575
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,8190.601395132538
+./data/A-n55-k9.vrp,CUST,11,5467.700805188747
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,8043.921650314453
+./data/A-n55-k9.vrp,CUST,11,5439.377836980772
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,8029.571094830296
+./data/A-n55-k9.vrp,CUST,11,5338.28984983744
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,7552.521423595146
+./data/A-n55-k9.vrp,CUST,11,5526.371232878193
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,7848.974413159887
+./data/A-n55-k9.vrp,CUST,10,5688.14388849343
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,7858.254072003855
+./data/A-n55-k9.vrp,CUST,11,5353.632974433111
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,7647.239892191776
+./data/A-n55-k9.vrp,CUST,11,5401.568626319056
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,8474.521217609996
+./data/A-n55-k9.vrp,CUST,11,5418.481987044858
+./data/A-n55-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 1073),
+./data/A-n55-k9.vrp,VEH,9,7920.118214784421
+./data/A-n55-k9.vrp,CUST,11,5468.966759390582
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,14257.61331276514
+./data/A-n60-k9.vrp,CUST,11,8612.973247872085
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12214.374432042438
+./data/A-n60-k9.vrp,CUST,10,8702.855533565822
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12897.525151081536
+./data/A-n60-k9.vrp,CUST,10,8605.630336980355
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12535.006216164345
+./data/A-n60-k9.vrp,CUST,10,8679.111141737652
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,11891.008558737602
+./data/A-n60-k9.vrp,CUST,10,8724.903927832333
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12967.85659800941
+./data/A-n60-k9.vrp,CUST,10,8693.024471616702
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12852.123879130628
+./data/A-n60-k9.vrp,CUST,11,8287.068751811232
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,13796.920978630485
+./data/A-n60-k9.vrp,CUST,10,8774.532474679481
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12370.29538605345
+./data/A-n60-k9.vrp,CUST,10,8773.348718062585
+./data/A-n60-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1408),
+./data/A-n60-k9.vrp,VEH,9,12660.644384265332
+./data/A-n60-k9.vrp,CUST,10,8636.938483770595
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8727.83065181934
+./data/A-n61-k9.vrp,CUST,11,6006.382544710629
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,9160.163827670765
+./data/A-n61-k9.vrp,CUST,11,6000.726991620969
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8476.352270011348
+./data/A-n61-k9.vrp,CUST,11,6081.34048700382
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,9290.149767953868
+./data/A-n61-k9.vrp,CUST,11,5972.835710247096
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,9221.734240129368
+./data/A-n61-k9.vrp,CUST,11,5989.01160707321
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8539.38064072267
+./data/A-n61-k9.vrp,CUST,11,5995.847701808075
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8537.09484817525
+./data/A-n61-k9.vrp,CUST,11,5938.227204202868
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8846.66240776112
+./data/A-n61-k9.vrp,CUST,11,5939.367698299068
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,9345.997620960137
+./data/A-n61-k9.vrp,CUST,11,5965.7582063499585
+./data/A-n61-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1035),
+./data/A-n61-k9.vrp,VEH,9,8889.488907252446
+./data/A-n61-k9.vrp,CUST,11,6092.142485587968
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,15796.44785237687
+./data/A-n62-k8.vrp,CUST,9,10813.628824537176
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,15661.332472503147
+./data/A-n62-k8.vrp,CUST,9,10844.996105114516
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,16540.736446521994
+./data/A-n62-k8.vrp,CUST,9,10826.541827153656
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,16227.087126801685
+./data/A-n62-k8.vrp,CUST,9,10922.627729960599
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,15121.781835162772
+./data/A-n62-k8.vrp,CUST,9,10823.14151810404
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,16665.106098128454
+./data/A-n62-k8.vrp,CUST,9,10810.505187490413
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,15973.71683820555
+./data/A-n62-k8.vrp,CUST,9,10891.980324838363
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,17299.351411403208
+./data/A-n62-k8.vrp,CUST,9,10813.31173595168
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,16966.594895523183
+./data/A-n62-k8.vrp,CUST,9,10859.077267679586
+./data/A-n62-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1290),
+./data/A-n62-k8.vrp,VEH,8,15843.670386999423
+./data/A-n62-k8.vrp,CUST,9,10888.34946134354
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,18771.343830225855
+./data/A-n63-k9.vrp,CUST,11,12303.28700274657
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17365.62041772699
+./data/A-n63-k9.vrp,CUST,11,12241.243252780421
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17545.320191037343
+./data/A-n63-k9.vrp,CUST,11,12290.343722742877
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,18146.55690671006
+./data/A-n63-k9.vrp,CUST,11,12173.225404609562
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17892.63700709528
+./data/A-n63-k9.vrp,CUST,11,12725.822971396963
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,18033.85338627017
+./data/A-n63-k9.vrp,CUST,11,12262.024648993161
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17872.111784473982
+./data/A-n63-k9.vrp,CUST,11,12354.67092059541
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17393.998520363595
+./data/A-n63-k9.vrp,CUST,11,12961.170121506986
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,18554.170288168873
+./data/A-n63-k9.vrp,CUST,11,12259.33952169695
+./data/A-n63-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1634),
+./data/A-n63-k9.vrp,VEH,9,17498.3404906431
+./data/A-n63-k9.vrp,CUST,11,12307.878354259727
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,10886.61255905858
+./data/A-n63-k10.vrp,CUST,12,7219.598598048233
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,10510.458206649626
+./data/A-n63-k10.vrp,CUST,12,7312.354079893698
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,10982.430355733944
+./data/A-n63-k10.vrp,CUST,12,7197.57970995327
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,10346.730662538826
+./data/A-n63-k10.vrp,CUST,12,7191.283210254237
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,11387.844258649955
+./data/A-n63-k10.vrp,CUST,12,7479.800779438087
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,12033.20625853444
+./data/A-n63-k10.vrp,CUST,12,7285.213495057719
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,11186.643769801753
+./data/A-n63-k10.vrp,CUST,12,7154.270364004392
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,11116.39535137715
+./data/A-n63-k10.vrp,CUST,12,7259.016894646507
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,10585.92357955718
+./data/A-n63-k10.vrp,CUST,12,7203.044623685981
+./data/A-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1315),
+./data/A-n63-k10.vrp,VEH,10,11209.29651480614
+./data/A-n63-k10.vrp,CUST,12,7144.913610053144
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,16055.329137829998
+./data/A-n64-k9.vrp,CUST,11,10767.988436357486
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,16987.041214980738
+./data/A-n64-k9.vrp,CUST,11,10760.643248276576
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,16743.025310276695
+./data/A-n64-k9.vrp,CUST,11,10794.070173579825
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,15519.112011959487
+./data/A-n64-k9.vrp,CUST,10,11512.085839666823
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,16348.689421967645
+./data/A-n64-k9.vrp,CUST,11,11444.880904309035
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,15166.62852279351
+./data/A-n64-k9.vrp,CUST,11,10745.265940994715
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,15308.201675110795
+./data/A-n64-k9.vrp,CUST,11,11213.783546051971
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,15946.727001100307
+./data/A-n64-k9.vrp,CUST,11,10827.262788022927
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,17333.546960369255
+./data/A-n64-k9.vrp,CUST,10,11485.613993541168
+./data/A-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1402),
+./data/A-n64-k9.vrp,VEH,9,15959.315863782595
+./data/A-n64-k9.vrp,CUST,11,10802.644942164154
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12105.602674229476
+./data/A-n65-k9.vrp,CUST,11,8259.667901850084
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12369.820500970656
+./data/A-n65-k9.vrp,CUST,11,8292.781916683065
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12957.038346864118
+./data/A-n65-k9.vrp,CUST,11,8260.072123669686
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,11580.889568737126
+./data/A-n65-k9.vrp,CUST,11,8260.010769747536
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12598.380732938427
+./data/A-n65-k9.vrp,CUST,11,8482.903370386042
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12015.050608291269
+./data/A-n65-k9.vrp,CUST,11,8304.849653770798
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,12787.32837258399
+./data/A-n65-k9.vrp,CUST,10,8847.810692612398
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,11865.492622760452
+./data/A-n65-k9.vrp,CUST,10,8805.60296219596
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,11796.261509992708
+./data/A-n65-k9.vrp,CUST,10,8802.107107071022
+./data/A-n65-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1177),
+./data/A-n65-k9.vrp,VEH,9,11564.945734137647
+./data/A-n65-k9.vrp,CUST,11,8217.863296531614
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,11959.576799610324
+./data/A-n69-k9.vrp,CUST,11,8379.537297960038
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,11874.405027596838
+./data/A-n69-k9.vrp,CUST,11,8863.524751244666
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,12796.907706466889
+./data/A-n69-k9.vrp,CUST,10,8887.609782215284
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,11723.20003220093
+./data/A-n69-k9.vrp,CUST,10,8912.155665190514
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,11866.356336985184
+./data/A-n69-k9.vrp,CUST,10,8882.004557700622
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,11888.647694583266
+./data/A-n69-k9.vrp,CUST,10,8895.18918999445
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,13431.02775344808
+./data/A-n69-k9.vrp,CUST,11,8847.666345101123
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,12064.772250833597
+./data/A-n69-k9.vrp,CUST,11,8782.715410440605
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,12814.835526554127
+./data/A-n69-k9.vrp,CUST,11,8363.921879946696
+./data/A-n69-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1168),
+./data/A-n69-k9.vrp,VEH,9,12357.653255958796
+./data/A-n69-k9.vrp,CUST,10,8861.896591719893
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,24786.75777828871
+./data/A-n80-k10.vrp,CUST,11,19139.050694356043
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,25773.49865717091
+./data/A-n80-k10.vrp,CUST,11,19225.095573724524
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,26954.99368906036
+./data/A-n80-k10.vrp,CUST,11,19093.876478100392
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,25758.678806196578
+./data/A-n80-k10.vrp,CUST,11,19161.49693623045
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,26571.67076040008
+./data/A-n80-k10.vrp,CUST,11,19303.622390343415
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,26117.58386501788
+./data/A-n80-k10.vrp,CUST,11,19230.900056701495
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,25019.58233167795
+./data/A-n80-k10.vrp,CUST,11,19203.497981200868
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,25780.27444710401
+./data/A-n80-k10.vrp,CUST,12,19158.73552016065
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,25434.9898748838
+./data/A-n80-k10.vrp,CUST,11,19122.086236888157
+./data/A-n80-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1764),
+./data/A-n80-k10.vrp,VEH,10,27290.293387287555
+./data/A-n80-k10.vrp,CUST,11,19216.569788533518
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,7065.550463808764
+./data/B-n31-k5.vrp,CUST,5,5492.16713572066
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6819.620895452788
+./data/B-n31-k5.vrp,CUST,5,5476.360455670688
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,7110.470928334685
+./data/B-n31-k5.vrp,CUST,5,5472.078031216058
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6560.743375710538
+./data/B-n31-k5.vrp,CUST,5,5468.166100052003
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6705.368896433762
+./data/B-n31-k5.vrp,CUST,5,5461.323284253532
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6673.1499528993545
+./data/B-n31-k5.vrp,CUST,5,5477.215094350955
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,7318.847422428274
+./data/B-n31-k5.vrp,CUST,5,5482.783908552578
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6603.687618443514
+./data/B-n31-k5.vrp,CUST,5,5478.149924044097
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6202.819918566887
+./data/B-n31-k5.vrp,CUST,5,5516.0142536930025
+./data/B-n31-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 672),
+./data/B-n31-k5.vrp,VEH,5,6588.464862141626
+./data/B-n31-k5.vrp,CUST,5,5508.543673206113
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8370.24571008693
+./data/B-n34-k5.vrp,CUST,7,5508.053382906483
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8656.90658797995
+./data/B-n34-k5.vrp,CUST,7,5437.237624135039
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8778.562582041708
+./data/B-n34-k5.vrp,CUST,7,5440.066795771085
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8284.693870166697
+./data/B-n34-k5.vrp,CUST,7,5448.351103574403
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8000.010536145063
+./data/B-n34-k5.vrp,CUST,7,5415.9032468480555
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,7991.686605845411
+./data/B-n34-k5.vrp,CUST,7,5504.056426370051
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8740.169198663345
+./data/B-n34-k5.vrp,CUST,7,5416.384984632519
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8849.409460506151
+./data/B-n34-k5.vrp,CUST,7,5498.085691918938
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,8746.786661005126
+./data/B-n34-k5.vrp,CUST,7,5475.309656273026
+./data/B-n34-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 788),
+./data/B-n34-k5.vrp,VEH,5,9728.746239654718
+./data/B-n34-k5.vrp,CUST,7,5417.188137674204
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10568.117784987657
+./data/B-n35-k5.vrp,CUST,6,7563.636107411021
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10273.553398625321
+./data/B-n35-k5.vrp,CUST,6,7686.06674511866
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,9913.051006324155
+./data/B-n35-k5.vrp,CUST,6,7491.958967745093
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10917.641943305518
+./data/B-n35-k5.vrp,CUST,6,7648.693578223637
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10695.249744561954
+./data/B-n35-k5.vrp,CUST,6,7585.064778923598
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10329.714250492021
+./data/B-n35-k5.vrp,CUST,6,7623.217096740503
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10535.873321535679
+./data/B-n35-k5.vrp,CUST,6,7576.6415129326115
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,10212.314846873389
+./data/B-n35-k5.vrp,CUST,6,7665.130047905021
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,9755.628629011992
+./data/B-n35-k5.vrp,CUST,6,7518.473669181356
+./data/B-n35-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 955),
+./data/B-n35-k5.vrp,VEH,5,11110.741931784516
+./data/B-n35-k5.vrp,CUST,6,7623.759909832502
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7528.010260039489
+./data/B-n38-k6.vrp,CUST,7,5888.648407061118
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7565.502023433466
+./data/B-n38-k6.vrp,CUST,7,5421.17893475882
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,6932.545644215004
+./data/B-n38-k6.vrp,CUST,7,5392.121195761036
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7542.637512944064
+./data/B-n38-k6.vrp,CUST,6,5914.319354903319
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7317.213714069245
+./data/B-n38-k6.vrp,CUST,7,5713.349717427571
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7248.692086322787
+./data/B-n38-k6.vrp,CUST,7,5664.543288515966
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7258.343275037824
+./data/B-n38-k6.vrp,CUST,7,5757.53701068662
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7299.446043527738
+./data/B-n38-k6.vrp,CUST,7,5336.116384916808
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,6914.118582338098
+./data/B-n38-k6.vrp,CUST,7,5357.546926493156
+./data/B-n38-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 805),
+./data/B-n38-k6.vrp,VEH,6,7971.923732644307
+./data/B-n38-k6.vrp,CUST,7,5388.810299520804
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,8949.012135384184
+./data/B-n39-k5.vrp,CUST,6,4971.568098357192
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7688.93338928598
+./data/B-n39-k5.vrp,CUST,5,5620.607626971344
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7491.158691137492
+./data/B-n39-k5.vrp,CUST,6,4967.501817798815
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7016.849987535838
+./data/B-n39-k5.vrp,CUST,6,4990.910833214086
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7213.7055674299845
+./data/B-n39-k5.vrp,CUST,6,5079.176318302074
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,8038.311608961481
+./data/B-n39-k5.vrp,CUST,6,5525.761675001232
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,8078.9772616323335
+./data/B-n39-k5.vrp,CUST,6,4909.12118530174
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,8264.392287048118
+./data/B-n39-k5.vrp,CUST,6,4897.753986843212
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7124.366035238667
+./data/B-n39-k5.vrp,CUST,6,4968.082506270907
+./data/B-n39-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 549),
+./data/B-n39-k5.vrp,VEH,5,7909.425252527498
+./data/B-n39-k5.vrp,CUST,5,5626.943639924545
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7525.284481183842
+./data/B-n41-k6.vrp,CUST,7,5452.26236346022
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7707.418574512531
+./data/B-n41-k6.vrp,CUST,7,5466.588886023326
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7530.880571467046
+./data/B-n41-k6.vrp,CUST,7,5497.000152030088
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7839.492242712144
+./data/B-n41-k6.vrp,CUST,7,5489.369039368837
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,8031.249625113062
+./data/B-n41-k6.vrp,CUST,7,5450.395803599995
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,8126.237215914487
+./data/B-n41-k6.vrp,CUST,7,5447.4330227831115
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7346.239170558151
+./data/B-n41-k6.vrp,CUST,7,5443.321434979445
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7778.285128017893
+./data/B-n41-k6.vrp,CUST,7,5504.9001585995675
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,7320.098983589306
+./data/B-n41-k6.vrp,CUST,7,5451.277805978614
+./data/B-n41-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 829),
+./data/B-n41-k6.vrp,VEH,6,8297.906739177746
+./data/B-n41-k6.vrp,CUST,7,5483.37171594126
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,8037.616885118989
+./data/B-n43-k6.vrp,CUST,6,5928.538545718229
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7769.07656845091
+./data/B-n43-k6.vrp,CUST,6,5898.5049113362875
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7847.403845513305
+./data/B-n43-k6.vrp,CUST,7,5844.861032109274
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,8496.22800002507
+./data/B-n43-k6.vrp,CUST,6,5915.019468551445
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7582.5804738074585
+./data/B-n43-k6.vrp,CUST,6,5908.374259855569
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7831.282576439143
+./data/B-n43-k6.vrp,CUST,6,5951.075247432102
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7598.841901492136
+./data/B-n43-k6.vrp,CUST,6,5966.311241398855
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,8010.471732855662
+./data/B-n43-k6.vrp,CUST,6,5929.098831146711
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7888.910698078652
+./data/B-n43-k6.vrp,CUST,6,5901.326808002073
+./data/B-n43-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 742),
+./data/B-n43-k6.vrp,VEH,6,7523.538095598166
+./data/B-n43-k6.vrp,CUST,6,5938.253813642456
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8130.831666302879
+./data/B-n44-k7.vrp,CUST,9,5368.650380149644
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8476.882143422035
+./data/B-n44-k7.vrp,CUST,8,5766.658985352128
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8814.810024210767
+./data/B-n44-k7.vrp,CUST,8,5780.628988670254
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,7743.523979889201
+./data/B-n44-k7.vrp,CUST,8,5785.8660894748355
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8945.658838290012
+./data/B-n44-k7.vrp,CUST,8,5785.69137534619
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8449.631395797553
+./data/B-n44-k7.vrp,CUST,8,5744.129024990263
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8795.593871796475
+./data/B-n44-k7.vrp,CUST,8,5788.088146811044
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8287.046748447052
+./data/B-n44-k7.vrp,CUST,8,5785.839080672407
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8610.879294741519
+./data/B-n44-k7.vrp,CUST,8,5792.507083896744
+./data/B-n44-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 909),
+./data/B-n44-k7.vrp,VEH,7,8716.092298711104
+./data/B-n44-k7.vrp,CUST,8,5796.064153442822
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9139.529226901177
+./data/B-n45-k5.vrp,CUST,6,6247.140544873837
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9111.202635933632
+./data/B-n45-k5.vrp,CUST,6,6247.808366907402
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9301.931099310528
+./data/B-n45-k5.vrp,CUST,6,6238.461178551808
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,8886.55546217412
+./data/B-n45-k5.vrp,CUST,6,6258.018517977844
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9423.536191248742
+./data/B-n45-k5.vrp,CUST,6,6250.3018862476365
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9448.33258997863
+./data/B-n45-k5.vrp,CUST,6,6217.023194467017
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,10279.315991205749
+./data/B-n45-k5.vrp,CUST,6,6230.194098487952
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9279.91567900065
+./data/B-n45-k5.vrp,CUST,6,6214.952805714759
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9321.783920920394
+./data/B-n45-k5.vrp,CUST,6,6223.320127608504
+./data/B-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Optimal value: 751),
+./data/B-n45-k5.vrp,VEH,5,9049.67516260535
+./data/B-n45-k5.vrp,CUST,6,6210.17318884045
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7610.926711623045
+./data/B-n45-k6.vrp,CUST,7,5419.416834178922
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7472.578944290795
+./data/B-n45-k6.vrp,CUST,7,5422.02668489668
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7345.424101319284
+./data/B-n45-k6.vrp,CUST,7,5415.353488958747
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7683.542134449972
+./data/B-n45-k6.vrp,CUST,7,5438.86924612225
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7677.667491436008
+./data/B-n45-k6.vrp,CUST,7,5442.92009370604
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7525.800466783825
+./data/B-n45-k6.vrp,CUST,7,5452.061612316767
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7646.647557849484
+./data/B-n45-k6.vrp,CUST,7,5437.901761354702
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7258.369121944652
+./data/B-n45-k6.vrp,CUST,7,5447.521944387085
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7132.317432462505
+./data/B-n45-k6.vrp,CUST,7,5453.6057178243445
+./data/B-n45-k6.vrp,COMMENT : (Augerat et al, Min no of trucks: 6, Optimal value: 678),
+./data/B-n45-k6.vrp,VEH,6,7282.655626176821
+./data/B-n45-k6.vrp,CUST,7,5411.673319574637
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8493.100609745039
+./data/B-n50-k7.vrp,CUST,8,6065.564580596631
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,9192.462026706604
+./data/B-n50-k7.vrp,CUST,8,6037.2186158744025
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8941.37891951592
+./data/B-n50-k7.vrp,CUST,8,6036.86564467683
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8659.614688304617
+./data/B-n50-k7.vrp,CUST,8,6046.626296012722
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,9066.978529897911
+./data/B-n50-k7.vrp,CUST,8,6110.553743283959
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,7833.935165332312
+./data/B-n50-k7.vrp,CUST,8,6042.915824541836
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8074.950465150705
+./data/B-n50-k7.vrp,CUST,8,6031.23101705992
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8273.9857415712
+./data/B-n50-k7.vrp,CUST,8,6106.607429454701
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,8364.690209353434
+./data/B-n50-k7.vrp,CUST,8,6059.081934791888
+./data/B-n50-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 741),
+./data/B-n50-k7.vrp,VEH,7,9106.768776113491
+./data/B-n50-k7.vrp,CUST,8,6078.335382029097
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10558.8872204515
+./data/B-n50-k8.vrp,CUST,9,7793.933554105093
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10195.938503390667
+./data/B-n50-k8.vrp,CUST,9,7534.695865257932
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,11489.789465377744
+./data/B-n50-k8.vrp,CUST,9,7510.399387719357
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10283.872166045405
+./data/B-n50-k8.vrp,CUST,9,7582.482811801679
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10716.75606012636
+./data/B-n50-k8.vrp,CUST,10,7523.9741735920425
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10997.231330410461
+./data/B-n50-k8.vrp,CUST,10,7487.8817844564865
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10479.839882707549
+./data/B-n50-k8.vrp,CUST,9,7610.20614337348
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10382.491970602236
+./data/B-n50-k8.vrp,CUST,9,7521.108270870306
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,10644.475775545585
+./data/B-n50-k8.vrp,CUST,10,7497.213356073979
+./data/B-n50-k8.vrp,COMMENT : (Augerat et al, Min no of trucks: 8, Best value: 1313),
+./data/B-n50-k8.vrp,VEH,8,11040.763467093793
+./data/B-n50-k8.vrp,CUST,9,7685.988157194384
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11114.85487922739
+./data/B-n51-k7.vrp,CUST,9,8375.36661250116
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11743.887606121785
+./data/B-n51-k7.vrp,CUST,9,8285.854705419104
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11694.908638032299
+./data/B-n51-k7.vrp,CUST,9,8366.959852154114
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11274.482256801124
+./data/B-n51-k7.vrp,CUST,9,8370.799526466679
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11738.555746003018
+./data/B-n51-k7.vrp,CUST,9,8283.796819956378
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,10905.291397292414
+./data/B-n51-k7.vrp,CUST,9,8358.983077118744
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11202.165721891235
+./data/B-n51-k7.vrp,CUST,9,8346.815541529442
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11316.685228975419
+./data/B-n51-k7.vrp,CUST,9,8339.023014992952
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11467.31153568678
+./data/B-n51-k7.vrp,CUST,9,8247.198770469146
+./data/B-n51-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1032),
+./data/B-n51-k7.vrp,VEH,7,11510.719025011744
+./data/B-n51-k7.vrp,CUST,9,8393.72909694742
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,11211.380560812668
+./data/B-n52-k7.vrp,CUST,8,7145.410789009925
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,10448.793235164965
+./data/B-n52-k7.vrp,CUST,8,6594.490215543785
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,9850.253570888452
+./data/B-n52-k7.vrp,CUST,8,6635.831516599539
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,9702.552562948886
+./data/B-n52-k7.vrp,CUST,8,6899.911061057919
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,10475.570063448495
+./data/B-n52-k7.vrp,CUST,8,6561.004713565542
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,10000.389938851007
+./data/B-n52-k7.vrp,CUST,7,7252.480035839082
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,9769.176632788953
+./data/B-n52-k7.vrp,CUST,8,6593.471029282754
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,10167.009243582412
+./data/B-n52-k7.vrp,CUST,8,6953.306074514856
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,9213.480406853467
+./data/B-n52-k7.vrp,CUST,7,7233.698945168463
+./data/B-n52-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 747),
+./data/B-n52-k7.vrp,VEH,7,10019.700998221224
+./data/B-n52-k7.vrp,CUST,7,7228.170656449069
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10937.51511805048
+./data/B-n56-k7.vrp,CUST,7,6726.799356708674
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,9732.412344187853
+./data/B-n56-k7.vrp,CUST,8,6138.8257815500565
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10346.420362091974
+./data/B-n56-k7.vrp,CUST,8,6179.15722781823
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,8956.012980677457
+./data/B-n56-k7.vrp,CUST,7,6736.682033506849
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10163.680799805972
+./data/B-n56-k7.vrp,CUST,7,6745.297261069041
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10113.7599528359
+./data/B-n56-k7.vrp,CUST,8,6199.451203047884
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10575.013106062082
+./data/B-n56-k7.vrp,CUST,8,6450.393966915683
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,10052.49551941563
+./data/B-n56-k7.vrp,CUST,8,6223.8240938492
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,9739.28935226441
+./data/B-n56-k7.vrp,CUST,8,6076.22544037003
+./data/B-n56-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 707),
+./data/B-n56-k7.vrp,VEH,7,9439.852227452406
+./data/B-n56-k7.vrp,CUST,7,6672.884715693217
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,17859.880044040558
+./data/B-n57-k7.vrp,CUST,9,11026.977972212608
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,16455.867533752385
+./data/B-n57-k7.vrp,CUST,9,10933.216479499657
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,17454.770288470347
+./data/B-n57-k7.vrp,CUST,9,11015.660614985267
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,17407.742328320397
+./data/B-n57-k7.vrp,CUST,9,10950.485343245655
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,16842.301481360286
+./data/B-n57-k7.vrp,CUST,9,10949.723064443744
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,16747.059712953982
+./data/B-n57-k7.vrp,CUST,9,10861.878259749486
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,15893.468954530525
+./data/B-n57-k7.vrp,CUST,9,10992.967232664367
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,15342.515475200915
+./data/B-n57-k7.vrp,CUST,9,10937.523073072927
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,17414.71058738627
+./data/B-n57-k7.vrp,CUST,9,10974.819581191849
+./data/B-n57-k7.vrp,COMMENT : (Augerat et al, Min no of trucks: 7, Optimal value: 1153),
+./data/B-n57-k7.vrp,VEH,7,16250.316705755798
+./data/B-n57-k7.vrp,CUST,9,10913.986908760593
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16784.029995488276
+./data/B-n57-k9.vrp,CUST,10,13145.392028994562
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16663.993461957514
+./data/B-n57-k9.vrp,CUST,10,13100.905650035853
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16499.90073197711
+./data/B-n57-k9.vrp,CUST,10,13101.932811936962
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16309.539134254828
+./data/B-n57-k9.vrp,CUST,10,12994.871965699098
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16562.035620506336
+./data/B-n57-k9.vrp,CUST,10,13118.597684637245
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16921.547225468585
+./data/B-n57-k9.vrp,CUST,10,13031.171682976366
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16538.855970848203
+./data/B-n57-k9.vrp,CUST,10,13035.908593279399
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16578.758486656017
+./data/B-n57-k9.vrp,CUST,10,13122.158030420409
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,17111.971709170117
+./data/B-n57-k9.vrp,CUST,10,12991.46485555612
+./data/B-n57-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1598),
+./data/B-n57-k9.vrp,VEH,9,16475.942041674898
+./data/B-n57-k9.vrp,CUST,10,12982.140061013686
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15855.331330109604
+./data/B-n63-k10.vrp,CUST,12,11584.178487476636
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,16033.63310846549
+./data/B-n63-k10.vrp,CUST,11,11523.41882509568
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15162.371874468186
+./data/B-n63-k10.vrp,CUST,12,11569.436079708974
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15691.939383621902
+./data/B-n63-k10.vrp,CUST,11,11581.912265426712
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15945.48322233635
+./data/B-n63-k10.vrp,CUST,12,11455.558677924855
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15085.237902694778
+./data/B-n63-k10.vrp,CUST,12,11045.775550857657
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,16150.996087607786
+./data/B-n63-k10.vrp,CUST,11,11540.133838095551
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15586.81075535393
+./data/B-n63-k10.vrp,CUST,11,11504.428389995202
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,15985.390158640805
+./data/B-n63-k10.vrp,CUST,12,11205.185946650796
+./data/B-n63-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1537),
+./data/B-n63-k10.vrp,VEH,10,16304.899215774178
+./data/B-n63-k10.vrp,CUST,11,11583.0360912918
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9815.848136332066
+./data/B-n64-k9.vrp,CUST,11,6378.692842776733
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,8998.951180000151
+./data/B-n64-k9.vrp,CUST,11,6385.772281918355
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,10344.274001947531
+./data/B-n64-k9.vrp,CUST,11,6412.30146421014
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9182.328247478306
+./data/B-n64-k9.vrp,CUST,11,6416.624165678179
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9338.62606670697
+./data/B-n64-k9.vrp,CUST,11,6394.574324785792
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9988.113224432847
+./data/B-n64-k9.vrp,CUST,11,6362.8640002957
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9469.542669907058
+./data/B-n64-k9.vrp,CUST,11,6338.101253115513
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9792.547126844353
+./data/B-n64-k9.vrp,CUST,11,6384.445569220846
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9288.333057534108
+./data/B-n64-k9.vrp,CUST,11,6390.228755468683
+./data/B-n64-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Optimal value: 861),
+./data/B-n64-k9.vrp,VEH,9,9839.689252340875
+./data/B-n64-k9.vrp,CUST,11,6385.1328758520185
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,16096.796478556455
+./data/B-n66-k9.vrp,CUST,10,11719.013330381309
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,14923.597090961839
+./data/B-n66-k9.vrp,CUST,10,11727.1880869643
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15519.122798972363
+./data/B-n66-k9.vrp,CUST,10,11747.744042770108
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15941.86416125692
+./data/B-n66-k9.vrp,CUST,10,11728.449806687815
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15313.547847751412
+./data/B-n66-k9.vrp,CUST,10,11781.331335975257
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15260.78832660132
+./data/B-n66-k9.vrp,CUST,11,11711.680422981039
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15508.247982263603
+./data/B-n66-k9.vrp,CUST,10,11736.936132733084
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,15340.971022768914
+./data/B-n66-k9.vrp,CUST,10,11735.632336458419
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,16030.60019668854
+./data/B-n66-k9.vrp,CUST,10,11736.224351282226
+./data/B-n66-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1374),
+./data/B-n66-k9.vrp,VEH,9,14848.573362347564
+./data/B-n66-k9.vrp,CUST,10,11768.798868808115
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10046.4310620605
+./data/B-n67-k10.vrp,CUST,11,7458.973578841715
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10090.212110331388
+./data/B-n67-k10.vrp,CUST,11,7417.37038315
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,9923.76052768907
+./data/B-n67-k10.vrp,CUST,11,7267.54889242077
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10821.518382241298
+./data/B-n67-k10.vrp,CUST,11,7307.707642085571
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10022.339053759113
+./data/B-n67-k10.vrp,CUST,11,7388.300493809481
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10804.442614184787
+./data/B-n67-k10.vrp,CUST,11,7325.605997079631
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10020.880487111119
+./data/B-n67-k10.vrp,CUST,11,7305.079625042488
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,9814.409241693736
+./data/B-n67-k10.vrp,CUST,11,7317.143258810871
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,10249.050841979757
+./data/B-n67-k10.vrp,CUST,11,7335.4836362222395
+./data/B-n67-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1033),
+./data/B-n67-k10.vrp,VEH,10,9985.422899663812
+./data/B-n67-k10.vrp,CUST,11,7379.455562567633
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,17690.176161819134
+./data/B-n68-k9.vrp,CUST,10,12411.907708034747
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,19378.19446200152
+./data/B-n68-k9.vrp,CUST,10,12374.956578432482
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,16999.039940396007
+./data/B-n68-k9.vrp,CUST,10,12410.513145908464
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,17358.98699096221
+./data/B-n68-k9.vrp,CUST,11,12225.260268690887
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,18776.552298525094
+./data/B-n68-k9.vrp,CUST,10,12363.51054476621
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,17194.887258749593
+./data/B-n68-k9.vrp,CUST,10,12295.723833953905
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,18542.208200505713
+./data/B-n68-k9.vrp,CUST,10,12391.952780971062
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,18454.48235878918
+./data/B-n68-k9.vrp,CUST,10,12462.964005090591
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,16619.663173009878
+./data/B-n68-k9.vrp,CUST,11,11916.947949076572
+./data/B-n68-k9.vrp,COMMENT : (Augerat et al, Min no of trucks: 9, Best value: 1304),
+./data/B-n68-k9.vrp,VEH,9,17681.663364089734
+./data/B-n68-k9.vrp,CUST,10,12385.861001970878
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16053.910757115711
+./data/B-n78-k10.vrp,CUST,11,10968.748798703067
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16163.247021855615
+./data/B-n78-k10.vrp,CUST,11,10960.549773647052
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16974.56938203673
+./data/B-n78-k10.vrp,CUST,11,10949.134724147647
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,15077.375481595922
+./data/B-n78-k10.vrp,CUST,11,10973.554653923922
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16174.41126672158
+./data/B-n78-k10.vrp,CUST,11,11028.117886293803
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16815.770141957983
+./data/B-n78-k10.vrp,CUST,11,10874.273698192905
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16850.516043423293
+./data/B-n78-k10.vrp,CUST,11,10902.523953363992
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16047.185894309854
+./data/B-n78-k10.vrp,CUST,11,10922.588423120902
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,16204.034078048213
+./data/B-n78-k10.vrp,CUST,11,10949.705166432694
+./data/B-n78-k10.vrp,COMMENT : (Augerat et al, Min no of trucks: 10, Best value: 1266),
+./data/B-n78-k10.vrp,VEH,10,17006.249949711048
+./data/B-n78-k10.vrp,CUST,11,10909.214110125247
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,614.6117141288813
+./data/P-n16-k8.vrp,CUST,12,436.643473072236
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,638.688006963512
+./data/P-n16-k8.vrp,CUST,12,436.643473072236
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,620.7650112267173
+./data/P-n16-k8.vrp,CUST,12,436.6434730722361
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,614.8652164974518
+./data/P-n16-k8.vrp,CUST,12,436.643473072236
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,570.2198719655818
+./data/P-n16-k8.vrp,CUST,12,436.6434730722361
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,580.1991092030839
+./data/P-n16-k8.vrp,CUST,12,436.643473072236
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,596.82288519035
+./data/P-n16-k8.vrp,CUST,12,436.6434730722361
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,634.7562676838193
+./data/P-n16-k8.vrp,CUST,12,436.6434730722361
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,587.3581533193604
+./data/P-n16-k8.vrp,CUST,12,436.6434730722361
+./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
+./data/P-n16-k8.vrp,VEH,8,631.0886476763052
+./data/P-n16-k8.vrp,CUST,12,436.643473072236
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2345.3311630686985
+./data/P-n19-k2.vrp,CUST,3,1558.5757974265964
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2419.3042418758127
+./data/P-n19-k2.vrp,CUST,3,1553.3454092188808
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2505.865868141945
+./data/P-n19-k2.vrp,CUST,3,1553.3454092188806
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2430.001280449045
+./data/P-n19-k2.vrp,CUST,3,1557.1693259101644
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2630.8745524368396
+./data/P-n19-k2.vrp,CUST,3,1567.5768682191665
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2201.8525251049637
+./data/P-n19-k2.vrp,CUST,3,1563.9631944625892
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2326.080198523982
+./data/P-n19-k2.vrp,CUST,3,1592.8475164209162
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2399.6778641243777
+./data/P-n19-k2.vrp,CUST,3,1574.52866309007
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2489.0702866644847
+./data/P-n19-k2.vrp,CUST,3,1561.115966277041
+./data/P-n19-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 212),
+./data/P-n19-k2.vrp,VEH,2,2289.328245077681
+./data/P-n19-k2.vrp,CUST,3,1553.3454092188806
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2791.068465690248
+./data/P-n20-k2.vrp,CUST,3,1683.6359514633352
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2733.1167419473772
+./data/P-n20-k2.vrp,CUST,3,1757.3636275757865
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2684.274241409294
+./data/P-n20-k2.vrp,CUST,3,1762.5023319763588
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2755.7172291228953
+./data/P-n20-k2.vrp,CUST,3,1685.5912684699135
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2628.5232788956864
+./data/P-n20-k2.vrp,CUST,3,1776.232232476482
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2843.9635516537137
+./data/P-n20-k2.vrp,CUST,3,1801.2601065353724
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2728.543586380628
+./data/P-n20-k2.vrp,CUST,3,1759.8899048356152
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2563.426947459556
+./data/P-n20-k2.vrp,CUST,3,1695.8240131432722
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2809.706085691366
+./data/P-n20-k2.vrp,CUST,3,1685.698948182937
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,2,2626.309347485567
+./data/P-n20-k2.vrp,CUST,3,1727.4402377669853
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2849.3678376265493
+./data/P-n21-k2.vrp,CUST,3,2008.0664085369986
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2845.883144179026
+./data/P-n21-k2.vrp,CUST,3,1990.8383771026413
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2920.176050676384
+./data/P-n21-k2.vrp,CUST,3,1993.294568656272
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2962.5616586564215
+./data/P-n21-k2.vrp,CUST,3,1990.8383771026413
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2711.3639045566642
+./data/P-n21-k2.vrp,CUST,3,1996.1315971798717
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2987.418077414254
+./data/P-n21-k2.vrp,CUST,3,1994.7069778354016
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2952.6609474016204
+./data/P-n21-k2.vrp,CUST,3,1998.173357666972
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2931.9150642682926
+./data/P-n21-k2.vrp,CUST,3,1992.4045529618343
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2925.4525139781817
+./data/P-n21-k2.vrp,CUST,3,1995.6342242437977
+./data/P-n21-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 211),
+./data/P-n21-k2.vrp,VEH,2,2959.5308385772373
+./data/P-n21-k2.vrp,CUST,3,2008.0664085369986
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3264.282746216257
+./data/P-n22-k2.vrp,CUST,3,2067.954348642294
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,2939.3497027166472
+./data/P-n22-k2.vrp,CUST,3,2069.4832249887295
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,2966.9576645657075
+./data/P-n22-k2.vrp,CUST,3,2067.833121816431
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3067.1791515373943
+./data/P-n22-k2.vrp,CUST,3,2069.698289920708
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3469.501567951142
+./data/P-n22-k2.vrp,CUST,3,2101.358374032939
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,2947.607097459459
+./data/P-n22-k2.vrp,CUST,3,2067.954348642294
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,2974.0981275020654
+./data/P-n22-k2.vrp,CUST,3,2092.491192203618
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3039.9485120305158
+./data/P-n22-k2.vrp,CUST,3,2068.3223631045257
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3157.953538963701
+./data/P-n22-k2.vrp,CUST,3,2069.5906102076847
+./data/P-n22-k2.vrp,COMMENT : (Augerat et al, Min no of trucks: 2, Best value: 216),
+./data/P-n22-k2.vrp,VEH,2,3253.3537529712735
+./data/P-n22-k2.vrp,CUST,3,2076.375919763863
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1109.7869896618345
+./data/P-n22-k8.vrp,CUST,13,726.2994814207957
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1215.6162735963626
+./data/P-n22-k8.vrp,CUST,13,728.4606427593709
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1158.628908323712
+./data/P-n22-k8.vrp,CUST,13,727.2061297338879
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1130.2389931000419
+./data/P-n22-k8.vrp,CUST,13,727.206129733888
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1130.103072619308
+./data/P-n22-k8.vrp,CUST,13,727.2061297338879
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1158.7867886559306
+./data/P-n22-k8.vrp,CUST,13,719.3648732180502
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1298.046600799503
+./data/P-n22-k8.vrp,CUST,13,723.202703092255
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1191.2640511904929
+./data/P-n22-k8.vrp,CUST,13,725.7243134387871
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1205.22037222846
+./data/P-n22-k8.vrp,CUST,12,741.0906597075018
+./data/P-n22-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 603),
+./data/P-n22-k8.vrp,VEH,8,1114.0565902251253
+./data/P-n22-k8.vrp,CUST,13,719.3648732180502
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1091.1629031804887
+./data/P-n23-k8.vrp,CUST,13,691.3554478565853
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1217.5757569112443
+./data/P-n23-k8.vrp,CUST,13,691.3554478565852
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1136.3166009327574
+./data/P-n23-k8.vrp,CUST,13,689.1193798790855
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1048.520969939396
+./data/P-n23-k8.vrp,CUST,13,691.3554478565852
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1069.1311621429077
+./data/P-n23-k8.vrp,CUST,13,697.9673624144066
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1227.4049683083679
+./data/P-n23-k8.vrp,CUST,13,691.3554478565853
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1161.5414993259653
+./data/P-n23-k8.vrp,CUST,13,699.1193798790855
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1057.621503164818
+./data/P-n23-k8.vrp,CUST,13,699.1193798790856
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1076.971762294509
+./data/P-n23-k8.vrp,CUST,13,691.3554478565853
+./data/P-n23-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 554),
+./data/P-n23-k8.vrp,VEH,8,1100.412707990759
+./data/P-n23-k8.vrp,CUST,13,692.4195250722705
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4100.093590507135
+./data/P-n40-k5.vrp,CUST,6,2981.6095792149317
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,3981.8734590436447
+./data/P-n40-k5.vrp,CUST,6,2945.7012558965966
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4170.258793841153
+./data/P-n40-k5.vrp,CUST,6,2949.387898375358
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4227.080182126833
+./data/P-n40-k5.vrp,CUST,6,2986.0239872181346
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4180.898544954328
+./data/P-n40-k5.vrp,CUST,6,2971.6325204604277
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4490.756422814188
+./data/P-n40-k5.vrp,CUST,6,2928.92007656674
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4524.23225565325
+./data/P-n40-k5.vrp,CUST,6,2990.4799245469067
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4264.140578239448
+./data/P-n40-k5.vrp,CUST,6,2975.869416467728
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4467.521101370744
+./data/P-n40-k5.vrp,CUST,6,2966.4598905039293
+./data/P-n40-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 458),
+./data/P-n40-k5.vrp,VEH,5,4242.198064928786
+./data/P-n40-k5.vrp,CUST,6,2975.342031256168
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5657.5274702676825
+./data/P-n45-k5.vrp,CUST,6,3891.1704685862537
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5710.142763603037
+./data/P-n45-k5.vrp,CUST,6,3808.811047973264
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5411.911473880608
+./data/P-n45-k5.vrp,CUST,6,3800.3471282844152
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5599.562005003576
+./data/P-n45-k5.vrp,CUST,6,3808.1308447541887
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5279.967820578479
+./data/P-n45-k5.vrp,CUST,6,3840.8494476054802
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5394.636503040471
+./data/P-n45-k5.vrp,CUST,6,3820.7405923438896
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5672.543836292041
+./data/P-n45-k5.vrp,CUST,6,3815.0671968151073
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5305.300476791865
+./data/P-n45-k5.vrp,CUST,6,3837.6967800547573
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5627.591290207477
+./data/P-n45-k5.vrp,CUST,6,3829.7567318730285
+./data/P-n45-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 510),
+./data/P-n45-k5.vrp,VEH,5,5794.690220964787
+./data/P-n45-k5.vrp,CUST,6,3862.762733212656
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4442.363989702681
+./data/P-n50-k7.vrp,CUST,8,3368.5825063186367
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4581.184034810758
+./data/P-n50-k7.vrp,CUST,8,3377.4804451478494
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4826.653377668143
+./data/P-n50-k7.vrp,CUST,8,3349.2910532915057
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4492.137070514526
+./data/P-n50-k7.vrp,CUST,8,3343.8208793916447
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4424.723584746563
+./data/P-n50-k7.vrp,CUST,8,3339.8227041260134
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4758.532924153848
+./data/P-n50-k7.vrp,CUST,8,3341.411583845748
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4471.611974322158
+./data/P-n50-k7.vrp,CUST,8,3351.099335099161
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4668.24791254446
+./data/P-n50-k7.vrp,CUST,8,3361.438726886141
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4525.363391659941
+./data/P-n50-k7.vrp,CUST,8,3339.77385673662
+./data/P-n50-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 554),
+./data/P-n50-k7.vrp,VEH,7,4539.200333753001
+./data/P-n50-k7.vrp,CUST,8,3347.626072248318
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,3978.138641345529
+./data/P-n50-k8.vrp,CUST,10,2785.6002508406636
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4222.207024956312
+./data/P-n50-k8.vrp,CUST,10,2789.194024728366
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4203.930869676823
+./data/P-n50-k8.vrp,CUST,10,2786.4699530425314
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4083.1009095215454
+./data/P-n50-k8.vrp,CUST,10,2798.9805237151413
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4024.742088242265
+./data/P-n50-k8.vrp,CUST,10,2781.4731504181577
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4009.3543187529463
+./data/P-n50-k8.vrp,CUST,10,2820.7201151331897
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4072.548559793914
+./data/P-n50-k8.vrp,CUST,10,2814.070587615737
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,3886.2702779896567
+./data/P-n50-k8.vrp,CUST,10,2795.7779584027767
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,3980.702392609637
+./data/P-n50-k8.vrp,CUST,10,2806.4980462177023
+./data/P-n50-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 649),
+./data/P-n50-k8.vrp,VEH,8,4132.638113873861
+./data/P-n50-k8.vrp,CUST,10,2792.379741097982
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3265.4896914802093
+./data/P-n50-k10.vrp,CUST,13,2416.4024245485366
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3234.239909490514
+./data/P-n50-k10.vrp,CUST,12,2408.614444106165
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3345.460979339372
+./data/P-n50-k10.vrp,CUST,12,2436.5159735805446
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3394.5241178690108
+./data/P-n50-k10.vrp,CUST,12,2444.725716827601
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3256.96095584146
+./data/P-n50-k10.vrp,CUST,12,2421.7932187366737
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3568.5255560847363
+./data/P-n50-k10.vrp,CUST,12,2411.550472822877
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3319.3757554942185
+./data/P-n50-k10.vrp,CUST,12,2431.074645609459
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3452.2255082764723
+./data/P-n50-k10.vrp,CUST,12,2421.797595091492
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3479.00024534956
+./data/P-n50-k10.vrp,CUST,13,2433.495427080311
+./data/P-n50-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 696),
+./data/P-n50-k10.vrp,VEH,10,3388.8474916346977
+./data/P-n50-k10.vrp,CUST,12,2452.4755136570034
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3658.6197666380535
+./data/P-n51-k10.vrp,CUST,13,2517.0333647130337
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3684.210841285653
+./data/P-n51-k10.vrp,CUST,13,2623.333014717723
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3970.140924142706
+./data/P-n51-k10.vrp,CUST,12,2615.7897527726764
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3865.96088586791
+./data/P-n51-k10.vrp,CUST,13,2508.7310554805654
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3688.5560582610465
+./data/P-n51-k10.vrp,CUST,13,2616.518725221671
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3730.2932750216155
+./data/P-n51-k10.vrp,CUST,13,2493.189556190261
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3606.693277850332
+./data/P-n51-k10.vrp,CUST,13,2476.997925264634
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3678.1786978917175
+./data/P-n51-k10.vrp,CUST,13,2508.3244677912185
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3733.433661928158
+./data/P-n51-k10.vrp,CUST,13,2531.426706290027
+./data/P-n51-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 745),
+./data/P-n51-k10.vrp,VEH,10,3829.569362982308
+./data/P-n51-k10.vrp,CUST,13,2502.642676413945
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5628.786620421126
+./data/P-n55-k7.vrp,CUST,7,4369.533805517897
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5528.965635244919
+./data/P-n55-k7.vrp,CUST,7,4372.233259556949
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5443.406975366596
+./data/P-n55-k7.vrp,CUST,7,4358.146908140403
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5500.921428409909
+./data/P-n55-k7.vrp,CUST,7,4372.192801980382
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5256.944236024834
+./data/P-n55-k7.vrp,CUST,7,4385.03118380288
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5387.927810164683
+./data/P-n55-k7.vrp,CUST,8,4272.443264234964
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5657.663847087205
+./data/P-n55-k7.vrp,CUST,7,4369.895926758945
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5709.07149228348
+./data/P-n55-k7.vrp,CUST,7,4386.207392500457
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5731.554118185448
+./data/P-n55-k7.vrp,CUST,7,4368.549586809713
+./data/P-n55-k7.vrp,COMMENT : (Augerat et al, No of trucks: 7, Best value: 524),
+./data/P-n55-k7.vrp,VEH,7,5414.301385691395
+./data/P-n55-k7.vrp,CUST,7,4375.706780839414
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5154.375362675581
+./data/P-n55-k8.vrp,CUST,8,3941.7674641169456
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5250.245019966908
+./data/P-n55-k8.vrp,CUST,8,3986.638188872572
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5644.626999254055
+./data/P-n55-k8.vrp,CUST,8,3938.3319586451125
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5269.71256680345
+./data/P-n55-k8.vrp,CUST,8,3937.2815151049404
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5214.822297441301
+./data/P-n55-k8.vrp,CUST,8,3936.8493442180015
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5609.423663761499
+./data/P-n55-k8.vrp,CUST,8,3976.032767721333
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5258.690463656168
+./data/P-n55-k8.vrp,CUST,8,3977.424059810162
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5222.182011021271
+./data/P-n55-k8.vrp,CUST,8,3960.4308101077663
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5259.099879962282
+./data/P-n55-k8.vrp,CUST,8,3998.305329687042
+./data/P-n55-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 576),
+./data/P-n55-k8.vrp,VEH,7,5445.5906448865935
+./data/P-n55-k8.vrp,CUST,8,3989.5455788474233
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3992.493356382301
+./data/P-n55-k10.vrp,CUST,11,3043.850280064844
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,4157.446991542007
+./data/P-n55-k10.vrp,CUST,11,3089.194017244299
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3927.9407165230677
+./data/P-n55-k10.vrp,CUST,11,3044.002022294597
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,4009.275592354586
+./data/P-n55-k10.vrp,CUST,11,3046.545273409325
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3831.0945157684037
+./data/P-n55-k10.vrp,CUST,11,3049.290435071877
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3923.535981451604
+./data/P-n55-k10.vrp,CUST,11,3067.2846180792494
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3902.7170018498905
+./data/P-n55-k10.vrp,CUST,11,3046.3147562448275
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,3876.039503577135
+./data/P-n55-k10.vrp,CUST,11,3039.186674032465
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,4033.2607931976827
+./data/P-n55-k10.vrp,CUST,11,3038.8703221674714
+./data/P-n55-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 669),
+./data/P-n55-k10.vrp,VEH,10,4163.82399654202
+./data/P-n55-k10.vrp,CUST,11,3076.9940419170484
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2765.858292673686
+./data/P-n55-k15.vrp,CUST,21,1959.9143461819601
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2872.521713109587
+./data/P-n55-k15.vrp,CUST,21,1959.3103979111354
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2723.1819327041826
+./data/P-n55-k15.vrp,CUST,20,2027.51368430336
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2727.284113239599
+./data/P-n55-k15.vrp,CUST,21,1954.6637825836722
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2725.0892438177616
+./data/P-n55-k15.vrp,CUST,21,2027.8278497469396
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2691.437693404253
+./data/P-n55-k15.vrp,CUST,21,1981.8638837841704
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2704.845981781085
+./data/P-n55-k15.vrp,CUST,21,1968.2905989777403
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2785.3544225331116
+./data/P-n55-k15.vrp,CUST,21,1982.9337421265943
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2754.5279345327995
+./data/P-n55-k15.vrp,CUST,21,1989.1808755228155
+./data/P-n55-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 856),
+./data/P-n55-k15.vrp,VEH,16,2743.7872464852585
+./data/P-n55-k15.vrp,CUST,21,1996.116949125163
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4793.721971490857
+./data/P-n60-k10.vrp,CUST,11,3712.480718343312
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4905.725777911819
+./data/P-n60-k10.vrp,CUST,12,3656.175213761651
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4873.452772120923
+./data/P-n60-k10.vrp,CUST,12,3551.3126098337975
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,5002.498279739423
+./data/P-n60-k10.vrp,CUST,11,3679.870787983722
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4774.202935760745
+./data/P-n60-k10.vrp,CUST,12,3657.8305982005736
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4858.154254905861
+./data/P-n60-k10.vrp,CUST,11,3690.882874878243
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4850.904808287284
+./data/P-n60-k10.vrp,CUST,12,3582.5866959092573
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4748.156996609875
+./data/P-n60-k10.vrp,CUST,12,3563.2506183589503
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4974.06161037702
+./data/P-n60-k10.vrp,CUST,11,3680.322015939635
+./data/P-n60-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 706),
+./data/P-n60-k10.vrp,VEH,10,4879.802888130917
+./data/P-n60-k10.vrp,CUST,12,3574.658527982667
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3411.860140516374
+./data/P-n60-k15.vrp,CUST,19,2553.814398919957
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3611.418659781272
+./data/P-n60-k15.vrp,CUST,19,2518.240041796347
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3671.0628654750844
+./data/P-n60-k15.vrp,CUST,18,2579.61155262994
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3554.54373597686
+./data/P-n60-k15.vrp,CUST,19,2538.1089008267295
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3602.5382014964725
+./data/P-n60-k15.vrp,CUST,18,2566.8302925888675
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3519.533387415844
+./data/P-n60-k15.vrp,CUST,19,2543.076331784782
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3505.172030089508
+./data/P-n60-k15.vrp,CUST,19,2511.9659560310033
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3449.8508817285588
+./data/P-n60-k15.vrp,CUST,19,2513.504355494796
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3334.493960129314
+./data/P-n60-k15.vrp,CUST,19,2560.776561491173
+./data/P-n60-k15.vrp,COMMENT : (Augerat et al, No of trucks: 15, Best value: 905),
+./data/P-n60-k15.vrp,VEH,15,3405.125195219318
+./data/P-n60-k15.vrp,CUST,19,2544.456233784472
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5858.029151084852
+./data/P-n65-k10.vrp,CUST,12,4411.3379377928995
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5894.929067388277
+./data/P-n65-k10.vrp,CUST,11,4429.705714649588
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5884.873998150886
+./data/P-n65-k10.vrp,CUST,12,4350.410559363225
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5872.89112218071
+./data/P-n65-k10.vrp,CUST,11,4412.132954082658
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5990.5157462965335
+./data/P-n65-k10.vrp,CUST,11,4444.405122976445
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5734.70475975287
+./data/P-n65-k10.vrp,CUST,11,4388.143084443967
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5732.282289500051
+./data/P-n65-k10.vrp,CUST,11,4414.122450972183
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,6337.729234022354
+./data/P-n65-k10.vrp,CUST,11,4419.904995424238
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,6120.634020506402
+./data/P-n65-k10.vrp,CUST,11,4428.415733256099
+./data/P-n65-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 792),
+./data/P-n65-k10.vrp,VEH,10,5653.478199026186
+./data/P-n65-k10.vrp,CUST,11,4432.907631917133
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6777.655470504161
+./data/P-n70-k10.vrp,CUST,12,4785.82597636047
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6373.462215565874
+./data/P-n70-k10.vrp,CUST,12,4811.396648843934
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6784.7290463489035
+./data/P-n70-k10.vrp,CUST,12,4945.388920207023
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,7009.201913852774
+./data/P-n70-k10.vrp,CUST,12,4774.945520489759
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,7062.947951839942
+./data/P-n70-k10.vrp,CUST,12,4942.86871933739
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6631.035342631836
+./data/P-n70-k10.vrp,CUST,12,4697.5225726616
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6792.066741432948
+./data/P-n70-k10.vrp,CUST,12,4672.243094657117
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6804.523904865873
+./data/P-n70-k10.vrp,CUST,12,4741.784165979918
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6882.1022361039195
+./data/P-n70-k10.vrp,CUST,12,4786.012399032645
+./data/P-n70-k10.vrp,COMMENT : (Augerat et al, No of trucks: 10, Best value: 834),
+./data/P-n70-k10.vrp,VEH,10,6484.798094854564
+./data/P-n70-k10.vrp,CUST,12,4720.871906474361
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18054.03583218073
+./data/P-n76-k4.vrp,CUST,5,11994.263688258337
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18341.991907177082
+./data/P-n76-k4.vrp,CUST,5,12188.651875576335
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18283.32539295149
+./data/P-n76-k4.vrp,CUST,5,12200.40056000739
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18527.130946218913
+./data/P-n76-k4.vrp,CUST,5,11854.4538585638
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18022.995132337488
+./data/P-n76-k4.vrp,CUST,5,11932.074966918368
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,17928.979787500462
+./data/P-n76-k4.vrp,CUST,5,12129.007613807782
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,19004.582466403474
+./data/P-n76-k4.vrp,CUST,5,12351.8802505192
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18658.70740400887
+./data/P-n76-k4.vrp,CUST,5,12245.218507906597
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,18307.1674836702
+./data/P-n76-k4.vrp,CUST,5,11955.300960389975
+./data/P-n76-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Best value: 589),
+./data/P-n76-k4.vrp,VEH,4,17921.93208901453
+./data/P-n76-k4.vrp,CUST,5,11896.836190001011
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14664.15860026733
+./data/P-n76-k5.vrp,CUST,6,9930.293629850092
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14826.427395914698
+./data/P-n76-k5.vrp,CUST,6,9784.19733493864
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14689.66027019475
+./data/P-n76-k5.vrp,CUST,6,9948.609790995804
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14287.450142688906
+./data/P-n76-k5.vrp,CUST,6,9868.152176263207
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14329.695983751948
+./data/P-n76-k5.vrp,CUST,6,9798.843954751801
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,13742.076059896812
+./data/P-n76-k5.vrp,CUST,6,9984.579729473586
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,13902.87864521608
+./data/P-n76-k5.vrp,CUST,6,9845.918827883715
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14878.029330354046
+./data/P-n76-k5.vrp,CUST,6,9819.404440504717
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14938.328551517872
+./data/P-n76-k5.vrp,CUST,6,9888.890039612008
+./data/P-n76-k5.vrp,COMMENT : (Augerat et al, Min no of trucks: 5, Best value: 631),
+./data/P-n76-k5.vrp,VEH,5,14296.527979746503
+./data/P-n76-k5.vrp,CUST,6,9805.42011927427
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,33406.60855664907
+./data/P-n101-k4.vrp,CUST,4,25900.222633695084
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,31603.920454314648
+./data/P-n101-k4.vrp,CUST,4,25950.782433861183
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,33196.39106332058
+./data/P-n101-k4.vrp,CUST,4,25951.617227724324
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,32753.127272214617
+./data/P-n101-k4.vrp,CUST,4,25926.156632586673
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,33152.862191054104
+./data/P-n101-k4.vrp,CUST,4,26013.104444510107
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,32932.68626435128
+./data/P-n101-k4.vrp,CUST,4,25940.41000989654
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,32173.733932796455
+./data/P-n101-k4.vrp,CUST,4,25977.97272900257
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,33760.95842252947
+./data/P-n101-k4.vrp,CUST,4,25997.11559278411
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,33718.21209110704
+./data/P-n101-k4.vrp,CUST,4,25950.284637665733
+./data/P-n101-k4.vrp,COMMENT : (Augerat et al, Min no of trucks: 4, Optimal value: 681),
+./data/P-n101-k4.vrp,VEH,4,34161.72096710274
+./data/P-n101-k4.vrp,CUST,4,25961.853137559905
