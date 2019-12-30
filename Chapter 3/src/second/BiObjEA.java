@@ -27,13 +27,14 @@ public class BiObjEA extends VRPSolver {
 	private int POP_SIZE = 1000;
 	private int TOUR_SIZE = 2;
 	private double XO_RATE = 0.7;
-	private int evalsBudget = 1000000;
+	private int evalsBudget = 100000;//0;
 	
 	@Override
 	public void solve() {
 		//Reference to the best individual in the population
 		BiObjectiveIndividual bestSoFar = InitialisePopution();
 		while(evalsBudget >0) {	
+			
 			//Create child
 			BiObjectiveIndividual child = null;
 			if (rnd.getRnd().nextDouble() < XO_RATE){
@@ -49,7 +50,7 @@ public class BiObjEA extends VRPSolver {
 			evalsBudget --;
 			
 			//Select an Individual with a poor fitness to be replaced
-			Individual poor = tournamentSelectWorst(TOUR_SIZE);
+			BiObjectiveIndividual poor = tournamentSelectWorst(TOUR_SIZE);
 			if (poor.evaluate() > child.evaluate()){
 				//Only replace if the child is an improvement
 				
@@ -60,7 +61,8 @@ public class BiObjEA extends VRPSolver {
 				population.remove(poor);
 				population.add(child);
 			}
-			//System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
+			//if ((evalsBudget % 100)==0)
+			 // System.out.println("e,"+ (evalsBudget+",v,"+bestSoFar.getVehicles() + ",cs," + bestSoFar.getCustService()));
 		}
 		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());

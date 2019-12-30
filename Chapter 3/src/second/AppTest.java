@@ -45,7 +45,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		System.out.print("\n" +probName + ",VEH,");
 		myVRP.solve(eaSolve);
 		eaSolve = new BiObjEA();
-		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
+	    BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
 		System.out.print(probName + ",CUST,");
 		myVRP.solve(eaSolve);
 		
