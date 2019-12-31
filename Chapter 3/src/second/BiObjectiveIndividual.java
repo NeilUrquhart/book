@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-import second.OLDBiObjectiveIndividual.Objective;
+
 import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.RandomSingleton;
@@ -18,7 +18,7 @@ import book.ch2.VRPVisit;
  * evaluated then the solution is stored in the genotype.
  * 
  */
-public class BiObjectiveIndividual  extends EAIndividual {
+public class BiObjectiveIndividual  extends EAIndividual implements Domination  {
 	
 	private class Gene {
 		private boolean newVan = false;
@@ -57,7 +57,8 @@ public class BiObjectiveIndividual  extends EAIndividual {
 	}
 	public enum Objective{
 		VEHICLES,
-		CUST_SERVICE
+		CUST_SERVICE,
+		DISTANCE
 	}
 	
 	private static Objective evalObjective;
@@ -102,11 +103,27 @@ public class BiObjectiveIndividual  extends EAIndividual {
 		/*
 		 * Constructor to create a new random genotype
 		 */
+		boolean all1s = false;
+		boolean all0s = false;
+		
+		//Create some with all newVans set to 1 and some with all set to 0
+		if (rnd.getRnd().nextFloat() > 0.8){
+			if (rnd.getRnd().nextBoolean()){
+			   all1s = true;	
+			}else{
+				all0s = true;
+			}
+		}
 		problem = prob;
 		genotype = new ArrayList<Gene>();
 		for (Visit v : prob.getSolution()){
 			Gene g = new Gene((VRPVisit)v);
-			g.setNewVan(rnd.getRnd().nextBoolean());
+			if (all1s == true)
+				g.setNewVan(true);
+			else if (all0s == true)
+				g.setNewVan(false);
+			else
+			  g.setNewVan(rnd.getRnd().nextBoolean());
 			genotype.add(g);
 		}
 		genotype = randomize(genotype);
@@ -207,8 +224,10 @@ public class BiObjectiveIndividual  extends EAIndividual {
 		
 		if (evalObjective == Objective.VEHICLES)
 			return this.getVehicles();
-		else
+		else if (evalObjective == Objective.CUST_SERVICE)
 			return this.getCustService();
+		else//dist
+			return this.getDistance();
 	}
 
 	public ArrayList<ArrayList<VRPVisit>> getPhenotype(){
@@ -267,4 +286,23 @@ public class BiObjectiveIndividual  extends EAIndividual {
 			
 		return res;
 	}
+	
+
+	public boolean dominates(EAIndividual i) {
+		//True if we dominate the other
+		BiObjectiveIndividual other = (BiObjectiveIndividual)i;
+		if (this.getCustService() > other.getCustService())
+			return false;
+		if (this.getVehicles() > other.getVehicles())
+			return false;
+		
+		if ((this.getVehicles() < other.getVehicles())||(this.getCustService() < other.getCustService()))
+			return true;
+		
+		return false;
+					
+	    			
+	      
+	}
+	
 }
