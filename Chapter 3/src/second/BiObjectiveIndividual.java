@@ -19,11 +19,12 @@ import book.ch2.VRPVisit;
  * 
  */
 public class BiObjectiveIndividual  extends EAIndividual implements Domination  {
+	private int rank =-1;
 	
 	private class Gene {
 		private boolean newVan = false;
 		private VRPVisit visit = null;
-		
+
 		public Gene(VRPVisit aVisit){
 			this.visit = aVisit;
 			this.newVan = false;
@@ -175,16 +176,20 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 	public void mutate() {
 		//Mutate the genotype, by randomly moving a gene. or flipping new van
 		phenotype = null;
-		
-		if (rnd.getRnd().nextBoolean()){
-		int rndGene = rnd.getRnd().nextInt(genotype.size());
-		Gene g = genotype.remove(rndGene);
-		int addPoint = rnd.getRnd().nextInt(genotype.size());
-		genotype.add(addPoint,g);
-		}else{
+		double choice = rnd.getRnd().nextDouble();
+		if (choice < 0.45){
+			int rndGene = rnd.getRnd().nextInt(genotype.size());
+			Gene g = genotype.remove(rndGene);
+			int addPoint = rnd.getRnd().nextInt(genotype.size());
+			genotype.add(addPoint,g);
+		}else if ( choice < 0.999){
 			int rndGene = rnd.getRnd().nextInt(genotype.size());
 			Gene g = genotype.get(rndGene);
 			g.flipNewVan();	
+		}else{
+			boolean newVan = rnd.getRnd().nextBoolean();
+			for (Gene g : genotype)
+				g.setNewVan(newVan);	
 		}
 		
 	}
@@ -288,9 +293,15 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 	}
 	
 
-	public boolean dominates(EAIndividual i) {
+	
+	    			
+	      
+
+
+	@Override
+	public boolean dominates(Domination i) {
 		//True if we dominate the other
-		BiObjectiveIndividual other = (BiObjectiveIndividual)i;
+		BiObjectiveIndividual other = (BiObjectiveIndividual) i;
 		if (this.getCustService() > other.getCustService())
 			return false;
 		if (this.getVehicles() > other.getVehicles())
@@ -298,11 +309,28 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		
 		if ((this.getVehicles() < other.getVehicles())||(this.getCustService() < other.getCustService()))
 			return true;
-		
+					
 		return false;
 					
-	    			
-	      
+	}
+
+	@Override
+	public void setRank(int rank) {
+		this.rank = rank;
+	}
+
+	@Override
+	public int getRank() {
+		// TODO Auto-generated method stub
+		return this.rank;
+	}
+
+	@Override
+	public double[] getVector() {
+		double[] v = new double[2];
+		v[0] = this.getVehicles();
+		v[1] = this.getCustService();
+		return v;
 	}
 	
 }

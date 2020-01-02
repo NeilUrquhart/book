@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import second.Domination;
 import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.Individual;
@@ -86,4 +87,6 @@ public class BiObjectiveIndividual extends Individual {
 		else
 			return this.getCustService();
 	}
+
+	
 }
