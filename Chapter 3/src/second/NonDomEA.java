@@ -35,8 +35,6 @@ public class NonDomEA extends VRPSolver {
 		
 		
 		
-		population.rank();
-		
 		
 		while(evalsBudget >0) {	
 			
