@@ -205,16 +205,17 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 			ArrayList<VRPVisit> newRoute = new ArrayList<VRPVisit>();
 			for (Gene g : genotype){
 				VRPVisit v = g.visit();
+				if (g.newVan()){
+					phenotype.add(newRoute);
+					newRoute = new ArrayList<VRPVisit>();
+				}
 				if (v.getDemand() + routeDemand(newRoute) > problem.getCapacity()){
 					//If next visit cannot be added  due to capacity constraint then
 					//start new route.
 					phenotype.add(newRoute);
 					newRoute = new ArrayList<VRPVisit>();
 				}
-				if (g.newVan()){
-					phenotype.add(newRoute);
-					newRoute = new ArrayList<VRPVisit>();
-				}
+				
 				newRoute.add(v);
 			}
 			phenotype.add(newRoute);
