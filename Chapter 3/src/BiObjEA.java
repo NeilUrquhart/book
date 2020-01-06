@@ -63,7 +63,7 @@ public class BiObjEA extends VRPSolver {
 		}
 		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
-		System.out.println(bestSoFar.getVehicles() +","+ bestSoFar.getCustService());
+		System.out.print(bestSoFar.getVehicles() +","+ bestSoFar.getCustService() +",");
 	}
 
 	private BiObjectiveIndividual InitialisePopution() {

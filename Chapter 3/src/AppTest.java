@@ -26,9 +26,8 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"};
 
-		System.out.println("Ch2 tests");
 		for (String fName : problems)
-			for (int x=0; x < 10; x++)
+			//for (int x=0; x < 10; x++)
 				run("./data/"+ fName);
 	}
 
@@ -45,7 +44,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		myVRP.solve(eaSolve);
 		eaSolve = new BiObjEA();
 		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
-		System.out.print(probName + ",CUST,");
+		System.out.print( ",CUST,");
 		myVRP.solve(eaSolve);
 		
 	
