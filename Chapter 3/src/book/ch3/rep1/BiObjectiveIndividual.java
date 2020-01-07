@@ -1,3 +1,4 @@
+package book.ch3.rep1;
 import java.util.ArrayList;
 
 import second.Domination;
@@ -6,10 +7,17 @@ import book.ch2.CVRPProblem;
 import book.ch2.Individual;
 import book.ch2.VRPVisit;
 
+/*
+ * Neil Urquhart 2019
+ *
+ * This Class extends Individual in order to allow the Routes or CUST_SERVICE to be used
+ * as the fitness criterion.
+ */
+
 
 public class BiObjectiveIndividual extends Individual {
 	public enum Objective{
-		VEHICLES,
+		ROUTES,
 		CUST_SERVICE
 	}
 	
@@ -82,7 +90,7 @@ public class BiObjectiveIndividual extends Individual {
 	
 	public double evaluate(){
 		super.evaluate();//built solution
-		if (evalObjective == Objective.VEHICLES)
+		if (evalObjective == Objective.ROUTES)
 			return this.getVehicles();
 		else
 			return this.getCustService();

@@ -1,20 +1,16 @@
-package second;
-
-import java.util.ArrayList;
+package book.ch3.rep1;
 
 import book.ch2.CVRPProblem;
 import book.ch2.RandomSingleton;
 import book.ch2.VRPProblemFactory;
 
-public class NonDomApp {
+public class AppTest {
 
 	public static void main(String[] args){
-		/*Problem instances from.
-		 Augerat, P., Belenguer, J., Benavent, E., Corber´an, A., Naddef, D., Rinaldi, G., 1995.
-Computational results with a branch and cut code for the capacitated vehicle routing
-problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
-
-*/
+		/*
+		 * Neil Urquhart 2019
+		 * Test the CvrpEA with multiple (single-objective) criterion.
+		 */
 
 		String[] problems = {"A-n32-k5.vrp","A-n33-k5.vrp","A-n33-k6.vrp","A-n34-k5.vrp","A-n36-k5.vrp","A-n37-k5.vrp",
 				"A-n37-k6.vrp","A-n38-k5.vrp","A-n39-k5.vrp","A-n39-k6.vrp","A-n44-k7.vrp","A-n45-k6.vrp","A-n45-k7.vrp",
@@ -29,34 +25,28 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"};
 
-		System.out.println("Ch2 tests");
-		for (String fName : problems){
-			NonDominatedPop grandFront= new NonDominatedPop();
-			for (int x=0; x < 10; x++)
-				grandFront.addAll(run("./data/"+ fName));
-
-			//extract GrandFront
-			grandFront = grandFront.extractNonDom();
-			System.out.println("Grand front,"+fName + "," + grandFront.getStats());
-			
-			for (Domination d : grandFront){
-				BiObjectiveIndividual i = (BiObjectiveIndividual) d;
-				System.out.println("V," +i.getVehicles() + ",CS," + i.getCustService());
-			}
-		}
+		for (String fName : problems)
+			//for (int x=0; x < 10; x++)
+				run("./data/"+ fName);
 	}
 
-	private static ArrayList<Domination> run(String probName) {
+	private static void run(String probName) {
 		/*
 		 * Solve the instance named in  <probName>
 		 */
 		CVRPProblem myVRP = VRPProblemFactory.buildProblem(probName);//Load instance from file
 		//Solve using the Evolutionary Algorithm
 		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
-		NonDomEA eaSolve = new NonDomEA();
-		
+		CvrpEA eaSolve = new CvrpEA();
+		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.ROUTES);
+		System.out.print("\n" +probName + ",ROUTES,");
 		myVRP.solve(eaSolve);
-		return eaSolve.getNonDom();	
+		eaSolve = new CvrpEA();
+		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
+		System.out.print( ",CUST SERVICE,");
+		myVRP.solve(eaSolve);
+		
+	
 	}
 
 

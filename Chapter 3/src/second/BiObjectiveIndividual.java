@@ -57,7 +57,7 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		
 	}
 	public enum Objective{
-		VEHICLES,
+		ROUTES,
 		CUST_SERVICE,
 		DISTANCE
 	}
@@ -228,7 +228,7 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 			decode();
 		//built solution
 		
-		if (evalObjective == Objective.VEHICLES)
+		if (evalObjective == Objective.ROUTES)
 			return this.getVehicles();
 		else if (evalObjective == Objective.CUST_SERVICE)
 			return this.getCustService();
