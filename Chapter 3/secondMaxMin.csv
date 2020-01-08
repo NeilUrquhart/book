@@ -1,28 +1,8 @@
 Ch2 tests
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,628.3346210801271,d,533.5124551770963
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.9196614905562,d,759.8393229811124
-./data/P-n16-k8.vrp,DIST,v,9,cs,624.5475443278784,d,456.9361098307191
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,645.1084407213291,d,576.6848738731426
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.91966149055617,d,759.8393229811123
-./data/P-n16-k8.vrp,DIST,v,9,cs,586.6134361825481,d,451.94709212981854
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,582.8685586868456,d,538.6088284665301
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.9196614905562,d,759.8393229811124
-./data/P-n16-k8.vrp,DIST,v,9,cs,582.8018718902694,d,454.3983428045983
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,612.6064427623517,d,579.2311685561708
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.9196614905562,d,759.8393229811124
-./data/P-n16-k8.vrp,DIST,v,8,cs,625.1767277498973,d,451.335080208618
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,581.0316292923374,d,503.5133385489788
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.9196614905562,d,759.8393229811124
-./data/P-n16-k8.vrp,DIST,v,8,cs,609.0430491010177,d,451.33508020861797
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,584.5168114223443,d,552.3726399962544
-./data/P-n16-k8.vrp,CUST,v,16,cs,379.9196614905562,d,759.8393229811124
-./data/P-n16-k8.vrp,DIST,v,9,cs,624.2834623552949,d,451.335080208618
-./data/P-n16-k8.vrp,COMMENT : (Augerat et al, No of trucks: 8, Best value: 435),
-./data/P-n16-k8.vrp,VEH,v,8,cs,596.6056590755562,d,550.1824134429969
-./data/P-n16-k8.vrp,CUST,
+./data/P-n20-k2.vrp,COMMENT : (Augerat et al, No of trucks: 2, Best value: 220),
+./data/P-n20-k2.vrp,VEH,v,2,cs,2638.195244209907,d,530.6848424562072
+
+./data/P-n20-k2.vrp,CUST,v,20,cs,510.8514332189932,d,1021.7028664379864
+
+./data/P-n20-k2.vrp,DIST,v,2,cs,2894.4679375434894,d,370.68646954166985
+

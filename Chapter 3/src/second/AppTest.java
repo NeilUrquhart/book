@@ -1,6 +1,7 @@
 package second;
 
 import book.ch2.CVRPProblem;
+import book.ch2.DrawProblem;
 import book.ch2.RandomSingleton;
 import book.ch2.VRPProblemFactory;
 
@@ -21,8 +22,8 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"B-n31-k5.vrp","B-n34-k5.vrp","B-n35-k5.vrp","B-n38-k6.vrp","B-n39-k5.vrp","B-n41-k6.vrp","B-n43-k6.vrp",
 				"B-n44-k7.vrp","B-n45-k5.vrp","B-n45-k6.vrp","B-n50-k7.vrp","B-n50-k8.vrp","B-n51-k7.vrp","B-n52-k7.vrp",
 				"B-n56-k7.vrp","B-n57-k7.vrp","B-n57-k9.vrp","B-n63-k10.vrp","B-n64-k9.vrp","B-n66-k9.vrp","B-n67-k10.vrp",
-				"B-n68-k9.vrp","B-n78-k10.vrp",*/
-				"P-n16-k8.vrp"/*,"P-n19-k2.vrp","P-n20-k2.vrp","P-n21-k2.vrp","P-n22-k2.vrp","P-n22-k8.vrp","P-n23-k8.vrp",
+				"B-n68-k9.vrp","B-n78-k10.vrp",
+				"P-n16-k8.vrp","P-n19-k2.vrp",*/"P-n20-k2.vrp"/*,"P-n21-k2.vrp","P-n22-k2.vrp","P-n22-k8.vrp","P-n23-k8.vrp",
 				"P-n40-k5.vrp","P-n45-k5.vrp","P-n50-k7.vrp","P-n50-k8.vrp","P-n50-k10.vrp","P-n51-k10.vrp","P-n55-k7.vrp",
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"*/};
@@ -44,19 +45,20 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.VEHICLES);
 		System.out.print("\n" +probName + ",VEH,");
 		myVRP.solve(eaSolve);
+		DrawProblem.writeSVG(myVRP,"P-n20-k2-Routes.svg");
+		
 		eaSolve = new BiObjEA();
 	    BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
 		System.out.print(probName + ",CUST,");
 		myVRP.solve(eaSolve);
+		DrawProblem.writeSVG(myVRP,"P-n20-k2-Cust.svg");
 		
-		if (myVRP.getVehicles() > 16){
-			System.out.println("***");
-			System.out.println(myVRP.getCVRPSolution());
-		}
+		
 		eaSolve = new BiObjEA();
 	    BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.DISTANCE);
 		System.out.print(probName + ",DIST,");
 		myVRP.solve(eaSolve);
+		DrawProblem.writeSVG(myVRP,"P-n20-k2-Dist.svg");
 		
 	}
 
