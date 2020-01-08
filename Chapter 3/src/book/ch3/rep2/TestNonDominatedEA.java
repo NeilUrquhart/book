@@ -1,4 +1,4 @@
-package second;
+package book.ch3.rep2;
 
 import java.util.ArrayList;
 

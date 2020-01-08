@@ -1,4 +1,4 @@
-package second;
+package book.ch3.rep2;
 
 
 import java.util.ArrayList;
@@ -32,10 +32,6 @@ public class NonDomEA extends VRPSolver {
 	public void solve() {
 		//Reference to the best individual in the population
 		InitialisePopution();
-		
-		
-		
-		
 		while(evalsBudget >0) {	
 			
 			//Create child

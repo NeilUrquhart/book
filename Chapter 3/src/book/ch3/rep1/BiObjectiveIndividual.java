@@ -1,11 +1,11 @@
 package book.ch3.rep1;
 import java.util.ArrayList;
 
-import second.Domination;
 import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.Individual;
 import book.ch2.VRPVisit;
+import book.ch3.rep2.Domination;
 
 /*
  * Neil Urquhart 2019
