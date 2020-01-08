@@ -1,4 +1,4 @@
-package second;
+package book.ch3.rep2;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import book.ch2.CVRPProblem;
 import book.ch2.RandomSingleton;
 import book.ch2.VRPProblemFactory;
 
-public class NonDomApp {
+public class TestNonDominatedEA {
 
 	public static void main(String[] args){
 		/*Problem instances from.

@@ -1,3 +1,4 @@
+package book.ch3.rep1;
 
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import book.ch2.VRPSolver;
  * Use Individual.check() to ensure that Individuals contain valid solutions. Advisable to turn this on when testing
  * modificatins, and comment it out when testing is completed
  */
-public class BiObjEA extends VRPSolver {
+public class CvrpEA extends VRPSolver {
 	private ArrayList <BiObjectiveIndividual> population = new ArrayList<BiObjectiveIndividual>();
 	//population stores our pool of potential solutions
 	private RandomSingleton rnd = RandomSingleton.getInstance();

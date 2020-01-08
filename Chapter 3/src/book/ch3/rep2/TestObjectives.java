@@ -1,9 +1,17 @@
+package book.ch3.rep2;
 
 import book.ch2.CVRPProblem;
 import book.ch2.RandomSingleton;
 import book.ch2.VRPProblemFactory;
 
-public class AppTest {
+/*
+ * Copyright Neil Urquhart 2020
+ * 
+ * This example solves the CVRP examples 3 times using Routes, Customer Service and Distance as objectives.
+ * 
+ */
+public class TestObjectives {
+	
 
 	public static void main(String[] args){
 		/*Problem instances from.
@@ -11,7 +19,7 @@ public class AppTest {
 Computational results with a branch and cut code for the capacitated vehicle routing
 problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 
-*/
+		 */
 
 		String[] problems = {"A-n32-k5.vrp","A-n33-k5.vrp","A-n33-k6.vrp","A-n34-k5.vrp","A-n36-k5.vrp","A-n37-k5.vrp",
 				"A-n37-k6.vrp","A-n38-k5.vrp","A-n39-k5.vrp","A-n39-k6.vrp","A-n44-k7.vrp","A-n45-k6.vrp","A-n45-k7.vrp",
@@ -26,8 +34,10 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"};
 
+
+		//Solve each problem 10 times due to the stochastic nature of the EA
 		for (String fName : problems)
-			//for (int x=0; x < 10; x++)
+			for (int x=0; x < 10; x++)
 				run("./data/"+ fName);
 	}
 
@@ -36,18 +46,23 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		 * Solve the instance named in  <probName>
 		 */
 		CVRPProblem myVRP = VRPProblemFactory.buildProblem(probName);//Load instance from file
-		//Solve using the Evolutionary Algorithm
-		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
+
+		//Solve using the Evolutionary Algorithm 3 times, once for each objective
 		BiObjEA eaSolve = new BiObjEA();
-		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.VEHICLES);
-		System.out.print("\n" +probName + ",VEH,");
-		myVRP.solve(eaSolve);
-		eaSolve = new BiObjEA();
-		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
-		System.out.print( ",CUST,");
+		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.ROUTES);
+		System.out.print("\n" +probName + ",ROUTES,");
 		myVRP.solve(eaSolve);
 		
-	
+		eaSolve = new BiObjEA();
+		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
+		System.out.print(probName + ",CUST,");
+		myVRP.solve(eaSolve);
+		
+		eaSolve = new BiObjEA();
+		BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.DISTANCE);
+		System.out.print(probName + ",DIST,");
+		myVRP.solve(eaSolve);
+
 	}
 
 
