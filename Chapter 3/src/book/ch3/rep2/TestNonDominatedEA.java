@@ -6,15 +6,21 @@ import book.ch2.CVRPProblem;
 import book.ch2.RandomSingleton;
 import book.ch2.VRPProblemFactory;
 
+/*
+ * Copyright Neil Urquhart 2020
+ * Run the non-dominated EA 10 times on each problem.
+ * Take the 10 individual fronts and combine them into 1 "grand" front
+ * 
+ */
 public class TestNonDominatedEA {
 
 	public static void main(String[] args){
 		/*Problem instances from.
 		 Augerat, P., Belenguer, J., Benavent, E., Corber´an, A., Naddef, D., Rinaldi, G., 1995.
 Computational results with a branch and cut code for the capacitated vehicle routing
-problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
+problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France. */
 
-*/
+
 
 		String[] problems = {"A-n32-k5.vrp","A-n33-k5.vrp","A-n33-k6.vrp","A-n34-k5.vrp","A-n36-k5.vrp","A-n37-k5.vrp",
 				"A-n37-k6.vrp","A-n38-k5.vrp","A-n39-k5.vrp","A-n39-k6.vrp","A-n44-k7.vrp","A-n45-k6.vrp","A-n45-k7.vrp",
@@ -29,9 +35,9 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 				"P-n55-k8.vrp","P-n55-k10.vrp","P-n55-k15.vrp","P-n60-k10.vrp","P-n60-k15.vrp","P-n65-k10.vrp",
 				"P-n70-k10.vrp","P-n76-k4.vrp","P-n76-k5.vrp","P-n101-k4.vrp"};
 
-		System.out.println("Ch2 tests");
 		for (String fName : problems){
-			NonDominatedPop grandFront= new NonDominatedPop();
+			NonDominatedPop grandFront= new NonDominatedPop();//Create an empty population
+			
 			for (int x=0; x < 10; x++)
 				grandFront.addAll(run("./data/"+ fName));
 
@@ -41,7 +47,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 			
 			for (Domination d : grandFront){
 				BiObjectiveIndividual i = (BiObjectiveIndividual) d;
-				System.out.println("V," +i.getVehicles() + ",CS," + i.getCustService());
+				System.out.println("V," +i.getRoutes() + ",CS," + i.getCustService());
 			}
 		}
 	}
@@ -56,7 +62,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		NonDomEA eaSolve = new NonDomEA();
 		
 		myVRP.solve(eaSolve);
-		return eaSolve.getNonDom();	
+		return eaSolve.getNonDom();	//Return the non-dominated front
 	}
 
 

@@ -17,42 +17,43 @@ import book.ch2.VRPVisit;
  * The basic solution (a grand tour) is stored in the genotype. Once the solution has been
  * evaluated then the solution is stored in the genotype.
  * 
+ * The Genotype comprises a set of Gene objects (see private class below) which contain the details of the visit and the newVan flag.
+ * 
  */
 public class BiObjectiveIndividual  extends EAIndividual implements Domination  {
-	private int rank =-1;
 	
 	private class Gene {
-		private boolean newVan = false;
+		/*
+		 * Represents a single Gene, 
+		 *   visit - the visit being made
+		 *   newRoute - true if this visit should be added to the start of a new route
+		 */
+		private boolean newRoute = false;
 		private VRPVisit visit = null;
 
 		public Gene(VRPVisit aVisit){
 			this.visit = aVisit;
-			this.newVan = false;
+			this.newRoute = false;
 		}
 		
-		public Gene(VRPVisit aVisit, boolean aNewVan){
-			this.visit = aVisit;
-			this.newVan = aNewVan;
-		}
-		
-		public boolean newVan(){
-			return this.newVan;
+		public boolean newRoute(){
+			return this.newRoute;
 		}
 		
 		public VRPVisit visit(){
 			return this.visit;
 		}
 		
-		public void setNewVan(boolean val){
-			this.newVan = val;
+		public void setNewRoute(boolean val){
+			this.newRoute = val;
 		}
 		
-		public void flipNewVan(){
-			this.newVan = ! this.newVan;
+		public void flipNewRoute(){
+			this.newRoute = ! this.newRoute;
 		}
 		
 		public String toString(){
-			return this.visit.toString() + "New Van "+ this.newVan;
+			return this.visit.toString() + "New Route "+ this.newRoute;
 		}
 		
 	}
@@ -93,9 +94,6 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 	//Use the RandomSingleton object to get access to a seeded random number generator
 	private RandomSingleton rnd =RandomSingleton.getInstance();
 
-	
-	
-
 	//The genotype is a "grand tour" list of visits
 	protected ArrayList<Gene> genotype;
 
@@ -120,11 +118,11 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		for (Visit v : prob.getSolution()){
 			Gene g = new Gene((VRPVisit)v);
 			if (all1s == true)
-				g.setNewVan(true);
+				g.setNewRoute(true);
 			else if (all0s == true)
-				g.setNewVan(false);
+				g.setNewRoute(false);
 			else
-			  g.setNewVan(rnd.getRnd().nextBoolean());
+			  g.setNewRoute(rnd.getRnd().nextBoolean());
 			genotype.add(g);
 		}
 		genotype = randomize(genotype);
@@ -156,13 +154,14 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 	}
 
     private boolean genotypeContains(ArrayList<Gene> genome, Gene search){
+    	//return True if <genome> contains the gene <search> - based on visit
     	for (Gene g: genome){
     		if (g.visit == search.visit)
     			return true;
     	}
-    	
     	return false;
     }
+    
 	private ArrayList randomize(ArrayList list) {
 		// Randomly shuffle the contents of <list>
 		Random  r= rnd.getInstance().getRnd();
@@ -173,8 +172,10 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		}
 		return list;
 	}
+	
 	public void mutate() {
 		//Mutate the genotype, by randomly moving a gene. or flipping new van
+		//With a very low probability set all of the newRoutes to all 1s or  all 0s
 		phenotype = null;
 		double choice = rnd.getRnd().nextDouble();
 		if (choice < 0.45){
@@ -185,27 +186,25 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		}else if ( choice < 0.999){
 			int rndGene = rnd.getRnd().nextInt(genotype.size());
 			Gene g = genotype.get(rndGene);
-			g.flipNewVan();	
+			g.flipNewRoute();	
 		}else{
-			boolean newVan = rnd.getRnd().nextBoolean();
+			boolean newRoute = rnd.getRnd().nextBoolean();
 			for (Gene g : genotype)
-				g.setNewVan(newVan);	
+				g.setNewRoute(newRoute);	
 		}
-		
 	}
 
 	private void decode() {
 		/*
 		 * Build a phenotype based upon the genotype
-		 * Only build the genotyoe if the phenotype has been set to null
-		 * Return the fitness (distance)
+		 * Only build the genotype if the phenotype has been set to null
 		 */
 		if (phenotype == null) {
 			phenotype = new ArrayList<ArrayList<VRPVisit>> ();
 			ArrayList<VRPVisit> newRoute = new ArrayList<VRPVisit>();
 			for (Gene g : genotype){
 				VRPVisit v = g.visit();
-				if (g.newVan()){
+				if (g.newRoute()){//Create a new route, if the gene specifies a new route
 					phenotype.add(newRoute);
 					newRoute = new ArrayList<VRPVisit>();
 				}
@@ -215,7 +214,6 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 					phenotype.add(newRoute);
 					newRoute = new ArrayList<VRPVisit>();
 				}
-				
 				newRoute.add(v);
 			}
 			phenotype.add(newRoute);
@@ -223,13 +221,14 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 	}
 	
 	public double evaluate(){
+		//Used when not creating a non-domainated front.
+		//Evaluate based on the value of evalObjective
 		
 		if (phenotype == null)  
 			decode();
-		//built solution
-		
+		//build solution
 		if (evalObjective == Objective.ROUTES)
-			return this.getVehicles();
+			return this.getRoutes();
 		else if (evalObjective == Objective.CUST_SERVICE)
 			return this.getCustService();
 		else//dist
@@ -247,7 +246,7 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		return problem.getDistance(phenotype);
 	}
 
-	public int getVehicles() {
+	public int getRoutes() {
 		if (phenotype == null)
 			//If the genotype has been changed then evaluate
 			evaluate();
@@ -269,8 +268,6 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 		copy.genotype = (ArrayList<Gene>) this.genotype.clone();
 		return copy;
 	}
-
-	
 	
 	public String toString() {
 		String res="";
@@ -286,50 +283,31 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 					res = res + v.toString()+":";
 				}
 				res = res +"\n";
-				
 			}
 		}
-			
 		return res;
 	}
 	
 
-	
-	    			
-	      
-
-
 	@Override
 	public boolean dominates(Domination i) {
-		//True if we dominate the other
+		//True if we dominate the <i>, else false
 		BiObjectiveIndividual other = (BiObjectiveIndividual) i;
 		if (this.getCustService() > other.getCustService())
 			return false;
-		if (this.getVehicles() > other.getVehicles())
+		if (this.getRoutes() > other.getRoutes())
 			return false;
 		
-		if ((this.getVehicles() < other.getVehicles())||(this.getCustService() < other.getCustService()))
+		if ((this.getRoutes() < other.getRoutes())||(this.getCustService() < other.getCustService()))
 			return true;
-					
 		return false;
-					
-	}
-
-	@Override
-	public void setRank(int rank) {
-		this.rank = rank;
-	}
-
-	@Override
-	public int getRank() {
-		// TODO Auto-generated method stub
-		return this.rank;
 	}
 
 	@Override
 	public double[] getVector() {
+		//Return a vector representation
 		double[] v = new double[2];
-		v[0] = this.getVehicles();
+		v[0] = this.getRoutes();
 		v[1] = this.getCustService();
 		return v;
 	}

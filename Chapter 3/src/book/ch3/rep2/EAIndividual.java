@@ -10,7 +10,7 @@ import book.ch2.VRPVisit;
 
 /*
  * Neil Urquhart 2019
- * This class represents a single CVRP solution to be used within an Evolutionary Algorithm.
+ * This abstrct class represents a single CVRP solution to be used within an Evolutionary Algorithm.
  * 
  * The basic solution (a grand tour) is stored in the genotype. Once the solution has been
  * evaluated then the solution is stored in the genotype.

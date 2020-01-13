@@ -57,16 +57,12 @@ public class BiObjEA extends VRPSolver {
 				if (child.evaluate() < bestSoFar.evaluate()){
 					bestSoFar = child;
 				}
-				//child.check();//Check child contains a valid solution
 				population.remove(poor);
 				population.add(child);
 			}
-			//if ((evalsBudget % 100)==0)
-			 // System.out.println("e,"+ (evalsBudget+",v,"+bestSoFar.getVehicles() + ",cs," + bestSoFar.getCustService()));
-		}
-		
+		}		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
-		System.out.println("v,"+bestSoFar.getVehicles() +",cs,"+ bestSoFar.getCustService()+",d,"+bestSoFar.getDistance());
+		System.out.println("v,"+bestSoFar.getRoutes() +",cs,"+ bestSoFar.getCustService()+",d,"+bestSoFar.getDistance());
 	}
 
 	private BiObjectiveIndividual InitialisePopution() {
@@ -75,7 +71,6 @@ public class BiObjEA extends VRPSolver {
 		for (int count=0; count < POP_SIZE; count++){
 			BiObjectiveIndividual i = new BiObjectiveIndividual(super.theProblem);
 			
-			//i.check();//Check individual contains a valid solution
 			if (best == null) 
 				best = i;
 			if (i.evaluate() < best.evaluate()) 
