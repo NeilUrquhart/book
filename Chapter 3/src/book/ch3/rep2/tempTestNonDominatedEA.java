@@ -12,7 +12,7 @@ import book.ch2.VRPProblemFactory;
  * Take the 10 individual fronts and combine them into 1 "grand" front
  * 
  */
-public class TestNonDominatedEA {
+public class tempTestNonDominatedEA {
 
 	public static void main(String[] args){
 		/*Problem instances from.
@@ -22,7 +22,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France. */
 
 
 
-		String[] problems = {"A-n32-k5","A-n33-k5","A-n33-k6","A-n34-k5","A-n36-k5","A-n37-k5",
+		String[] problems = {/*"A-n32-k5","A-n33-k5","A-n33-k6","A-n34-k5","A-n36-k5","A-n37-k5",
 				"A-n37-k6","A-n38-k5","A-n39-k5","A-n39-k6","A-n44-k7","A-n45-k6","A-n45-k7",
 				"A-n46-k7","A-n48-k7","A-n53-k7","A-n54-k7","A-n55-k9","A-n60-k9","A-n61-k9",
 				"A-n62-k8","A-n63-k9","A-n63-k10","A-n64-k9","A-n65-k9","A-n69-k9","A-n80-k10",
@@ -33,7 +33,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France. */
 				"P-n16-k8","P-n19-k2","P-n20-k2","P-n21-k2","P-n22-k2","P-n22-k8","P-n23-k8",
 				"P-n40-k5","P-n45-k5","P-n50-k7","P-n50-k8","P-n50-k10","P-n51-k10","P-n55-k7",
 				"P-n55-k8","P-n55-k10","P-n55-k15","P-n60-k10","P-n60-k15","P-n65-k10",
-				"P-n70-k10","P-n76-k4","P-n76-k5","P-n101-k4"};
+				"P-n70-k10","P-n76-k4","P-n76-k5",*/"P-n101-k4"};
 		
 		System.out.println("Problems ");
 
@@ -41,51 +41,43 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France. */
 			NonDominatedPop grandFront= new NonDominatedPop();//Create an empty population
 
 			String probName = "./data/"+ fName + ".vrp";
-
 			CVRPProblem myVRP = VRPProblemFactory.buildProblem(probName);//Load instance from file
-			//Find best for each objective
-			double maxR = 0, minR = Double.MAX_VALUE;
-			double maxCS=0, minCS = Double.MAX_VALUE;
 			
-			for (int c=0; c < 10; c++){
-				System.out.print(c +",");
-				BiObjEA eaSolve = new BiObjEA();
-				BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.ROUTES);
-				myVRP.solve(eaSolve);
-				if  (eaSolve.getBestIndividual().getVector()[0] < minR) minR = eaSolve.getBestIndividual().getVector()[0];
-				if  (eaSolve.getBestIndividual().getVector()[0] > maxR) maxR = eaSolve.getBestIndividual().getVector()[0];
-				
-				if  (eaSolve.getBestIndividual().getVector()[1] < minCS) minCS = eaSolve.getBestIndividual().getVector()[1];
-				if  (eaSolve.getBestIndividual().getVector()[1] > maxCS) maxCS = eaSolve.getBestIndividual().getVector()[1];
-				
-				eaSolve = new BiObjEA();
-				BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
-				myVRP.solve(eaSolve);
-				if  (eaSolve.getBestIndividual().getVector()[0] < minR) minR = eaSolve.getBestIndividual().getVector()[0];
-				if  (eaSolve.getBestIndividual().getVector()[0] > maxR) maxR = eaSolve.getBestIndividual().getVector()[0];
-				
-				if  (eaSolve.getBestIndividual().getVector()[1] < minCS) minCS = eaSolve.getBestIndividual().getVector()[1];
-				if  (eaSolve.getBestIndividual().getVector()[1] > maxCS) maxCS = eaSolve.getBestIndividual().getVector()[1];
-			
-			}
-
-			
-			for (int x=0; x < 10; x++){
+			for (int x=0; x < 1; x++){
 				System.out.print(x + ",");
 				grandFront.addAll(run(myVRP));
 				}
 
-			//extract GrandFront
-			NonDominatedPop grandFrontA = grandFront.extractNonDom();
-			System.out.print("\nGrand front ,"+fName + "," + grandFrontA.getStats());
-			System.out.println(",," + minR +","+maxR+",,"+ minCS +","+maxCS);
-
-			for (Domination d : grandFrontA){
-				BiObjectiveIndividual i = (BiObjectiveIndividual) d;
-				System.out.println("R," +i.getRoutes() + ",CS," + i.getCustService());
-			}
-			
-					
+//			//extract GrandFront
+//			NonDominatedPop grandFrontA = grandFront.extractNonDom();
+//			System.out.println("\nGrand front A,"+fName + "," + grandFrontA.getStats());
+//
+//			for (Domination d : grandFrontA){
+//				BiObjectiveIndividual i = (BiObjectiveIndividual) d;
+//				System.out.println("V," +i.getRoutes() + ",CS," + i.getCustService());
+//			}
+//			
+//			for (int c=0; c < 10; c++){
+//				System.out.print(c +",");
+//				BiObjEA eaSolve = new BiObjEA();
+//				BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.ROUTES);
+//				myVRP.solve(eaSolve);
+//				grandFront.add(eaSolve.getBestIndividual());
+//
+//				eaSolve = new BiObjEA();
+//				BiObjectiveIndividual.setObjective(BiObjectiveIndividual.Objective.CUST_SERVICE);
+//				myVRP.solve(eaSolve);
+//				grandFront.add(eaSolve.getBestIndividual());
+//			}
+//			grandFront = grandFront.extractNonDom();
+//			System.out.println("\nGrand front B,"+fName + "," + grandFront.getStats());
+//
+//			for (Domination d : grandFront){
+//				BiObjectiveIndividual i = (BiObjectiveIndividual) d;
+//				System.out.println("V," +i.getRoutes() + ",CS," + i.getCustService());
+//			}
+//			System.out.println("\nSummary,"+fName + ", Grand front A,"+	 grandFrontA.getStats() + "Grand front B," + grandFront.getStats());
+//
 		}
 	}
 
@@ -95,7 +87,7 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France. */
 		 */
 		//Solve using the Evolutionary Algorithm
 		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
-		NonDomEA eaSolve = new NonDomEA();
+		tempNonDomEA eaSolve = new tempNonDomEA();
 		
 		myVRP.solve(eaSolve);
 		return eaSolve.getNonDom();	//Return the non-dominated front

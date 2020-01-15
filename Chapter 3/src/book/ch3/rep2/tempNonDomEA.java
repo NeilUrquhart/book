@@ -17,14 +17,14 @@ import book.ch2.VRPSolver;
  * Use Individual.check() to ensure that Individuals contain valid solutions. Advisable to turn this on when testing
  * modificatins, and comment it out when testing is completed
  */
-public class NonDomEA extends VRPSolver {
+public class tempNonDomEA extends VRPSolver {
 	private RandomSingleton rnd = RandomSingleton.getInstance();
 	//Note that we use the RandomSingleton object to generate random numbers
 
 	//EA Parameters
 	private int INIT_POP_SIZE = 1000;
-	private double XO_RATE = 0.7;
 	private int CHILDREN = 100;
+	private double XO_RATE = 0.7;
 	private int evalsBudget = 100000;
 
 	private NonDominatedPop population;
@@ -36,6 +36,11 @@ public class NonDomEA extends VRPSolver {
 		population = new NonDominatedPop (INIT_POP_SIZE, super.theProblem);
 		evalsBudget = evalsBudget - INIT_POP_SIZE;//account for initial solutions in pop.
 		
+		System.out.println("Evals ="+evalsBudget +","+ population.extractNonDom().getStats());
+		for (Domination d : population.extractNonDom()){
+			BiObjectiveIndividual i = (BiObjectiveIndividual) d;
+			System.out.println("v,"+i.getRoutes()+",cs,"+i.getCustService());
+		}
 		while(evalsBudget >0) {	
 			for (int count =0; count < CHILDREN; count ++){
 				//Create child
@@ -52,9 +57,27 @@ public class NonDomEA extends VRPSolver {
 				child.evaluate();
 				evalsBudget --;
 
+				//Select a dominated Individual to be replaced
+
+				//Domination rip = population.getRIP();//.getDominated();
+				//population.remove(rip);
 				population.add(child);
 			}
-			population = population.extractNonDom();	
+			population = population.extractNonDom();
+			if ((evalsBudget %10000)==0){
+				System.out.println("Evals ="+evalsBudget +","+ population.extractNonDom().getStats());
+				for (Domination d : population.extractNonDom()){
+					BiObjectiveIndividual i = (BiObjectiveIndividual) d;
+					System.out.println("v,"+i.getRoutes()+",cs,"+i.getCustService());
+				}
+			}
+		}
+
+		System.out.println("Final," + population.extractNonDom().getStats());
+		
+		for (Domination d : population.extractNonDom()){
+			BiObjectiveIndividual i = (BiObjectiveIndividual) d;
+			System.out.println("v,"+i.getRoutes()+",cs,"+i.getCustService());
 		}
 	}
 

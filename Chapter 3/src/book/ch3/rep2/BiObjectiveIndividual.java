@@ -291,18 +291,36 @@ public class BiObjectiveIndividual  extends EAIndividual implements Domination  
 
 	@Override
 	public boolean dominates(Domination i) {
-		//True if we dominate the <i>, else false
-		BiObjectiveIndividual other = (BiObjectiveIndividual) i;
-		if (this.getCustService() > other.getCustService())
+		double[] me = this.getVector();
+		double[] other = i.getVector();
+		
+		//Test to see if I am worse in any vector
+		if(me[0] > other[0])
 			return false;
-		if (this.getRoutes() > other.getRoutes())
+		if(me[1] > other[1])
+			return false;
+		//Must be the same or better
+		
+		if ((me[0]==other[0])&&(me[1]==other[1]))
 			return false;
 		
-		if ((this.getRoutes() < other.getRoutes())||(this.getCustService() < other.getCustService()))
-			return true;
-		return false;
+		return true;
 	}
+//	public boolean dominates(Domination i) {
+//		//True if we dominate the <i>, else false
+//		BiObjectiveIndividual other = (BiObjectiveIndividual) i;
+//		if (this.getCustService() > other.getCustService())
+//			return false;
+//		if (this.getRoutes() > other.getRoutes())
+//			return false;
+//		
+//		if ((this.getRoutes() < other.getRoutes())||(this.getCustService() < other.getCustService()))
+//			return true;
+//		
+//		return false;
+//	}
 
+	
 	@Override
 	public double[] getVector() {
 		//Return a vector representation

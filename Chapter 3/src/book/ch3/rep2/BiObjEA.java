@@ -29,10 +29,13 @@ public class BiObjEA extends VRPSolver {
 	private double XO_RATE = 0.7;
 	private int evalsBudget = 100000;
 	
+	//Reference to the best individual in the population
+	private BiObjectiveIndividual bestSoFar; 
+	
 	@Override
 	public void solve() {
-		//Reference to the best individual in the population
-		BiObjectiveIndividual bestSoFar = InitialisePopution();
+		//Initialise population and keep track of best individual found so far
+		bestSoFar = InitialisePopution();
 		while(evalsBudget >0) {	
 			
 			//Create child
@@ -62,9 +65,12 @@ public class BiObjEA extends VRPSolver {
 			}
 		}		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
-		System.out.println("v,"+bestSoFar.getRoutes() +",cs,"+ bestSoFar.getCustService()+",d,"+bestSoFar.getDistance());
+		//System.out.println("v,"+bestSoFar.getRoutes() +",cs,"+ bestSoFar.getCustService()+",d,"+bestSoFar.getDistance());
 	}
 
+	public Domination getBestIndividual(){
+		return bestSoFar;
+	}
 	private BiObjectiveIndividual InitialisePopution() {
 		//Initialise population with random solutions
 		BiObjectiveIndividual best = null;

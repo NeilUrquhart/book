@@ -67,7 +67,7 @@ public class NonDominatedPop extends ArrayList<Domination> {
 		}
 		
 		for (int pos = 0 ; pos < size; pos++){
-			res = res + ",obj"+pos +"Max," + max[pos] + ",obj"+pos +"Min,"+ min[pos];
+			res = res + ",obj"+pos +"Min," + min[pos] + ",obj"+pos +"Max,"+ max[pos];
 		}
 		return res;
 	}
@@ -105,6 +105,18 @@ public class NonDominatedPop extends ArrayList<Domination> {
 		return nd;
 	}	
 	
+//	public void delete(Domination d){
+//		int index=0;
+//		for (Domination current: this){
+//			if ((current.getVector()[0]==d.getVector()[0]) &&
+//					(current.getVector()[1]==d.getVector()[1])){
+//				;
+//				break;
+//			}
+//			index ++;
+//		}
+//		this.remove(index);
+//	}
 
 	public Domination getDominator(){
 		/*
@@ -117,17 +129,35 @@ public class NonDominatedPop extends ArrayList<Domination> {
 		else
 			return y;
 	}
-
-	public Domination getDominated(){
+	public Domination getRIP(){
 		/*
 		 * Select 2 individuals at random.
 		 * If one dominates the other return the dominated individual
 		 */
-		Domination x = this.get(rnd.getRnd().nextInt(this.size()));
-		Domination y = this.get(rnd.getRnd().nextInt(this.size()));
-		if (y.dominates(x))
-			return x;
-		else
-			return y;
+		while(true){
+			Domination x = this.get(rnd.getRnd().nextInt(this.size()));
+			Domination y = this.get(rnd.getRnd().nextInt(this.size()));
+
+			double[] xv = x.getVector();
+			double[] yv = y.getVector();
+
+			if ((xv[0] <= yv[0]))
+				if (xv[1] <= yv[1])
+					return y;
+		}
 	}
+	
+//	public Domination getDominated(){
+//		/*
+//		 * Select 2 individuals at random.
+//		 * If one dominates the other return the dominated individual
+//		 */
+//		Domination x = this.get(rnd.getRnd().nextInt(this.size()));
+//		Domination y = this.get(rnd.getRnd().nextInt(this.size()));
+//		
+//		if (y.dominates(x))
+//			return x;
+//		else
+//			return y;
+//	}
 }
