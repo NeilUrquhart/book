@@ -5,6 +5,7 @@ public class Node {
 	private double lat;
 	private double lon;
 	private boolean used;
+	private int index;
 	
 	public Node(long id, double lat, double lon){
 		this.id = id;
@@ -13,10 +14,19 @@ public class Node {
 		used = false;
 	}
 	
+	public int getIndex(){
+		return index;
+	}
+	public void setIndex(int indx){
+		this.index = indx;
+	}
 	public long getId(){
 		return this.id;
 	}
 	
+	public String getCoords(){
+		return lat + "\t" + lon;
+	}
 	public void setUsed(){
 		used = true;
 	}

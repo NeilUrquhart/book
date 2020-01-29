@@ -18,9 +18,9 @@ import org.json.simple.parser.ParseException;
 
 public class ParseDemo {
 	private static HashMap<Long,Node> nodeList = new HashMap<Long,Node>();
-	private static ArrayList<Long> nodeIDIndex = new ArrayList<Long>();
 	private static ArrayList<Way> wayList = new ArrayList<Way>();
 	private static Way[][] links;
+	private static int nodeCount=0;
 
 	public static void main(String[] args) {
 
@@ -37,6 +37,7 @@ public class ParseDemo {
 
 			// loop array
 			System.out.println("Loading Nodes");
+			
 			JSONArray elements = (JSONArray) jsonObject.get("elements");
 			Iterator<String> iterator = elements.iterator();
 			while (iterator.hasNext()) {
@@ -45,11 +46,13 @@ public class ParseDemo {
 				org.json.simple.JSONObject obj = (org.json.simple.JSONObject) current;
 				String type = (String) obj.get("type");
 				if (type.equals("node")){
-					processNode(obj);
+					processNode(obj,nodeCount);
+					nodeCount++;
 				}
 
 
 			}
+			
 			System.out.println("Loading Ways");
 			elements = (JSONArray) jsonObject.get("elements");
 			iterator = elements.iterator();
@@ -63,12 +66,14 @@ public class ParseDemo {
 
 			}
 
-			// for (Way w : wayList.values()){
-			// 	System.out.println(w);
-			//}
-			links = new Way[nodeIDIndex.size()][];
-			for (int c=0; c < nodeIDIndex.size();c++)
-				links[c] = new Way[nodeIDIndex.size()];
+			System.out.println("Nodes = " + nodeList.size());
+			
+			nodeList = removeUnused();
+			System.out.println("Nodes = " + nodeList.size());
+			
+			links = new Way[nodeCount][];
+			for (int c=0; c < nodeCount;c++)
+				links[c] = new Way[nodeCount];
 
 			System.out.println("Stats:");
 			System.out.println("Nodes = " + nodeList.size());
@@ -76,13 +81,13 @@ public class ParseDemo {
 			
 			//Add ways  to links
 			for (Way w : wayList){
-				long[] nodes = w.getNodeIDs();
-				for (int x=0; x < nodes.length; x++){
-					for (int y=0; y < nodes.length; y++){
+				ArrayList<Node> nodes = w.getNodes();
+				for (int x=0; x < nodes.size(); x++){
+					for (int y=0; y < nodes.size(); y++){
 						if (x != y){
-							System.out.println(w.getName() + ":"+ nodes[x] + ":" +nodes[y]);
-							int idx1 = nodeIDIndex.indexOf(nodes[x]);
-							int idx2 = nodeIDIndex.indexOf(nodes[y]);
+							System.out.println(w.getName() + ":"+ nodes.get(x) + ":" +nodes.get(y));
+							int idx1 = nodes.get(x).getIndex();
+							int idx2 = nodes.get(y).getIndex();
 							System.out.println(idx1 +":"+idx2);
 							links[idx1][idx2] = w;
 							links[idx2][idx1] = w;
@@ -91,16 +96,7 @@ public class ParseDemo {
 				}
 			}
 			
-			/*
-			//pick a node..
-			System.out.println("Testing node");
-			Node start = nodeList.get((long)14015492);
-			System.out.println("Start node" + start);
-			for (Node n : getNeighbours(start.getId())){
-				System.out.println(n);
-			}*/
-			
-			dijkstra();
+			dijkstra(3984467283L,3057700283L);
 			
 			
 
@@ -112,47 +108,113 @@ public class ParseDemo {
 
 	}
 	
-	private static void dijkstra(){
-		//test Dijkstra
-		Node start = nodeList.get((long)14015492);
-		/*
-		 * 
-		 *  1  function Dijkstra(Graph, source):
- 2
- 3      create vertex set Q
- 4
- 5      for each vertex v in Graph:             
- 6          dist[v] ← INFINITY                  
- 7          prev[v] ← UNDEFINED                 
- 8          add v to Q                      
-10      dist[source] ← 0                        
-11      
-12      while Q is not empty:
-13          u ← vertex in Q with min dist[u]    
-14                                              
-15          remove u from Q 
-16          
-17          for each neighbor v of u:           // only v that are still in Q
-18              alt ← dist[u] + length(u, v)
-19              if alt < dist[v]:               
-20                  dist[v] ← alt 
-21                  prev[v] ← u 
-22
-23      return dist[], prev[]
-
-1  S ← empty sequence
-2  u ← target
-3  if prev[u] is defined or u = source:          // Do something only if the vertex is reachable
-4      while u is defined:                       // Construct the shortest path with a stack S
-5          insert u at the beginning of S        // Push the vertex onto the stack
-6          u ← prev[u]                           // Traverse from target to source
-		 */
+	private static HashMap<Long,Node>removeUnused(){
+		HashMap<Long,Node> res= new HashMap<Long,Node>();
 		
+		for(Node n: nodeList.values()){
+			if (n.getUsed())
+				res.put(n.getId(),n);
+		}
+		return res;
 	}
-	private static ArrayList<Node> getNeighbours(long node) {
-		int id = nodeIDIndex.indexOf(node);
+	private static void dijkstra(long sourceID, long destID){
+		if (!nodeList.containsKey(sourceID)){
+			System.out.println("Source not used");
+			return;
+		}
+		if (!nodeList.containsKey(destID)){
+			System.out.println("Dest not used");
+			return;
+		}
+
+		//test Dijkstra
+		Node source = nodeList.get(sourceID);
+		System.out.println("Running Dijkstra");
+		
+		double dists[] = new double[nodeCount];
+		Node prev[] = new Node[nodeCount];
+		
+//       create vertex set Q
+		ArrayList<Node> q = new ArrayList<Node>();
+ 
+ //     for each vertex v in Graph:             
+		for (int v=0; v < nodeCount; v++){
+           dists[v]    =  Double.MAX_VALUE;              
+           prev[v] = null;                 
+               
+		}
+		q.addAll(nodeList.values());
+		
+     dists[source.getIndex()] = 0;            
+     System.out.println("Done setup");
+		
+      
+//12      while Q is not empty:
+     System.out.println("Processing");
+     while(q.size() >0){
+    	 System.out.println("Q=" + q.size());
+//13          u ← vertex in Q with min dist[u]    
+    	Node u = findMin(q,dists);
+                              
+//15          remove u from Q 
+    	q.remove(u);
+
+    	ArrayList<Node> neighbours = getNeighbours(u);
+    	
+//17          for each neighbor v of u:           
+    	// only v that are still in Q
+    	for (Node v : neighbours){
+    		if (q.indexOf(v)>-1){
+    	
+//18              alt ← dist[u] + length(u, v)
+    			double alt = dists[u.getIndex()] + u.getDist(v);
+//19              if alt < dist[v]:              
+    			if (alt < dists[v.getIndex()]){
+//20                  dist[v] ← alt 
+    				 dists[v.getIndex()] = alt;
+//21                  prev[v] ← u 
+    				 prev[v.getIndex()] = u;
+    			}
+    		}
+    	}
+//22
+     }
+//23      return dist[], prev[]
+//
+//1  S ← empty sequence
+//2  u ← target
+//3  if prev[u] is defined or u = source:          // Do something only if the vertex is reachable
+//4      while u is defined:                       // Construct the shortest path with a stack S
+//5          insert u at the beginning of S        // Push the vertex onto the stack
+//6          u ← prev[u]                           // Traverse from target to source
+//		 
+     System.out.println("Finding route");
+     
+     Node current = nodeList.get(destID);
+	 while (current != source){
+		 System.out.println(current.getCoords());
+		 
+		 current = prev[current.getIndex()];
+
+	 }
+	 
+	}
+	
+	private static Node findMin(ArrayList<Node> data, double[] dists ){
+		double best = Double.MAX_VALUE;
+		Node res = null;
+		for (Node current : data){
+			if (dists[current.getIndex()] <= best){
+				res = current;
+				best = dists[current.getIndex()];
+			}
+		}
+		return res;
+	}
+		
+	private static ArrayList<Node> getNeighbours(Node node) {
 		ArrayList<Node> result = new ArrayList<Node>();
-		Way[] linkedTo = links[id];
+		Way[] linkedTo = links[node.getIndex()];
 		for (int c=0; c < linkedTo.length; c++ ){
 			if (linkedTo[c] != null){
 				//System.out.println(linkedTo[c].getName());
@@ -162,7 +224,7 @@ public class ParseDemo {
 		return result;
 	}
 	
-	public static void processNode(JSONObject node){
+	public static void processNode(JSONObject node, int index){
 		Long id = (Long) node.get("id");
 		System.out.println("Loading " + id);
 		Double lat= (Double) node.get("lat");
@@ -170,7 +232,7 @@ public class ParseDemo {
 		JSONObject tags = (JSONObject) node.get("tags");
 		Node newNode = new Node(id,lat,lon);
 		nodeList.put(id, newNode);		
-		nodeIDIndex.add(id);
+		newNode.setIndex(index);
 	}
 
 	public static void processWay(JSONObject way){
