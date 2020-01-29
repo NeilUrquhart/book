@@ -26,7 +26,7 @@ public class ParseDemo {
 
 		JSONParser parser = new JSONParser();
 
-		try (Reader reader = new FileReader("Edin.dat")) {
+		try (Reader reader = new FileReader("bigEdin.dat.json")) {
 
 			JSONObject jsonObject = (JSONObject) parser.parse(reader);
 			System.out.println(jsonObject);
@@ -95,8 +95,8 @@ public class ParseDemo {
 					}	 
 				}
 			}
-			
-			dijkstra(3984467283L,3057700283L);
+			//Princes St, Findlay Gdns
+			dijkstra(4032301786L,38827957L);
 			
 			
 
