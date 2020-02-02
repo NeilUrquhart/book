@@ -1,4 +1,4 @@
-package book.ch6;
+package book.ch6.data;
 
 import java.util.ArrayList;
 
@@ -14,6 +14,10 @@ public class Way {
 		this.name = name;
 		this.highway = highway;
 		nodes = new ArrayList<Node>();
+	}
+	
+	public long getID(){
+		return id;
 	}
 	
 	public ArrayList<Node> getNodes(){
