@@ -3,6 +3,7 @@ package book.ch6.parse;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.json.simple.JSONArray;
@@ -29,8 +30,9 @@ public class Parser {
 
 			JSONArray elements = (JSONArray) jsonObject.get("elements");
 			Iterator<String> iterator = elements.iterator();
+			Object current;
 			while (iterator.hasNext()) {
-				Object current =  iterator.next();
+				current =  iterator.next();
 				org.json.simple.JSONObject obj = (org.json.simple.JSONObject) current;
 				String type = (String) obj.get("type");
 				if (type.equals("node")){
@@ -43,7 +45,7 @@ public class Parser {
 			elements = (JSONArray) jsonObject.get("elements");
 			iterator = elements.iterator();
 			while (iterator.hasNext()) {
-				Object current =  iterator.next();
+				current =  iterator.next();
 				org.json.simple.JSONObject obj = (org.json.simple.JSONObject) current;
 				String type = (String) obj.get("type");
 				if (type.equals("way"))
@@ -60,7 +62,6 @@ public class Parser {
 	public static Node processNode(JSONObject node, int index){
 		Long id = (Long) node.get("id");
 		
-		System.out.println("Loading " + id);
 		Double lat= (Double) node.get("lat");
 		Double lon = (Double) node.get("lon");
 		JSONObject tags = (JSONObject) node.get("tags");
@@ -76,17 +77,21 @@ public class Parser {
 		JSONObject tags = (JSONObject) way.get("tags");
 		String name = (String)tags.get("name");
 		String highway = (String)tags.get("highway");
-		Way newWay = new Way(id,name,highway);
+		
 		//add nodes
 		JSONArray elements = (JSONArray)  way.get("nodes");
+		ArrayList<Node> nodes = new ArrayList<Node>();
 		for (Object o : elements){
 			long nodeId = (long)o;
 			Node found = g.getNode(nodeId);
 			if (found!= null){
-				newWay.addNode(found);
+				nodes.add(found);
 				found.setUsed();
 			}
 		}
+		Node[] myNodes =  nodes.toArray(new Node[nodes.size()]);
+		Way newWay = new Way(id,name,highway,myNodes);
+		
 		return newWay;
 		
 	}

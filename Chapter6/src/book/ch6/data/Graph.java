@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,11 +17,11 @@ import org.json.simple.parser.ParseException;
 import book.ch6.parse.Parser;
 
 public class Graph {
-	private static HashMap<Long,Node> nodeList = new HashMap<Long,Node>();
-	private static HashMap<Long,Way> wayList = new HashMap<Long,Way>();
-	private static Way[][] links;
-	private static int nodeCount=0;
-
+	private  HashMap<Long,Node> nodeList = new HashMap<Long,Node>();
+	private HashMap<Long,Way> wayList = new HashMap<Long,Way>();
+	private Way[][] links;
+	private int nodeCount;
+	
 	public Graph(String[] files){
 		for (String fName: files)
 			Parser.loadJSON(fName,this);
@@ -30,7 +31,7 @@ public class Graph {
 		nodeList = removeUnused();
 		System.out.println("Nodes = " + nodeList.size());
 
-		
+		nodeCount = nodeList.size();
 		
 		links = new Way[nodeCount][];
 		for (int c=0; c < nodeCount;c++)
@@ -41,28 +42,29 @@ public class Graph {
 		System.out.println("Ways = " + wayList.size());
 
 		//Add ways  to links
+		String key = "";
 		for (Way w : wayList.values()){
-			ArrayList<Node> nodes = w.getNodes();
-			for (int x=0; x < nodes.size(); x++){
-				for (int y=0; y < nodes.size(); y++){
+			System.out.println(w.getName());
+			Node[] nodes = w.getNodes();
+			for (int x=0; x < nodes.length; x++){
+				System.out.println(w.getName());
+				
+				for (int y=0; y < (nodes.length-x); y++){
 					if (x != y){
-						System.out.println(w.getName() + ":"+ nodes.get(x) + ":" +nodes.get(y));
-						int idx1 = nodes.get(x).getIndex();
-						int idx2 = nodes.get(y).getIndex();
-						System.out.println(idx1 +":"+idx2);
-						links[idx1][idx2] = w;
-						links[idx2][idx1] = w;
+					
+						links[nodes[x].getIndex()][nodes[y].getIndex()] = w;
 					}
 				}	 
 			}
+			
 		}
 	}
 	
-	public static int getNodeCount(){
+	public  int getNodeCount(){
 		return nodeCount;
 	}
 	
-	public static void addNode(Node n){
+	public  void addNode(Node n){
 		if (nodeList.containsKey(n.getId()))
 			return;
 		
@@ -70,54 +72,54 @@ public class Graph {
 		nodeCount++;
 	}
 	
-	public static void addWay(Way w){
+	public  void addWay(Way w){
 		if (wayList.containsKey(w.getID()))
 			return;
 		wayList.put(w.getID(),w);
 	}
 	
-	public static boolean nodeExists(long id){
+	public boolean nodeExists(long id){
 		return nodeList.containsKey(id);
 	}
 
-	public static Node getNode(long id){
+	public Node getNode(long id){
 		return nodeList.get(id);
 	}
 	
-	public static int nodeCount(){
+	public  int nodeCount(){
 		return nodeCount;
 	}
 	
-	public static Way getWay(Node x, Node y){
+	public Way getWay(Node x, Node y){
 		if ((x==null)||(y==null))
 			return null;
-		
-		return links[x.getIndex()][y.getIndex()];
+		if (x.getIndex()<y.getIndex())
+			return links[x.getIndex()][y.getIndex()];
+		return links[y.getIndex()][x.getIndex()];
 	}
-
-
-
 	
 	public Collection<Node> getNodes(){
 		return nodeList.values();
 	}
-	private static HashMap<Long,Node>removeUnused(){
+	private HashMap<Long,Node>removeUnused(){
 		HashMap<Long,Node> res= new HashMap<Long,Node>();
-
+		int index=0;
 		for(Node n: nodeList.values()){
-			if (n.getUsed())
+			if (n.getUsed()){
+				n.setIndex(index);
 				res.put(n.getId(),n);
+				index++;
+			}
 		}
 		return res;
 	}
 	
-	public static ArrayList<Node> getNeighbours(Node node) {
+	public ArrayList<Node> getNeighbours(Node node) {
 		ArrayList<Node> result = new ArrayList<Node>();
 		Way[] linkedTo = links[node.getIndex()];
 		for (int c=0; c < linkedTo.length; c++ ){
 			if (linkedTo[c] != null){
-				//System.out.println(linkedTo[c].getName());
-				result.addAll(linkedTo[c].getNodes());
+				result.addAll(Arrays.asList(linkedTo[c].getNodes()));
 			}
 		}
 		return result;

@@ -8,15 +8,16 @@ import book.ch6.data.Node;
 import book.ch6.data.Way;
 
 public class Dijkstra {
-	private static Graph myGraph;
-	private static Node source;
-	private static Node dest;
-	private static Node prev[] ;
-	public static void setData(Graph aGraph){
+	private Graph myGraph;
+	private Node source;
+	private Node dest;
+	private Node prev[] ;
+	
+	public  void setData(Graph aGraph){
 		myGraph = aGraph;
 	}
 	
-	public static void findRoute(long sourceID, long destID){
+	public  void findRoute(long sourceID, long destID){
 
 		
 		if (!myGraph.nodeExists(sourceID)){
@@ -47,12 +48,13 @@ public class Dijkstra {
 		System.out.println("Done setup");
 		System.out.println("Processing");
 		while(q.size() >0){
-			System.out.println("Q=" + q.size());
+			if ((q.size()%5000)==0)
+				System.out.println("Q=" + q.size());
+			
 			Node u = findMin(q,dists);
 			q.remove(u);
 
-			ArrayList<Node> neighbours = myGraph.getNeighbours(u);
-			for (Node v : neighbours){
+			for (Node v : myGraph.getNeighbours(u)){
 				if (q.indexOf(v)>-1){
 					double alt = dists[u.getIndex()] + u.getDist(v);
 					if (alt < dists[v.getIndex()]){
@@ -80,7 +82,7 @@ public class Dijkstra {
 		Node old = null;
 		Node current = dest;
 		while (current != source){
-			Way currentWay = Graph.getWay(current,old);
+			Way currentWay = myGraph.getWay(current,old);
 			if (currentWay != null)
 				res.add(res.size(),currentWay.getName());
 			old = current;
@@ -101,7 +103,7 @@ public class Dijkstra {
 		return res;
 	}
 	
-	private static Node findMin(ArrayList<Node> data, double[] dists ){
+	private  Node findMin(ArrayList<Node> data, double[] dists ){
 		double best = Double.MAX_VALUE;
 		Node res = null;
 		for (Node current : data){

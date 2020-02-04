@@ -6,34 +6,32 @@ public class Way {
 	private long id;
 	private String name;
 	private String highway;
-	private ArrayList<Node>  nodes;
+	private Node[]  nodes;
 	
 	
-	public Way(long id, String name, String highway){
+	public Way(long id, String name, String highway, Node[] someNodes){
 		this.id = id;
 		this.name = name;
 		this.highway = highway;
-		nodes = new ArrayList<Node>();
+		nodes = someNodes;
 	}
 	
 	public long getID(){
 		return id;
 	}
 	
-	public ArrayList<Node> getNodes(){
+	public Node[] getNodes(){
 		return nodes;
 	}
 	
-	public void addNode(Node n){
-		nodes.add(n);
-	}
+	
 	
 	public String getName(){
 		return name;
 	}
 	
 	public long[] getNodeIDs(){
-		long[] result = new long[nodes.size()];
+		long[] result = new long[nodes.length];
 		int c=0;
 		for (Node n : nodes){
 			result[c]=n.getId();
