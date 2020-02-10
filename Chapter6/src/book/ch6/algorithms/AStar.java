@@ -7,7 +7,7 @@ import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 import book.ch6.data.Way;
 
-public class Dijkstra implements RoutingAlgorithm {
+public class AStar implements RoutingAlgorithm {
 	private Graph myGraph;
 	private Node source;
 	private Node dest;
@@ -23,36 +23,22 @@ public class Dijkstra implements RoutingAlgorithm {
 		myGraph = aGraph;
 	}
 	
-	public void setEnds(long sourceID, long destID) {
-		if (!myGraph.nodeExists(sourceID)){
-			System.out.println("Source not used");
-			return;
-		}
-		
-		if (!myGraph.nodeExists(destID)){
-			System.out.println("Dest not used");
-			return;
-		}
-		
-		initialise(sourceID, destID);            
-
-		
-	}
 	/* (non-Javadoc)
 	 * @see book.ch6.algorithms.RoutingAlgorithm#findRoute(long, long)
 	 */
 	@Override
 	public  void findRoute(){
-	
+		
+		
 		
 		while(q.size() >0){
-			step();
-		}
-		
+			if (step())
+				return;
+		}	
 	}
 
-	private void step() {
-		Node u = findMin(q,dists);
+	private boolean step() {
+		Node u = findClosest(q);
 		q.remove(u);
 
 		for (Node v : myGraph.getNeighbours(u)){
@@ -61,9 +47,12 @@ public class Dijkstra implements RoutingAlgorithm {
 				if (alt < dists[v.getIndex()]){
 					dists[v.getIndex()] = alt;
 					prev[v.getIndex()] = u;
+					if (v.getId() == dest.getId())
+						return true;
 				}
 			}
 		}
+		return false;
 	}
 
 	private void initialise(long sourceID, long destID) {
@@ -130,15 +119,34 @@ public class Dijkstra implements RoutingAlgorithm {
 		return res;
 	}
 	
-	private  Node findMin(ArrayList<Node> data, double[] dists ){
+	private  Node findClosest(ArrayList<Node> data){
 		double best = Double.MAX_VALUE;
 		Node res = null;
 		for (Node current : data){
-			if (dists[current.getIndex()] <= best){
+			double estim = dists[current.getIndex()] + current.getDist(dest);
+			if (estim <= best){
 				res = current;
-				best = dists[current.getIndex()];
+				best = estim;
 			}
 		}
 		return res;
 	}
+
+	@Override
+	public void setEnds(long sourceID, long destID) {
+		if (!myGraph.nodeExists(sourceID)){
+			System.out.println("Source not used");
+			return;
+		}
+		
+		if (!myGraph.nodeExists(destID)){
+			System.out.println("Dest not used");
+			return;
+		}
+		
+		initialise(sourceID, destID);            
+		
+	}
+
+	
 }

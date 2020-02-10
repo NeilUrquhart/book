@@ -7,13 +7,13 @@ import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 import book.ch6.data.Way;
 
-public class Dijkstra implements RoutingAlgorithm {
+public class DijkstraMod implements RoutingAlgorithm {
 	private Graph myGraph;
-	private Node source;
-	private Node dest;
-	private Node prev[] ;
-	private double dists[];
-	private ArrayList<Node> q;
+	protected Node source;
+	protected Node dest;
+	protected Node prev[] ;
+	protected double dists[];
+	protected ArrayList<Node> q;
 	
 	/* (non-Javadoc)
 	 * @see book.ch6.algorithms.RoutingAlgorithm#setData(book.ch6.data.Graph)
@@ -23,6 +23,15 @@ public class Dijkstra implements RoutingAlgorithm {
 		myGraph = aGraph;
 	}
 	
+	public void setSource(Node s){
+		this.source = s;
+	}
+	
+	public void setDest(Node d){
+		this.dest = d;
+	}
+	
+	@Override
 	public void setEnds(long sourceID, long destID) {
 		if (!myGraph.nodeExists(sourceID)){
 			System.out.println("Source not used");
@@ -35,23 +44,24 @@ public class Dijkstra implements RoutingAlgorithm {
 		}
 		
 		initialise(sourceID, destID);            
-
 		
 	}
+	
 	/* (non-Javadoc)
 	 * @see book.ch6.algorithms.RoutingAlgorithm#findRoute(long, long)
 	 */
 	@Override
 	public  void findRoute(){
-	
 		
 		while(q.size() >0){
-			step();
+			if (step())
+				return;
 		}
 		
 	}
 
-	private void step() {
+	
+	public boolean step() {
 		Node u = findMin(q,dists);
 		q.remove(u);
 
@@ -61,12 +71,15 @@ public class Dijkstra implements RoutingAlgorithm {
 				if (alt < dists[v.getIndex()]){
 					dists[v.getIndex()] = alt;
 					prev[v.getIndex()] = u;
+					if (v.getId() == dest.getId())
+						return true;
 				}
 			}
 		}
+		return false;
 	}
 
-	private void initialise(long sourceID, long destID) {
+	public void initialise(long sourceID, long destID) {
 		source = myGraph.getNode(sourceID);
 		dest = myGraph.getNode(destID);
 		dists = new double[myGraph.nodeCount()];
@@ -130,7 +143,7 @@ public class Dijkstra implements RoutingAlgorithm {
 		return res;
 	}
 	
-	private  Node findMin(ArrayList<Node> data, double[] dists ){
+	protected  Node findMin(ArrayList<Node> data, double[] dists ){
 		double best = Double.MAX_VALUE;
 		Node res = null;
 		for (Node current : data){

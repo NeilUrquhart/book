@@ -2,7 +2,7 @@ package book.ch6.data;
 
 import java.util.ArrayList;
 
-import book.ch6.algorithms.Dijkstra;
+import book.ch6.algorithms.RoutingAlgorithm;
 
 public class Route {
 	private Node start;
@@ -19,9 +19,10 @@ public class Route {
 		this.finish = myGraph.getNode(finish);
 	}
 	
-	public void buildRoute(Dijkstra algorithm){
+	public void buildRoute(RoutingAlgorithm algorithm){
 		algorithm.setData(myGraph);
-		algorithm.findRoute(start.getId(), finish.getId());
+		algorithm.setEnds(start.getId(), finish.getId());
+		algorithm.findRoute();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();
 		ways = algorithm.getStreets();

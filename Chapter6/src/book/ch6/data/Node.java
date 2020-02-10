@@ -1,18 +1,21 @@
 package book.ch6.data;
 
+import java.util.ArrayList;
+
 
 public class Node {
 	private long id;
 	private LatLon location;
 	private boolean used;
 	private int index;
-
+	
 	public Node(long id, LatLon loc){
 		this.id = id;
 		this.location = loc;
 		used = false;
 	}
 
+	
 	public int getIndex(){
 		return index;
 	}
