@@ -140,6 +140,7 @@ public class DijkstraMod implements RoutingAlgorithm {
 			old = current;
 			current = prev[current.getIndex()];
 		}
+		res = res + current.getDist(old);
 		return res;
 	}
 	

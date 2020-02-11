@@ -11,9 +11,9 @@ public class AStar implements RoutingAlgorithm {
 	private Graph myGraph;
 	private Node source;
 	private Node dest;
-	private Node prev[] ;
-	private double dists[];
-	private ArrayList<Node> q;
+	protected Node prev[] ;
+	protected double dists[];
+	protected ArrayList<Node> q;
 	
 	/* (non-Javadoc)
 	 * @see book.ch6.algorithms.RoutingAlgorithm#setData(book.ch6.data.Graph)
@@ -22,7 +22,9 @@ public class AStar implements RoutingAlgorithm {
 	public  void setData(Graph aGraph){
 		myGraph = aGraph;
 	}
-	
+	public void setDest(Node d){
+		this.dest = d;
+	}
 	/* (non-Javadoc)
 	 * @see book.ch6.algorithms.RoutingAlgorithm#findRoute(long, long)
 	 */
@@ -55,7 +57,7 @@ public class AStar implements RoutingAlgorithm {
 		return false;
 	}
 
-	private void initialise(long sourceID, long destID) {
+	protected void initialise(long sourceID, long destID) {
 		source = myGraph.getNode(sourceID);
 		dest = myGraph.getNode(destID);
 		dists = new double[myGraph.nodeCount()];
@@ -116,10 +118,11 @@ public class AStar implements RoutingAlgorithm {
 			old = current;
 			current = prev[current.getIndex()];
 		}
+		res = res + current.getDist(old);
 		return res;
 	}
 	
-	private  Node findClosest(ArrayList<Node> data){
+	protected  Node findClosest(ArrayList<Node> data){
 		double best = Double.MAX_VALUE;
 		Node res = null;
 		for (Node current : data){

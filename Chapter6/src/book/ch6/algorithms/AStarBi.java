@@ -6,7 +6,7 @@ import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 
-public class DijkstraBi implements RoutingAlgorithm {
+public class AStarBi implements RoutingAlgorithm {
 
 	private Graph myGraph;
 	private Node join;
@@ -14,15 +14,15 @@ public class DijkstraBi implements RoutingAlgorithm {
 	private Long destID;
 	//private Node dest;
 	
-	private DijkstraSlave  forward;
-	private DijkstraSlave  reverse;
+	private AStarSlave  forward;
+	private AStarSlave  reverse;
 	
 	@Override
 	public void setData(Graph aGraph) {
 		myGraph = aGraph;
 		
-		forward = new DijkstraSlave();
-		reverse = new DijkstraSlave();
+		forward = new AStarSlave();
+		reverse = new AStarSlave();
 		
 		forward.setData(myGraph);
 		reverse.setData(myGraph);
@@ -102,10 +102,10 @@ public class DijkstraBi implements RoutingAlgorithm {
 		return forward.getDist() + reverse.getDist();
 	}
 	
-	private class DijkstraSlave extends DijkstraMod{
+	private class AStarSlave extends AStar{
 		
 		public ArrayList<Node> stepN() {
-			Node u = findMin(q,dists);
+			Node u = findClosest(q);
 			q.remove(u);
 			ArrayList<Node> neighbours = myGraph.getNeighbours(u);
 			for (Node v : neighbours){
