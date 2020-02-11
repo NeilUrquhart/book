@@ -81,6 +81,10 @@ public class Graph {
 		return nodeList.containsKey(id);
 	}
 
+	public boolean nodeExists(Node n){
+		return nodeList.containsValue(n);
+	}
+
 	public Node getNode(long id){
 		return nodeList.get(id);
 	}

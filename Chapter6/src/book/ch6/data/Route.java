@@ -20,8 +20,8 @@ public class Route {
 	}
 	
 	public void buildRoute(RoutingAlgorithm algorithm){
-		algorithm.setData(myGraph);
-		algorithm.setEnds(start.getId(), finish.getId());
+		algorithm.initialise(myGraph);
+		algorithm.setRoute(start, finish);
 		algorithm.findRoute();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();

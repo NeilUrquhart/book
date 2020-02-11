@@ -13,9 +13,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import book.ch6.algorithms.AStar;
-import book.ch6.algorithms.AStarBi;
+import book.ch6.algorithms.AStarBiDirectional;
 import book.ch6.algorithms.Dijkstra;
-import book.ch6.algorithms.DijkstraBi;
+import book.ch6.algorithms.DijkstraBiDirectional;
 import book.ch6.algorithms.DijkstraMod;
 import book.ch6.algorithms.RoutingAlgorithm;
 import book.ch6.data.Graph;
@@ -33,7 +33,7 @@ public class Application {
 		Graph myGraph = new Graph(files);
 		System.out.println("Load time =" + (System.currentTimeMillis()-start));
 		
-		RoutingAlgorithm[] testAlgs = {new AStarBi(), new DijkstraBi(), new AStar(), new DijkstraMod(),new Dijkstra()};
+		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new DijkstraMod(),new Dijkstra()};
 		for (RoutingAlgorithm alg:testAlgs){
 			 testRouter(myGraph, 26941173L,3676389428L,alg); 
 			 testRouter(myGraph, 38826274L, 52047461L,alg); 
