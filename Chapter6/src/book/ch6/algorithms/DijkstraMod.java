@@ -11,27 +11,24 @@ public class DijkstraMod extends Dijkstra {
 
 	@Override
 	public  void findRoute(){
-		while(current.size() >0){
-			if (step())
+		while(unVisited.size() >0){
+			if (step()==null)
 				return;
 		}
 	}
 
-
-	public boolean step() {
-		Node u = findMin(current,dists);
-		current.remove(u);
-		for (Node v : myGraph.getNeighbours(u)){
-			if (current.indexOf(v)>-1){
-				double alt = dists[u.getIndex()] + u.getDist(v);
-				if (alt < dists[v.getIndex()]){
-					dists[v.getIndex()] = alt;
-					previous[v.getIndex()] = u;
-					if (v.getId() == dest.getId())
-						return true;
-				}
+	public Node step() {
+		for (Node v : myGraph.getNeighbours(current)){
+			double alt = dists[current.getIndex()] + current.getDist(v);
+			if (alt < dists[v.getIndex()]){
+				dists[v.getIndex()] = alt;
+				previous[v.getIndex()] = current;
+				if (v.getId() == finish.getId())
+					return null;
 			}
 		}
-		return false;
+		current = findMin(unVisited,dists);
+		unVisited.remove(current);
+		return current;
 	}
 }

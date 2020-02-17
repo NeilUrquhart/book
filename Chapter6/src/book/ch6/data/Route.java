@@ -13,22 +13,38 @@ public class Route {
 	private Graph myGraph;
 	
 	public Route(Graph myGraph, long start, long finish){
+		if (!myGraph.nodeExists(start)){
+			System.out.println("Start not found");
+			return;
+		}
+		
+		if (!myGraph.nodeExists(finish)){
+			System.out.println("Finish not found");
+			return;
+		}
+		
 		this.myGraph = myGraph;
-	
+		
+		
 		this.start = myGraph.getNode(start);
 		this.finish = myGraph.getNode(finish);
 	}
 	
+	public Route reverse(){
+		return new Route(this.myGraph, this.getFinish().getId(), this.getStart().getId());
+	}
+	
 	public void buildRoute(RoutingAlgorithm algorithm){
-		algorithm.initialise(myGraph);
-		algorithm.setRoute(start, finish);
+		algorithm.setRoute(this);
 		algorithm.findRoute();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();
 		ways = algorithm.getStreets();
-		
 	}
 
+	public Graph getGraph(){
+		return myGraph;
+	}
 	public ArrayList<LatLon> getLocations() {
 		return locations;
 	}
