@@ -7,30 +7,30 @@ import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 import book.ch6.data.Route;
 
-public class DijkstraBiDirectional implements RoutingAlgorithm {	
-	private Dijkstra  forward;
-	private Dijkstra  reverse;
+public class DijkstraBiDirectional extends RoutingAlgorithm {	
+	private DijkstraFlood  forward;
+	private DijkstraFlood  reverse;
 	
 	
 	@Override
 	public void setRoute(Route r){		
-		forward = new Dijkstra();
-		reverse = new Dijkstra();
+		forward = new DijkstraFlood();
+		reverse = new DijkstraFlood();
 		forward.setRoute(r);            
 		reverse.setRoute(r.reverse()); 
 		
 	}
 
 	@Override
-	public void findRoute() {
+	public void findPath() {
 		boolean done = false;
 		while(!done){
 			Node fCurrent = forward.step();			
 			Node rCurrent = reverse.step();
 
 			if (rCurrent==fCurrent){
-				forward.setFinish(rCurrent);
-				reverse.setFinish(fCurrent);
+				forward.updateFinish(rCurrent);
+				reverse.updateFinish(fCurrent);
 				done = true;
 			}
 		}
@@ -47,11 +47,11 @@ public class DijkstraBiDirectional implements RoutingAlgorithm {
 	}
 
 	@Override
-	public ArrayList<String> getStreets() {
-		ArrayList<String> res= forward.getStreets();
+	public ArrayList<String> getDirections() {
+		ArrayList<String> res= forward.getDirections();
 		
-		for (int count = reverse.getStreets().size()-1;count >=0; count--){
-			res.add(reverse.getStreets().get(count));
+		for (int count = reverse.getDirections().size()-1;count >=0; count--){
+			res.add(reverse.getDirections().get(count));
 		}
 		return res;
 	}

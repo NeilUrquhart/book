@@ -7,11 +7,11 @@ import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 import book.ch6.data.Way;
 
-public class AStar  extends Dijkstra  {
+public class AStar  extends RoutingAlgorithm  {
 	protected ArrayList<Node> open;
 	
 	@Override
-	public  void findRoute(){
+	public  void findPath(){
 		open = new ArrayList<Node>();
 		open.add(start);
 		while(open.size() >0){

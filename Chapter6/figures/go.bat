@@ -1,0 +1,9 @@
+DOT -Tpng dijkstra1.gv -o dijkstra1.png
+DOT -Tpng dijkstra2.gv -o dijkstra2.png
+DOT -Tpng dijkstra3.gv -o dijkstra3.png
+DOT -Tpng dijkstra4.gv -o dijkstra4.png
+DOT -Tpng Astar.gv -o Astar.png
+DOT -Tpng Astar1.gv -o Astar1.png
+DOT -Tpng Astar2.gv -o Astar2.png
+DOT -Tpng Astar3.gv -o Astar3.png
+DOT -Tpng ReverseRoute.gv -o ReverseRoute.png

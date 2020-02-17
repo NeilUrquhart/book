@@ -36,10 +36,10 @@ public class Route {
 	
 	public void buildRoute(RoutingAlgorithm algorithm){
 		algorithm.setRoute(this);
-		algorithm.findRoute();
+		algorithm.findPath();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();
-		ways = algorithm.getStreets();
+		ways = algorithm.getDirections();
 	}
 
 	public Graph getGraph(){

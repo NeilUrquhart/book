@@ -1,0 +1,22 @@
+graph {
+    rankdir=LR;
+labelloc=t
+ a [label="A\nPrev=\nDist=0"];
+ b [label="B\nPrev=A\nDist=10"];
+ c [label="C\nPrev=b\nDist=22"];
+ d [label="D\nPrev=A\nDist=25"];
+ e [label="E\nPrev=\nDist=infin"];
+ f [label="F\nPrev=\nDist=infin"];
+ 
+    a -- b[weight=10,label="10"];
+    b -- c[weight=10,label="12"];
+    c -- d[weight=10,label="8"];
+    d -- e[weight=10,label="4"];
+    e -- f[weight=10,label="5"];
+    a -- d[weight=10,label="25"];
+    b -- d[weight=10,label="16"];
+    c -- f[weight=10,label="15"];
+label ="Start= A End= C Current=C
+Unvisited ={CDEF}";
+
+}

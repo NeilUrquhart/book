@@ -35,9 +35,7 @@ public class Graph {
 		nodeCount = nodeList.size();
 		
 		links = new Matrix(nodeCount);//Way[nodeCount][];
-		//for (int c=0; c < nodeCount;c++)
-		//	links[c] = new Way[nodeCount];
-
+	
 		System.out.println("Stats:");
 		System.out.println("Nodes = " + nodeList.size());
 		System.out.println("Ways = " + wayList.size());
@@ -98,7 +96,6 @@ public class Graph {
 			return null;
 		
 		return links.get(x.getIndex(),y.getIndex());
-		//return links[y.getIndex()][x.getIndex()];
 	}
 	
 	public Collection<Node> getNodes(){
