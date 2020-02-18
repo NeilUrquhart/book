@@ -38,8 +38,8 @@ public class Application {
 		
 
 		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
-		//testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
-		//testRouter(myGraph, 38826274L, 52047461L,testAlgs);
+		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
+		testRouter(myGraph, 38826274L, 52047461L,testAlgs);
 		testRouter(myGraph, 3984466166L,52047461L,testAlgs);
 		testRouter(myGraph, 4611819743L,3715514804L,testAlgs);
 		testRouter(myGraph, 4756281951L,2508067364L,testAlgs);
