@@ -19,6 +19,7 @@ import book.ch6.algorithms.DijkstraFlood;
 import book.ch6.algorithms.DijkstraBiDirectional;
 import book.ch6.algorithms.RoutingAlgorithm;
 import book.ch6.data.Graph;
+import book.ch6.data.Node;
 import book.ch6.data.Route;
 
 /*
@@ -32,6 +33,9 @@ public class Application {
 		Graph myGraph = new Graph(files);
 		System.out.println("Load time =" + (System.currentTimeMillis()-start));
 		System.out.println("Nodes,"+myGraph.getNodes().size());
+		
+		
+		
 
 		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
 		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
@@ -44,8 +48,17 @@ public class Application {
 		testRouter(myGraph, 3073722023L, 4611819743L,testAlgs);
 		testRouter(myGraph, 1631995154L,2420233344L,testAlgs);
 		testRouter(myGraph, 1815330260L,3984466166L,testAlgs);                         
-                     
-
+                  
+		System.out.println("Drawing route");
+		drawRoute(myGraph, 3984466166L, 2407072781L, testAlgs);
+		
+		System.out.println("Drawing nodes");
+		KMLWriter allNodes = new KMLWriter();
+		for(Node n : myGraph.getNodes()) {
+			System.out.println(n);
+			allNodes.addPlacemark(n.getLocation(), "", "", "styleRV");
+		}
+		allNodes.writeFile("allNodes");
 	}
 
 	public static void testRouter(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
@@ -66,4 +79,22 @@ public class Application {
 		}
 		System.out.println();
 	}
+	
+	public static void drawRoute(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
+		System.out.print("Testing,"+start+":"+end+",");
+		for (RoutingAlgorithm router : routers) {
+			System.out.print(","+router.getClass().getSimpleName());
+			Route testRoute = new Route(myGraph,start,end);
+			testRoute.buildRoute(router);
+			KMLWriter out = new KMLWriter();
+			out.addRoute(testRoute.getLocations(), router.getClass().getSimpleName(), "", colours[colIndex]);
+			out.writeFile(router.getClass().getSimpleName()+".kml");		
+			colIndex++; 
+			if (colIndex==colours.length)
+				colIndex=0;
+		}
+	}
+	
+	private static String[] colours = {"green","red","yellow","blue"};
+	private static int colIndex=0;
 }

@@ -42,13 +42,13 @@ public class DrawFigs {
 		
 		System.out.println("Nodes,"+myGraph.getNodes().size());
 		RoutingAlgorithm[] testAlgs = {/*new AStar(), new Dijkstra(),new DijkstraFlood(),new AStarBiDirectional(),*/ new DijkstraBiDirectional()};
-		testRouter(myGraph, 4032301773L,1969997014L,testAlgs);                         
+		drawRoute(myGraph, 4032301773L,1969997014L,testAlgs);                         
 	}
 
 	private static String[] colours = {"green","red","yellow","blue"};
 	private static int colIndex=0;
 		
-	public static void testRouter(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
+	public static void drawRoute(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
 		System.out.print("Testing,"+start+":"+end+",");
 		for (RoutingAlgorithm router : routers) {
 			System.out.print(","+router.getClass().getSimpleName());
