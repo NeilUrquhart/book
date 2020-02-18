@@ -7,10 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+
 
 import book.ch6.algorithms.AStar;
 import book.ch6.algorithms.AStarBiDirectional;
@@ -24,6 +21,8 @@ import book.ch6.data.Route;
 
 /*
  * https://code.google.com/archive/p/json-simple/
+ * 
+ * http://umap.openstreetmap.fr/en/map/new/#17/55.94883/-3.18124
  */
 
 public class DrawFigs {
@@ -33,17 +32,17 @@ public class DrawFigs {
 		String[] files = {/*"Greenbank.dat",*/"Edin1.json","Edin2.json","Edin3.json","Edin4.json"};
 		Graph myGraph = new Graph(files);
 
-		KMLWriter allNodes = new KMLWriter();
-		for(Node n : myGraph.getNodes()) {
-			System.out.println(n);
-			allNodes.addPlacemark(n.getLocation(), "", "", "styleRV");
-		}
-		
-		allNodes.writeFile("allNodes");
+//		KMLWriter allNodes = new KMLWriter();
+//		for(Node n : myGraph.getNodes()) {
+//			System.out.println(n);
+//			allNodes.addPlacemark(n.getLocation(), "", "", "styleRV");
+//		}
+//		
+//		allNodes.writeFile("allNodes");
 		
 		System.out.println("Nodes,"+myGraph.getNodes().size());
-	//	RoutingAlgorithm[] testAlgs = {new AStar(), new Dijkstra(),new DijkstraFlood(),new AStarBiDirectional(), new DijkstraBiDirectional()};
-	//	testRouter(myGraph, 4032301773L,1969997014L,testAlgs);                         
+		RoutingAlgorithm[] testAlgs = {/*new AStar(), new Dijkstra(),new DijkstraFlood(),new AStarBiDirectional(),*/ new DijkstraBiDirectional()};
+		testRouter(myGraph, 4032301773L,1969997014L,testAlgs);                         
 	}
 
 	private static String[] colours = {"green","red","yellow","blue"};

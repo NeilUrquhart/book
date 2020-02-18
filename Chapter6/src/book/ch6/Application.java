@@ -28,22 +28,23 @@ import book.ch6.data.Route;
 public class Application {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
-		String[] files = {"Greenbank.dat","Edin1.json","Edin2.json","Edin3.json","Edin4.json"};
+		String[] files = {"Edin1.json","Edin2.json","Edin4.json","Edin5.json","Edin3.json"};
 		Graph myGraph = new Graph(files);
 		System.out.println("Load time =" + (System.currentTimeMillis()-start));
 		System.out.println("Nodes,"+myGraph.getNodes().size());
 
 		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
+		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
 		testRouter(myGraph, 38826274L, 52047461L,testAlgs);
-		testRouter(myGraph, 26941173L,3676389428L,testAlgs);
+		testRouter(myGraph, 3984466166L,3676389428L,testAlgs);
 		testRouter(myGraph, 4611819743L,3715514804L,testAlgs);
 		testRouter(myGraph, 4756281951L,2508067364L,testAlgs);
 		testRouter(myGraph, 320845744L,5363531156L,testAlgs);
-		testRouter(myGraph, 2957366516L,29769767L,testAlgs);
+		testRouter(myGraph, 2407072781L,29769767L,testAlgs);
 		testRouter(myGraph, 3073722023L, 4611819743L,testAlgs);
 		testRouter(myGraph, 1631995154L,2420233344L,testAlgs);
-		testRouter(myGraph, 1815330260L,2275608756L,testAlgs);                         
-		testRouter(myGraph, 4032301773L,1969997014L,testAlgs);                         
+		testRouter(myGraph, 1815330260L,3984466166L,testAlgs);                         
+                     
 
 	}
 

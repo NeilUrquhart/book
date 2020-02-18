@@ -42,7 +42,7 @@ public class Graph {
 
 		//Add ways  to links
 		for (Way w : wayList.values()){
-			System.out.println(w.getName());
+			//System.out.println(w.getName());
 			Node[] nodes = w.getNodes();
 			for (int x=0; x < nodes.length; x++){
 				

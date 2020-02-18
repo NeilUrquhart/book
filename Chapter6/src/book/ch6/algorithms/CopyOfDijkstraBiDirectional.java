@@ -7,9 +7,10 @@ import book.ch6.data.LatLon;
 import book.ch6.data.Node;
 import book.ch6.data.Route;
 
-public class DijkstraBiDirectional extends RoutingAlgorithm {	
+public class CopyOfDijkstraBiDirectional extends RoutingAlgorithm {	
 	private Dijkstra  forward;
 	private Dijkstra  reverse;
+	
 	
 	@Override
 	public void setRoute(Route r){	
@@ -19,6 +20,7 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 		reverse = new Dijkstra();
 		forward.setRoute(r);            
 		reverse.setRoute(r.reverse()); 
+		
 	}
 
 	@Override
@@ -36,6 +38,7 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 					done = true;
 					break;
 				}
+
 			}
 		}
 	}
@@ -49,6 +52,7 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 		}
 		res.addAll(reverse.getLocations());
 		
+		
 		return res;
 	}
 
@@ -56,6 +60,7 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 	@Override
 	public ArrayList<String> getDirections() {
 		ArrayList<String> res= forward.getDirections();
+		
 		for (int count = reverse.getDirections().size()-1;count >=0; count--){
 			res.add(reverse.getDirections().get(count));
 		}
@@ -66,4 +71,6 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 	public double getDist() {
 		return forward.getDist() + reverse.getDist();
 	}
+	
+
 }

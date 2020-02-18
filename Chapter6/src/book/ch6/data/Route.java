@@ -15,12 +15,12 @@ public class Route {
 	public Route(Graph myGraph, long start, long finish){
 		if (!myGraph.nodeExists(start)){
 			System.out.println("Start not found");
-			return;
+			System.exit(-1);
 		}
 		
 		if (!myGraph.nodeExists(finish)){
 			System.out.println("Finish not found");
-			return;
+			System.exit(-1);
 		}
 		
 		this.myGraph = myGraph;
