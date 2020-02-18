@@ -21,10 +21,14 @@ public abstract class RoutingAlgorithm {
 	
 	public void setRoute(Route aRoute){
 		this.theRoute = aRoute;
+		this.myGraph = aRoute.getGraph();
+		this.start = aRoute.getStart();
+		this.finish = aRoute.getFinish();		
 	}
 	
 	public void updateFinish(Node f){
 		  finish = f;
+
 	}
 	
 	public ArrayList<LatLon> getLocations(){

@@ -9,6 +9,14 @@ public class LatLon {
 		lon = ln;
 	}
 	
+	public double getLat() {
+		return lat;
+	}
+	
+	public double getLon() {
+		return lon;
+	}
+	
 	public String toString(){
 		return lat + "\t" + lon;
 	}

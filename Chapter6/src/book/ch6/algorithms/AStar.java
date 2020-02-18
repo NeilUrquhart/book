@@ -5,14 +5,36 @@ import java.util.ArrayList;
 import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
 import book.ch6.data.Node;
+import book.ch6.data.Route;
 import book.ch6.data.Way;
 
 public class AStar  extends RoutingAlgorithm  {
 	protected ArrayList<Node> open;
 	
 	@Override
-	public  void findPath(){
+	public void setRoute(Route aRoute) { 
+		theRoute = aRoute;
+		start = aRoute.getStart();
+		finish = aRoute.getFinish();
+		myGraph = theRoute.getGraph();
+		dists = new double[myGraph.nodeCount()];
+		previous = new Node[myGraph.nodeCount()];
+
+		for (int v=0; v < myGraph.nodeCount(); v++){
+			dists[v]    =  Double.MAX_VALUE;              
+			previous[v] = null;                 
+		}
+		
+		dists[start.getIndex()] = 0;
+		current = start;
+		//
 		open = new ArrayList<Node>();
+		open.add(current);
+				
+	}
+	
+	@Override
+	public  void findPath(){
 		open.add(start);
 		while(open.size() >0){
 			if (step()==null)

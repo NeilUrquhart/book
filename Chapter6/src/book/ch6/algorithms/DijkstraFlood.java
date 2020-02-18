@@ -18,7 +18,7 @@ public class DijkstraFlood extends RoutingAlgorithm {
 		}
 	}
 
-	public Node step() {
+	public ArrayList<Node> step() {
 		ArrayList<Node> neighbours = myGraph.getNeighbours(current);
 		for (Node v : neighbours){
 				double alt = dists[current.getIndex()] + current.getDist(v);
@@ -29,7 +29,9 @@ public class DijkstraFlood extends RoutingAlgorithm {
 		}
 		current = findMin(unVisited,dists);
 		unVisited.remove(current);
-		return current;
+		ArrayList<Node> res = new ArrayList<Node>();
+		res.add(current);
+		return  res;
 	}
 
 	@Override
@@ -46,14 +48,11 @@ public class DijkstraFlood extends RoutingAlgorithm {
 			dists[v]    =  Double.MAX_VALUE;              
 			previous[v] = null;                 
 		}
-		
 		unVisited.addAll(myGraph.getNodes());
 		dists[start.getIndex()] = 0;
 		current = start;
 	}
 
-	
-	
 	protected  Node findMin(ArrayList<Node> data, double[] dists ){
 		double best = Double.MAX_VALUE;
 		Node res = null;

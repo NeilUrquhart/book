@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Mapperz &#39;My Map&#39;</name>
+  <description><![CDATA[Testing out the new My Maps Service from Google Maps]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleRV">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>50147800</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleDel">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+    <Style id="style4">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="style5">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>73FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="style2">
+    <LineStyle>
+      <color>E60000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="styleBLine">
+    <LineStyle>
+      <color>50000000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleGLine">
+    <LineStyle>
+      <color>5014F000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleYLine">
+    <LineStyle>
+      <color>5014F0FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+      <Style id="styleRLine">
+    <LineStyle>
+      <color>501400FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style> <Placemark> <name>#Dijkstra</name> <description><![CDATA[]]></description> <styleUrl>#styleRLine</styleUrl> <LineString> <coordinates> -3.1778008,55.933295,0.000000 -3.1784314,55.9340458,0.000000 -3.1791473,55.9348385,0.000000 -3.1805219,55.9369476,0.000000 -3.1809829,55.9377158,0.000000 -3.1818975,55.9389717,0.000000 -3.1822516,55.9394221,0.000000 -3.1826495,55.939897,0.000000 -3.1826857,55.9399892,0.000000 -3.1827389,55.9404775,0.000000 -3.1828119,55.9408325,0.000000 -3.1830792,55.9411638,0.000000 -3.1836828,55.9417438,0.000000 -3.1827726,55.9420362,0.000000 -3.1823528,55.9421601,0.000000 -3.1822161,55.9422004,0.000000 -3.1822499,55.9422329,0.000000 -3.183053,55.9430198,0.000000 -3.1834079,55.9434899,0.000000 -3.1835257,55.9438013,0.000000 -3.1842037,55.9451214,0.000000 -3.1850327,55.9459473,0.000000 -3.1851048,55.9460216,0.000000 -3.1852827,55.9462196,0.000000 -3.186056,55.9471886,0.000000 -3.1864767,55.9479946,0.000000 -3.1865308,55.9480963,0.000000 -3.1868247,55.9486466,0.000000 -3.186909,55.9488095,0.000000 -3.1873476,55.949713,0.000000 -3.1875481,55.9501678,0.000000 -3.1882248,55.9500759,0.000000 -3.1913553,55.9509,0.000000 -3.1947777,55.9500926,0.000000 -3.1964281,55.9511576,0.000000 -3.1967609,55.9517381,0.000000 -3.1973171,55.9518509,0.000000 -3.1994702,55.9514781,0.000000 -3.1995172,55.9515674,0.000000 </coordinates> </LineString> </Placemark>
+</Document>
+</kml>

@@ -17,8 +17,11 @@ public class Dijkstra extends DijkstraFlood {
 		}
 	}
 
-	public Node step() {
-		for (Node v : myGraph.getNeighbours(current)){
+	public ArrayList<Node> step() {
+		current = findMin(unVisited,dists);
+		unVisited.remove(current);
+		ArrayList<Node> neighbours = myGraph.getNeighbours(current);
+		for (Node v : neighbours ){
 			double alt = dists[current.getIndex()] + current.getDist(v);
 			if (alt < dists[v.getIndex()]){
 				dists[v.getIndex()] = alt;
@@ -27,8 +30,6 @@ public class Dijkstra extends DijkstraFlood {
 					return null;
 			}
 		}
-		current = findMin(unVisited,dists);
-		unVisited.remove(current);
-		return current;
+		return neighbours;
 	}
 }

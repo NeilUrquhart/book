@@ -8,7 +8,6 @@ import book.ch6.data.Node;
 import book.ch6.data.Route;
 
 public class AStarBiDirectional extends RoutingAlgorithm {
-	private Node join;	
 	private AStar  forward;
 	private AStar  reverse;
 	
@@ -43,11 +42,14 @@ public class AStarBiDirectional extends RoutingAlgorithm {
 
 	@Override
 	public ArrayList<LatLon> getLocations() {
-		ArrayList<LatLon> res= forward.getLocations();
+		ArrayList<LatLon> res= new ArrayList<LatLon>();
 		
-		for (int count = reverse.getLocations().size()-1;count >=0; count--){
-			res.add(reverse.getLocations().get(count));
+		for (int count = forward.getLocations().size()-1;count >=0; count--){
+			res.add(forward.getLocations().get(count));
 		}
+		res.addAll(reverse.getLocations());
+		
+		
 		return res;
 	}
 

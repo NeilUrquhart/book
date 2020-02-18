@@ -8,43 +8,51 @@ import book.ch6.data.Node;
 import book.ch6.data.Route;
 
 public class DijkstraBiDirectional extends RoutingAlgorithm {	
-	private DijkstraFlood  forward;
-	private DijkstraFlood  reverse;
+	private Dijkstra  forward;
+	private Dijkstra  reverse;
 	
 	
 	@Override
-	public void setRoute(Route r){		
-		forward = new DijkstraFlood();
-		reverse = new DijkstraFlood();
+	public void setRoute(Route r){	
+		this.finish = r.getFinish();
+		this.start = r.getStart();
+		forward = new Dijkstra();
+		reverse = new Dijkstra();
 		forward.setRoute(r);            
 		reverse.setRoute(r.reverse()); 
-		
 	}
 
 	@Override
 	public void findPath() {
 		boolean done = false;
+		forward.current = this.start;
+		reverse.current = this.finish;
 		while(!done){
-			Node fCurrent = forward.step();			
-			Node rCurrent = reverse.step();
-
-			if (rCurrent==fCurrent){
-				forward.updateFinish(rCurrent);
-				reverse.updateFinish(fCurrent);
+			ArrayList<Node> fCurrent = forward.step();			
+			ArrayList<Node> rCurrent = reverse.step();
+			for (Node join: fCurrent) {
+			if (rCurrent.contains(join)){
+				forward.updateFinish(join);
+				reverse.updateFinish(join);
 				done = true;
+			}
 			}
 		}
 	}
 
 	@Override
 	public ArrayList<LatLon> getLocations() {
-		ArrayList<LatLon> res= forward.getLocations();
+		ArrayList<LatLon> res= new ArrayList<LatLon>();
 		
-		for (int count = reverse.getLocations().size()-1;count >=0; count--){
-			res.add(reverse.getLocations().get(count));
+		for (int count = forward.getLocations().size()-1;count >=0; count--){
+			res.add(forward.getLocations().get(count));
 		}
+		res.addAll(reverse.getLocations());
+		
+		
 		return res;
 	}
+
 
 	@Override
 	public ArrayList<String> getDirections() {
