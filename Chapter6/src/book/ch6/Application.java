@@ -38,9 +38,9 @@ public class Application {
 		
 
 		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
-		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
-		testRouter(myGraph, 38826274L, 52047461L,testAlgs);
-		testRouter(myGraph, 3984466166L,3676389428L,testAlgs);
+		//testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
+		//testRouter(myGraph, 38826274L, 52047461L,testAlgs);
+		testRouter(myGraph, 3984466166L,52047461L,testAlgs);
 		testRouter(myGraph, 4611819743L,3715514804L,testAlgs);
 		testRouter(myGraph, 4756281951L,2508067364L,testAlgs);
 		testRouter(myGraph, 320845744L,5363531156L,testAlgs);
@@ -67,7 +67,7 @@ public class Application {
 			System.out.print(router.getClass().getSimpleName());
 			long startRun = System.currentTimeMillis();
 			double dist=0;
-			for (int i=0;i<1/*0*/;i++ ){
+			for (int i=0;i<10;i++ ){
 				//System.out.print(".");
 				Route testRoute = new Route(myGraph,start,end);
 				testRoute.buildRoute(router);
