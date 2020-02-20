@@ -33,10 +33,6 @@ public class Application {
 		Graph myGraph = new Graph(files);
 		System.out.println("Load time =" + (System.currentTimeMillis()-start));
 		System.out.println("Nodes,"+myGraph.getNodes().size());
-		
-		
-		
-
 		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
 		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
 		testRouter(myGraph, 38826274L, 52047461L,testAlgs);
@@ -48,7 +44,7 @@ public class Application {
 		testRouter(myGraph, 3073722023L, 4611819743L,testAlgs);
 		testRouter(myGraph, 1631995154L,2420233344L,testAlgs);
 		testRouter(myGraph, 1815330260L,3984466166L,testAlgs);                         
-                  
+                  /*
 		System.out.println("Drawing route");
 		drawRoute(myGraph, 3984466166L, 2407072781L, testAlgs);
 		
@@ -58,7 +54,7 @@ public class Application {
 			System.out.println(n);
 			allNodes.addPlacemark(n.getLocation(), "", "", "styleRV");
 		}
-		allNodes.writeFile("allNodes");
+		allNodes.writeFile("allNodes");*/
 	}
 
 	public static void testRouter(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
