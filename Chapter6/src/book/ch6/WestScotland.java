@@ -12,13 +12,15 @@ import book.ch6.data.Route;
 public class WestScotland {
 
 	public static void main(String[] args) {
-		String[] files = {"WestScotTrunk.json","WestScotPrimary.json"};
+		String[] files = {"WestScotCTown.json","WestScotTrunk.json","WestScotPrimary.json","WestScotMWay.json","WestScotLuss.json","WestScotInveraray"};
+		//String[] files = {"Edin1.json","Edin2.json","Edin4.json","Edin5.json","Edin3.json"};
+		
 		Graph myGraph = new Graph(files);
 		
-		RoutingAlgorithm[] testAlgs = {/*new AStarBiDirectional(), new DijkstraBiDirectional(), */new AStar(), new Dijkstra(),new DijkstraFlood()};
-		testRouter(myGraph, 3841225793L, 1208895219L, testAlgs);
-		testRouter(myGraph, 1208895219L, 3841225793L, testAlgs);
+		RoutingAlgorithm[] testAlgs = {/*new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(),*/ new Dijkstra()/*,new DijkstraFlood()*/};
+		testRouter(myGraph, 3878896391L,  18927439L, testAlgs);  //Last known good 2254810100
 		
+		//testRouter(myGraph, 3984466166L, 2407072781L, testAlgs); for edin
 		
 		
 	}

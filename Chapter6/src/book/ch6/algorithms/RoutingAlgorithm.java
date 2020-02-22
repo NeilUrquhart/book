@@ -56,15 +56,19 @@ public abstract class RoutingAlgorithm {
 	}
 
 	public double getDist(){
+		System.out.print("DEBUG: get dist");
 		double res=0;
 		Node old = finish;
 		Node current = old;
 		while (current != start){
+			System.out.println("Current= "+ current);
 			res = res + current.getDist(old);
 			old = current;
 			current = previous[current.getIndex()];
 		}
 		res = res + current.getDist(old);
+		System.out.print("Done DEBUG: get dist");
+		
 		return res;
 	}
 }

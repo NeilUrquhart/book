@@ -19,6 +19,7 @@ public class Dijkstra extends DijkstraFlood {
 
 	public ArrayList<Node> step() {
 		current = findMin(unVisited,dists);
+		System.out.println("Unvisited = "+unVisited.size());
 		unVisited.remove(current);
 		ArrayList<Node> neighbours = myGraph.getNeighbours(current);
 		for (Node v : neighbours ){
@@ -26,8 +27,11 @@ public class Dijkstra extends DijkstraFlood {
 			if (alt < dists[v.getIndex()]){
 				dists[v.getIndex()] = alt;
 				previous[v.getIndex()] = current;
-				if (v.getId() == finish.getId())
+				if (v.getId() == finish.getId()) {
+					System.out.print("Found!!");
 					return null;
+					
+				}
 			}
 		}
 		return neighbours;
