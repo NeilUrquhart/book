@@ -1,16 +1,5 @@
 package book.ch6;
 
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import book.ch6.algorithms.AStar;
 import book.ch6.algorithms.AStarBiDirectional;
@@ -19,7 +8,8 @@ import book.ch6.algorithms.DijkstraFlood;
 import book.ch6.algorithms.DijkstraBiDirectional;
 import book.ch6.algorithms.RoutingAlgorithm;
 import book.ch6.data.Graph;
-import book.ch6.data.Node;
+import book.ch6.data.RouterNode;
+import book.ch6.data.RouterWay;
 import book.ch6.data.Route;
 
 /*
@@ -27,44 +17,29 @@ import book.ch6.data.Route;
  */
 
 public class Application {
+
 	public static void main(String[] args) {
-		long start = System.currentTimeMillis();
-		String[] files = {"Edin1.json","Edin2.json","Edin4.json","Edin5.json","Edin3.json"};
-		Graph myGraph = new Graph(files);
-		System.out.println("Load time =" + (System.currentTimeMillis()-start));
-		System.out.println("Nodes,"+myGraph.getNodes().size());
-		RoutingAlgorithm[] testAlgs = {new AStarBiDirectional(), new DijkstraBiDirectional(), new AStar(), new Dijkstra(),new DijkstraFlood()};
-		testRouter(myGraph, 3984466166L, 2407072781L, testAlgs);
-		testRouter(myGraph, 38826274L, 52047461L,testAlgs);
-		testRouter(myGraph, 3984466166L,52047461L,testAlgs);
-		testRouter(myGraph, 4611819743L,3715514804L,testAlgs);
-		testRouter(myGraph, 4756281951L,2508067364L,testAlgs);
-		testRouter(myGraph, 320845744L,5363531156L,testAlgs);
-		testRouter(myGraph, 2407072781L,29769767L,testAlgs);
-		testRouter(myGraph, 3073722023L, 4611819743L,testAlgs);
-		testRouter(myGraph, 1631995154L,2420233344L,testAlgs);
-		testRouter(myGraph, 1815330260L,3984466166L,testAlgs);                         
-                  /*
-		System.out.println("Drawing route");
-		drawRoute(myGraph, 3984466166L, 2407072781L, testAlgs);
+		Graph myGraph = new Graph("westscot.osm");
 		
-		System.out.println("Drawing nodes");
-		KMLWriter allNodes = new KMLWriter();
-		for(Node n : myGraph.getNodes()) {
-			System.out.println(n);
-			allNodes.addPlacemark(n.getLocation(), "", "", "styleRV");
-		}
-		allNodes.writeFile("allNodes");*/
+					
+		RoutingAlgorithm[] testAlgs = {  new AStar(),new DijkstraBiDirectional(),new AStarBiDirectional(),new Dijkstra(),new DijkstraFlood()};
+		//testRouter(myGraph, 26941156L, 3340213108L, testAlgs);//GBank Park to Lochend
+		
+		drawRoute(myGraph, 291781127L,257927392L, testAlgs);//Glasgow  to Campbeltown
+		drawRoute(myGraph, 257927392L, 291781127L, testAlgs);//Campbeltown to Glasgow
+					
+		testRouter(myGraph, 291781127L,257927392L, testAlgs);//Glasgow  to Campbeltown
+		testRouter(myGraph, 257927392L, 291781127L, testAlgs);//Campbeltown to Glasgow
+		 
 	}
 
 	public static void testRouter(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
-		System.out.print("Testing,"+start+":"+end);
+		System.out.print("Testing,"+start+":"+end+",");
 		for (RoutingAlgorithm router : routers) {
 			System.out.print(router.getClass().getSimpleName());
 			long startRun = System.currentTimeMillis();
 			double dist=0;
 			for (int i=0;i<10;i++ ){
-				//System.out.print(".");
 				Route testRoute = new Route(myGraph,start,end);
 				testRoute.buildRoute(router);
 				dist= testRoute.getDist();
@@ -77,14 +52,14 @@ public class Application {
 	}
 	
 	public static void drawRoute(Graph myGraph,long start, long end, RoutingAlgorithm[] routers){
-		System.out.print("Testing,"+start+":"+end+",");
+		System.out.print("drawing,"+start+":"+end+",");
 		for (RoutingAlgorithm router : routers) {
 			System.out.print(","+router.getClass().getSimpleName());
 			Route testRoute = new Route(myGraph,start,end);
 			testRoute.buildRoute(router);
 			KMLWriter out = new KMLWriter();
 			out.addRoute(testRoute.getLocations(), router.getClass().getSimpleName(), "", colours[colIndex]);
-			out.writeFile(router.getClass().getSimpleName()+".kml");		
+			out.writeFile(start+":"+end+"."+router.getClass().getSimpleName()+".kml");		
 			colIndex++; 
 			if (colIndex==colours.length)
 				colIndex=0;

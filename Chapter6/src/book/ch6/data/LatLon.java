@@ -37,4 +37,14 @@ public class LatLon {
         double c = 2 * Math.asin(Math.sqrt(a));
         return R * c;
     }
+	
+	public boolean equal(LatLon other){
+		if (this.lat != other.lat)
+			return false;
+		if (this.lon != other.lon)
+			return false;
+		
+		return true;
+		
+	}
 }

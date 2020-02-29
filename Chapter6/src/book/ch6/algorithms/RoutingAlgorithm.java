@@ -4,18 +4,18 @@ import java.util.ArrayList;
 
 import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
-import book.ch6.data.Node;
+import book.ch6.data.RouterNode;
 import book.ch6.data.Route;
-import book.ch6.data.Way;
+import book.ch6.data.RouterWay;
 
 public abstract class RoutingAlgorithm {
-	protected Node previous[] ;
+	protected RouterNode previous[] ;
 	protected double dists[];
 	protected Route theRoute;
 	protected Graph myGraph;
-	protected Node start;
-	protected Node finish;
-	protected Node current;
+	protected RouterNode start;
+	protected RouterNode finish;
+	protected RouterNode current;
 	
 	public abstract void findPath();
 	
@@ -26,14 +26,14 @@ public abstract class RoutingAlgorithm {
 		this.finish = aRoute.getFinish();		
 	}
 	
-	public void updateFinish(Node f){
+	public void updateFinish(RouterNode f){
 		  finish = f;
 
 	}
 	
 	public ArrayList<LatLon> getLocations(){
 		ArrayList<LatLon> res = new ArrayList<LatLon>();
-		Node current = finish;
+		RouterNode current = finish;
 		while (current != start){
 			res.add(res.size(),current.getLocation());//add at end to reverse order
 			current = previous[current.getIndex()];
@@ -43,10 +43,10 @@ public abstract class RoutingAlgorithm {
 	
 	public ArrayList<String> getDirections(){
 		ArrayList<String> res = new ArrayList<String>();
-		Node old = null;
-		Node current = finish;
+		RouterNode old = null;
+		RouterNode current = finish;
 		while (current != start){
-			Way currentWay = myGraph.getWay(current,old);
+			RouterWay currentWay = myGraph.getWay(current,old);
 			if (currentWay != null)
 				res.add(res.size(),currentWay.getName());
 			old = current;
@@ -56,19 +56,15 @@ public abstract class RoutingAlgorithm {
 	}
 
 	public double getDist(){
-		System.out.print("DEBUG: get dist");
 		double res=0;
-		Node old = finish;
-		Node current = old;
+		RouterNode old = finish;
+		RouterNode current = old;
 		while (current != start){
-			System.out.println("Current= "+ current);
 			res = res + current.getDist(old);
 			old = current;
 			current = previous[current.getIndex()];
 		}
-		res = res + current.getDist(old);
-		System.out.print("Done DEBUG: get dist");
-		
+		res = res + current.getDist(old);	
 		return res;
 	}
 }

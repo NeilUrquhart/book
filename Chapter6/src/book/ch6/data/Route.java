@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import book.ch6.algorithms.RoutingAlgorithm;
 
 public class Route {
-	private Node start;
-	private Node finish;
+	private RouterNode start;
+	private RouterNode finish;
 	private ArrayList<LatLon> locations = new ArrayList<LatLon>();
 	private ArrayList<String> ways = new ArrayList<String>();
 	private double dist=0;
@@ -69,11 +69,11 @@ public class Route {
 		this.dist = dist;
 	}
 
-	public Node getStart() {
+	public RouterNode getStart() {
 		return start;
 	}
 
-	public Node getFinish() {
+	public RouterNode getFinish() {
 		return finish;
 	}
 	

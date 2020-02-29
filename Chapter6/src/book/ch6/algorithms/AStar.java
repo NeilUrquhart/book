@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
-import book.ch6.data.Node;
+import book.ch6.data.RouterNode;
 import book.ch6.data.Route;
-import book.ch6.data.Way;
+import book.ch6.data.RouterWay;
 
 public class AStar  extends RoutingAlgorithm  {
-	protected ArrayList<Node> open;
+	protected ArrayList<RouterNode> open;
 	
 	@Override
 	public void setRoute(Route aRoute) { 
@@ -18,7 +18,7 @@ public class AStar  extends RoutingAlgorithm  {
 		finish = aRoute.getFinish();
 		myGraph = theRoute.getGraph();
 		dists = new double[myGraph.nodeCount()];
-		previous = new Node[myGraph.nodeCount()];
+		previous = new RouterNode[myGraph.nodeCount()];
 
 		for (int v=0; v < myGraph.nodeCount(); v++){
 			dists[v]    =  Double.MAX_VALUE;              
@@ -28,7 +28,7 @@ public class AStar  extends RoutingAlgorithm  {
 		dists[start.getIndex()] = 0;
 		current = start;
 		//
-		open = new ArrayList<Node>();
+		open = new ArrayList<RouterNode>();
 		open.add(current);
 				
 	}
@@ -42,8 +42,8 @@ public class AStar  extends RoutingAlgorithm  {
 		}	
 	}
 	
-	public Node step() {
-		for (Node v : myGraph.getNeighbours(current)){
+	public RouterNode step() {
+		for (RouterNode v : myGraph.getNeighbours(current)){
 				double alt = dists[current.getIndex()] + current.getDist(v);
 				if (alt < dists[v.getIndex()]){
 					if (!open.contains(v))
@@ -59,10 +59,10 @@ public class AStar  extends RoutingAlgorithm  {
 		return  current;
 	}
 
-	protected  Node findClosest(ArrayList<Node> data){
+	protected  RouterNode findClosest(ArrayList<RouterNode> data){
 		double best = Double.MAX_VALUE;
-		Node res = null;
-		for (Node current : data){
+		RouterNode res = null;
+		for (RouterNode current : data){
 			double estim = dists[current.getIndex()] + current.getDist(finish);
 			if (estim <= best){
 				res = current;

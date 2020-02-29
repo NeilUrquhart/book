@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
-import book.ch6.data.Node;
+import book.ch6.data.RouterNode;
 import book.ch6.data.Route;
 
 public class DijkstraBiDirectional extends RoutingAlgorithm {	
@@ -27,9 +27,9 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 		forward.current = this.start;
 		reverse.current = this.finish;
 		while(!done){
-			ArrayList<Node> fCurrent = forward.step();			
-			ArrayList<Node> rCurrent = reverse.step();
-			for (Node join: fCurrent) {
+			ArrayList<RouterNode> fCurrent = forward.step();			
+			ArrayList<RouterNode> rCurrent = reverse.step();
+			for (RouterNode join: fCurrent) {
 				if (rCurrent.contains(join)){
 					forward.updateFinish(join);
 					reverse.updateFinish(join);

@@ -1,5 +1,6 @@
 package book.ch6.data;
 
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,7 +8,7 @@ import java.util.HashMap;
 public class Matrix {
 	private class NodeWay{
 		public int id;
-		public Way way;
+		public RouterWay way;
 	}
 	private NodeWay[][] links;
 
@@ -18,7 +19,7 @@ public class Matrix {
 		}
 	}
 
-	public void put(int x, int y, Way w){
+	public void put(int x, int y, RouterWay w){
 		
 		NodeWay nw = new NodeWay();
 		nw.id = y;
@@ -31,23 +32,26 @@ public class Matrix {
 			}
 		 
 		 links[x] = Arrays.copyOf(links[x], oldSize + 5);
-		 links[x][oldSize] = nw;
+		 links[x][oldSize+1] = nw;
 	}
 
-	public Way get(int x, int y){
+	public RouterWay get(int x, int y){
 		NodeWay[] row = links[x];
-		for(NodeWay nw : row)
-			if (nw.id==y)
-				return nw.way;
-		
+		for(NodeWay nw : row){
+			if (nw!=null){
+				if (nw.id==y)
+					return nw.way;
+			}
+		}
+
 		return null;
 	}
 		
 
-	public Way[] getNeighbours(int i){
-		Way[] res = new Way[links[i].length];
+	public RouterWay[] getNeighbours(int i){
+		RouterWay[] res = new RouterWay[links[i].length];
 		
-		for (int x=0; x < links[i].length-2; x++){
+		for (int x=0; x < links[i].length-1; x++){
 			if (links[i][x] != null)
 			  res[x] = links[i][x].way;
 		}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
-import book.ch6.data.Node;
+import book.ch6.data.RouterNode;
 import book.ch6.data.Route;
 
 public class AStarBiDirectional extends RoutingAlgorithm {
@@ -22,15 +22,15 @@ public class AStarBiDirectional extends RoutingAlgorithm {
 	@Override
 	public void findPath() {
 		boolean done = false;
-		forward.open = new ArrayList<Node>();
+		forward.open = new ArrayList<RouterNode>();
 		forward.open.add(forward.start);
 
-		reverse.open = new ArrayList<Node>();
+		reverse.open = new ArrayList<RouterNode>();
 		reverse.open.add(reverse.start);
 
 		while(!done){
-			Node fCurrent = forward.step();			
-			Node rCurrent = reverse.step();
+			RouterNode fCurrent = forward.step();			
+			RouterNode rCurrent = reverse.step();
 
 			if (rCurrent==fCurrent){
 				forward.updateFinish(rCurrent);
