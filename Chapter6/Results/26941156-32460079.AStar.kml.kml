@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Mapperz &#39;My Map&#39;</name>
+  <description><![CDATA[Testing out the new My Maps Service from Google Maps]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleRV">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>50147800</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleDel">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+    <Style id="style4">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="style5">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>73FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="style2">
+    <LineStyle>
+      <color>E60000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="styleBLine">
+    <LineStyle>
+      <color>50000000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleGLine">
+    <LineStyle>
+      <color>5014F000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleYLine">
+    <LineStyle>
+      <color>5014F0FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+      <Style id="styleRLine">
+    <LineStyle>
+      <color>501400FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style> <Placemark> <name>#AStar</name> <description><![CDATA[]]></description> <styleUrl>#styleBLine</styleUrl> <LineString> <coordinates> -3.1412424,55.9510037,0.000000 -3.1410797,55.9508781,0.000000 -3.1426454,55.9506365,0.000000 -3.1424912,55.949557,0.000000 -3.1421186,55.947097,0.000000 -3.1436391,55.9467905,0.000000 -3.143172,55.9458259,0.000000 -3.143355,55.9451786,0.000000 -3.143715,55.9449769,0.000000 -3.1437122,55.9427583,0.000000 -3.1449282,55.942244,0.000000 -3.1485036,55.9413699,0.000000 -3.1495359,55.9415479,0.000000 -3.1503226,55.9417525,0.000000 -3.1515516,55.9415205,0.000000 -3.1661624,55.9399942,0.000000 -3.1700691,55.9414957,0.000000 -3.1703245,55.9415654,0.000000 -3.1706229,55.9416069,0.000000 -3.1709706,55.9416939,0.000000 -3.1716813,55.9415922,0.000000 -3.1728843,55.9405246,0.000000 -3.1724268,55.9403693,0.000000 -3.1721283,55.9384663,0.000000 -3.1718364,55.9380501,0.000000 -3.1721167,55.9378323,0.000000 -3.1723496,55.9377504,0.000000 -3.1744037,55.9361607,0.000000 -3.1761684,55.9356291,0.000000 -3.1761836,55.9356442,0.000000 -3.1776031,55.9352013,0.000000 -3.1791473,55.9348385,0.000000 -3.1784314,55.9340458,0.000000 -3.1798205,55.9335007,0.000000 -3.1831735,55.9322703,0.000000 -3.1898843,55.9308805,0.000000 -3.1922589,55.930991,0.000000 -3.1922695,55.931028,0.000000 -3.1942779,55.9311514,0.000000 -3.1942992,55.9309153,0.000000 -3.196442,55.9309289,0.000000 -3.1965511,55.9309208,0.000000 -3.197359,55.9302255,0.000000 -3.1974111,55.9300519,0.000000 -3.1982512,55.929663,0.000000 -3.1985158,55.9296675,0.000000 -3.2015258,55.9285418,0.000000 -3.2035171,55.9282609,0.000000 -3.2043312,55.9281723,0.000000 -3.2093411,55.9276414,0.000000 -3.2094379,55.9254244,0.000000 -3.2096073,55.9250463,0.000000 -3.2100022,55.9242803,0.000000 -3.2121405,55.9205023,0.000000 -3.2123119,55.9202065,0.000000 -3.212444,55.9199619,0.000000 -3.212684,55.9194491,0.000000 -3.2127621,55.9192479,0.000000 </coordinates> </LineString> </Placemark>
+</Document>
+</kml>

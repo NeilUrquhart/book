@@ -18,35 +18,10 @@ public class DijkstraFlood extends RoutingAlgorithm {
 		while(unVisited.size() >0){
 			step();
 		}
-//		//Temp
-//		try{
-//		PrintWriter writer = new PrintWriter("visited.csv");
-//		writer.println("lat,lon,label");
-//		for (Node n : myGraph.getNodes()){
-//			if (previous[n.getIndex()]!=null){
-//			   //System.out.println(n.getLocation().getLat()+","+n.getLocation().getLon()+"," +dists[n.getIndex()]+":"+n.getId())	;
-//			   writer.println(n.getLocation().getLat()+","+n.getLocation().getLon()+"," +dists[n.getIndex()]+":"+n.getId())	;
-//				
-//			}
-//		}
-//		writer.close();
-//		writer = new PrintWriter("NOTvisited.csv");
-//		writer.println("lat,lon,label");
-//		for (Node n : myGraph.getNodes()){
-//			if (previous[n.getIndex()]==null){
-//			   //System.out.println(n.getLocation().getLat()+","+n.getLocation().getLon()+"," +dists[n.getIndex()]+":"+n.getId())	;
-//			   writer.println(n.getLocation().getLat()+","+n.getLocation().getLon()+"," +dists[n.getIndex()]+":"+n.getId())	;
-//				
-//			}
-//		}
-//		writer.close();
-//		}catch(IOException e){
-//			e.printStackTrace();
-//		}
-//		//Temp
+
 	}
 
-	public ArrayList<RouterNode> step() {
+	private ArrayList<RouterNode> step() {
 		ArrayList<RouterNode> neighbours = myGraph.getNeighbours(current);
 		for (RouterNode v : neighbours){
 		

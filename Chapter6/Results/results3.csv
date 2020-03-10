@@ -1,0 +1,29 @@
+Testing Edin
+Loading Ways
+Stats:
+Nodes = 63267
+Ways = 10612
+Testing,13878019:4481999189,AStardistance,4.6805251091458295,Time,233,DijkstraBiDirectionaldistance,4.6805251091458295,Time,5695,AStarBiDirectionaldistance,5.4525560336849885,Time,860,Dijkstradistance,4.6805251091458295,Time,4886,DijkstraFlooddistance,4.6805251091458295,Time,7033,
+Testing,13878019:2536500371,AStardistance,4.857077759461046,Time,534,DijkstraBiDirectionaldistance,5.826592334536001,Time,5741,AStarBiDirectionaldistance,8.56215451821086,Time,5993,Dijkstradistance,4.857077759461046,Time,4849,DijkstraFlooddistance,4.857077759461046,Time,6788,
+Testing,13878019:26941156,AStardistance,3.9661445433679208,Time,93,DijkstraBiDirectionaldistance,4.245092542440202,Time,2269,AStarBiDirectionaldistance,4.265270505147403,Time,143,Dijkstradistance,3.9661445433679208,Time,2927,DijkstraFlooddistance,3.9661445433679208,Time,6847,
+Testing,13878019:3340213108,AStardistance,5.228895657927559,Time,432,DijkstraBiDirectionaldistance,5.87329624868756,Time,5020,AStarBiDirectionaldistance,8.590782209239155,Time,5485,Dijkstradistance,5.228895657927559,Time,5179,DijkstraFlooddistance,5.228895657927559,Time,6589,
+Testing,13878019:32460079,AStardistance,4.137387616300121,Time,91,DijkstraBiDirectionaldistance,5.066683291514348,Time,3438,AStarBiDirectionaldistance,9.224647783282801,Time,4901,Dijkstradistance,4.298083179596549,Time,3616,DijkstraFlooddistance,4.137387616300121,Time,6534,
+Testing,13878019:249784769,AStardistance,4.058696136345413,Time,160,DijkstraBiDirectionaldistance,4.114481578121114,Time,3363,AStarBiDirectionaldistance,4.124710204745384,Time,92,Dijkstradistance,4.058696136345413,Time,3620,DijkstraFlooddistance,4.058696136345413,Time,6749,
+Testing,13878019:2970377463,AStardistance,3.46789062505642,Time,125,DijkstraBiDirectionaldistance,3.4678906250564205,Time,2390,AStarBiDirectionaldistance,4.796888693581821,Time,817,Dijkstradistance,3.7227041500792555,Time,2352,DijkstraFlooddistance,3.46789062505642,Time,6536,
+Testing,2970377463:4481999189,AStardistance,1.6914332267873766,Time,43,DijkstraBiDirectionaldistance,1.6959030738835348,Time,655,AStarBiDirectionaldistance,1.9329997846148594,Time,139,Dijkstradistance,1.6914332267873766,Time,1146,DijkstraFlooddistance,1.6914332267873766,Time,6766,
+Testing,2970377463:2536500371,AStardistance,3.8846330795441233,Time,42,DijkstraBiDirectionaldistance,4.321604107668193,Time,4267,AStarBiDirectionaldistance,4.459052708474141,Time,462,Dijkstradistance,3.8846330795441233,Time,4067,DijkstraFlooddistance,3.8846330795441233,Time,6517,
+Testing,2970377463:26941156,AStardistance,5.751624740786908,Time,250,DijkstraBiDirectionaldistance,5.808864808560003,Time,5085,AStarBiDirectionaldistance,6.766002152588862,Time,2622,Dijkstradistance,5.751624740786908,Time,5436,DijkstraFlooddistance,5.751624740786908,Time,6510,
+Testing,2970377463:3340213108,AStardistance,1.8475811749153628,Time,28,DijkstraBiDirectionaldistance,1.8475811749153626,Time,882,AStarBiDirectionaldistance,2.502054777705459,Time,215,Dijkstradistance,1.8475811749153628,Time,1408,DijkstraFlooddistance,1.8475811749153628,Time,6505,
+Testing,2970377463:32460079,AStardistance,2.4744416928093953,Time,48,DijkstraBiDirectionaldistance,2.4744416928093953,Time,1332,AStarBiDirectionaldistance,5.837272506283835,Time,1806,Dijkstradistance,2.4840835816565185,Time,1345,DijkstraFlooddistance,2.4744416928093953,Time,6533,
+Testing,2970377463:249784769,AStardistance,0.6607569525127812,Time,4,DijkstraBiDirectionaldistance,0.6607569525127811,Time,190,AStarBiDirectionaldistance,0.6675838658089205,Time,3,Dijkstradistance,0.6607569525127812,Time,241,DijkstraFlooddistance,0.6607569525127812,Time,6507,
+Testing,2970377463:13878019,AStardistance,3.4678906250564188,Time,72,DijkstraBiDirectionaldistance,3.4682328687315263,Time,2300,AStarBiDirectionaldistance,4.796888693581821,Time,821,Dijkstradistance,3.4678906250564188,Time,3585,DijkstraFlooddistance,3.4678906250564188,Time,6534,
+Loading Ways
+Stats:
+Nodes = 842315
+Ways = 117447
+Testing,291781127:257927392,AStardistance,196.81600118623234,Time,126660,DijkstraBiDirectional** 10 min timeout!**Exception in thread "main" java.lang.NullPointerException
+	at book.ch6.algorithms.RoutingAlgorithm.getDist(RoutingAlgorithm.java:63)
+	at book.ch6.algorithms.DijkstraBiDirectional.getDist(DijkstraBiDirectional.java:72)
+	at book.ch6.data.Route.buildRoute(Route.java:40)
+	at book.ch6.Application.evalRoute(Application.java:55)
+	at book.ch6.Application.main(Application.java:43)

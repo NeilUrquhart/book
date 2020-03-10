@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Mapperz &#39;My Map&#39;</name>
+  <description><![CDATA[Testing out the new My Maps Service from Google Maps]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleRV">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>50147800</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleDel">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+    <Style id="style4">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="style5">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>73FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="style2">
+    <LineStyle>
+      <color>E60000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="styleBLine">
+    <LineStyle>
+      <color>50000000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleGLine">
+    <LineStyle>
+      <color>5014F000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleYLine">
+    <LineStyle>
+      <color>5014F0FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+      <Style id="styleRLine">
+    <LineStyle>
+      <color>501400FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style> <Placemark> <name>#AStarBiDirectional</name> <description><![CDATA[]]></description> <styleUrl>#styleBLine</styleUrl> <LineString> <coordinates> -3.1692328,55.9573361,0.000000 -3.1699717,55.9572257,0.000000 -3.170045,55.9572149,0.000000 -3.1722788,55.9563326,0.000000 -3.1741331,55.9553357,0.000000 -3.1853385,55.9539967,0.000000 -3.1870971,55.9536859,0.000000 -3.1873665,55.9536387,0.000000 -3.1884993,55.9534569,0.000000 -3.1890628,55.9532762,0.000000 -3.1913556,55.952879,0.000000 -3.1922215,55.9527304,0.000000 -3.1933461,55.9525362,0.000000 -3.1967997,55.9519395,0.000000 -3.1994702,55.9514781,0.000000 -3.2059153,55.9503644,0.000000 -3.206802,55.9502112,0.000000 -3.2069844,55.9498897,0.000000 -3.2069436,55.9497881,0.000000 -3.2076254,55.949828,0.000000 -3.2087422,55.9489369,0.000000 -3.2096363,55.9485413,0.000000 -3.2104227,55.9486268,0.000000 -3.2102345,55.9485022,0.000000 -3.210884,55.9479121,0.000000 -3.2134057,55.9478166,0.000000 -3.2138095,55.9476424,0.000000 -3.2145029,55.9473286,0.000000 -3.2145944,55.9472382,0.000000 -3.2150705,55.9470111,0.000000 -3.2163753,55.9463998,0.000000 -3.2167358,55.9462284,0.000000 -3.2168164,55.9461317,0.000000 -3.2169391,55.9459599,0.000000 -3.2171331,55.9456465,0.000000 -3.2211201,55.942788,0.000000 -3.2229226,55.9415766,0.000000 -3.2233223,55.9412922,0.000000 -3.2244768,55.9404822,0.000000 -3.2248036,55.940257,0.000000 -3.2262651,55.9392028,0.000000 -3.2310907,55.9381285,0.000000 -3.2368859,55.9368714,0.000000 -3.2374381,55.9368034,0.000000 -3.2391635,55.9365968,0.000000 -3.2412885,55.9360858,0.000000 -3.2440938,55.9343716,0.000000 -3.2440938,55.9343716,0.000000 -3.2412885,55.9360858,0.000000 -3.2391635,55.9365968,0.000000 -3.2374381,55.9368034,0.000000 -3.2368859,55.9368714,0.000000 -3.2334914,55.934108,0.000000 -3.2325145,55.9345541,0.000000 -3.2321619,55.9347156,0.000000 -3.2321406,55.9347245,0.000000 </coordinates> </LineString> </Placemark>
+</Document>
+</kml>

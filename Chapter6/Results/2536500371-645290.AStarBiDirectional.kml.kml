@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Mapperz &#39;My Map&#39;</name>
+  <description><![CDATA[Testing out the new My Maps Service from Google Maps]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleRV">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>50147800</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleDel">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+    <Style id="style4">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="style5">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>73FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="style2">
+    <LineStyle>
+      <color>E60000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="styleBLine">
+    <LineStyle>
+      <color>50000000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleGLine">
+    <LineStyle>
+      <color>5014F000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleYLine">
+    <LineStyle>
+      <color>5014F0FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+      <Style id="styleRLine">
+    <LineStyle>
+      <color>501400FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style> <Placemark> <name>#AStarBiDirectional</name> <description><![CDATA[]]></description> <styleUrl>#styleRLine</styleUrl> <LineString> <coordinates> -3.2264654,55.9372527,0.000000 -3.2262651,55.9392028,0.000000 -3.2248036,55.940257,0.000000 -3.2244768,55.9404822,0.000000 -3.2233223,55.9412922,0.000000 -3.2229226,55.9415766,0.000000 -3.2211201,55.942788,0.000000 -3.2171331,55.9456465,0.000000 -3.2169391,55.9459599,0.000000 -3.216245,55.9461838,0.000000 -3.2161304,55.9461824,0.000000 -3.2163753,55.9463998,0.000000 -3.2150705,55.9470111,0.000000 -3.2145944,55.9472382,0.000000 -3.2145029,55.9473286,0.000000 -3.2138095,55.9476424,0.000000 -3.2134057,55.9478166,0.000000 -3.213295,55.9478667,0.000000 -3.2109451,55.9489162,0.000000 -3.2108757,55.9489478,0.000000 -3.2104927,55.9491201,0.000000 -3.2084528,55.9500245,0.000000 -3.208111,55.9501551,0.000000 -3.2082745,55.9502196,0.000000 -3.208474,55.9503015,0.000000 -3.2080971,55.9505693,0.000000 -3.2083408,55.9510167,0.000000 -3.2087371,55.9517492,0.000000 -3.2087423,55.9521411,0.000000 -3.2074719,55.9524139,0.000000 -3.207341,55.9524359,0.000000 -3.2069675,55.9524993,0.000000 -3.2071803,55.9528784,0.000000 -3.2072327,55.9529848,0.000000 -3.2065953,55.9535098,0.000000 -3.2064521,55.9535331,0.000000 -3.2061571,55.9535811,0.000000 -3.2053457,55.9537175,0.000000 -3.2042727,55.9538972,0.000000 -3.203567,55.9540177,0.000000 -3.2029526,55.9541213,0.000000 -3.2027039,55.9541632,0.000000 -3.2012652,55.9544074,0.000000 -3.2017891,55.9553832,0.000000 -3.1985575,55.9559401,0.000000 -3.1995652,55.9578187,0.000000 -3.2010496,55.9605949,0.000000 -3.1998534,55.9608082,0.000000 -3.1996157,55.9603853,0.000000 -3.1995125,55.9604128,0.000000 -3.1995125,55.9604128,0.000000 -3.1996157,55.9603853,0.000000 -3.1998534,55.9608082,0.000000 -3.2010496,55.9605949,0.000000 -3.1995652,55.9578187,0.000000 -3.1985575,55.9559401,0.000000 -3.1980259,55.9549491,0.000000 -3.1973143,55.9536225,0.000000 -3.1970785,55.9534745,0.000000 -3.1943289,55.9539429,0.000000 -3.1941005,55.9539816,0.000000 -3.1938418,55.9534858,0.000000 -3.1933886,55.9526177,0.000000 -3.1922628,55.9528106,0.000000 -3.1913916,55.9529621,0.000000 -3.1896862,55.9532609,0.000000 </coordinates> </LineString> </Placemark>
+</Document>
+</kml>

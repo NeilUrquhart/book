@@ -1,0 +1,11 @@
+Loading west
+Loading Ways
+Stats:
+Nodes = 842315
+Ways = 117447
+Testing,291781127:257927392,AStardistance,196.81600118623234,Time,154993,AStarBiDirectional** 20 min timeout!**Exception in thread "main" java.lang.NullPointerException
+	at book.ch6.algorithms.RoutingAlgorithm.getDist(RoutingAlgorithm.java:63)
+	at book.ch6.algorithms.AStarBiDirectional.getDist(AStarBiDirectional.java:74)
+	at book.ch6.data.Route.buildRoute(Route.java:40)
+	at book.ch6.Application.evalRoute(Application.java:56)
+	at book.ch6.Application.main(Application.java:44)
