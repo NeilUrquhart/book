@@ -39,7 +39,7 @@ public class Route {
 		algorithm.findPath();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();
-		ways = algorithm.getDirections();
+		ways = algorithm.getRoadNames();
 	}
 
 	public Graph getGraph(){

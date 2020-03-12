@@ -21,7 +21,7 @@ public class DijkstraFlood extends RoutingAlgorithm {
 
 	}
 
-	private ArrayList<RouterNode> step() {
+	public ArrayList<RouterNode> step() {
 		ArrayList<RouterNode> neighbours = myGraph.getNeighbours(current);
 		for (RouterNode v : neighbours){
 		

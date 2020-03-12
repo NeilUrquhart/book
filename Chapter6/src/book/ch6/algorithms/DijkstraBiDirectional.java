@@ -31,8 +31,8 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 			ArrayList<RouterNode> rCurrent = reverse.step();
 			for (RouterNode join: fCurrent) {
 				if (rCurrent.contains(join)){
-					forward.updateFinish(join);
-					reverse.updateFinish(join);
+					forward.setFinish(join);
+					reverse.setFinish(join);
 					done = true;
 					break;
 				}
@@ -54,10 +54,10 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 
 
 	@Override
-	public ArrayList<String> getDirections() {
-		ArrayList<String> res= forward.getDirections();
-		for (int count = reverse.getDirections().size()-1;count >=0; count--){
-			res.add(reverse.getDirections().get(count));
+	public ArrayList<String> getRoadNames() {
+		ArrayList<String> res= forward.getRoadNames();
+		for (int count = reverse.getRoadNames().size()-1;count >=0; count--){
+			res.add(reverse.getRoadNames().get(count));
 		}
 		return res;
 	}
@@ -66,4 +66,11 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 	public double getDist() {
 		return forward.getDist() + reverse.getDist();
 	}
+	
+	@Override
+	public RouterNode step() {
+		// Step() is not used in bi-directional algorithms
+		return null;
+	}
+	
 }

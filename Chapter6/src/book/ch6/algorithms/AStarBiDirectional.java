@@ -33,8 +33,8 @@ public class AStarBiDirectional extends RoutingAlgorithm {
 			RouterNode rCurrent = reverse.step();
 
 			if (rCurrent==fCurrent){
-				forward.updateFinish(rCurrent);
-				reverse.updateFinish(fCurrent);
+				forward.setFinish(rCurrent);
+				reverse.setFinish(fCurrent);
 				done = true;
 			}
 		}
@@ -54,11 +54,11 @@ public class AStarBiDirectional extends RoutingAlgorithm {
 	}
 
 	@Override
-	public ArrayList<String> getDirections() {
-		ArrayList<String> res= forward.getDirections();
+	public ArrayList<String> getRoadNames() {
+		ArrayList<String> res= forward.getRoadNames();
 		
-		for (int count = reverse.getDirections().size()-1;count >=0; count--){
-			res.add(reverse.getDirections().get(count));
+		for (int count = reverse.getRoadNames().size()-1;count >=0; count--){
+			res.add(reverse.getRoadNames().get(count));
 		}
 		return res;
 	}
@@ -66,6 +66,12 @@ public class AStarBiDirectional extends RoutingAlgorithm {
 	@Override
 	public double getDist() {
 			return forward.getDist() + reverse.getDist();
+	}
+
+	@Override
+	public RouterNode step() {
+		// Step() is not used in bi-directional algorithms
+		return null;
 	}
 	
 

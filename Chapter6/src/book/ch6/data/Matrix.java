@@ -12,7 +12,6 @@ import java.util.HashMap;
  */
 
 public class Matrix {
-	
 	private class NodeWay{
 		public int id;
 		public RouterWay way;
@@ -22,10 +21,9 @@ public class Matrix {
 
 	public Matrix(int size){
 		//Initialise a matrix for a graph with <size> nodes;
-		//Note that NodeWay is not sizexsize, but is initially sizex10
-		//The node IDs used here are the position of the node within the 
-		//Graph object and NOT the OSM ids.
-		
+		//Note that NodeWay is not sizexsize, but is initially
+		//sizex10. The node IDs used here are the position of 
+		//the node within the Graph object and NOT the OSM ids.
 		links = new NodeWay[size][];
 		for (int c= 0; c < size; c++){
 			links[c] = new NodeWay[10];
@@ -49,8 +47,8 @@ public class Matrix {
 		 links[x][oldSize+1] = nw;
 	}
 
-	//If nodes <x> and <y> are linked by a way, return a reference to
-	//that way, if the nodes are not directly linked, return null.
+	//If nodes <x> and <y> are linked by a way, return a reference 
+	//to that way, if the nodes are not directly linked, return null.
 	public RouterWay get(int x, int y){
 		NodeWay[] row = links[x];
 		for(NodeWay nw : row){
@@ -59,20 +57,17 @@ public class Matrix {
 					return nw.way;
 			}
 		}
-
 		return null;
 	}
-		
 
 	public RouterWay[] getNeighbours(int i){
-		RouterWay[] res = new RouterWay[links[i].length];
-		
+		//Return a List of RouterWay objects that are
+		//connected to Node <i>.
+		RouterWay[] res = new RouterWay[links[i].length];	
 		for (int x=0; x < links[i].length-1; x++){
 			if (links[i][x] != null)
 			  res[x] = links[i][x].way;
 		}
 		return res;
 	}
-
-	
 }
