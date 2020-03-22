@@ -6,10 +6,42 @@ import book.ch6.data.Graph;
 import book.ch6.data.LatLon;
 import book.ch6.data.RouterNode;
 import book.ch6.data.Route;
+/*
+ * An implementation of BiDirectional Dijkstra.
+ * Copyright Neil Urquhart, 2020
+ * 
+ */
 
 public class DijkstraBiDirectional extends RoutingAlgorithm {	
+	/*
+	 * We use two instances of Dijkstra for the forward
+	 * and reverse seearches.
+	 */
 	private Dijkstra  forward;
 	private Dijkstra  reverse;
+	
+	@Override
+	public void findPath() {
+		boolean done = false;
+		forward.current = this.start;
+		reverse.current = this.finish;
+		while(!done){
+			ArrayList<RouterNode> fCurrent = forward.step();			
+			ArrayList<RouterNode> rCurrent = reverse.step();
+			//Look for a common node in the nodes currently
+			//being considered by forward and reverse
+			for (RouterNode join: fCurrent) {
+				if (rCurrent.contains(join)){
+					//A complete route has been found
+					forward.setFinish(join);
+					reverse.setFinish(join);
+					done = true;
+					break;
+				}
+			}
+		}
+	}
+
 	
 	@Override
 	public void setRoute(Route r){	
@@ -21,25 +53,7 @@ public class DijkstraBiDirectional extends RoutingAlgorithm {
 		reverse.setRoute(r.reverse()); 
 	}
 
-	@Override
-	public void findPath() {
-		boolean done = false;
-		forward.current = this.start;
-		reverse.current = this.finish;
-		while(!done){
-			ArrayList<RouterNode> fCurrent = forward.step();			
-			ArrayList<RouterNode> rCurrent = reverse.step();
-			for (RouterNode join: fCurrent) {
-				if (rCurrent.contains(join)){
-					forward.setFinish(join);
-					reverse.setFinish(join);
-					done = true;
-					break;
-				}
-			}
-		}
-	}
-
+	
 	@Override
 	public ArrayList<LatLon> getLocations() {
 		ArrayList<LatLon> res= new ArrayList<LatLon>();

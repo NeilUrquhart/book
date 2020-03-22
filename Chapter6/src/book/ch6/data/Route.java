@@ -3,7 +3,10 @@ package book.ch6.data;
 import java.util.ArrayList;
 
 import book.ch6.algorithms.RoutingAlgorithm;
-
+/*
+ * The Route Object provides a Facade to an application 
+ * that wishes to make use of our routing engine.
+ */
 public class Route {
 	private RouterNode start;
 	private RouterNode finish;
@@ -11,37 +14,38 @@ public class Route {
 	private ArrayList<String> ways = new ArrayList<String>();
 	private double dist=0;
 	private Graph myGraph;
-	
+
 	public Route(Graph myGraph, long start, long finish){
+		//Find a path from <start> to <finish> through <myGraph>
 		if (!myGraph.nodeExists(start)){
 			System.out.println("Start not found");
 			System.exit(-1);
 		}
-		
+
 		if (!myGraph.nodeExists(finish)){
 			System.out.println("Finish not found");
 			System.exit(-1);
 		}
-		
+
 		this.myGraph = myGraph;
-		
-		
 		this.start = myGraph.getNode(start);
 		this.finish = myGraph.getNode(finish);
 	}
-	
+
 	public Route reverse(){
+		//Create a new Route object that is the Reverse of this one
 		return new Route(this.myGraph, this.getFinish().getId(), this.getStart().getId());
 	}
-	
+
 	public void buildRoute(RoutingAlgorithm algorithm){
+		//Find the desired path using <algorithm>
 		algorithm.setRoute(this);
 		algorithm.findPath();
 		dist = algorithm.getDist();
 		locations = algorithm.getLocations();
 		ways = algorithm.getRoadNames();
 	}
-
+	//Get/set methods for properties
 	public Graph getGraph(){
 		return myGraph;
 	}
@@ -76,7 +80,4 @@ public class Route {
 	public RouterNode getFinish() {
 		return finish;
 	}
-	
-	
-	
 }
