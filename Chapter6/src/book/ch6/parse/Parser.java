@@ -17,9 +17,9 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.Map;
-
 
 import org.xml.sax.SAXException;
 
@@ -29,11 +29,17 @@ import book.ch6.data.RouterNode;
 import book.ch6.data.RouterWay;
 public class Parser {
 
-	private static ArrayList<String> inValidHighways = new ArrayList<String>( 
+	protected static ArrayList<String> inValidHighways = new ArrayList<String>( 
 		Arrays.asList("cycleway","elevator","bus_stop","proposed","no",
 		"path","corridor","steps","bridleway","footway","raceway",
-		"escape","bus_guideway","pedestrian","construction")); 
+		"escape","bus_guideway","pedestrian","construction","service","track","living_street","road")); 
+	
+	private static ArrayList<String> excludedHighways=null;
 
+	public static void setInvalid(ArrayList<String> ex){
+		excludedHighways = ex;
+	}
+	
 	public static void loadOSM(String fName, Graph graph) {
 		//Load the contents of <fName> into <graph>
 		OSMParser p = new OSMParser();		//Initialise parser
@@ -67,7 +73,12 @@ public class Parser {
 		if (inValidHighways.contains(highway ))
 			//Disregard any highways types that are in our 'invalid list'
 			return null; 
+		if(excludedHighways != null)
+			if (excludedHighways.contains(highway ))
+				//Disregard any highways types that are in our 'excluded list'
+				return null; 
 
+		
 		ArrayList<RouterNode> nodes = new ArrayList<RouterNode>();
 		//add nodes associated with myWay to the RouterWay object
 		

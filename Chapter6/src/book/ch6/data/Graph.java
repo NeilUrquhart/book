@@ -15,7 +15,10 @@ public class Graph {
 	private Matrix links;
 	private int nodeCount;
 	
-	public Graph(String fName){
+	public Graph(String fName, ArrayList<String> excludedHighways){
+		if (excludedHighways != null)
+			Parser.setInvalid(excludedHighways);
+		
 		Parser.loadOSM(fName,this);
 		nodeCount = nodeList.size();
 		

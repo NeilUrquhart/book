@@ -19,7 +19,7 @@ import book.ch6.data.Route;
 public class Application {
 
 	public static void main(String[] args) {
-		Graph myGraph = new Graph("westscot.osm");
+		Graph myGraph = new Graph("westscot.osm",null);
 		//Load osm data into a street graph
 		Route testRoute = new Route(myGraph,291781127L,257927392L); 
 		//Create a Route object within the graph based on the start and end nodes

@@ -8,10 +8,10 @@ import book.ch6.algorithms.RoutingAlgorithm;
  * that wishes to make use of our routing engine.
  */
 public class Route {
-	private RouterNode start;
-	private RouterNode finish;
-	private ArrayList<LatLon> locations = new ArrayList<LatLon>();
-	private ArrayList<String> ways = new ArrayList<String>();
+	protected RouterNode start;
+	protected RouterNode finish;
+	protected ArrayList<LatLon> locations = new ArrayList<LatLon>();
+	protected ArrayList<String> ways = new ArrayList<String>();
 	private double dist=0;
 	private Graph myGraph;
 

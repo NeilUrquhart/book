@@ -17,7 +17,7 @@ import book.ch6.data.Route;
 public class ExampleApplication {
 
 	public static void main(String[] args) {
-		Graph myGraph = new Graph("westscot.osm");
+		Graph myGraph = new Graph("westscot.osm",null);
 		
 					
 		RoutingAlgorithm[] testAlgs = {  new AStar(),new DijkstraBiDirectional(),new AStarBiDirectional(),new Dijkstra(),new DijkstraFlood()};
