@@ -15,11 +15,19 @@ public class MultiRoute extends Route {
 	
 	public MultiRoute(Route r){
 		super(r.getGraph(),r.getStart().getId(), r.getFinish().getId());
-		this.append(r);
+		this.append(r,true);
 	}
-	public void append(Route appendRoute){
-		super.locations.addAll(reverse(appendRoute.getLocations()));
-		super.ways.addAll(reverse(appendRoute.getWays()));
+	
+	public void append(Route appendRoute, boolean reverse){
+		if (reverse){
+			super.locations.addAll(reverse(appendRoute.getLocations()));
+			super.ways.addAll(reverse(appendRoute.getWays()));
+		}else
+		{
+			super.locations.addAll(appendRoute.getLocations());
+			super.ways.addAll(appendRoute.getWays());
+
+		}
 		super.setDist(super.getDist()+appendRoute.getDist());
 		super.finish = appendRoute.getFinish();
 	}
