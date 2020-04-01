@@ -17,16 +17,6 @@ public class Route {
 
 	public Route(Graph myGraph, long start, long finish){
 		//Find a path from <start> to <finish> through <myGraph>
-//		if (!myGraph.nodeExists(start)){
-//			System.out.println("Start not found");
-//			System.exit(-1);
-//		}
-//
-//		if (!myGraph.nodeExists(finish)){
-//			System.out.println("Finish not found");
-//			System.exit(-1);
-//		}
-
 		this.myGraph = myGraph;
 		this.start = myGraph.getNode(start);
 		this.finish = myGraph.getNode(finish);

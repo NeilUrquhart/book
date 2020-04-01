@@ -56,8 +56,10 @@ public abstract class RoutingAlgorithm {
 		RouterNode current = finish;
 		while (current != start){
 			RouterWay currentWay = myGraph.getWay(current,old);
-			if (currentWay != null)
-				res.add(res.size(),currentWay.getName());
+			if (currentWay != null){
+				res.add(res.size(),currentWay.getName() +","+ currentWay.getHWayType());
+				
+			}
 			//Add in reverse order
 			old = current;
 			current = previous[current.getIndex()];

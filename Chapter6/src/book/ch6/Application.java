@@ -19,13 +19,15 @@ import book.ch6.data.Route;
 public class Application {
 
 	public static void main(String[] args) {
-		Graph myGraph = new Graph("westscot.osm",null);
+		Graph myGraph = new Graph("./data/roads.osm",null);
 		//Load osm data into a street graph
-		Route testRoute = new Route(myGraph,291781127L,257927392L); 
+		Route testRoute = new Route(myGraph,33628531L,5620022255L); //ENU - Mardale cres -> SEC
 		//Create a Route object within the graph based on the start and end nodes
 		testRoute.buildRoute(new AStar());
 		//Find a path between the start and the end using A*
-		System.out.print("distance," + testRoute.getDist());
+		System.out.println("distance," + testRoute.getDist());
+		for (String stage : testRoute.getWays())
+			System.out.println(stage);
 		//Print out the distance of the path found
 	}
 

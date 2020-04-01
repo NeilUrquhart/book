@@ -11,15 +11,6 @@ public class DijkstraFindUpLink extends Dijkstra
 	public void setlinks(Long[] links){
 		uplinks = links;
 	}
-
-	private boolean linked (long link){
-		for (long n : uplinks)
-		  if (n==link)
-			  return true;
-
-		 return false;
-					  
-	}
 	
 	public ArrayList<RouterNode> step() {
 		current = findMin(unVisited,dists);
@@ -30,14 +21,6 @@ public class DijkstraFindUpLink extends Dijkstra
 			if (alt < dists[v.getIndex()]){
 				dists[v.getIndex()] = alt;
 				previous[v.getIndex()] = current;
-				//if (v.getId() == finish.getId()) {
-				//	return null;
-				//}
-//				if (linked(v.getId())){
-//					super.theRoute.setFinish(v);
-//					this.setFinish(v);
-//					return null;
-//				}
 				if (v.isUplink()){
 					super.theRoute.setFinish(v);
 					this.setFinish(v);

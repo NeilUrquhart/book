@@ -26,6 +26,11 @@ public class RouterWay {
 		return nodes;
 	}
 	
+	public String getHWayType(){
+		
+		return (String)osmWay.getTags().get("highway");
+	}
+	
 	
 	
 	public String getName(){
