@@ -5,9 +5,8 @@ import java.util.ArrayList;
 import book.ch6.data.Graph;
 import book.ch6.data.Route;
 
-
-
 public class MultiRoute extends Route {
+	private boolean first =true;
 
 	public MultiRoute(Graph myGraph, long start, long finish) {
 		super(myGraph, start, finish);
@@ -18,6 +17,9 @@ public class MultiRoute extends Route {
 		this.append(r,true);
 	}
 	
+	public MultiRoute() {
+	}
+
 	public void append(Route appendRoute, boolean reverse){
 		if (reverse){
 			super.locations.addAll(reverse(appendRoute.getLocations()));
@@ -27,6 +29,9 @@ public class MultiRoute extends Route {
 			super.locations.addAll(appendRoute.getLocations());
 			super.ways.addAll(appendRoute.getWays());
 
+		}
+		if (first){
+			super.start =appendRoute.getStart();
 		}
 		super.setDist(super.getDist()+appendRoute.getDist());
 		super.finish = appendRoute.getFinish();

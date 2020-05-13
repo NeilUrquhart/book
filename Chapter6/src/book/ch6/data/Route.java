@@ -15,6 +15,9 @@ public class Route {
 	private double dist=0;
 	private Graph myGraph;
 
+	public Route(){
+		
+	}
 	public Route(Graph myGraph, long start, long finish){
 		//Find a path from <start> to <finish> through <myGraph>
 		this.myGraph = myGraph;
