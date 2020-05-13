@@ -19,6 +19,10 @@ public class Visit extends Point2D.Double{
  	  return theName;	
  	}
  	
+ 	public String getName() {
+ 		return theName;
+ 	}
+ 	
  	public double distance(Visit v) {
  		//Return the distance between 2 points based upon the Euclidean distance
  		//as implemented within 

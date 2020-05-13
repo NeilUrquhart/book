@@ -14,16 +14,16 @@ import book.ch1.Visit;
  * modificatins, and comment it out when testing is completed
  */
 public class VRPea extends VRPSolver {
-	private ArrayList <Individual> population = new ArrayList<Individual>();
+	protected ArrayList <Individual> population = new ArrayList<Individual>();
 	//population stores our pool of potential solutions
-	private RandomSingleton rnd = RandomSingleton.getInstance();
+	protected RandomSingleton rnd = RandomSingleton.getInstance();
 	//Note that we use the RandomSingleton object to generate random numbers
 
 	//EA Parameters
-	private int POP_SIZE = 1000;
-	private int TOUR_SIZE = 2;
-	private double XO_RATE = 0.7;
-	private int evalsBudget = 1000000;
+	protected int POP_SIZE = 1000;
+	protected int TOUR_SIZE = 2;
+	protected double XO_RATE = 0.7;
+	protected int evalsBudget = 1000000;
 	
 	@Override
 	public void solve() {
@@ -62,7 +62,7 @@ public class VRPea extends VRPSolver {
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
 	}
 
-	private Individual InitialisePopution() {
+	protected Individual InitialisePopution() {
 		//Initialise population with random solutions
 		Individual best = null;
 		for (int count=0; count < POP_SIZE; count++){
@@ -79,7 +79,7 @@ public class VRPea extends VRPSolver {
 		return best;
 	}
 
-	private Individual tournamentSelection(int poolSize){
+	protected Individual tournamentSelection(int poolSize){
 		//Return the best individual from a randomly selected pool of individuals
 		Individual bestI = null;
 		double bestFit = Double.MAX_VALUE;
@@ -93,7 +93,7 @@ public class VRPea extends VRPSolver {
 		return bestI;
 	}
 
-	private Individual tournamentSelectWorst(int poolSize){
+	protected Individual tournamentSelectWorst(int poolSize){
 		//Return the worst individual from a ransomly selected pool of individuals
 		Individual bestI = null;
 		double bestFit = 0;

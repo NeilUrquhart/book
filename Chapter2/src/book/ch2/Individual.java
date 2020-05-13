@@ -124,7 +124,7 @@ public class Individual   {
 		return phenotype.size();
 	}
 
-	private int routeDemand(ArrayList<VRPVisit> route){
+	protected int routeDemand(ArrayList<VRPVisit> route){
 		//Return the total cumulative demand within <route>
 		int demand=0;
 		for (VRPVisit visit: route){

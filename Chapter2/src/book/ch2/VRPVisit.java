@@ -7,7 +7,7 @@ import book.ch1.Visit;
 
 public class VRPVisit extends Visit {
 
-	private int demand;
+	protected int demand;
 	
 	public VRPVisit(String name, double lat, double lon, int demand) {
 		super(name, lat, lon);
@@ -21,6 +21,8 @@ public class VRPVisit extends Visit {
 	public String toString(){
 		return super.toString() + " " +demand+" (" + super.x +":" + super.y +")";
 	}
+	
+	
 
 	@Override
 	  public boolean equals(Object o) {
