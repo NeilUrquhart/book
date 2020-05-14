@@ -6,20 +6,12 @@ package book.ch8.humanitarian;
  * 
  */
 
-import java.io.BufferedReader;
+
+
 import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
 import java.io.PrintWriter;
-
-import java.nio.file.Files;
-import java.nio.file.Paths;
-
 import java.util.ArrayList;
-
 import book.ch1.Visit;
-
-import book.ch2.RandomSingleton;
 import book.ch2.VRPVisit;
 import book.ch7.GPXWriter;
 import book.ch7.KMLWriter;
@@ -32,7 +24,6 @@ public class HudFacade  {
 	
 	public  void setProblem(HudProblem aProb) {
 		myVRP = aProb;
-		
 	}
 	
 	public  HudProblem getProblem() {
@@ -40,13 +31,10 @@ public class HudFacade  {
 	}
 
 	public  void run()  {
-		/*
-		 * Solve the instance named in  <probName>
-		*/	
-		//Solve using the Evolutionary Algorithm
+	
+	//Solve using the Evolutionary Algorithm
 				
-		//RandomSingleton rnd = RandomSingleton.getInstance();
-		
+			
 		HudEA eaSolve = new HudEA();
 		myVRP.solve(eaSolve);
 		}
@@ -60,12 +48,7 @@ public class HudFacade  {
 			
 		 ArrayList<ArrayList<VRPVisit>> solution = myVRP.getCVRPSolution();
 		 
-		 if (myVRP.getInitialVisit()!= null) {
-			 ArrayList<VRPVisit> run =solution.get(0);
-			 run.add(0,myVRP.getInitialVisit());
-		 }
 			 
-		 
 			 
 		for(ArrayList<VRPVisit> run :solution){
 			int c=0;
@@ -109,7 +92,7 @@ public class HudFacade  {
 				buffer +=(c + " " +v.getName() + " " + myVRP.getTimeOnlyformatter().format(time)+"\n");
 				if (v instanceof HudVisit){
 					HudVisit f = (HudVisit)v;
-					csv.println(c + "," +f.getName()+ ","+f.getOrder()+","+f.getAddress()+","+f.getPostCode()+"," + myVRP.getTimeOnlyformatter().format(time));
+					csv.println(c + "," +f.getName()+ ","+f.getOrder()+","+f.getAddress()+"," + myVRP.getTimeOnlyformatter().format(time));
 				}
 				else {
 					csv.println(c + "," +v.getName() + ",,,," + myVRP.getTimeOnlyformatter().format(time));
@@ -139,7 +122,7 @@ public class HudFacade  {
 			time = time + ( j.getTravelTimeMS()) ;
 			buffer +=("End"  + " " + myVRP.getTimeOnlyformatter().format(time)+"\n");
 			
-			csv.println( (c+1)+"," +"End"+ ",,,"+myVRP.getEndPCode()+"," + myVRP.getTimeOnlyformatter().format(time));
+			csv.println( (c+1)+"," +"End"+ ",,,"+"," + myVRP.getTimeOnlyformatter().format(time));
 			time  = time + deliveryTime;
 			
 			
@@ -161,7 +144,6 @@ public class HudFacade  {
 		  //Done end
 			kml.writeFile(outFolder+"/"+r);
 			gpx.write(outFolder+"/"+r+".gpx", "gpxTest");
-			String pageName = myVRP.getReference() +"-"+r+".htm";
 	
 
 			r++;
@@ -169,7 +151,6 @@ public class HudFacade  {
 			
 		}
 		String fName = myVRP.getReference();
-		String pageName = fName +".htm";
 		File summaryFile  = new File(outFolder+"/summary.csv");
 		PrintWriter summary = new PrintWriter(summaryFile);
 		summary.println(buffer);

@@ -13,11 +13,7 @@ public class GPXWriter {
 	
 	
 	 public  void addPath(ArrayList<Double> lat, ArrayList<Double>lon) {
-
-	        
-	        
-	        //DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ");
-	        for (int c=0; c< lat.size();c++) {
+       for (int c=0; c< lat.size();c++) {
 	            segments += "<trkpt lat=\"" + lat.get(c) + "\" lon=\"" + lon.get(c) + "\">"/*<time>" + df.format(new Date(l.getTime())) + "</time>*/+"</trkpt>\n";
 	        }
 	 }

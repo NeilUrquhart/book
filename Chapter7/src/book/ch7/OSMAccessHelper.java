@@ -72,7 +72,7 @@ public class OSMAccessHelper {
 	    
 	    PathWrapper pw = response.getBest();
 	    
-	    Journey res = new Journey(start,end,"hopper");
+	    Journey res = new Journey(start,end);
 	    res.setDistanceKM(pw.getDistance()/1000);//Check
 	    res.setTravelTimeMS(pw.getTime()*timeFactor);//Check
 	    ArrayList<Visit> path = new ArrayList<Visit>();

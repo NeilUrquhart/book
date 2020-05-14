@@ -35,11 +35,6 @@ public class HudIndividual extends Individual {
         double deliveryTime = ((HudProblem)problem).getDeliveryTimeMS();
        HudProblem fProblem = (HudProblem)problem;
        if (phenotype == null) {
-    	 //Add in initVisit
-//			if (fProblem.getInitialVisit()!=null) {
-//				genotype.add(0,fProblem.getInitialVisit());
-//			}
-//			//done add initVisit
 			phenotype = new ArrayList<ArrayList<VRPVisit>> ();
 			
 			Visit depot = problem.getStart();
@@ -56,12 +51,10 @@ public class HudIndividual extends Individual {
 						first = false;
 					}
 					double timeToReturn = deliveryTime +  OSMAccessHelper.getJourney(curr,depot, fProblem.getMode()).getTravelTimeMS();
-					//System.out.println (v + " - " +time + " - " + (time + timeToReturn));
-
+			
 					if ((v.getDemand() + routeDemand(newRoute) > problem.getCapacity())|| ((time + timeToReturn)> timeLimit)){
 						//If next visit cannot be added  due to capacity constraint then
 						//start new route.
-						//System.out.println("New route");
 						phenotype.add(newRoute);
 						newRoute = new ArrayList<VRPVisit>();
 						time = 0;
@@ -69,24 +62,13 @@ public class HudIndividual extends Individual {
 					}
 					time = time + OSMAccessHelper.getJourney(prev, curr, fProblem.getMode()).getTravelTimeMS();
 					time = time + deliveryTime;
-
-					//			
-
 					newRoute.add(v);
 				
 			}
 			prev = curr;
 			phenotype.add(newRoute);
-//		
-//			   //Remove initVisit
-//	        if (fProblem.getInitialVisit()!=null) {
-//	        	genotype.remove(0);
-//	        }
-//	        //done remove initVisit
        }
-       
-   
-		//Get weighted distance
+       	//Get weighted distance
         double fit = problem.getDistance(phenotype);
      
 

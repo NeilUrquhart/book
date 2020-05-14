@@ -25,10 +25,6 @@ public class Journey {
 	protected double travelTimeMS=-1; 
 	// Traveltime in MSecs
 
-	protected String description=null; 
-	// An optional description of the journey
-	protected String source=null; 
-	//An optional source of the journey data 
 	
 	protected HashMap<String,Object> attributes = new HashMap<String,Object>();
 	//Additional attributes stored in attributes.  Allowable keys are defined below
@@ -39,10 +35,9 @@ public class Journey {
 	/*
 	* Constructor
 	*/
-	public Journey(Visit a, Visit b, String source){
+	public Journey(Visit a, Visit b){
 		locationA = a;
 		locationB = b;
-		this.source = source;
 	}
 
 	/*
@@ -65,21 +60,6 @@ public class Journey {
 		this.travelTimeMS = travelTimeMS;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public String getSource() {
-		return source;
-	}
-
-	public void setSource(String source) {
-		this.source = source;
-	}
 
 	public Visit getPointA() {
 		return locationA;
@@ -105,11 +85,6 @@ public class Journey {
 		
 		buffer = locationA + " : " + locationB;
 		
-		if (description != null)
-			buffer += ", " +description;
-		
-		if (source != null)
-			buffer += ", " +source;
 		
 		return buffer;
 	}
