@@ -82,38 +82,7 @@ public class OSMAccessHelper {
 	    		path.add(new Visit("",pl.getLatitude(c),pl.getLongitude(c)));
 	    }
 	    //path.add(end);
-	    res.putAttribute(Journey.PATH, path);
-	    
-	    /*
-	     * Need to check if a car route cannot access the actual start or end. If this is the case, add a walk
-	     */
-	    
-	    if (type.equals("car")){
-	    	//Check start
-	    	Visit carStart = new Visit("",pw.getPoints().getLat(0),pw.getPoints().getLon(0));
-	    	if ((start.getX() != carStart.getY())||(start.getX() != carStart.getY())){
-	    		 Journey walkA = getJourney(start ,carStart,"foot");	
-	    		 if (walkA.getDistanceKM() > 0.01) {
-	    		 //Get walk path
-	    		 res.putAttribute("walkA",  walkA.getAttribute(Journey.PATH));
-	    		 res.setDistanceKM(res.getDistanceKM() + walkA.getDistanceKM());//Check
-	    		 res.setTravelTimeMS(res.getTravelTimeMS() + walkA.getTravelTimeMS());//Check
-	    		 }
-	    	}  
-	    	//Add walk to result?
-	    	
-	    	//Check end
-	    	Visit carEnd = new Visit("",pw.getPoints().getLat(pw.getPoints().getSize()-1),pw.getPoints().getLon(pw.getPoints().getSize()-1));
-	    	if ((end.getX() != carEnd.getY())||(end.getX() != carEnd.getY())){
-	    		 Journey walkB = getJourney(end ,carEnd,"foot");		
-	    		 res.putAttribute("walkB",  walkB.getAttribute(Journey.PATH));
-	    		 res.setDistanceKM(res.getDistanceKM() + walkB.getDistanceKM());//Check
-	    		 res.setTravelTimeMS(res.getTravelTimeMS() + walkB.getTravelTimeMS());//Check
-
-	    	}
-	    	//Add walk to result?
-	    	
-	    }
+	    res.setPath(path);
 	    
 	    return res;
 	}

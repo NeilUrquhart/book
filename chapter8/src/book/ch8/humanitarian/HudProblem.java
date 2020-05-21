@@ -24,14 +24,38 @@ public class HudProblem extends CVRPProblem {
 	private double speedfactor;
 	private double startDate;
 
+	private double startTime =0;
+	private double runTime;
+	
+	
+	public double getStartTime() {
+		return startTime;
+	}
+
+	public double getRunTime() {
+		return runTime;
+	}
+
+
+	
+	public void setStartTime(double startTime) {
+		this.startTime = startTime;
+	}
+
+	public void setRunTime(double runTime) {
+		this.runTime = runTime;
+	}
+
+	
+	
 	public void setMode(String aMode) {
-    	if (aMode.contains("Car"))
+    	if (aMode.contains("car"))
     		mode = "car";
     	
     	if (aMode.contains("cycle"))
     		mode = "bike";
     	
-    	if (aMode.contains("Walk"))
+    	if (aMode.contains("walk"))
     		mode = "foot";
     	
     }

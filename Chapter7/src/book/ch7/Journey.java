@@ -1,6 +1,7 @@
 package book.ch7;
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import book.ch1.Visit;
@@ -10,7 +11,7 @@ import book.ch1.Visit;
 /*
  * A basic class to represent a journey that links two locations
  * 
- * Neil Urquhart 21/2/17
+ * Neil Urquhart 2020
  */
 public class Journey {
 	
@@ -24,12 +25,7 @@ public class Journey {
 	// The distance travelled in KM 
 	protected double travelTimeMS=-1; 
 	// Traveltime in MSecs
-
-	
-	protected HashMap<String,Object> attributes = new HashMap<String,Object>();
-	//Additional attributes stored in attributes.  Allowable keys are defined below
-	
-	public static final String PATH = "path"; //A List of Locations representing the path
+	protected ArrayList<Visit> path;
 	
 	
 	/*
@@ -69,13 +65,15 @@ public class Journey {
 		return locationB;
 	}
 	
-	public Object getAttribute(String key){
-		return this.attributes.get(key);
-	}
 	
-	public void putAttribute(String key, Object value){
-		this.attributes.put(key, value);
+	public ArrayList<Visit> getPath() {
+		return path;
 	}
+
+	public void setPath(ArrayList<Visit> path) {
+		this.path = path;
+	}
+
 	/*
 	 * ToString
 	 * 

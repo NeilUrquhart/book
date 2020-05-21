@@ -9,9 +9,24 @@ import book.ch2.VRPVisit;
 import book.ch7.OSMAccessHelper;
 
 public class HudIndividual extends Individual {
-
+	private static int evals=0;
+	
+	
 	public HudIndividual(CVRPProblem prob) {
 		super(prob);
+	}
+	
+	
+	public HudIndividual(CVRPProblem prob, ArrayList<Visit> exampleSol) {
+		this(prob);
+		this.genotype = new ArrayList<VRPVisit>();
+		for (Visit v :exampleSol) {
+			this.genotype.add((VRPVisit)v);
+		}
+	}
+	
+	public static int getEvals() {
+		return evals;
 	}
 	
 	public HudIndividual (CVRPProblem prob, Individual parent1, Individual parent2){
@@ -36,6 +51,7 @@ public class HudIndividual extends Individual {
        HudProblem fProblem = (HudProblem)problem;
        if (phenotype == null) {
 			phenotype = new ArrayList<ArrayList<VRPVisit>> ();
+			evals++;
 			
 			Visit depot = problem.getStart();
 			Visit prev= depot;

@@ -9,6 +9,13 @@ public class HudVisit extends book.ch2.VRPVisit {
 		super(name, lat, lon, demand);
 	}
 	
+	public HudVisit(String name, double lat, double lon, int demand, String address, String order, String shipingDate) {
+		this(name, lat, lon, demand);
+		this.setAddress(address);
+		this.setOrder(order);
+		this.setShippingDate(shipingDate);
+	}
+	
 	private String address;
 	private String order;
 	private String shippingDate;
