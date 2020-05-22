@@ -6,6 +6,7 @@ import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.Individual;
 import book.ch2.VRPVisit;
+import book.ch7.IVisit;
 import book.ch7.OSMAccessHelper;
 
 public class HudIndividual extends Individual {
@@ -63,10 +64,10 @@ public class HudIndividual extends Individual {
 					curr = v;
 					if (first ) {
 						
-						time = (OSMAccessHelper.getJourney(prev, curr, fProblem.getMode()).getTravelTimeMS());
+						time = (OSMAccessHelper.getJourney((IVisit)prev, (IVisit)curr, fProblem.getMode()).getTravelTimeMS());
 						first = false;
 					}
-					double timeToReturn = deliveryTime +  OSMAccessHelper.getJourney(curr,depot, fProblem.getMode()).getTravelTimeMS();
+					double timeToReturn = deliveryTime +  OSMAccessHelper.getJourney((IVisit)curr,(IVisit)depot, fProblem.getMode()).getTravelTimeMS();
 			
 					if ((v.getDemand() + routeDemand(newRoute) > problem.getCapacity())|| ((time + timeToReturn)> timeLimit)){
 						//If next visit cannot be added  due to capacity constraint then
@@ -76,7 +77,7 @@ public class HudIndividual extends Individual {
 						time = 0;
 						prev = depot;
 					}
-					time = time + OSMAccessHelper.getJourney(prev, curr, fProblem.getMode()).getTravelTimeMS();
+					time = time + OSMAccessHelper.getJourney((IVisit)prev, (IVisit)curr, fProblem.getMode()).getTravelTimeMS();
 					time = time + deliveryTime;
 					newRoute.add(v);
 				

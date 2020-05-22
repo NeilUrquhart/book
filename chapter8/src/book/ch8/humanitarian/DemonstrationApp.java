@@ -7,6 +7,7 @@ import book.ch1.Visit;
 import book.ch7.CSVWriter;
 import book.ch7.ConsoleWriter;
 import book.ch7.GPXWriter;
+import book.ch7.IVisit;
 import book.ch7.KMLWriter;
 import book.ch7.OSMAccessHelper;
 
@@ -29,15 +30,15 @@ public class DemonstrationApp {
 		 * Define a new problem
 		 */
 
-		Visit depot = new Visit("Depot",55.933020,-3.213618);
+		IVisit depot = new IVisit("Depot",55.933020,-3.213618,0);
 		hf.setDepot(depot);//Assume start/end are the same
 		hf.setStartDateTime("14/05/2020 09:00");
-		hf.setRound("car", 25,5,180);//Type, capacity,mins/delivery,max mins per round
+		hf.setRound("car", 30,5,180);//Type, capacity,mins/delivery,max mins per round
 
 
-		createRandomDels(500);
-
-		hf.solve(60);//halt after a maximum of x mins
+		createRandomDels(1000);
+ 
+		hf.solve(30);//halt after a maximum of x mins
 
 		try {
 			hf.writeOut(".", new ConsoleWriter());
@@ -55,7 +56,7 @@ public class DemonstrationApp {
 		int count = 0;
 		double lat =55.933020;
 		double lon = -3.213618;
-		
+		HudVisit base = new HudVisit("depot",lat,lon,1);
 		while (count < qty) {
 			//Create random address
 
@@ -87,12 +88,13 @@ public class DemonstrationApp {
 			HudVisit v = new HudVisit("Visit "+count,lat,lon,1,"","","");
 			//Check new point is recognised by OSM
 			try {
-				OSMAccessHelper.getJourney(v,v,"car");
+				//OSMAccessHelper.getJourney((IVisit)base,(IVisit)v,"car");
 				System.out.println("Random added " + v);
 				hf.addVisit(v);
 				count++;
 			}catch(Exception e) {
 				System.out.println("Random failed!");
+				e.printStackTrace();
 			}
 		}
 	}

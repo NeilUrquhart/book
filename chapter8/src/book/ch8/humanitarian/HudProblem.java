@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.VRPVisit;
+import book.ch7.IVisit;
 import book.ch7.OSMAccessHelper;
 
 /*
@@ -16,7 +17,7 @@ import book.ch7.OSMAccessHelper;
  */
 public class HudProblem extends CVRPProblem {
 	private SimpleDateFormat dateOnlyformatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-    private Visit end;
+    private IVisit end;
     private String mode;
 	private String reference;
 	private double timeLimitMS;
@@ -68,7 +69,7 @@ public class HudProblem extends CVRPProblem {
 		return end;
 	}
 
-	public void setEnd(Visit end) {
+	public void setEnd(IVisit end) {
 		this.end = end;
 	}
 
@@ -146,7 +147,7 @@ public class HudProblem extends CVRPProblem {
 		int visitCount = possibleRoute.size();
 		Visit previousCity = super.getStart();
 		for (Visit city : possibleRoute){//go through each city
-			double wDist = getDistance(previousCity, city)*(visitCount);//Add weighting
+			double wDist = getDistance((IVisit)previousCity, (IVisit)city)*(visitCount);//Add weighting
 			dist = dist + wDist;
 			visitCount --;
 			previousCity = city;
@@ -155,7 +156,7 @@ public class HudProblem extends CVRPProblem {
 		return dist;
 	}
 	
-	public double getDistance(Visit x, Visit y){
+	public double getDistance(IVisit x, IVisit y){
 		//Get the distance between two visits
 		if ((x == null)||(y==null))
 			return 0;

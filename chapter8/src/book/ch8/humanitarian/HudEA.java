@@ -9,6 +9,7 @@ import book.ch2.VRPea;
 public class HudEA extends VRPea {
 	private static int evalsChange = 20000;//default
 	private ArrayList<Visit> initSol;
+	private int POP_SIZE =100;
 	
 	public HudEA(ArrayList<Visit> initSol) {
 		this.initSol = initSol;

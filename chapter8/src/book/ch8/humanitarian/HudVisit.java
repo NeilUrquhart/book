@@ -1,9 +1,9 @@
 package book.ch8.humanitarian;
 
-
+import book.ch7.IVisit;
 
 @SuppressWarnings("serial")
-public class HudVisit extends book.ch2.VRPVisit {
+public class HudVisit extends IVisit {
 
 	public HudVisit(String name, double lat, double lon, int demand) {
 		super(name, lat, lon, demand);

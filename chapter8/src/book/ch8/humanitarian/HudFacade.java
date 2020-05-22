@@ -20,6 +20,7 @@ import book.ch2.VRPVisit;
 import book.ch7.CSVWriter;
 import book.ch7.DataFileWriter;
 import book.ch7.GPXWriter;
+import book.ch7.IVisit;
 import book.ch7.KMLWriter;
 import book.ch7.Journey;
 import book.ch7.OSMAccessHelper;
@@ -37,15 +38,17 @@ public class HudFacade  {
 		myVRP.addVisit(v);
 	}
 
-	public void setDepot(Visit start) {
+	public void setDepot(IVisit start) {
 		this.setDepot(start,start);
 	}
 	
-	public void setDepot(Visit start, Visit end) {
+	public void setDepot(IVisit start, IVisit end) {
 		myVRP.setStart(start);
 		myVRP.setEnd(end);
 	}
 	public  void solve(int runTime)  {
+		
+		OSMAccessHelper.setCacheSize();
 		myVRP.setStartTime(System.currentTimeMillis());
 		myVRP.setRunTime(runTime*60000);
 		
@@ -64,8 +67,9 @@ public class HudFacade  {
 		ArrayList<ArrayList<VRPVisit>> solution = myVRP.getCVRPSolution();
 		for(ArrayList<VRPVisit> run :solution){
 			out.addWayPoint(myVRP.getStart(),myVRP.getTimeOnlyformatter().format(time));			
-			Visit prev = new Visit("",myVRP.getStart().getX(),myVRP.getStart().getY());
-			for (VRPVisit v : run){
+			IVisit prev = (IVisit)myVRP.getStart();//new IVisit("",myVRP.getStart().getX(),myVRP.getStart().getY(),1);
+			for (VRPVisit vv : run){
+				IVisit v = (IVisit)vv;
 				String description = " ";
 				if (v instanceof HudVisit) {
 					if (((HudVisit)v).getAddress()!= null) {
@@ -79,7 +83,8 @@ public class HudFacade  {
 				description += myVRP.getTimeOnlyformatter().format(time);
 				out.addWayPoint(v, description);
 				
-				Visit curr = new Visit("",v.getX(),v.getY());
+				//IVisit curr = new IVisit("",v.getX(),v.getY(),1);
+				IVisit curr = v;
 
 				Journey j = OSMAccessHelper.getJourney(prev, curr, myVRP.getMode());
 				time = time + ( j.getTravelTimeMS()) ;
@@ -91,13 +96,14 @@ public class HudFacade  {
 				out.addPath(p);
 				prev = curr;
 			}
-			time = time + OSMAccessHelper.getJourney(prev, myVRP.getStart(), myVRP.getMode()).getTravelTimeMS()*1.6;
+			time = time + OSMAccessHelper.getJourney(prev, (IVisit)myVRP.getStart(), myVRP.getMode()).getTravelTimeMS()*1.6;
 
 			/*
 			 * Add journey to end...
 			 */
 
-			Journey j = OSMAccessHelper.getJourney(prev, new Visit( "",myVRP.getEnd().getX(),myVRP.getEnd().getY()), myVRP.getMode());
+			Journey j = OSMAccessHelper.getJourney(prev, (IVisit)myVRP.getEnd(), myVRP.getMode());
+			
 			time = time + ( j.getTravelTimeMS()) ;
 			time  = time + deliveryTime;
 

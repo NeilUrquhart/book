@@ -23,18 +23,21 @@ import com.graphhopper.util.PointList;
 import book.ch1.Visit;
 
 
-
-
-
 public class OSMAccessHelper {
 	private static GraphHopperOSM hopper=null;
-	private static HashMap<String, Journey> cache = new HashMap<String, Journey>();
+	//private static HashMap<String, Journey> cache = new HashMap<String, Journey>();
+	private static Journey[][] cache;
 	private static String fileName;
 	private static String folder;
 	private static double  timeFactor = 1.6;
 	
 	
-
+	public static void setCacheSize() {
+		int size = IVisit.getCounter()+1;
+		cache = new Journey[size][];
+		for (int c=0; c < size;c++)
+			cache[c] = new Journey[size];
+	}
 	
 	public static void setFileName(String fName) {
 		fileName = fName;
@@ -44,14 +47,26 @@ public class OSMAccessHelper {
 		folder = path;
 	}
 	
-	public static Journey getJourney(Visit last, Visit next, String type){
-		String key = last.getX()+""+last.getY()+":" + next.getX()+""+ next.getY() +":" + type;
-		Journey res = cache.get(key);
+	public static Journey getJourney(IVisit last, IVisit next, String type){
+		//todo: add types into cache;
+		//String key = last.getX()+""+last.getY()+":" + next.getX()+""+ next.getY() +":" + type
+		
+		Journey res = cache[last.getIndex()][next.getIndex()];//cache.get(key);
 		if (res != null)
 			return res;
-		
+		try {
 		res = findJourney(last, next, type);
-		cache.put(key, res);
+		}catch(Exception e) {
+			//if hopper fails, then calculate journey based on Euclidean dist
+			res = new Journey(last, next);
+			res.distanceKM = haversine(last,next);
+			res.path = new ArrayList<Visit>();
+			res.path.add(last);
+			res.path.add(next);
+			
+		}
+		//cache.put(key, res);
+		cache[last.getIndex()][next.getIndex()] =res;
 		return res;
 	}
 	
@@ -92,6 +107,7 @@ public class OSMAccessHelper {
 		setFolder(folder);
 		return init();
 	}
+	
 	private static GraphHopperOSM init() {
 		//String fileName = "./data/scotland-latest.osm.pbf";//edinburgh.osm";
 		hopper = new GraphHopperOSM();
@@ -120,4 +136,17 @@ public class OSMAccessHelper {
 		return hopper;
 	}
 
+	private static double haversine(Visit start, Visit finish) {
+		/* from https://rosettacode.org/wiki/Haversine_formula */
+		final double R = 6372.8; // In kilometers
+	    
+        double dLat = Math.toRadians(finish.getX()- start.getX());
+        double dLon = Math.toRadians(finish.getY() - start.getY());
+        double lat1 = Math.toRadians(start.getX());
+        double lat2 = Math.toRadians(finish.getX());
+ 
+        double a = Math.pow(Math.sin(dLat / 2),2) + Math.pow(Math.sin(dLon / 2),2) * Math.cos(lat1) * Math.cos(lat2);
+        double c = 2 * Math.asin(Math.sqrt(a));
+        return R * c;
+    }
 }
