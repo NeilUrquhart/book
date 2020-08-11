@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Delivery Route;</name>
+  <description><![CDATA[Food delivery route]]></description>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.google.com/mapfiles/ms/icons/blue-dot.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleRV">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>50147800</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+<Style id="styleDel">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>1A0000FF</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+    <Style id="style4">
+    <LineStyle>
+      <color>A600CC33</color>
+      <width>10</width>
+    </LineStyle>
+  </Style>
+  <Style id="style5">
+    <LineStyle>
+      <color>40000000</color>
+      <width>3</width>
+    </LineStyle>
+    <PolyStyle>
+      <color>73FF0000</color>
+      <fill>1</fill>
+      <outline>1</outline>
+    </PolyStyle>
+  </Style>
+  <Style id="style2">
+    <LineStyle>
+      <color>E60000FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="styleBLine">
+    <LineStyle>
+      <color>50000000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleGLine">
+    <LineStyle>
+      <color>5014F000</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+    <Style id="styleYLine">
+    <LineStyle>
+      <color>5014F0FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+      <Style id="styleRLine">
+    <LineStyle>
+      <color>501400FF</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Style id="delivery">
+    <IconStyle>
+        <Icon>
+          <href>https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/13764952091536837650-512.png</href>
+        </Icon>
+    </IconStyle>
+</Style>
+
+  <Style id="cafe">
+    <IconStyle>
+        <Icon>
+          <href>https://upload-icon.s3.us-east-2.amazonaws.com/uploads/icons/png/20617935631580622631-512.png</href>
+        </Icon>
+    </IconStyle>
+</Style> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2134383749457354,55.932875616256155,0.000000 -3.2162305686525383,55.931794217194486,0.000000 -3.223802221353402,55.92982093087929,0.000000 -3.223781173462745,55.929672291793054,0.000000 -3.2237930943919664,55.928396193572794,0.000000 -3.223848228689616,55.92634821518544,0.000000 -3.223884736535357,55.92624185814504,0.000000 -3.2242995476193625,55.92568697614268,0.000000 -3.2245711212881907,55.92525894027782,0.000000 -3.224731681303643,55.92457311431855,0.000000 -3.2247281422777805,55.924497863452835,0.000000 -3.2246724491865737,55.92435742000544,0.000000 -3.2236591702027435,55.922617336868136,0.000000 -3.223248829467196,55.92206860159491,0.000000 -3.221904744697468,55.922177566338576,0.000000 -3.2211509321887255,55.91921353904635,0.000000 -3.221854267012796,55.91920236317521,0.000000 -3.2218928237682465,55.91914853272919,0.000000 -3.222018179789592,55.91913772938708,0.000000 -3.222261441251519,55.91896394459078,0.000000 -3.2223748763436424,55.91879034605899,0.000000 -3.222401512169872,55.918650275140635,0.000000 -3.2224072863699633,55.91678092442708,0.000000 -3.2224313144929257,55.91673435829731,0.000000 -3.222521093991125,55.9167215060455,0.000000 -3.2252021854788553,55.91671424172925,0.000000 -3.2251846766140613,55.91620480826955,0.000000 -3.2265021255575594,55.91619102469514,0.000000 -3.2265039882027504,55.916459245602624,0.000000 -3.2261567087856964,55.916461184163964,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2261567087856964,55.916461184163964,0.000000 -3.2265039882027504,55.916459245602624,0.000000 -3.2265021255575594,55.91619102469514,0.000000 -3.2251846766140613,55.91620480826955,0.000000 -3.2252021854788553,55.91671424172925,0.000000 -3.225533334131102,55.91671424172925,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.225533334131102,55.91671424172925,0.000000 -3.2252021854788553,55.91671424172925,0.000000 -3.2251959725886903,55.91653416842868,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2251959725886903,55.91653416842868,0.000000 -3.2251846766140613,55.91620480826955,0.000000 -3.2258887564962078,55.916197171424265,0.000000 -3.2258760134631275,55.915919221900744,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2258760134631275,55.915919221900744,0.000000 -3.2258887564962078,55.916197171424265,0.000000 -3.2251846766140613,55.91620480826955,0.000000 -3.2252021854788553,55.91671424172925,0.000000 -3.222521093991125,55.9167215060455,0.000000 -3.2224313144929257,55.91673435829731,0.000000 -3.2224072863699633,55.91678092442708,0.000000 -3.222401512169872,55.918650275140635,0.000000 -3.2223748763436424,55.91879034605899,0.000000 -3.222290125987458,55.918933583474164,0.000000 -3.222018179789592,55.91913772938708,0.000000 -3.2220865388680964,55.919190628510506,0.000000 -3.2220612068935006,55.91923849849191,0.000000 -3.2221269582687384,55.919254144711516,0.000000 -3.2224465881834905,55.919275378866686,0.000000 -3.2228671734675878,55.919236077053164,0.000000 -3.2231620302013018,55.919163992684275,0.000000 -3.223750998610653,55.918941779113005,0.000000 -3.2244483729701128,55.91864673611477,0.000000 -3.2250304495922575,55.918444825376085,0.000000 -3.225290165957274,55.91838672018436,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.225290165957274,55.91838672018436,0.000000 -3.2250304495922575,55.918444825376085,0.000000 -3.224697392140079,55.9185603563451,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.224697392140079,55.9185603563451,0.000000 -3.224151284723471,55.91877242729605,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.224151284723471,55.91877242729605,0.000000 -3.2239746045079136,55.91884717661801,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2239746045079136,55.91884717661801,0.000000 -3.2244483729701128,55.91864673611477,0.000000 -3.2250304495922575,55.918444825376085,0.000000 -3.2251787161494505,55.91840682741419,0.000000 -3.225528707180814,55.918343683742215,0.000000 -3.226002750381889,55.918309597335224,0.000000 -3.226866691373699,55.91829124742429,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.226866691373699,55.91829124742429,0.000000 -3.228375914073229,55.91826460021084,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.228375914073229,55.91826460021084,0.000000 -3.229017627887822,55.918274393341115,0.000000 -3.229472113314393,55.91836659427807,0.000000 -3.230283059992115,55.91862694189201,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.230283059992115,55.91862694189201,0.000000 -3.230409646227322,55.91866758133872,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.230409646227322,55.91866758133872,0.000000 -3.229721335893834,55.91844660509219,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.229721335893834,55.91844660509219,0.000000 -3.230537918892605,55.91870876219963,0.000000 -3.2310943187636756,55.91885070268549,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.2310943187636756,55.91885070268549,0.000000 -3.232114089253115,55.91905577299868,0.000000 -3.2335833437796686,55.91920981375597,0.000000 -3.2384366520889847,55.91953875689668,0.000000 -3.238741753371248,55.91959836154278,0.000000 -3.240135570767572,55.92008637458279,0.000000 -3.237890524519023,55.92203637783311,0.000000 -3.2374021389499785,55.92254208600242,0.000000 -3.2369575255429193,55.92312080986323,0.000000 -3.236638268157205,55.923492221314284,0.000000 -3.23582578232495,55.924332088030845,0.000000 -3.234580604014857,55.9250967038817,0.000000 -3.2338789455714587,55.92569219154922,0.000000 -3.2330275304547147,55.926352871798414,0.000000 -3.2327283896370616,55.92656390949854,0.000000 -3.2320054970384873,55.927001817382916,0.000000 -3.231789616460866,55.92709774361024,0.000000 -3.2311050943532234,55.927354974911104,0.000000 -3.2306755683722104,55.9275432883399,0.000000 -3.2302065543131504,55.92780741142796,0.000000 -3.2294050580875218,55.928324667997465,0.000000 -3.229045381301166,55.9284548668963,0.000000 -3.227505346257359,55.928860923547916,0.000000 -3.2273250422028834,55.92892481227796,0.000000 -3.2272546342146686,55.92897957404657,0.000000 -3.2269612675971078,55.92900956263414,0.000000 -3.226702918709135,55.92906134417045,0.000000 -3.2162305686525383,55.931794217194486,0.000000 -3.2151152167122485,55.930954909271485,0.000000 -3.2150824341568893,55.930887295251054,0.000000 -3.2150408971691333,55.929918906016326,0.000000 -3.2150155651945376,55.92980900995006,0.000000 -3.214893559223206,55.92964753996194,0.000000 </coordinates> </LineString> </Placemark> <Placemark> <name>  </name> <description><![CDATA[ Delivery ]]></description> <styleUrl>#styleDGLine</styleUrl> <LineString> <coordinates> -3.214893559223206,55.92964753996194,0.000000 -3.2150155651945376,55.92980900995006,0.000000 -3.2150408971691333,55.929918906016326,0.000000 -3.2150824341568893,55.930887295251054,0.000000 -3.2151152167122485,55.930954909271485,0.000000 -3.2162305686525383,55.931794217194486,0.000000 -3.2134383749457354,55.932875616256155,0.000000 </coordinates> </LineString> </Placemark><Placemark><name>Depot</name><description><![CDATA[Depot 01:13]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.213618,55.93302,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 531</name><description><![CDATA[Visit 531   01:13]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.226158587931707,55.91656690435311,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 114</name><description><![CDATA[Visit 114   01:26]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.225533334131102,55.91669821582814,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 13</name><description><![CDATA[Visit 13   01:32]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.225206321920897,55.916534056957346,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 3</name><description><![CDATA[Visit 3   01:37]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2258156056272473,55.915920091679055,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 662</name><description><![CDATA[Visit 662   01:43]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2255810376394516,55.9188929917631,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 396</name><description><![CDATA[Visit 396   01:50]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.22550577023707,55.91929214636022,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 623</name><description><![CDATA[Visit 623   01:55]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.225497246331148,55.919771412301756,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 686</name><description><![CDATA[Visit 686   02:00]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2255623621774845,55.92002562487059,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 807</name><description><![CDATA[Visit 807   02:05]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2269773986343813,55.91992799987848,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 327</name><description><![CDATA[Visit 327   02:11]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2284427084035574,55.91952116425858,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 489</name><description><![CDATA[Visit 489   02:16]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2294092127383625,55.91948166531703,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 138</name><description><![CDATA[Visit 138   02:21]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2299248115453283,55.919141805590364,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 890</name><description><![CDATA[Visit 890   02:26]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2295405564830215,55.918623428211475,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 249</name><description><![CDATA[Visit 249   02:31]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.230406408349829,55.91984807488261,1</coordinates>  </Point> </Placemark><Placemark><name>Visit 962</name><description><![CDATA[Visit 962   02:36]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.2145681819074357,55.92972469778911,1</coordinates>  </Point> </Placemark><Placemark><name>Depot</name><description><![CDATA[Depot 02:57]]></description><styleUrl>#delivery</styleUrl><Point>  <coordinates> -3.213618,55.93302,1</coordinates>  </Point> </Placemark>
+</Document>
+</kml>
