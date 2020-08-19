@@ -15,6 +15,7 @@ public class CVRPProblem extends TSPProblem {
 	
 	private ArrayList<ArrayList<VRPVisit>> currentVRPSolution = new ArrayList<ArrayList<VRPVisit>> ();
 	//Represents the colection  of routes that comprise the solution
+	
 	private int capacity;
 	//The vehicle capacity
 	

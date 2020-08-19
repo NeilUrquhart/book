@@ -20,7 +20,6 @@ import book.ch1.Visit;
 public class VRPProblemFactory {
 	public static CVRPProblem buildProblem(String fName){
 		try {
-
 			File f = new File(fName);
 			BufferedReader b = new BufferedReader(new FileReader(f));
 
