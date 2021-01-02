@@ -16,7 +16,7 @@ import book.ch3.rep2.EAIndividual;
 
 /*
  * Neil Urquhart 2020
- * This class represents a single CVRP solution to be used within an Evolutionary Algorithm.
+ * This class represents a single CVRPTW solution to be used within an Evolutionary Algorithm.
  * 
  * The basic solution (a grand tour) is stored in the genotype. Once the solution has been
  * evaluated then the solution is stored in the genotype.
@@ -25,9 +25,22 @@ import book.ch3.rep2.EAIndividual;
  * 
  */
 public class BiObjectiveTWIndividual  extends EAIndividual implements Domination  {
-	private int deliveryTime = 5;//5 mins
+	//Use the RandomSingleton object to get access to a seeded random number generator
+	private RandomSingleton rnd =RandomSingleton.getInstance();
 	
-	private class Gene {
+	private ArrayList<VRPTWRoute> phenotype;
+	
+	public enum Objective{
+		ROUTES, 	//No of routes in solution
+		TIME,   	//Total time in solution
+		DISTANCE, 	//Total distance in solution
+		IDLE,		//Amount of time vehicle spend idle in solution
+		COST_DEL	//The cost per delivery
+	}
+	//The genotype is a "grand tour" list of visits
+	protected ArrayList<Gene> genotype;
+
+	public class Gene {
 		/*
 		 * Represents a single Gene, 
 		 *   visit - the visit being made
@@ -60,185 +73,8 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		public String toString(){
 			return this.visit.toString() + "New Route "+ this.newRoute;
 		}
-		
-	}
-	public enum Objective{
-		ROUTES,
-		TIME,
-		DISTANCE,
-		IDLE
 	}
 	
-	public class VisitNode{
-		private LocalTime visitTime=null;
-		private int minsWaiting;
-		private VRPTWVisit myVisit;
-		
-		public VisitNode(VRPTWVisit v) {
-			myVisit = v;
-		}
-		
-		public VRPTWVisit getVisit() {
-			return myVisit;
-			
-		}
-		public void setDeliveryTime(LocalTime t) {
-			visitTime = t;
-		}
-		
-		public LocalTime getDeliveryTime() {
-			return visitTime;
-		}
-	
-	
-		public int getMinsWaiting() {
-			return minsWaiting;
-		}
-	
-		public void setMinsWaiting(int minsWaiting) {
-			this.minsWaiting = minsWaiting;
-		}
-		
-		public String toString() {
-			return this.myVisit + " T=" + this.getDeliveryTime() + " w="+ this.getMinsWaiting();
-		}
-	}
-	
-	public class Route extends ArrayList<VisitNode>{
-		private LocalTime start;
-		private LocalTime end;
-		
-		public Route() {
-			super();
-		}
-		
-		public double getIdle() {
-			double idle=0;
-			for (VisitNode vn : this) {
-				idle += vn.minsWaiting;
-			}
-			return idle;
-		}
-		public double getDist() {
-			double dist=0;
-			Visit p =  problem.getStart();
-			for (VisitNode vn : this) {
-				dist += problem.getDistance(p, vn.myVisit);
-				p = vn.myVisit;
-			}
-			dist += dist += problem.getDistance(p, problem.getStart()); 
-			return dist;
-		}
-		public String toString() {
-			String buffer = start.toString() +",";
-			
-			for (VisitNode v : this)
-				buffer += v.toString() +",";
-			
-			buffer += end.toString() +"\n";
-			return buffer;
-		}
-		private int demand(){
-			//Return the total cumulative demand within <route>
-			int demand=0;
-			for (VisitNode visit: this){
-				demand += visit.getVisit().getDemand();
-			}
-			return demand;
-		}
-		
-		private void setStartEnd() {
-			
-			if (this.size()<1)return;
-			//set start and end times
-			VisitNode v = this.get(0);
-			int mins = ((CVRPTWProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit());
-			v.setMinsWaiting(0);
-			this.start = v.getDeliveryTime().minusMinutes(mins);
-			
-			v = this.get(this.size()-1);
-			mins = ((CVRPTWProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit());
-			mins = mins + deliveryTime;
-			this.end = v.getDeliveryTime().plusMinutes(mins);
-			
-			
-		}
-		
-		public long getTime() {//Route timespan in mins
-			if ((start==null)||(end==null)) 
-				return 0;
-				
-			//Check for routes that end after midnight
-			long m=0;
-				
-			m =  ChronoUnit.MINUTES.between(start, end);
-			
-			if (m<0) {//Route ends after midnight
-				m =  ChronoUnit.MINUTES.between(start, LocalTime.of(23,59,00));
-				m ++;// missing minute at midnight
-				m += ChronoUnit.MINUTES.between(LocalTime.of(00,00,00),end);
-				
-			}
-			return m;
-		}
-		
-		public LocalTime getStart() {
-			return this.start;
-		}
-		
-		public LocalTime getEnd() {
-			return this.end;
-		}
-			
-	}
-	
-	private ArrayList<Route> phenotype;
-
-	private static Objective evalObjective;
-	
-	public static void setObjective(Objective o){
-		evalObjective =o;
-	}
-	
-//	//Get Customer Service
-//		public double getCustService() {
-//			if (super.phenotype == null)
-//				//If the genotype has been changed then evaluate
-//				evaluate();
-//			
-//			//Get Dist to customers
-//			double totTime=0;
-//			for (ArrayList<VRPVisit> route : getPhenotype()){
-//			  double routeTime=0;
-//			  Visit prev = super.problem.getStart();
-//			  for (VRPVisit v : route){
-//				  double dist = super.problem.getDistance(prev,v);
-//				  routeTime = routeTime + dist;
-//				  totTime = totTime + routeTime;
-//				  
-//			  }
-//			}
-//			return totTime;
-//		}
-		
-	public double getTime() {
-		if (phenotype == null)
-			//If the genotype has been changed then evaluate
-			evaluate();
-		double time=0;
-
-		for (Route r : phenotype)
-			time += r.getTime();
-		return time;
-
-	}
-
-	//Use the RandomSingleton object to get access to a seeded random number generator
-	private RandomSingleton rnd =RandomSingleton.getInstance();
-
-	//The genotype is a "grand tour" list of visits
-	protected ArrayList<Gene> genotype;
-
 	public BiObjectiveTWIndividual( CVRPProblem prob) {
 		super();
 		/*
@@ -255,6 +91,22 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 				all0s = true;
 			}
 		}
+		
+		createRandom(prob, all1s, all0s);
+	}
+	
+	public BiObjectiveTWIndividual( CVRPProblem prob, boolean vanBits) {
+		super();
+		
+		if (vanBits == false)
+			createRandom(prob, false, true);
+		else
+			createRandom(prob, true, false);
+	}
+
+	private void createRandom(CVRPProblem prob, boolean all1s, boolean all0s) {
+		//Set the genotype randomly.
+		//The all1s and all0s are used to specify if newVan bits should be set of all1s (T,F) all0s (F,T) or randomly (F,F)
 		problem = prob;
 		genotype = new ArrayList<Gene>();
 		for (Visit v : prob.getSolution()){
@@ -270,7 +122,15 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		genotype = randomize(genotype);
 		phenotype = null;
 	}
+	
 
+	
+	private static Objective evalObjective;
+	
+	public static void setObjective(Objective o){
+		evalObjective =o;
+	}
+			
 	public BiObjectiveTWIndividual (CVRPProblem prob, BiObjectiveTWIndividual parent1, BiObjectiveTWIndividual parent2){
 		super();
 		/*
@@ -291,7 +151,6 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 			if (!genotypeContains(genotype,g)){
 				genotype.add(g);
 			}
-
 		}
 	}
 
@@ -303,6 +162,17 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
     	}
     	return false;
     }
+    
+	public double getTime() {
+		if (phenotype == null)
+			//If the genotype has been changed then evaluate
+			evaluate();
+		double time=0;
+
+		for (VRPTWRoute r : phenotype)
+			time += r.getTime();
+		return time;
+	}
     
 	private ArrayList randomize(ArrayList list) {
 		// Randomly shuffle the contents of <list>
@@ -344,16 +214,14 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		 * Build a phenotype based upon the genotype
 		 * Only build the genotype if the phenotype has been set to null
 		 * 
-		 * NEW: RESPECT TIME WINDOWS!
-		 * 
-		 * todo: add start/end for each route
+		 * The solution must respect the delivery time windows
+
 		 */
 		if (phenotype == null) {
-			LocalTime start = LocalTime.of(7,30,0); //Move to problem
 			
-			phenotype = new ArrayList<Route> ();
-			Route newRoute = new Route();
-			LocalTime currentTime = start;
+			phenotype = new ArrayList<VRPTWRoute> ();
+			VRPTWRoute newRoute = new VRPTWRoute(((CVRPTWProblem)this.problem));
+			LocalTime currentTime = ((CVRPTWProblem)this.problem).getStartTime();
 			Visit previous =  this.problem.getStart();
 			boolean addNewRoute = false;
 			boolean firstGene = true;
@@ -373,8 +241,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 					//make current time is >= tw start
 					currentTime = proposedTime;
 				}
-				else
-					//new route	
+				else //Proposed time is beyond the time window
 				{
 					addNewRoute = true;
 				}
@@ -391,11 +258,14 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 				}
 				
 				if (addNewRoute) {
-					
+					/*
+					 * Add a new route to the phenotype
+					 * 
+					 */
 					phenotype.add(newRoute);
-					newRoute.setStartEnd();
-					newRoute = new Route();
-					currentTime = start;
+					newRoute.setStartEndTimes();
+					newRoute = new VRPTWRoute(((CVRPTWProblem)this.problem));
+					currentTime = ((CVRPTWProblem)this.problem).getStartTime();
 					proposedTime = currentTime.plusMinutes(((CVRPTWProblem)this.problem).getTravelMinutes(this.problem.getStart(),(Visit)v.getVisit()));
 					
 					if (proposedTime.compareTo(v.getVisit().getEarliest())<0)
@@ -404,32 +274,16 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 					currentTime = proposedTime;
 					previous = this.problem.getStart();
 					addNewRoute = false;
-
 				}
-						
 				v.setDeliveryTime(currentTime);
-				//temp
-//				if(newRoute.size()>0) {
-//				  VRPTWVisit old = newRoute.get(newRoute.size()-1);
-//				  if (old.getDeliveryTime().compareTo(currentTime)>=0)
-//					  System.out.println("err");
-//				}
-				//done temp
 				newRoute.add(v);
-				currentTime = currentTime.plusMinutes(deliveryTime);
+				currentTime = currentTime.plusMinutes(((CVRPTWProblem)problem).getDeliveryTime());
 				previous = v.getVisit();
 				firstGene = false;
-
 			}
 			phenotype.add(newRoute);
-			newRoute.setStartEnd();
-			
-			//TEMP - check for empty routes
-			for (Route r : phenotype) {
-				if (r.size()==0)
-					System.out.println("!");
-			}
-			//doen temp
+			newRoute.setStartEndTimes();
+
 		}
 	}
 	
@@ -447,21 +301,31 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 			return this.getTime();
 		else if (evalObjective == Objective.IDLE)
 			return this.getIdle();
+		else if (evalObjective == Objective.COST_DEL)
+			return (getCost()/((CVRPTWProblem)this.problem).getTotalDemand());
 		else//dist
 			return this.getDistance();
 	}
 
-	public ArrayList<Route> getPhenotype(){
+	public ArrayList<VRPTWRoute> getPhenotype(){
 		return phenotype;
 	}
 
+	public double getCost() {
+		return FabFoodCostModel.getInstance().getSolutionCost(this);
+	}
+	
+	public double getCostDel() {
+		return FabFoodCostModel.getInstance().getSolutionCost(this)/((CVRPTWProblem)this.problem).getTotalDemand();
+	}
+	
 	public double getDistance(){
 		if (phenotype == null)
 			//If the genotype has been changed then evaluate
 			evaluate();
 		double dist =0;
 		
-		for (Route  r : phenotype)
+		for (VRPTWRoute  r : phenotype)
 		  dist += r.getDist();
 		
 		return  dist;
@@ -474,7 +338,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 			evaluate();
 		double idle =0;
 		
-		for (Route  r : phenotype)
+		for (VRPTWRoute  r : phenotype)
 		  idle += r.getIdle();
 		
 		return  idle;
@@ -487,7 +351,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		return phenotype.size();
 	}
 
-	
+
 
 	public BiObjectiveTWIndividual copy() {
 		//Create a new individual that is a direct copy of this individual
@@ -505,12 +369,8 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		
 		if (phenotype != null) {
 			res = res+"Phenotype\n";
-			for (Route route: phenotype) {
+			for (VRPTWRoute route: phenotype) {
 				res = res + route.toString();
-				//for (VRPVisit v : route) {
-				//	res = res + v.toString()+":";
-				//}
-				//res = res +"\n";
 			}
 		}
 		return res;
@@ -529,21 +389,23 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 			return false;
 		//Must be the same or better
 		
-		if ((me[0]==other[0])&&(me[1]==other[1]))
+		if(me[2] > other[2])
+			return false;
+		//Must be the same or better
+		
+		if ((me[0]==other[0])&&(me[1]==other[1])&&(me[2]==other[2]))
 			return false;
 		
 		return true;
 	}
 
-
-	
 	@Override
 	public double[] getVector() {
 		//Return a vector representation
-		double[] v = new double[2];
-		v[0] = this.getRoutes();
+		double[] v = new double[3];
+		v[0] = this.getDistance();
 		v[1] = this.getTime();
+		v[2] = (this.getCost()/((CVRPTWProblem)this.problem).getTotalDemand());
 		return v;
 	}
-	
 }

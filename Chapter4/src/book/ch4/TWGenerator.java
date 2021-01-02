@@ -8,6 +8,13 @@ import java.time.LocalTime;
 import book.ch2.RandomSingleton;
 
 public class TWGenerator {
+	
+	/*
+	 * Neil Urquhart 2020
+	 * 
+	 * A simple class for generating lists of time windows
+	 * 
+	 */
 
 	//Assume the day starts at 08:00 and ends 22:00
 	private static int startH = 8;

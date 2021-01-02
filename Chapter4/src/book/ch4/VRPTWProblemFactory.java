@@ -13,13 +13,17 @@ import book.ch1.Visit;
  * 
  *  * the problems are in the ORLIB format
  *  * the problems are CVRP instances only
- *  * distancd calculation is EUC2D
+ *  * distance calculation is EUC2D
+ *  
+ *  Time windows are added using those contained in a separate .csv file
+ *  The <twLen> parameter is used to specify the time window file to load
  * 
  */
 
 public class VRPTWProblemFactory {
 	public static CVRPTWProblem buildProblem(String path, String fName, int twLen){
 		try {
+			//Open time windows file
 			File twF = new File(path + "/TW"+twLen+".csv");
 			BufferedReader twReader = new BufferedReader(new FileReader(twF));
 
@@ -38,10 +42,6 @@ public class VRPTWProblemFactory {
 					String[] buffer = readLine.split(":");
 					capacity = Integer.parseInt(buffer[1].trim());
 				}
-
-//				if (readLine.contains("COMMENT")){
-//					System.out.print(fName + "," +readLine + ",");
-//				}
 
 				if (readLine.contains("DIMENSION :")){
 					String[] buffer = readLine.split(":");
@@ -76,7 +76,8 @@ public class VRPTWProblemFactory {
 					Visit v = new Visit("Depot",coords[c][0],coords[c][1]);
 					result.setStart(v);
 				}else{
-					String[] buffer = twReader.readLine().trim().split(",");
+					
+					String[] buffer = twReader.readLine().trim().split(",");//Read next time window from file
 					VRPTWVisit v = new VRPTWVisit(""+(c+1),coords[c][0],coords[c][1],demand[c],Integer.parseInt(buffer[0]),Integer.parseInt(buffer[1]));
 					result.addVisit(v);
 				}
