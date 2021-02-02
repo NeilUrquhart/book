@@ -2,10 +2,12 @@ package book.ch4.mapElites;
 
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import book.ch2.RandomSingleton;
 import book.ch2.VRPSolver;
 import book.ch3.rep2.Domination;
+import book.ch4.mapElites.ModalCostModel.Mode;
 
 
 /*
@@ -21,6 +23,19 @@ public class MAPElites extends VRPSolver {
 	
 	@Override
 	public void solve() {
+		//Temp
+//		EliteIndividual t = new EliteIndividual(theProblem);
+//		t.evaluate();
+//		System.out.println("\n"+t.printKey()+"\n"+t);
+//		
+//		t.SetAllMode(Mode.CYCLE);
+//		t.evaluate();
+//		System.out.println("\n"+t.printKey()+"\n"+t);
+//		t.SetAllMode(Mode.VAN);
+//		t.evaluate();
+//		System.out.println("\n"+t.printKey()+"\n"+t);
+		
+		
 		/*
 		 * Create new pop
 		 * 
@@ -32,15 +47,11 @@ public class MAPElites extends VRPSolver {
 		map = new MAPofElites(keyGen.getDimensions(), keyGen.getBuckets());
 		EliteIndividual e = new EliteIndividual(theProblem);
 		try {
-			System.out.println("Initialising map");
 			for (int c=0; c < 5000; c++) {
-				e = new EliteIndividual(theProblem);
-				
+				e = new EliteIndividual(theProblem);	
 				e.mutate();
 				e.evaluate();
-				
 				if (map.put(e)) {
-					System.out.println(c);
 					Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
 			}
 				
@@ -48,13 +59,12 @@ public class MAPElites extends VRPSolver {
 			//	System.out.println(map.getUsed() +" " +e.printKey() + " " + e.getFitness() );
 				
 			}
-			System.out.println("Used:"+map.getUsed());
 			EliteIndividual  ch;
 			String parent="";
 			boolean improved = false;
 			for (int c=0; c < 500000; c++) {
-				if ((c%1000)==0) {
-					System.out.println(c + " : "+ map.getUsed()+" : "+improved);
+				if ((c%50000)==0) {
+					System.out.println(c + " : "+ map.getUsed()+" : "+improved );
 					improved = false;
 				}
 				Logger.Action action;
@@ -67,24 +77,23 @@ public class MAPElites extends VRPSolver {
 					action = Logger.Action.RECOMBINATION;
 					if (rnd.getRnd().nextBoolean()) {
 						
-						ch.mutate();
+						ch.mutate();						
 						parent = parent + ",MUTATE";
-					}
-					
+					}					
 				}else {
 					ch =  ((EliteIndividual)map.getRandom()).copy();
+					ch.evaluate();
 					parent = ch.printKey();
 					ch.mutate();
 					action = Logger.Action.CLONE;
 				}
-					
+				ch.evaluate();
 				if (map.put(ch)) {
 					Logger.getLogger().add(action, parent, ch.getFitness(), ch.getKey());
+
 					improved = true;
-					//System.out.println(c+ "Used:"+map.getUsed() );
 				}
 			}
-
 
 		} catch (InvalidMAPKeyException e1) {
 			e1.printStackTrace();
@@ -123,8 +132,18 @@ public class MAPElites extends VRPSolver {
 //		}
 	}
 
-	public void exportToElVis(String fName) {
-		map.exportToElVis(fName);
+//	public void exportToElVis(String fName) {
+//		map.exportToElVis(fName);
+//	}
+	
+	public void exportToCSV(String fName) {
+		map.exportToCSV(fName);
 	}
 
+	public HashSet<String> getKeys(){
+		return map.getKeys();
+	}
+	public String stats() {
+		return map.getUsed()+"," + map.getBest();	
+	}
 }

@@ -1,5 +1,9 @@
 package book.ch4.mapElites;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+
+import book.ch2.RandomSingleton;
 
 public class MAP <T>{
 	
@@ -7,7 +11,12 @@ public class MAP <T>{
 	private int buckets;
 	private int dimensions;
 	private int used=0;
+	private RandomSingleton rnd = RandomSingleton.getInstance();
+	//Note that we use the RandomSingleton object to generate random numbers
+	int  temp;
 	
+	private ArrayList<Integer> index = new ArrayList<Integer>();
+
 	
 	public int getUsed() {
 		return used;
@@ -23,6 +32,8 @@ public class MAP <T>{
 			used++;
 		
 		store[idx] = data;
+		index.add(idx);
+		temp = idx;
 	}
 	
 	
@@ -63,4 +74,14 @@ public class MAP <T>{
 	public int getCapacity() {
 		return store.length;
 	}
+	
+	public T getRandom() {
+		
+		if (this.getUsed()==0)
+			return null;
+		
+		int i = (int)index.get(rnd.getRnd().nextInt(index.size()-1));
+		return (T)store[i];	
+	}
+	
 }

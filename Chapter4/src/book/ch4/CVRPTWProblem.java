@@ -32,14 +32,14 @@ public class CVRPTWProblem extends CVRPProblem {
 	final private  LocalTime startTime = LocalTime.of(7,30,0);
 	
 	//Turnaround time - time for a vehicle to be prepared for an addtional route
-	final private int turnAroundTime = 30;//mins
+	//final private int turnAroundTime = 30;//mins
 	/*
 	 * Finished Parameters
 	 */
 	
-	public int getTurnAroundTime() {
-		return turnAroundTime;
-	}
+//	public int getTurnAroundTime() {
+//		return turnAroundTime;
+//	}
 
 	public LocalTime getStartTime() {
 		return startTime;

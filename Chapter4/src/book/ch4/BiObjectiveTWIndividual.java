@@ -26,9 +26,9 @@ import book.ch3.rep2.EAIndividual;
  */
 public class BiObjectiveTWIndividual  extends EAIndividual implements Domination  {
 	//Use the RandomSingleton object to get access to a seeded random number generator
-	private RandomSingleton rnd =RandomSingleton.getInstance();
+	protected RandomSingleton rnd =RandomSingleton.getInstance();
 	
-	private ArrayList<VRPTWRoute> phenotype;
+	protected ArrayList<VRPTWRoute> phenotype;
 	
 	public enum Objective{
 		ROUTES, 	//No of routes in solution
@@ -104,7 +104,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 			createRandom(prob, true, false);
 	}
 
-	private void createRandom(CVRPProblem prob, boolean all1s, boolean all0s) {
+	protected void createRandom(CVRPProblem prob, boolean all1s, boolean all0s) {
 		//Set the genotype randomly.
 		//The all1s and all0s are used to specify if newVan bits should be set of all1s (T,F) all0s (F,T) or randomly (F,F)
 		problem = prob;
@@ -174,7 +174,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 		return time;
 	}
     
-	private ArrayList randomize(ArrayList list) {
+	protected ArrayList randomize(ArrayList list) {
 		// Randomly shuffle the contents of <list>
 		Random  r= rnd.getInstance().getRnd();
 
@@ -209,7 +209,7 @@ public class BiObjectiveTWIndividual  extends EAIndividual implements Domination
 	public void reset() {
 		phenotype =null;
 	}
-	private void decode() {
+	protected void decode() {
 		/*
 		 * Build a phenotype based upon the genotype
 		 * Only build the genotype if the phenotype has been set to null

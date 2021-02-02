@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 import book.ch1.Visit;
+import book.ch4.mapElites.ReloadNode;
 
 /*
  *  Neil Urquhart 2020
@@ -15,9 +16,9 @@ import book.ch1.Visit;
 
 public class VRPTWRoute extends ArrayList<VisitNode>{
 	
-	private LocalTime start; //Time of leaving the depot
-	private LocalTime end; //Time of returning to the depot
-	private CVRPTWProblem problem;
+	protected LocalTime start; //Time of leaving the depot
+	protected LocalTime end; //Time of returning to the depot
+	protected CVRPTWProblem problem;
 	
 	public VRPTWRoute(CVRPTWProblem prob) {
 		super();
@@ -34,6 +35,7 @@ public class VRPTWRoute extends ArrayList<VisitNode>{
 		}
 		return idle;
 	}
+	
 	public double getDist() {
 		/*
 		 * Get distance of route
@@ -48,14 +50,18 @@ public class VRPTWRoute extends ArrayList<VisitNode>{
 		return dist;
 	}
 	public String toString() {
-		String buffer = start.toString() +",";
+		String buffer = start.toString() +"NEW ROUTE: \n";
 		
 		for (VisitNode v : this)
-			buffer += v.toString() +",";
+			if (v instanceof ReloadNode)
+				buffer += "RELOAD";
+			else 
+			   buffer += v.toString() +",";
 		
 		buffer += end.toString() +"\n";
 		return buffer;
 	}
+	
 	public int demand(){
 		//Return the total cumulative demand within <route>
 		int demand=0;
