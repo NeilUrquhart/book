@@ -11,139 +11,92 @@ import book.ch4.mapElites.ModalCostModel.Mode;
 
 
 /*
- * Neil Urquhart 2019
-
-
+ * Neil Urquhart 2020
+ * An implementation of the MAP-Elites algorithm for solving a multi-model CVRPTW problem
+ * 
  */
 public class MAPElites extends VRPSolver {
+	
+	private int MAX_EVALS = 10000; //Evaluations per run
+	private int INIT_EVALS = 5000; //Evals to use for the initialisation
+	
 	private RandomSingleton rnd = RandomSingleton.getInstance();
 	//Note that we use the RandomSingleton object to generate random numbers
 
-	private MAPofElites map;
-	
+	private MAPofElites archive;//The archive of elite solutions
+
 	@Override
-	public void solve() {
-		//Temp
-//		EliteIndividual t = new EliteIndividual(theProblem);
-//		t.evaluate();
-//		System.out.println("\n"+t.printKey()+"\n"+t);
-//		
-//		t.SetAllMode(Mode.CYCLE);
-//		t.evaluate();
-//		System.out.println("\n"+t.printKey()+"\n"+t);
-//		t.SetAllMode(Mode.VAN);
-//		t.evaluate();
-//		System.out.println("\n"+t.printKey()+"\n"+t);
-		
-		
-		/*
-		 * Create new pop
-		 * 
-		 */
-		System.out.println("MAP-Elites solver");
-		//Initialise
-      
-		KeyGenerator keyGen = KeyGenerator.getInstance(theProblem);
-		map = new MAPofElites(keyGen.getDimensions(), keyGen.getBuckets());
-		EliteIndividual e = new EliteIndividual(theProblem);
+	public void solve() {      
+		//MAPElitesKeyGen keyGen = CVRPKeyGen.getInstance(theProblem);
+		KeyGenerator.setup(new CVRPKeyGen(theProblem));
+		archive = new MAPofElites(KeyGenerator.getInstance().getDimensions(), KeyGenerator.getInstance().getBuckets());
 		try {
-			for (int c=0; c < 5000; c++) {
+			//Initialise archive by generating 5000 random solutions
+			EliteIndividual e;
+			for (int c=0; c < INIT_EVALS; c++) {
 				e = new EliteIndividual(theProblem);	
 				e.mutate();
 				e.evaluate();
-				if (map.put(e)) {
+				if (archive.put(e)) {
 					Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+				}
 			}
-				
-		
-			//	System.out.println(map.getUsed() +" " +e.printKey() + " " + e.getFitness() );
-				
-			}
+
 			EliteIndividual  ch;
-			String parent="";
-			boolean improved = false;
-			for (int c=0; c < 500000; c++) {
+			String descForLogger="";
+			for (int c=0; c < MAX_EVALS; c++) {
 				if ((c%50000)==0) {
-					System.out.println(c + " : "+ map.getUsed()+" : "+improved );
-					improved = false;
+					System.out.println(c + " : "+ archive.getUsed());
 				}
 				Logger.Action action;
 				if (rnd.getRnd().nextBoolean()) {
-					EliteIndividual p1 = (EliteIndividual)map.getRandom();
-					EliteIndividual p2 = (EliteIndividual)map.getRandom();
-					
+					//Select two random parents from the archive
+					EliteIndividual p1 = (EliteIndividual)archive.getRandom();
+					EliteIndividual p2 = (EliteIndividual)archive.getRandom();
+
+					//Create a new solution from the parents
 					ch = new EliteIndividual(theProblem, p1,p2);
-					parent = p1.printKey() +"," + p2.printKey();
+					descForLogger = p1.keyToString() +"," + p2.keyToString();
 					action = Logger.Action.RECOMBINATION;
+					
 					if (rnd.getRnd().nextBoolean()) {
-						
-						ch.mutate();						
-						parent = parent + ",MUTATE";
+						ch.mutate();		//Mutate the child solution				
+						descForLogger = descForLogger + ",MUTATE";
 					}					
-				}else {
-					ch =  ((EliteIndividual)map.getRandom()).copy();
+				}else {//Create a new solution by copying an existing member of the archive
+					ch =  ((EliteIndividual)archive.getRandom()).copy();
 					ch.evaluate();
-					parent = ch.printKey();
+					descForLogger = ch.keyToString();
 					ch.mutate();
 					action = Logger.Action.CLONE;
 				}
 				ch.evaluate();
-				if (map.put(ch)) {
-					Logger.getLogger().add(action, parent, ch.getFitness(), ch.getKey());
-
-					improved = true;
+				if (archive.put(ch)) {//Put the solution into the Archive. Returns True if this
+									  //solution is allowed to join the archive
+					Logger.getLogger().add(action, descForLogger, ch.getFitness(), ch.getKey());
 				}
 			}
 
 		} catch (InvalidMAPKeyException e1) {
 			e1.printStackTrace();
 		}
-		
-		
-//		ArrayList<Domination> init = new ArrayList<Domination>();
-//		for (int count=0; count < INIT_POP_SIZE; count++){
-//			BiObjectiveTWIndividual i = new BiObjectiveTWIndividual(theProblem);
-//			i.evaluate();
-//			init.add(i);
-//		}
-//		population = new NonDominatedPop (init);
-//		evalsBudget = evalsBudget - INIT_POP_SIZE;//account for initial solutions in pop.
-//		while(evalsBudget >0) {	
-//			for (int count =0; count < CHILDREN; count ++){
-//				//Create child
-//				BiObjectiveTWIndividual child = null;
-//				if (rnd.getRnd().nextDouble() < XO_RATE){
-//					//Create a new Individual using recombination, randomly selecting the parents
-//					child = new BiObjectiveTWIndividual(super.theProblem, (BiObjectiveTWIndividual) population.getDominator(),(BiObjectiveTWIndividual) population.getDominator());				
-//				}
-//				else{
-//					//Create a child by copying a single parent
-//					child =  ((BiObjectiveTWIndividual) population.getDominator()).copy();
-//				}
-//				child.mutate();
-//				child.evaluate();
-//				evalsBudget --;
-//
-//				population.add(child);
-//			}
-//			
-//			population = population.extractNonDom();	
-			
-//		}
 	}
 
-//	public void exportToElVis(String fName) {
-//		map.exportToElVis(fName);
-//	}
-	
-	public void exportToCSV(String fName) {
-		map.exportToCSV(fName);
+
+	public ArrayList<Elite> getArchive() {
+		/*
+		 * Write a summary of the archive to a CSV file
+		 * 
+		 */
+		return archive.getArchive();
 	}
 
 	public HashSet<String> getKeys(){
-		return map.getKeys();
+		/*
+		 * Return a list of all the keys un he archive
+		 */
+		return archive.getKeys();
 	}
-	public String stats() {
-		return map.getUsed()+"," + map.getBest();	
-	}
+	
+	
 }

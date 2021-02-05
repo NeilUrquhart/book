@@ -36,10 +36,7 @@ public class CVRPTWProblem extends CVRPProblem {
 	/*
 	 * Finished Parameters
 	 */
-	
-//	public int getTurnAroundTime() {
-//		return turnAroundTime;
-//	}
+
 
 	public LocalTime getStartTime() {
 		return startTime;

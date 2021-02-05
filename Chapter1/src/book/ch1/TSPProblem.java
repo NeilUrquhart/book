@@ -18,7 +18,7 @@ public class TSPProblem{// implements Cloneable{
 	 * Properties
 	 */
 
-	private ArrayList<Visit> currentSolution = new ArrayList<Visit>();
+	protected ArrayList<Visit> currentSolution = new ArrayList<Visit>();
 	//The list of visits that comprise the TSP - once solve() has been called the vists are
 	//in solution order.
 	public void setRoute(ArrayList<Visit> route){

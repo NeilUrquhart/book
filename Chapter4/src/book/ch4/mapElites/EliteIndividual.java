@@ -16,22 +16,38 @@ import book.ch4.VisitNode;
 import book.ch4.mapElites.ModalCostModel.Mode;
 import book.ch4.BiObjectiveTWIndividual.Gene;
 
+
 public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 	/*
-	 * Test
+	 * Neil Urquhart 2021
+	 * An extension of BiObjectiveTWIndividual with 2 enhancements
+	 * 1. Implements book.ch4.mapElites.Elite to allow use with book.ch4.mapElitesMAPElites
+	 * 2. Uses the inner class ModeGene as the basis
 	 * 
 	 */
-	public void SetAllMode(Mode m) {
-		for(Gene g : genotype) {
-			ModeGene mg = (ModeGene) g;
-			mg.setMode(m);
-		}
-		this.phenotype = null;
-	}
-	/*
-	 * Done test
 
-	 */
+	public  class ModeGene extends Gene{
+		private Mode theMode;
+		
+		public ModeGene(VRPVisit aVisit) {
+			super(aVisit);
+
+		}
+		
+		public void setMode(Mode m) {
+			theMode = m;
+		}
+		
+		public Mode getMode() {
+			return theMode;
+		}
+		
+		public void flipMode() {
+			if (theMode == Mode.CYCLE) theMode = Mode.VAN;
+			if (theMode == Mode.VAN) theMode = Mode.CYCLE;
+		}
+	}
+	
 	public EliteIndividual(CVRPProblem prob) {
 		super(prob);
 	}
@@ -51,7 +67,7 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 
 	@Override
 	public int[] getKey() {
-		return KeyGenerator.getInstance(this.problem).getKey(this);
+		return KeyGenerator.getInstance().getKey(this);
 	}
 	
 	public EliteIndividual copy() {
@@ -75,30 +91,7 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 	
 	
 	
-	public  class ModeGene extends Gene{
-		private Mode theMode;
-		
-		
-		
-		public ModeGene(VRPVisit aVisit) {
-			super(aVisit);
-
-		}
-		
-		public void setMode(Mode m) {
-			theMode = m;
-		}
-		
-		public Mode getMode() {
-			return theMode;
-		}
-		
-		public void flipMode() {
-			if (theMode == Mode.CYCLE) theMode = Mode.VAN;
-			if (theMode == Mode.VAN) theMode = Mode.CYCLE;
-		}
-		
-	}
+	
 	
 	
 	
@@ -165,91 +158,6 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 	
 	@Override
 	protected void decode() {
-		/*
-		 * Build a phenotype based upon the genotype
-		 * Only build the genotype if the phenotype has been set to null
-		 * 
-		 * The solution must respect the delivery time windows
-
-		 */
-//		if (phenotype == null) {
-//			Mode currentMode = Mode.VAN;
-//			phenotype = new ArrayList<VRPTWRoute> ();
-//			VRPTWModalRoute newRoute = new VRPTWModalRoute(((CVRPTWProblem)this.problem));
-//			LocalTime currentTime = ((CVRPTWProblem)this.problem).getStartTime();
-//			Visit previous =  this.problem.getStart();
-//			boolean addNewRoute = false;
-//			boolean firstGene = true;
-//			for (Gene tmp : genotype){
-//				ModeGene g = (ModeGene)tmp;
-//				if (firstGene) {
-//					currentMode = g.theMode;
-//					
-//				}
-//				VisitNode v = new VisitNode((VRPTWVisit)g.visit());
-//				int travelTime = ((CVRPTWModalProblem)this.problem).getTravelMinutes(previous,v.getVisit(),currentMode);
-//				LocalTime proposedTime = currentTime.plusMinutes(travelTime);
-//			
-//				//If arrival is before TW
-//				if (proposedTime.compareTo(v.getVisit().getEarliest())<0) {
-//					//wait at visit for tw to start
-//					v.setMinsWaiting((int)ChronoUnit.MINUTES.between(proposedTime,v.getVisit().getEarliest()));
-//					proposedTime = v.getVisit().getEarliest();
-//					currentTime = proposedTime;
-//				}
-//				else if (v.getVisit().inTimeWindow(proposedTime)) {
-//					//make current time is >= tw start
-//					currentTime = proposedTime;
-//				}
-//				else //Proposed time is beyond the time window
-//				{
-//					addNewRoute = true;
-//				}
-//
-//				if ((g.newRoute() && !firstGene)){//Create a new route, if the gene specifies a new route
-//					addNewRoute = true;
-//					//currentMode = g.getMode();
-//
-//				}
-//				if (v.getVisit().getDemand() +newRoute.demand() > ModalCostModel.getInstance().getCapacity(currentMode)){
-//					//If next visit cannot be added  due to capacity constraint then
-//					//start new route.
-//					
-//					addNewRoute = true;
-//				}
-//				
-//				if (addNewRoute) {
-//					/*
-//					 * Add a new route to the phenotype
-//					 * 
-//					 */
-//		    		newRoute.setMode(currentMode);
-//					phenotype.add(newRoute);
-//					newRoute.setStartEndTimes();
-//					newRoute = new VRPTWModalRoute(((CVRPTWProblem)this.problem));
-//					currentTime = ((CVRPTWProblem)this.problem).getStartTime();
-//					proposedTime = currentTime.plusMinutes(((CVRPTWProblem)this.problem).getTravelMinutes(this.problem.getStart(),(Visit)v.getVisit()));
-//					
-//					if (proposedTime.compareTo(v.getVisit().getEarliest())<0)
-//						proposedTime = v.getVisit().getEarliest();
-//				
-//					currentTime = proposedTime;
-//					previous = this.problem.getStart();
-//					addNewRoute = false;
-//					currentMode = g.getMode();
-//				}
-//				v.setDeliveryTime(currentTime);
-//				newRoute.add(v);
-//				currentTime = currentTime.plusMinutes(((CVRPTWProblem)problem).getDeliveryTime());
-//				previous = v.getVisit();
-//				firstGene = false;
-//			}
-//			newRoute.setMode(currentMode);
-//			phenotype.add(newRoute);
-//			newRoute.setStartEndTimes();
-//
-//		}
-		
 		if (phenotype == null) {
 			
 			Mode currentMode = ((ModeGene)genotype.get(0)).getMode();

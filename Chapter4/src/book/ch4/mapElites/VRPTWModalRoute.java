@@ -7,8 +7,16 @@ import book.ch4.mapElites.ModalCostModel.Mode;
 
 
 public class VRPTWModalRoute extends VRPTWRoute {
+	/*
+	 * Neil Urquhart 2021
+	 * 
+	 * ExtendVRPTWRoute to take into account the mode used
+	 * 
+	 * 
+	 * 
+	 */
 
-	private Mode myMode;
+	private Mode myMode; //Mode is defined in ModalCostModel
 	
 	public VRPTWModalRoute(CVRPTWProblem prob) {
 		super(prob);
