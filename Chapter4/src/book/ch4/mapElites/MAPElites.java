@@ -17,36 +17,90 @@ import book.ch4.mapElites.ModalCostModel.Mode;
  */
 public class MAPElites extends VRPSolver {
 	
-	private int MAX_EVALS = 10000; //Evaluations per run
-	private int INIT_EVALS = 5000; //Evals to use for the initialisation
+	private int MAX_EVALS = 100000; //Evaluations per run
+	private int INIT_EVALS = 500; //Evals to use for the initialisation
 	
 	private RandomSingleton rnd = RandomSingleton.getInstance();
 	//Note that we use the RandomSingleton object to generate random numbers
 
 	private MAPofElites archive;//The archive of elite solutions
+	private ArrayList<Elite> seeds; 
+	
+	public void setSeeds(ArrayList<Elite> seeds) {
+		this.seeds = seeds;
+	}
 
+//	public MAPElites() {
+//		super();
+//		try {
+//		KeyGenerator.setup(new CVRPKeyGen(theProblem));
+//		archive = new MAPofElites(KeyGenerator.getInstance().getDimensions(), KeyGenerator.getInstance().getBuckets());
+//			//Initialise archive by generating 5000 random solutions
+//			EliteIndividual e;
+//			for (int c=0; c < INIT_EVALS; c++) {
+//				e = new EliteIndividual(theProblem);	
+//				e.mutate();
+//				e.evaluate();
+//				if (archive.put(e)) {
+//					Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+//				}
+//			}
+//		} catch (InvalidMAPKeyException e1) {
+//			e1.printStackTrace();
+//		}
+//
+//	}
+//	
+//	public MAPElites(ArrayList<EliteIndividual> seeds) {
+//		super();
+//		try {
+//			KeyGenerator.setup(new CVRPKeyGen(theProblem));
+//			archive = new MAPofElites(KeyGenerator.getInstance().getDimensions(), KeyGenerator.getInstance().getBuckets());
+//			for (EliteIndividual e : seeds) {
+//				if (archive.put(e)) {
+//					Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+//				}
+//			}
+//		} catch (InvalidMAPKeyException e1) {
+//			e1.printStackTrace();
+//		}
+//
+//	}
+	
 	@Override
 	public void solve() {      
-		//MAPElitesKeyGen keyGen = CVRPKeyGen.getInstance(theProblem);
 		KeyGenerator.setup(new CVRPKeyGen(theProblem));
 		archive = new MAPofElites(KeyGenerator.getInstance().getDimensions(), KeyGenerator.getInstance().getBuckets());
 		try {
-			//Initialise archive by generating 5000 random solutions
-			EliteIndividual e;
-			for (int c=0; c < INIT_EVALS; c++) {
-				e = new EliteIndividual(theProblem);	
-				e.mutate();
-				e.evaluate();
-				if (archive.put(e)) {
-					Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+			
+			if (seeds !=null) {
+				for(Elite seed : seeds)
+					if (archive.put(seed)) {
+						Logger.getLogger().add(Logger.Action.INIT, "",seed.getFitness() ,seed.getKey());
+						EliteIndividual i = (EliteIndividual) seed;
+						//System.out.println( "seeding : "+ archive.getUsed() + " - " + i.getCostDel());
+					}
+			}
+			else {
+				//Initialise archive by generating 5000 random solutions
+				EliteIndividual e;
+				for (int c=0; c < INIT_EVALS; c++) {
+					e = new EliteIndividual(theProblem);	
+					e.mutate();
+					e.evaluate();
+					if (archive.put(e)) {
+						Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+						//System.out.println( "random : "+ archive.getUsed());
+					}
 				}
 			}
 
+			//System.out.println( "setup: "+ archive.getUsed());
 			EliteIndividual  ch;
 			String descForLogger="";
 			for (int c=0; c < MAX_EVALS; c++) {
-				if ((c%50000)==0) {
-					System.out.println(c + " : "+ archive.getUsed());
+				if ((c%10000)==0) {
+					System.out.print(" "+c + " : "+ archive.getUsed());
 				}
 				Logger.Action action;
 				if (rnd.getRnd().nextBoolean()) {
@@ -76,6 +130,7 @@ public class MAPElites extends VRPSolver {
 					Logger.getLogger().add(action, descForLogger, ch.getFitness(), ch.getKey());
 				}
 			}
+			System.out.println();
 
 		} catch (InvalidMAPKeyException e1) {
 			e1.printStackTrace();
@@ -83,7 +138,7 @@ public class MAPElites extends VRPSolver {
 	}
 
 
-	public ArrayList<Elite> getArchive() {
+	public ArrayList<Object> getArchive() {
 		/*
 		 * Write a summary of the archive to a CSV file
 		 * 

@@ -2,7 +2,7 @@ package book.ch4.mapElites;
 
 public interface MAPElitesKeyGen {
 
-	int getDimensions();
+	int getDimensions() ;
 
 	int getBuckets();
 

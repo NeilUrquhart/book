@@ -74,7 +74,7 @@ public class TestMapElites {
 		}
 	}
 	
-	public static void exportToCSV(String fName, ArrayList<Elite> archive) {
+	public static void exportToCSV(String fName, ArrayList<Object> archive) {
 
 		try {
 			FileWriter csv = new FileWriter(fName);
@@ -82,7 +82,8 @@ public class TestMapElites {
 
 			csv.write("FixedVehCost,CostperDel,StaffCost,VehRunCost,Emissions,DelsByCycle,DistByCycle,Cycles,Vans\n"); 
 
-			for (Elite el : archive) {
+			for (Object el : archive) {
+				
 				EliteIndividual e = (EliteIndividual) el;
 					ModalCostModel m = ModalCostModel.getInstance();
 					csv.write(m.getFixedVehCost(e)+",");
@@ -107,7 +108,7 @@ public class TestMapElites {
 		}
 	}
 
-	public static String stats(ArrayList<Elite> archive) {
+	public static String stats(ArrayList<Object> archive) {
 		/*
 		 * Return a String that describes the size of the archive
 		 * and the best solutions found for each solution attribute
@@ -115,7 +116,7 @@ public class TestMapElites {
 		return archive.size()+"," + getBest(archive);	
 	}
 
-	private static String getBest(ArrayList<Elite> archive) {//Find the lowest in each feature
+	private static String getBest(ArrayList<Object> archive) {//Find the lowest in each feature
 		double fixedCost = Double.MAX_VALUE;
 		double costDel = Double.MAX_VALUE;
 		double staffCost = Double.MAX_VALUE;

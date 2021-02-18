@@ -24,9 +24,75 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 	 * 1. Implements book.ch4.mapElites.Elite to allow use with book.ch4.mapElitesMAPElites
 	 * 2. Uses the inner class ModeGene as the basis
 	 * 
+	 * Also enhanced to support single-objective optimisation using evaluate() and
+	 * the optimiseCharacteristic enum
+	 * 
 	 */
 
+	public enum optimiseCharacteristic{
+		distance,
+		fixedVehCost,
+		costDel,
+		staffCost,
+		vehRunningCost,
+		emissions,
+		cycleDels,
+		cycleDist,
+		cycles,
+		vans
+		}
+
+		private static optimiseCharacteristic criterion;
+	
+		public static void setSingleObjective(optimiseCharacteristic obj) {
+			criterion = obj;
+		}
+	
+	@Override
+	public double evaluate() {
+		if (phenotype == null)  
+			decode();
+		
+		switch(criterion) {
+		case distance:
+			return this.getDistance();
+		
+		case fixedVehCost :
+			return ModalCostModel.getInstance().getFixedVehCost(this);
+		
+		case costDel:
+			return this.getCostDel();
+		
+		case staffCost:
+			return ModalCostModel.getInstance().getStaffCost(this);
+		
+		case vehRunningCost:
+			return ModalCostModel.getInstance().getVehRunningCost(this);
+		
+		case emissions:
+			return ModalCostModel.getInstance().getEmissions(this);
+		
+		case cycleDels:
+			return ModalCostModel.getInstance().getCycleDels(this);
+		
+		case cycleDist:
+			return ModalCostModel.getInstance().getCycleDist(this);
+		
+		case cycles:
+			return ModalCostModel.getInstance().getCycles(this);
+		
+		case vans:
+			return ModalCostModel.getInstance().getVans(this);
+		
+		default:
+			return this.getDistance();
+	
+
+		}
+	}
 	public  class ModeGene extends Gene{
+		
+	
 		private Mode theMode;
 		
 		public ModeGene(VRPVisit aVisit) {
@@ -88,13 +154,7 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 	public double getCostDel() {
 		return ModalCostModel.getInstance().getSolutionCost(this)/((CVRPTWProblem)this.problem).getTotalDemand();
 	}
-	
-	
-	
-	
-	
-	
-	
+		
 	@Override
 	protected void createRandom(CVRPProblem prob, boolean all1s, boolean all0s) {
 		//Set the genotype randomly.
