@@ -7,13 +7,14 @@ package book.ch4.mapElites;
  * 
  * getFitness() must return a double value that represents the fitness of the solution (lower == better)
  * getKey() must return an array of int which represents the "key" of the individual (ie the bucket location
- * 
+ * getSummary must return a string that summerises the invidual (for the log file)
  */
 
 public interface Elite {
 	public double getFitness();
 	public int[] getKey();
-
+	public String getSummary();
+	
 	public default String keyToString() {
 		/*
 		 * Return the key as a string 
@@ -25,4 +26,6 @@ public interface Elite {
 		res = res + getKey()[getKey().length-1];
 		return res;
 	}
+	
+
 }

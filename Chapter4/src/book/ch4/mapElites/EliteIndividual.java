@@ -309,6 +309,32 @@ public class EliteIndividual extends BiObjectiveTWIndividual implements Elite {
 
 		}
 	}
-	
+
+	@Override
+	public String getSummary() {
+		if (phenotype == null)  
+			decode();
+
+		return "Dist = " + this.getDistance() +
+				"fixedVehCost = " +
+				ModalCostModel.getInstance().getFixedVehCost(this)+
+				" costDel = " +
+				this.getCostDel()+
+				" staffCost = " +
+				ModalCostModel.getInstance().getStaffCost(this)+
+				" vehRunningCost = " +
+				ModalCostModel.getInstance().getVehRunningCost(this)+
+				" emissions = " +
+				ModalCostModel.getInstance().getEmissions(this)+
+				" cycleDels = " +
+				ModalCostModel.getInstance().getCycleDels(this)+
+				" cycleDist = " +
+				ModalCostModel.getInstance().getCycleDist(this)+
+				" cycles = " +
+				ModalCostModel.getInstance().getCycles(this)+	
+				" vans = " +
+				ModalCostModel.getInstance().getVans(this);
+	}
+
 
 }

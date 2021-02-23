@@ -57,10 +57,10 @@ public class CVRPKeyGen implements MAPElitesKeyGen {
 		MIN_VEHRUNCOST  = Double.MAX_VALUE;
 		MAX_STAFFCOST =0;
 		MIN_STAFFCOST  =Double.MAX_VALUE;
-		MAX_CYCLES=0;
-		MIN_CYCLES= Integer.MAX_VALUE;
-		MAX_VANS=0;
-		MIN_VANS= Integer.MAX_VALUE;
+		//MAX_CYCLES=0;
+		//MIN_CYCLES= Integer.MAX_VALUE;
+		//MAX_VANS=0;
+		//MIN_VANS= Integer.MAX_VALUE;
 	}
 	public static void printMaxMin() {
 		System.out.println("CostDel " + MIN_COSTDEL + " : " + MAX_COSTDEL);
@@ -82,6 +82,17 @@ public class CVRPKeyGen implements MAPElitesKeyGen {
     	}
     }
 	
+    public static void setCycles(int  min, int max) {
+    	MIN_CYCLES = min;
+    	MAX_CYCLES = max;
+    }
+    
+  public static void setVans(int  min, int max) {
+    	MIN_VANS = min;
+    	MAX_VANS = max;
+    }
+  
+  
 	public static void updateMaxMin(EliteIndividual i) {
 		if (ModalCostModel.getInstance().getFixedVehCost(i)>MAX_FIXEDVEHCOST)
 			MAX_FIXEDVEHCOST = ModalCostModel.getInstance().getFixedVehCost(i);
@@ -91,12 +102,12 @@ public class CVRPKeyGen implements MAPElitesKeyGen {
 			MAX_VEHRUNCOST = ModalCostModel.getInstance().getVehRunningCost(i);
 		if (ModalCostModel.getInstance().getEmissions(i)>MAX_EMISSIONS)
 			MAX_EMISSIONS = ModalCostModel.getInstance().getEmissions(i);
-		if (ModalCostModel.getInstance().getCycles(i)>MAX_CYCLES)
-			MAX_CYCLES = ModalCostModel.getInstance().getCycles(i);
-		if (ModalCostModel.getInstance().getVans(i)>MAX_VANS)
-			MAX_VANS = ModalCostModel.getInstance().getVans(i);
-		if (i.getCostDel() > MAX_COSTDEL)
-			MAX_COSTDEL = i.getCostDel();
+//		if (ModalCostModel.getInstance().getCycles(i)>MAX_CYCLES)
+//			MAX_CYCLES = ModalCostModel.getInstance().getCycles(i);
+//		if (ModalCostModel.getInstance().getVans(i)>MAX_VANS)
+//			MAX_VANS = ModalCostModel.getInstance().getVans(i);
+//		if (i.getCostDel() > MAX_COSTDEL)
+//			MAX_COSTDEL = i.getCostDel();
 		
 		MAX_CYCLEDELS =1;//FIX THIS!!
 		MIN_CYCLEDELS =0;

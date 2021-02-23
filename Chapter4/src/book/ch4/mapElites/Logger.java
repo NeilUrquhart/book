@@ -37,13 +37,15 @@ public class Logger {
 		RANDOM,
 		CLONE,
 		RECOMBINATION,
-		INIT
+		INIT,
+		SEED
+		
 	}
 
 	private static ArrayList<String> logBuffer = new ArrayList<String>();
 	//Data is stored in logBuffer until it is writen to a file
 
-	public void add(Action act, String message, double fit, int ... key) {
+	public void add(Action act, String message, double fit, String description, int ... key) {
 		/*
 		 * Add an action to the log.  The action should relate to the MapElite bucket
 		 * idetified by the key.
@@ -72,7 +74,11 @@ public class Logger {
 		if (act == Action.INIT) {
 			buffer +="initialisation";
 		}
-		buffer = buffer +"," +fit+","+ message;
+		
+		if (act == Action.SEED) {
+			buffer +="seeded";
+		}
+		buffer = buffer +"," +fit+","+ message +", "+description;
 
 		logBuffer.add(buffer);
 

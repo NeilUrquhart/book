@@ -76,7 +76,8 @@ public class MAPElites extends VRPSolver {
 			if (seeds !=null) {
 				for(Elite seed : seeds)
 					if (archive.put(seed)) {
-						Logger.getLogger().add(Logger.Action.INIT, "",seed.getFitness() ,seed.getKey());
+						
+						Logger.getLogger().add(Logger.Action.SEED, "",seed.getFitness(),seed.getSummary() ,seed.getKey());
 						EliteIndividual i = (EliteIndividual) seed;
 						//System.out.println( "seeding : "+ archive.getUsed() + " - " + i.getCostDel());
 					}
@@ -89,7 +90,7 @@ public class MAPElites extends VRPSolver {
 					e.mutate();
 					e.evaluate();
 					if (archive.put(e)) {
-						Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness() ,e.getKey());
+						Logger.getLogger().add(Logger.Action.INIT, "",e.getFitness(),e.getSummary() ,e.getKey());
 						//System.out.println( "random : "+ archive.getUsed());
 					}
 				}
@@ -127,7 +128,7 @@ public class MAPElites extends VRPSolver {
 				ch.evaluate();
 				if (archive.put(ch)) {//Put the solution into the Archive. Returns True if this
 									  //solution is allowed to join the archive
-					Logger.getLogger().add(action, descForLogger, ch.getFitness(), ch.getKey());
+					Logger.getLogger().add(action, descForLogger, ch.getFitness(),ch.getSummary(), ch.getKey());
 				}
 			}
 			System.out.println();

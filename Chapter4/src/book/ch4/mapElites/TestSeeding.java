@@ -36,7 +36,7 @@ public class TestSeeding {
 		 */
 
 
-		String[] problems = { "A-n32-k5","A-n33-k5","A-n33-k6","A-n34-k5","A-n36-k5","A-n37-k5",
+		String[] problems = {"A-n32-k5","P-n101-k4","P-n55-k15", "A-n33-k5","A-n33-k6","A-n34-k5","A-n36-k5","A-n37-k5",
 				"A-n37-k6","A-n38-k5","A-n39-k5","A-n39-k6","A-n44-k7","A-n45-k6","A-n45-k7",
 				"A-n46-k7","A-n48-k7","A-n53-k7","A-n54-k7","A-n55-k9","A-n60-k9","A-n61-k9",
 				"A-n62-k8","A-n63-k9","A-n63-k10","A-n64-k9","A-n65-k9","A-n69-k9","P-n16-k8","P-n19-k2","P-n20-k2","P-n21-k2","P-n22-k2","P-n22-k8","P-n23-k8",
@@ -46,18 +46,26 @@ public class TestSeeding {
 				"B-n56-k7","B-n57-k7","B-n57-k9","B-n63-k10","B-n64-k9","B-n66-k9","B-n67-k10",
 				"B-n68-k9","B-n78-k10",
 				"P-n50-k8","P-n50-k10","P-n51-k10","P-n55-k7",
-				"P-n55-k8","P-n55-k10","P-n55-k15","P-n60-k10","P-n60-k15","P-n65-k10",
-				"P-n70-k10","P-n76-k4","P-n76-k5","P-n101-k4" };
+				"P-n55-k8","P-n55-k10","P-n60-k10","P-n60-k15","P-n65-k10",
+				"P-n70-k10","P-n76-k4","P-n76-k5"};
 
 		for (String pName : problems){
 			int win = 1;//1 hour windows
 			String fName  = pName+".vrp";
 			String pSizeS = pName.split("-")[1];
 			pSizeS = pSizeS.replace("n","");
-
+			
+			String pRouteS = pName.split("-")[2];
+			pRouteS = pRouteS.replace("k","");
+			int pRoute = Integer.parseInt(pRouteS);
+			
+			
 			CVRPTWModalProblem myVRP = new  CVRPTWModalProblem (VRPTWProblemFactory.buildProblem("./data/",fName,win));
 			KeyGenerator.setup(new CVRPKeyGen(myVRP));
 			ArrayList<Elite> pool = new ArrayList<Elite>();
+			
+			CVRPKeyGen.setCycles(0, (pRoute *10));
+			CVRPKeyGen.setVans(0, (pRoute *2));
 			
 			CVRPKeyGen.resetHighLows();
 			
@@ -89,9 +97,9 @@ public class TestSeeding {
 				}catch(Exception e) {
 					e.printStackTrace();
 				}
-				exportToCSV(pName+"-"+win+"-"+x+".map.csv",me.getArchive());
+				exportToCSV("seeded-"+pName+"-"+win+"-"+x+".map.csv",me.getArchive());
 				System.out.println("seeded," + pName+"-"+win+"-"+"," +x+","+ stats(me.getArchive()) );
-				Logger.getLogger().write(pName+"-"+win+"-"+x+".log");
+				Logger.getLogger().write("seeded-"+pName+"-"+win+"-"+x+".log");
 			}
 			System.out.println("COMBINED SEEDED," + pName+"-"+win+","+ combined.getUsed()+"," +stats(combined.getArchive()) +"\n");
 			
@@ -108,9 +116,9 @@ public class TestSeeding {
 					combined.addAll(me.getArchive());
 				}catch(Exception e) {
 					e.printStackTrace();
-				}exportToCSV(pName+"-"+win+"-"+x+".map.csv",me.getArchive());
+				}exportToCSV("no seed-"+pName+"-"+win+"-"+x+".map.csv",me.getArchive());
 				System.out.println("non-seeded," + pName+"-"+win+"-"+"," +x+","+ stats(me.getArchive()) +"\n");
-				Logger.getLogger().write(pName+"-"+win+"-"+x+".log");
+				Logger.getLogger().write("no seed-"+pName+"-"+win+"-"+x+".log");
 			}
 			System.out.println("COMBINED NON SEEDED," + pName+"-"+win+","+ combined.getUsed()+"," +stats(combined.getArchive()) +"\n");
 			
@@ -204,11 +212,12 @@ public class TestSeeding {
 			FileWriter csv = new FileWriter(fName);
 
 
-			csv.write("FixedVehCost,CostperDel,StaffCost,VehRunCost,Emissions,DelsByCycle,DistByCycle,Cycles,Vans\n"); 
+			csv.write("Key,FixedVehCost,CostperDel,StaffCost,VehRunCost,Emissions,DelsByCycle,DistByCycle,Cycles,Vans\n"); 
 
 			for (Object el : archive) {
 				EliteIndividual e = (EliteIndividual) el;
 				ModalCostModel m = ModalCostModel.getInstance();
+				csv.write(e.keyToString()+",");
 				csv.write(m.getFixedVehCost(e)+",");
 				csv.write(e.getCostDel()+",");
 				csv.write(m.getStaffCost(e)+",");
