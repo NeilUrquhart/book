@@ -71,7 +71,7 @@ public class MAPElites extends VRPSolver {
 	public void solve() {      
 		KeyGenerator.setup(new CVRPKeyGen(theProblem));
 		archive = new MAPofElites(KeyGenerator.getInstance().getDimensions(), KeyGenerator.getInstance().getBuckets());
-		try {
+
 			
 			if (seeds !=null) {
 				for(Elite seed : seeds)
@@ -133,9 +133,7 @@ public class MAPElites extends VRPSolver {
 			}
 			System.out.println();
 
-		} catch (InvalidMAPKeyException e1) {
-			e1.printStackTrace();
-		}
+		
 	}
 
 

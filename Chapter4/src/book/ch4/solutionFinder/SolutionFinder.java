@@ -1,4 +1,4 @@
-package book.ch4.mapElites;
+package book.ch4.solutionFinder;
 
 import java.io.File;
 import java.io.FileNotFoundException;

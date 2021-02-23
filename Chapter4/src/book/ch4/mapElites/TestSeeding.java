@@ -112,11 +112,8 @@ public class TestSeeding {
 				Logger.getLogger().clear();
 				MAPElites me = new MAPElites();
 				myVRP.solve(me);
-				try {
-					combined.addAll(me.getArchive());
-				}catch(Exception e) {
-					e.printStackTrace();
-				}exportToCSV("no seed-"+pName+"-"+win+"-"+x+".map.csv",me.getArchive());
+				combined.addAll(me.getArchive());
+				exportToCSV("no seed-"+pName+"-"+win+"-"+x+".map.csv",me.getArchive());
 				System.out.println("non-seeded," + pName+"-"+win+"-"+"," +x+","+ stats(me.getArchive()) +"\n");
 				Logger.getLogger().write("no seed-"+pName+"-"+win+"-"+x+".log");
 			}
