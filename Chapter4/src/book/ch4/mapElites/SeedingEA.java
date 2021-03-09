@@ -16,7 +16,7 @@ import book.ch3.rep2.Domination;
 
  */
 public class SeedingEA extends VRPSolver {
-	private ArrayList <EliteIndividual> population = new ArrayList<EliteIndividual>();
+	private ArrayList <SupermarketSolution> population = new ArrayList<SupermarketSolution>();
 	
 	//population stores our pool of potential solutions
 	private RandomSingleton rnd = RandomSingleton.getInstance();
@@ -29,7 +29,7 @@ public class SeedingEA extends VRPSolver {
 	private int evalsBudget = 20000;
 	
 	//Reference to the best individual in the population
-	private EliteIndividual bestSoFar; 
+	private SupermarketSolution bestSoFar; 
 	
 	@Override
 	public void solve() {
@@ -41,21 +41,21 @@ public class SeedingEA extends VRPSolver {
 			//	System.out.println(evalsBudget + " : " + bestSoFar.evaluate() );
 			
 			//Create child
-			EliteIndividual child = null;
+			SupermarketSolution child = null;
 			if (rnd.getRnd().nextDouble() < XO_RATE){
 				//Create a new Individual using recombination, randomly selecting the parents
-				child = new EliteIndividual(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));				
+				child = new SupermarketSolution(super.theProblem, tournamentSelection(TOUR_SIZE),tournamentSelection(TOUR_SIZE));				
 			}
 			else{
 				//Create a child by copying a single parent
-				child = (EliteIndividual) tournamentSelection(TOUR_SIZE).copy();
+				child = (SupermarketSolution) tournamentSelection(TOUR_SIZE).copy();
 			}
 			child.mutate();
 			child.evaluate();
 			evalsBudget --;
 			
 			//Select an Individual with a poor fitness to be replaced
-			EliteIndividual poor = tournamentSelectWorst(TOUR_SIZE);
+			SupermarketSolution poor = tournamentSelectWorst(TOUR_SIZE);
 			if (poor.evaluate() > child.evaluate()){
 				//Only replace if the child is an improvement
 				
@@ -73,19 +73,19 @@ public class SeedingEA extends VRPSolver {
 
 	
 
-	public EliteIndividual  getBest(){
+	public SupermarketSolution  getBest(){
 		return bestSoFar;
 	}
 	
-	public ArrayList<EliteIndividual>  getFinalPop(){
+	public ArrayList<SupermarketSolution>  getFinalPop(){
 		return population;
 	}
 	
-	private EliteIndividual InitialisePopution() {
+	private SupermarketSolution InitialisePopution() {
 		//Initialise population with random solutions
-		EliteIndividual best = null;
+		SupermarketSolution best = null;
 		for (int count=0; count < POP_SIZE; count++){
-			EliteIndividual i = new EliteIndividual(super.theProblem);
+			SupermarketSolution i = new SupermarketSolution(super.theProblem);
 			
 			if (best == null) 
 				best = i;
@@ -97,12 +97,12 @@ public class SeedingEA extends VRPSolver {
 		return best;
 	}
 
-	private EliteIndividual tournamentSelection(int poolSize){
+	private SupermarketSolution tournamentSelection(int poolSize){
 		//Return the best individual from a randomly selected pool of individuals
-		EliteIndividual bestI = null;
+		SupermarketSolution bestI = null;
 		double bestFit = Double.MAX_VALUE;
 		for (int tries=0; tries < poolSize; tries++){
-			EliteIndividual i = population.get(rnd.getRnd().nextInt(population.size()));
+			SupermarketSolution i = population.get(rnd.getRnd().nextInt(population.size()));
 			if (i.evaluate() < bestFit){
 				bestFit = i.evaluate();
 				bestI = i;
@@ -111,12 +111,12 @@ public class SeedingEA extends VRPSolver {
 		return bestI;
 	}
 
-	private EliteIndividual tournamentSelectWorst(int poolSize){
+	private SupermarketSolution tournamentSelectWorst(int poolSize){
 		//Return the worst individual from a randomly selected pool of individuals
-		EliteIndividual bestI = null;
+		SupermarketSolution bestI = null;
 		double bestFit = 0;
 		for (int tries=0; tries < poolSize; tries++){
-			EliteIndividual i = population.get(rnd.getRnd().nextInt(population.size()));
+			SupermarketSolution i = population.get(rnd.getRnd().nextInt(population.size()));
 			if (i.evaluate() >= bestFit){
 				bestFit = i.evaluate();
 				bestI = i;

@@ -3,7 +3,7 @@ package book.ch4.mapElites;
 import book.ch4.CVRPTWProblem;
 import book.ch4.VRPTWRoute;
 import book.ch4.VisitNode;
-import book.ch4.mapElites.ModalCostModel.Mode;
+import book.ch4.mapElites.SupermarketCostModel.Mode;
 
 
 public class VRPTWModalRoute extends VRPTWRoute {
@@ -11,8 +11,6 @@ public class VRPTWModalRoute extends VRPTWRoute {
 	 * Neil Urquhart 2021
 	 * 
 	 * ExtendVRPTWRoute to take into account the mode used
-	 * 
-	 * 
 	 * 
 	 */
 
@@ -48,8 +46,6 @@ public class VRPTWModalRoute extends VRPTWRoute {
 	}
 	
 	public void setStartEndTimes() {
-		
-		
 		/*
 		 * Set the start and end times from the depot based of route
 		 * 
@@ -58,13 +54,13 @@ public class VRPTWModalRoute extends VRPTWRoute {
 			return;
 		//set start and end times
 		VisitNode v = this.get(0);
-		int mins = ((CVRPTWModalProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit(),myMode);
+		int mins = ((SupermarketProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit(),myMode);
 		v.setMinsWaiting(0);
 		this.start = v.getDeliveryTime().minusMinutes(mins);
 		
 		v = this.get(this.size()-1);
-		mins = ((CVRPTWModalProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit(),myMode);
-		mins = mins + ((CVRPTWModalProblem)problem).getDeliveryTime();
+		mins = ((SupermarketProblem)problem).getTravelMinutes(problem.getStart(), v.getVisit(),myMode);
+		mins = mins + ((SupermarketProblem)problem).getDeliveryTime();
 		this.end = v.getDeliveryTime().plusMinutes(mins);
 	}
 }

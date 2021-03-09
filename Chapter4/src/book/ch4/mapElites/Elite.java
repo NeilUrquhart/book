@@ -7,7 +7,7 @@ package book.ch4.mapElites;
  * 
  * getFitness() must return a double value that represents the fitness of the solution (lower == better)
  * getKey() must return an array of int which represents the "key" of the individual (ie the bucket location
- * getSummary must return a string that summerises the invidual (for the log file)
+ * getSummary must return a string that summarises the individual (for the log file)
  */
 
 public interface Elite {

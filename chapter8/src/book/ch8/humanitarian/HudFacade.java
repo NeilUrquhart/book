@@ -17,13 +17,13 @@ import book.ch1.Hybrid;
 import book.ch1.NearestNTSPSolver;
 import book.ch1.Visit;
 import book.ch2.VRPVisit;
-import book.ch7.CSVWriter;
-import book.ch7.DataFileWriter;
-import book.ch7.GPXWriter;
-import book.ch7.IVisit;
-import book.ch7.KMLWriter;
-import book.ch7.Journey;
-import book.ch7.OSMAccessHelper;
+import old.CSVWriter;
+import old.DataFileWriter;
+import old.GPXWriter;
+import old.IVisit;
+import old.Journey;
+import old.KMLWriter;
+import old.OSMAccessHelper;
 
 
 public class HudFacade  {

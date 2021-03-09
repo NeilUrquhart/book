@@ -6,8 +6,8 @@ import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.Individual;
 import book.ch2.VRPVisit;
-import book.ch7.IVisit;
-import book.ch7.OSMAccessHelper;
+import old.IVisit;
+import old.OSMAccessHelper;
 
 public class HudIndividual extends Individual {
 	private static int evals=0;
