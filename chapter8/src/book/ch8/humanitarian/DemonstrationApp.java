@@ -4,12 +4,12 @@ import java.text.SimpleDateFormat;
 import java.util.Random;
 
 import book.ch1.Visit;
+import book.ch7.routing.IVisit;
+import book.ch7.routing.OSMAccessHelper;
 import old.CSVWriter;
 import old.ConsoleWriter;
 import old.GPXWriter;
-import old.IVisit;
 import old.KMLWriter;
-import old.OSMAccessHelper;
 
 public class DemonstrationApp {
     private static HudFacade hf = new HudFacade("My Ref"); //Problem Reference

@@ -1,4 +1,4 @@
-package old;
+package book.ch7.routing;
 
 
 import java.util.ArrayList;
@@ -11,7 +11,7 @@ import book.ch1.Visit;
 /*
  * A basic class to represent a journey that links two locations
  * 
- * Neil Urquhart 2020
+ * Neil Urquhart 2021
  */
 public class Journey {
 	
@@ -80,10 +80,7 @@ public class Journey {
 	 */
 	public String toString(){
 		String buffer ="";
-		
 		buffer = locationA + " : " + locationB;
-		
-		
 		return buffer;
 	}
 }

@@ -1,6 +1,6 @@
 package book.ch8.humanitarian;
 
-import old.IVisit;
+import book.ch7.routing.IVisit;
 
 @SuppressWarnings("serial")
 public class HudVisit extends IVisit {

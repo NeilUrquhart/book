@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import book.ch1.Visit;
 import book.ch2.CVRPProblem;
 import book.ch2.VRPVisit;
-import old.IVisit;
-import old.OSMAccessHelper;
+import book.ch7.routing.IVisit;
+import book.ch7.routing.OSMAccessHelper;
 
 /*
  * Neil Urquhart 2019
