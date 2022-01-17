@@ -2,19 +2,5 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter1"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter2"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/trove4j-3.0.3.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/hppc-0.7.2.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/protobuf-java-3.4.0.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/jts-core-1.14.0.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/graphhopper-core-0.11.0-pre4.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/xmlgraphics-commons-2.1.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/osmosis-osm-binary-0.46.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/graphhopper-api-0.11.0-pre4.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/commons-io-1.3.1.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/graphhopper-reader-osm-0.11.0-pre4.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/slf4j-api-1.7.25.jar"/>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Dropbox/git/book/Chapter7/hopper/commons-logging-1.0.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
