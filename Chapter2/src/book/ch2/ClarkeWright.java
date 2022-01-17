@@ -14,13 +14,21 @@ public class ClarkeWright extends VRPSolver {
 
 	@Override
 	public void solve() {
-		//Calculate savings
-		
-		//Create default solution - 1 vehicle per customer
+		//1.Create the initial solution (1 vehicle per customer)
 		ArrayList<ArrayList<VRPVisit>> solution = createDefaultSolution();
-		
+		//2.Find Savings
+		ArrayList<Saving> savings = findSavings();
+		//3.Sort the savings into the order of largest saving first
+		Collections.sort(savings);
+		applySavinngs(solution, savings);
+		//3.Check solution
+		checkSolution(solution);
+		//4.Adopt solution 
+		super.theProblem.setSolution(solution);
+	}
+
+	private ArrayList<Saving> findSavings() {
 		ArrayList<Saving> savings = new ArrayList<Saving>();//Store savings in this list
-		
 		//Check the savings to be made for each pair of customers
 		for (int countX =0; countX <  super.theProblem.getSize(); countX ++){
 			for (int countY = countX +1; countY <  super.theProblem.getSize(); countY++){
@@ -32,20 +40,21 @@ public class ClarkeWright extends VRPSolver {
 				savings.add(new Saving(x,y,saving));
 			}
 		}
-		
-		//Sort the savings into the order of largest saving first
-		Collections.sort(savings);
-		
+		return savings;
+	}
+
+	private void applySavinngs(ArrayList<ArrayList<VRPVisit>> solution, ArrayList<Saving> savings) {
 		//Search through the savings and see which can be implemented
 		for (Saving s : savings){
 			ArrayList<VRPVisit> routeX = null, routeY =null;
 			boolean found = false;
+			//Find the routes that contain the customers
+			//at the start/end
 			for (ArrayList<VRPVisit> route : solution){
 				if (end(route)==s.x)
 					routeX = route;
 				if (start(route)== s.y)
 					routeY = route;	
-
 			}
 			if ((routeX != null)&&(routeY != null)){
 				found = joinRoutes(solution, routeX, routeY);
@@ -56,14 +65,19 @@ public class ClarkeWright extends VRPSolver {
 						routeX = route;
 					if (start(route)== s.x)
 						routeY = route;	
-
 				}
 				if ((routeX != null)&&(routeY != null)){
 					joinRoutes(solution, routeX, routeY);
 				}
 			}
 		}
-				//test check sol
+	}
+
+
+
+	
+	private void checkSolution(ArrayList<ArrayList<VRPVisit>> solution) {
+	    //Check the validity of <solution>
 		int size = super.theProblem.getSize();
 		ArrayList<VRPVisit> checkList = new ArrayList<VRPVisit>();
 		for (ArrayList<VRPVisit> route: solution){
@@ -79,10 +93,7 @@ public class ClarkeWright extends VRPSolver {
 		}
 		if (size != 0 )
 			System.out.println("Size error");
-		
-		super.theProblem.setSolution(solution);
 	}
-
 	private boolean joinRoutes(ArrayList<ArrayList<VRPVisit>> solution,ArrayList<VRPVisit> routeX, ArrayList<VRPVisit> routeY) {
 		/*
 		 * Join route Y to the end of route X.

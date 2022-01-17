@@ -53,10 +53,10 @@ problem. Tech. Rep. 949-M, Universit´e Joseph Fourier, Grenoble, France.
 		ArrayList<ArrayList<VRPVisit>> bestSolution = myVRP.getCVRPSolution();
 		double bestDist = myVRP.getDistance();
 		System.out.println("Clarke-Wright distance =" + bestDist);
-		
 		//Solve using the Evolutionary Algorithm
 		//As the Evolutionary Algorithm is stochastic, we repeat 20 times and report the best and average results
 			
+		
 		for (int count = 0; count < 20; count ++){
 			RandomSingleton rnd = RandomSingleton.getInstance();
 			rnd.setSeed(count);	

@@ -16,7 +16,7 @@ import book.ch1.Visit;
  */
 public class Individual   {
 	//Use the RandomSingleton object to get access to a seeded random number generator
-	private RandomSingleton rnd =RandomSingleton.getInstance();
+	protected RandomSingleton rnd =RandomSingleton.getInstance();
 
 	//The genotype is a "grand tour" list of visits
 	protected ArrayList<VRPVisit> genotype;
@@ -27,6 +27,7 @@ public class Individual   {
 	//THe problem being solved
 	protected CVRPProblem problem;
 
+	
 	public Individual( CVRPProblem prob) {
 		/*
 		 * Constructor to create a new random genotype
@@ -36,7 +37,7 @@ public class Individual   {
 		for (Visit v : prob.getSolution()){
 			genotype.add((VRPVisit)v);
 		}
-		genotype = randomize(genotype);
+		//genotype = randomize(genotype);
 		phenotype = null;
 	}
 

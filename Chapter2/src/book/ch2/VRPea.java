@@ -25,6 +25,8 @@ public class VRPea extends VRPSolver {
 	protected double XO_RATE = 0.7;
 	protected int evalsBudget = 1000000;
 	
+	
+	
 	@Override
 	public void solve() {
 		//Reference to the best individual in the population
@@ -56,7 +58,7 @@ public class VRPea extends VRPSolver {
 				population.remove(poor);
 				population.add(child);
 			}
-			System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
+		//	System.out.println("e,"+ (1000000-evalsBudget+","+bestSoFar.evaluate()));
 		}
 		
 		super.theProblem.setSolution(bestSoFar.getPhenotype());
@@ -65,6 +67,7 @@ public class VRPea extends VRPSolver {
 	protected Individual InitialisePopution() {
 		//Initialise population with random solutions
 		Individual best = null;
+		
 		for (int count=0; count < POP_SIZE; count++){
 			Individual i = new Individual(super.theProblem);
 			

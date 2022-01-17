@@ -19,7 +19,7 @@ public class VRPVisit extends Visit {
 	}
 	
 	public String toString(){
-		return super.toString() + " " +demand+" (" + super.x +":" + super.y +")";
+		return super.toString() + " " +demand+" (" + super.getLat() +":" + super.getLon() +")";
 	}
 	
 	

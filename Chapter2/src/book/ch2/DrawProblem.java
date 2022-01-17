@@ -39,20 +39,20 @@ public class DrawProblem {
 		String svg = "";
 		svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"200\" height=\"200\"> \n";
 		Visit v  = problem.getStart();
-		svg = svg + "<rect x=\" "+(v.x*SCALE)+" \" y=\" "+(v.y*SCALE)+" \" height=\"8\" width=\"8\" fill=\"red\"/>\n";
+		svg = svg + "<rect x=\" "+(v.getLat()*SCALE)+" \" y=\" "+(v.getLon()*SCALE)+" \" height=\"8\" width=\"8\" fill=\"red\"/>\n";
 		
 		for (Object o : problem.getSolution()) {
 			v = (Visit) o;
-			svg = svg + "<circle cx=\" "+(v.x*SCALE)+" \" cy=\" "+(v.y*SCALE)+" \" r=\"2\" fill=\"black\"/>\n";
+			svg = svg + "<circle cx=\" "+(v.getLat()*SCALE)+" \" cy=\" "+(v.getLon()*SCALE)+" \" r=\"2\" fill=\"black\"/>\n";
 		}
 		
 		if (problem.getSolution()!= null) {
 				Visit previous = problem.getStart();
 				for (Visit current : problem.getSolution()) {
-						svg = svg + "<line x1=\" "+(previous.x*SCALE)+" \" y1=\" "+(previous.y*SCALE)+" \" x2=\" "+(current.x*SCALE)+" \" y2=\" "+(current.y*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
+						svg = svg + "<line x1=\" "+(previous.getLat()*SCALE)+" \" y1=\" "+(previous.getLon()*SCALE)+" \" x2=\" "+(current.getLat()*SCALE)+" \" y2=\" "+(current.getLon()*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
 						previous = current;
 				}
-				svg = svg +"<line x1=\" "+(previous.x*SCALE)+" \" y1=\" "+(previous.y*SCALE)+" \" x2=\" "+(problem.getStart().x*SCALE)+" \" y2=\" "+(problem.getStart().y*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
+				svg = svg +"<line x1=\" "+(previous.getLat()*SCALE)+" \" y1=\" "+(previous.getLon()*SCALE)+" \" x2=\" "+(problem.getStart().getLat()*SCALE)+" \" y2=\" "+(problem.getStart().getLon()*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
 			
 		}
 		svg = svg +"</svg>";
@@ -76,21 +76,21 @@ public class DrawProblem {
 		String svg = "";
 		svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\"200\" height=\"200\"> \n";
 		Visit v  = problem.getStart();
-		svg = svg + "<rect x=\" "+(v.x*SCALE)+" \" y=\" "+(v.y*SCALE)+" \" height=\"8\" width=\"8\" fill=\"red\"/>\n";
+		svg = svg + "<rect x=\" "+(v.getLat()*SCALE)+" \" y=\" "+(v.getLon()*SCALE)+" \" height=\"8\" width=\"8\" fill=\"red\"/>\n";
 		
 		for (Object o : problem.getVisits()) {
 			v = (Visit) o;
-			svg = svg + "<circle cx=\" "+(v.x*SCALE)+" \" cy=\" "+(v.y*SCALE)+" \" r=\"2\" fill=\"black\"/>\n";
+			svg = svg + "<circle cx=\" "+(v.getLat()*SCALE)+" \" cy=\" "+(v.getLon()*SCALE)+" \" r=\"2\" fill=\"black\"/>\n";
 		}
 		
 		if (problem.getSolution()!= null) {
 			for (ArrayList<VRPVisit> r: problem.getCVRPSolution() ) {
 				Visit previous = problem.getStart();
 				for (Visit current : r) {
-						svg = svg + "<line x1=\" "+(previous.x*SCALE)+" \" y1=\" "+(previous.y*SCALE)+" \" x2=\" "+(current.x*SCALE)+" \" y2=\" "+(current.y*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
+						svg = svg + "<line x1=\" "+(previous.getLat()*SCALE)+" \" y1=\" "+(previous.getLon()*SCALE)+" \" x2=\" "+(current.getLat()*SCALE)+" \" y2=\" "+(current.getLon()*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
 						previous = current;
 				}
-				svg = svg +"<line x1=\" "+(previous.x*SCALE)+" \" y1=\" "+(previous.y*SCALE)+" \" x2=\" "+(problem.getStart().x*SCALE)+" \" y2=\" "+(problem.getStart().y*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
+				svg = svg +"<line x1=\" "+(previous.getLat()*SCALE)+" \" y1=\" "+(previous.getLon()*SCALE)+" \" x2=\" "+(problem.getStart().getLat()*SCALE)+" \" y2=\" "+(problem.getStart().getLon()*SCALE)+" \" style=\"stroke:rgb(0,0,0);stroke-width:1\" />\n" ;
 			}
 		}
 		svg = svg +"</svg>";
