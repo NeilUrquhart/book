@@ -7,7 +7,7 @@ import java.awt.geom.Point2D;
  * A simple class representing a visit that extends the Java Point class
  * 
  */
-public class Visit extends Point2D.Double{
+public class Visit extends LatLon{
  	protected String theName;
  	
  	public Visit(String name, double lat, double lon){
@@ -24,9 +24,9 @@ public class Visit extends Point2D.Double{
  	}
  	
  	public double distance(Visit v) {
- 		//Return the distance between 2 points based upon the Euclidean distance
- 		//as implemented within 
- 		return super.distance(v);
+ 		//Return the distance between 2 points based upon the Haversine
+ 		//as implemented within LatLon
+ 		return super.getDist(v);
  	}
 
 	

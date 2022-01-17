@@ -26,6 +26,7 @@ public class TwoOptTSPSolver extends TSPSolver{
 						theProblem.setRoute(new_route);//The modified route now becomes the current route
 						improved = true; 
 						best_distance = new_distance;
+						System.out.println("Improved ("+i+":"+k+")" + best_distance);
 						break;//Break out of the loops
 					}
 				}
