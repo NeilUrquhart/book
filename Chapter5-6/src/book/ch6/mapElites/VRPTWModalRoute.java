@@ -1,9 +1,9 @@
-package book.ch5.mapElites;
+package book.ch6.mapElites;
 
 import book.ch5.VRPTWProblem;
 import book.ch5.VRPTWRoute;
 import book.ch5.VisitNode;
-import book.ch5.mapElites.SupermarketCostModel.Mode;
+import book.ch6.mapElites.SupermarketCostModel.Mode;
 
 
 public class VRPTWModalRoute extends VRPTWRoute {

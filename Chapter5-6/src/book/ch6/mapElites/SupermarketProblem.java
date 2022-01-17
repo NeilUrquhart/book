@@ -1,4 +1,4 @@
-package book.ch5.mapElites;
+package book.ch6.mapElites;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import book.ch1.Visit;
 import book.ch5.VRPTWProblem;
 import book.ch5.VRPTWVisit;
-import book.ch5.mapElites.SupermarketCostModel.Mode;
+import book.ch6.mapElites.SupermarketCostModel.Mode;
 
 public class SupermarketProblem  extends VRPTWProblem{
 	/*

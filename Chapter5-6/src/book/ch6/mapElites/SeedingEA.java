@@ -1,4 +1,4 @@
-package book.ch5.mapElites;
+package book.ch6.mapElites;
 
 
 import java.util.ArrayList;

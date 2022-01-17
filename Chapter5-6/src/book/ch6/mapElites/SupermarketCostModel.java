@@ -1,4 +1,4 @@
-package book.ch5.mapElites;
+package book.ch6.mapElites;
 
 import book.ch5.FabFoodCostModel;
 import book.ch5.MObjTWIndividual;

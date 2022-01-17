@@ -5,7 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 import book.ch1.Visit;
-import book.ch5.mapElites.ReloadNode;
+import book.ch6.mapElites.ReloadNode;
 
 /*
  *  Neil Urquhart 2020
