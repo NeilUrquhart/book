@@ -1,0 +1,21 @@
+﻿Ref,Edinburgh Test Problem,,,
+Capacity,30,,,
+mins/delivery,5,mins,,
+time/round,500,mins,,
+Mode,car,,,
+commences,04/05/2021 09:00,,,
+Start,Edinburgh Napier University  10 Colinton  Rd Edinburgh EH10 5DT,,,
+Visit,1,The Eric Liddle Center,15 Morningside Rd Edinburgh EH10 4DP,1
+Visit,2,Roundsquare Coffee House,132 Morningside Rd Edinburgh EH10 4AY,1
+Visit,3,Waitrose,145 Morningside Road Edinburgh Scotland EH10 4AX,1
+Visit,4,Morningside Library,178-182 Morningside Rd Edinburgh EH10 4PU,1
+Visit,5,Canny Man's, 237 Morningside Rd Morningside Edinburgh EH10 4QU,1
+Visit,6,Benetts of Morningside,1 Maxwell St Morningside Edinburgh EH10 5HT,1
+Visit,7,The Hermitage Bar,1-5 Comiston Rd Edinburgh EH10 6AA,1
+
+
+
+
+
+
+
