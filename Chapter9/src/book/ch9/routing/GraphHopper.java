@@ -36,7 +36,7 @@ public class GraphHopper extends RoutingEngine{
 		GHRequest request = new GHRequest(start.getLat(),start.getLon(),end.getLat(),end.getLon()).setVehicle(options.get(RoutingEngine.OPTION_MODE));
 		GHResponse response = hopper.route(request);
 		if (response.hasErrors()) {
-			throw new IllegalStateException("S= " + start + "e= " + end +". GraphHopper gave " + response.getErrors().size()
+			throw new IllegalStateException("S= " + start.getLat() +","+start.getLon() + "e= " + end.getLat() +","+end.getLon()  +". GraphHopper gave " + response.getErrors().size()
 					+ " errors. First error chained.",
 					response.getErrors().get(0)
 					);

@@ -9,7 +9,7 @@ import java.util.Random;
 import book.ch1.LatLon;
 import book.ch1.Visit;
 import book.ch12.mapElites.Gene;
-import book.ch7.routing.Journey;
+import book.ch9.routing.Journey;
 
 /*
  * Neil Urquhart 2021

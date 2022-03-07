@@ -2,8 +2,8 @@ package book.ch12.problem;
 
 import java.util.HashMap;
 import book.ch1.LatLon;
-import book.ch7.routing.GraphHopper;
-import book.ch7.routing.Journey;
+import book.ch9.routing.GraphHopper;
+import book.ch9.routing.Journey;
 /*
  * Neil Urquhart 2021
  * An OSM Helper class, that allows for modes other than car journeys

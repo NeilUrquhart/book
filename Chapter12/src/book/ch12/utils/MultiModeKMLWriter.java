@@ -7,8 +7,9 @@ import java.util.ArrayList;
 
 import book.ch1.LatLon;
 import book.ch1.Visit;
+import book.ch9.export.KMLWriter;
 
-public class MultiModeKMLWriter extends book.ch7.export.KMLWriter{
+public class MultiModeKMLWriter extends KMLWriter{
 
 	/*
 	 * Neil Urquhart 2021

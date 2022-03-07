@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import book.ch1.LatLon;
 import book.ch1.Visit;
 import book.ch12.utils.MultiModeKMLWriter;
+import book.ch9.routing.Journey;
 import book.ch12.utils.MarkDownHelper;
-import book.ch7.routing.Journey;
+
 
 public class Model {
 	/*

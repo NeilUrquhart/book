@@ -19,6 +19,14 @@ public class MAPElites {
 	 * An implementation of the MAP-Elites illumination algorithm
 	 * for the microdepot problem.
 	 * 
+	 * Command line params:
+	 * <scenario file> <init evals> <timeout> <outfile>
+	 * 
+	 * e.g.
+	 * edinburghTest 500 1000 out.txt
+	 * 
+	 * You will also need to download a copy of scotland-lates.osm.pbf to place within the osm folder
+	 * 
 	 */
 
 	
