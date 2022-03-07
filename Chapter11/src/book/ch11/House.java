@@ -1,8 +1,9 @@
 package book.ch11;
 
 import book.ch1.LatLon;
-import book.ch7.Geocoder;
-import book.ch7.Nominatim;
+import book.ch9.Geocoder;
+import book.ch9.Nominatim;
+
 
 /* Written by Neil Urquhart, 2021
  * 

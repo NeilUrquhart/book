@@ -6,10 +6,9 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/chapter7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapters3-4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter1"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter2"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter 3"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapter9"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

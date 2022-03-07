@@ -13,8 +13,9 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 import book.ch1.LatLon;
-import book.ch7.Cache;
-import book.ch7.Geocoder;
+import book.ch9.Cache;
+import book.ch9.Geocoder;
+
 
 /*
  * An implementation of a Persistent Cache for use with a 

@@ -1,21 +1,8 @@
 package book.ch11;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
 
 import book.ch1.LatLon;
-import book.ch1.Visit;
-import book.ch2.VRPVisit;
-import book.ch7.export.ExportService;
-import book.ch7.export.KMLWriter;
-import book.ch7.routing.GraphHopper;
-import book.ch7.routing.Journey;
-import book.ch7.routing.RoutingEngine;
-import book.ch8.food.FoodOSMHelper;
-import book.ch8.food.FoodProperties;
-import book.ch8.food.FoodVisit;
-import book.ch8.food.FoodFacade.SaveTo;
+
 
 /*
  * Written by Neil Urquhart - 2021

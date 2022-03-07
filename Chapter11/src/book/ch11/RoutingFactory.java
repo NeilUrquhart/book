@@ -3,9 +3,10 @@ package book.ch11;
 import java.util.HashMap;
 
 import book.ch1.LatLon;
-import book.ch7.routing.GraphHopper;
-import book.ch7.routing.Journey;
-import book.ch7.routing.RoutingEngine;
+import book.ch9.routing.GraphHopper;
+import book.ch9.routing.Journey;
+import book.ch9.routing.RoutingEngine;
+
 
 public class RoutingFactory {
 
@@ -31,7 +32,7 @@ public class RoutingFactory {
 		 */
 		router = new GraphHopper();
 		options = new HashMap<String,String>();
-		options.put(RoutingEngine.OPTION_OSM_FILE, "./data/map.osm");
+		options.put(RoutingEngine.OPTION_OSM_FILE, "map.osm");
 		options.put(RoutingEngine.OPTION_DATA_DIR, "./data/");
 	}
 

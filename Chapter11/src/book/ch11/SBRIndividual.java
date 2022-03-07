@@ -3,9 +3,9 @@ package book.ch11;
 import java.util.ArrayList;
 import java.util.Random;
 import book.ch1.LatLon;
-import book.ch7.export.ExportService;
-import book.ch7.export.KMLWriter;
-import book.ch7.routing.Journey;
+import book.ch9.export.ExportService;
+import book.ch9.export.KMLWriter;
+import book.ch9.routing.Journey;
 
 /*
  * Neil Urquhart 2021
