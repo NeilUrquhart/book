@@ -8,10 +8,11 @@ public class LatLon implements Serializable{
 	
 	public LatLon(double lt, double ln){
 		if ((lt < -90)||(lt > 90))
-			throw new IllegalArgumentException();
+			System.out.println("Warning: Lattitiude out of normal range.");
 		
 		if ((ln < -180)||(ln > 180))
-			throw new IllegalArgumentException();
+			System.out.println("Warning: Longitude out of normal range.");
+
 		lat = lt;
 		lon = ln;
 	}

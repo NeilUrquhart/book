@@ -3,6 +3,7 @@ package book.ch7;
 import java.awt.geom.Point2D;
 import java.util.ArrayList;
 
+import book.ch1.LatLon;
 import book.ch1.Visit;
 /*
  * Neil Urquhart 2021
@@ -27,7 +28,7 @@ public class Cache implements Geocoder{
 		}
 	
 	@Override
-	public Point2D.Double geocode(String label) {
+	public LatLon geocode(String label) {
 		for (Entry e : cache) {
 			if (e.label.equals(label))
 				return e.location;
@@ -38,18 +39,18 @@ public class Cache implements Geocoder{
 		 * Resolve the label using the baseCoder
 		 */
 		System.out.println("Adding to cache");
-		Point2D.Double  p = baseCoder.geocode(label);
+		LatLon  p = baseCoder.geocode(label);
 		cache.add(new Entry(p,label));
 		return p;
 	}
 
 	@Override
-	public String reverseGeocode(Point2D.Double p) {
+	public String reverseGeocode(LatLon p) {
 		double dist = Double.MAX_VALUE;
 		String best = "";
 		
 		for (Entry e : cache) {
-			double cDist = p.distance(e.location);
+			double cDist = p.getDist(e.location);
 			if (cDist < dist) {
 				dist = cDist;
 				best = e.getLabel();
@@ -78,9 +79,9 @@ public class Cache implements Geocoder{
 		 * An inner class used to store a mapping between a label
 		 * and a location (stored as a Visit)
 		 */
-		private Point2D.Double location;
+		private LatLon location;
 		
-		public Point2D getLocation() {
+		public LatLon getLocation() {
 			return location;
 		}
 
@@ -90,7 +91,7 @@ public class Cache implements Geocoder{
 
 		private String label;
 		
-		public Entry(Point2D.Double loc, String label) {
+		public Entry(LatLon loc, String label) {
 			this.location =loc;
 			this.label = label;
 		}

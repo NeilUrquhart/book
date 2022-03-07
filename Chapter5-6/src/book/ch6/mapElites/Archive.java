@@ -34,7 +34,7 @@ public class Archive {
 		 * If there's no object in the cell, return null
 		 */
 		Object[] pointer = root;
-		for (int x =0; x < key.length-2; x++) {
+		for (int x =0; x <= key.length-2; x++) {
 			int k = key[x];
 			if (pointer[k]== null)
 				return null;
@@ -79,7 +79,7 @@ public class Archive {
 		 * Used to insert an object into the tree structure
 		 */
 		Object[] pointer =  root;
-		for (int x =0; x < key.length-2; x++) {
+		for (int x =0; x <= key.length-2; x++) {
 			int k = key[x];
 			if (pointer[k]== null)
 				pointer[k] = new Object[buckets];

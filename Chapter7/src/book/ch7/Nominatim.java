@@ -7,14 +7,16 @@ import java.io.Reader;
 import java.net.URL;
 import javax.net.ssl.HttpsURLConnection;
 
+import book.ch1.LatLon;
+
 
 
 public class Nominatim implements Geocoder{
 	private String nominatimBaseURL = "https://nominatim.openstreetmap.org";
 
 	@Override
-	public Point2D.Double geocode(String label) {
-		Point2D.Double p = null;
+	public LatLon geocode(String label) {
+		LatLon p = null;
 		String request = nominatimBaseURL+ "/search?q="+label+"&format=xml";
 		try {
 
@@ -35,7 +37,7 @@ public class Nominatim implements Geocoder{
 		return p;
 	}
 
-	private Point2D.Double extractLocation(String xml){
+	private LatLon extractLocation(String xml){
 		/*
 		 * A function that very crudely extracts the lat and lon from 
 		 * the supplied xml and returns them as a Point2D object.
@@ -55,7 +57,7 @@ public class Nominatim implements Geocoder{
 					lon = Double.parseDouble(section.split("'")[1]);
 				}
 			}
-			return new Point2D.Double(lat,lon);
+			return new LatLon(lat,lon);
 
 		}catch(Exception e) {
 			return null;
@@ -63,9 +65,9 @@ public class Nominatim implements Geocoder{
 	}
 	
 	@Override
-	public String reverseGeocode(Point2D.Double p) {
+	public String reverseGeocode(LatLon p) {
 		
-		String request = nominatimBaseURL+ "/reverse?lat="+p.x+ "&lon="+p.y+ "&format=xml";
+		String request = nominatimBaseURL+ "/reverse?lat="+p.getLat()+ "&lon="+p.getLon()+ "&format=xml";
 		try {
 
 			URL url = new URL(request);

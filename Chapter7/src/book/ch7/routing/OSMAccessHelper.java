@@ -30,7 +30,7 @@ public class OSMAccessHelper {
 		if (hopper==null)
 			init();
 
-		GHRequest request = new GHRequest(start.getX(),start.getY(),end.getX(),end.getY()).setVehicle(type);
+		GHRequest request = new GHRequest(start.getLat(),start.getLon(),end.getLat(),end.getLon()).setVehicle(type);
 		GHResponse response = hopper.route(request);
 		if (response.hasErrors()) {
 			throw new IllegalStateException("S= " + start + "e= " + end +". GraphHopper gave " + response.getErrors().size()

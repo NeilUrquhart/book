@@ -2,6 +2,7 @@ package book.ch7;
 
 import java.awt.geom.Point2D;
 
+import book.ch1.LatLon;
 import book.ch1.Visit;
 
 /*
@@ -11,9 +12,9 @@ import book.ch1.Visit;
  */
 
 public interface Geocoder {
-	public Point2D.Double geocode(String label);
+	public LatLon geocode(String label);
 	//Convert a String label to lat/lon coordinate
-	public String reverseGeocode(Point2D.Double p);
+	public String reverseGeocode(LatLon p);
 	//Convert a lat/lon coordinate to a String label
 }
 
