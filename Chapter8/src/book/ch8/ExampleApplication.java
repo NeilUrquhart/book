@@ -11,13 +11,14 @@ import book.ch8.data.Graph;
 import book.ch8.data.Route;
 
 /*
- * https://code.google.com/archive/p/json-simple/
+ * Please make sure that the uncompress the .ZIP files in /data  otherwise this example will not
+ * work!
  */
 
 public class ExampleApplication {
 
 	public static void main(String[] args) {
-		Graph myGraph = new Graph("westscot.osm",null);
+		Graph myGraph = new Graph("./data/westscot.osm",null);
 		
 					
 		RoutingAlgorithm[] testAlgs = {  new AStar(),new DijkstraBiDirectional(),new AStarBiDirectional(),new Dijkstra(),new DijkstraFlood()};

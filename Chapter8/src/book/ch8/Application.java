@@ -15,6 +15,9 @@ import book.ch8.data.Route;
  * A very simple demonstration of routing, using the code developed for ch6
  * Copyright Neil Urquhart 2020
  * 
+ * Please make sure that the uncompress the .ZIP files in /data  otherwise this example will not
+ * work!
+ * 
  */
 public class Application {
 
