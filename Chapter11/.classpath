@@ -11,6 +11,5 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter2"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter 3"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter4"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
