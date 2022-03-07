@@ -7,6 +7,19 @@ import java.util.Scanner;
 import book.ch10.food.FoodFacade;
 import book.ch10.food.FoodFacade.SaveTo;
 
+
+/*
+ * Written by Neil Urquhart 2022
+ * 
+ * A simple food delivery App
+ * 
+ * Note!  To use this you will have to download scotland-latest.osm.pbf and
+ * place in in /data  
+ * 
+ * Copies of scotland-latest.osm.pbf may be found at http://download.geofabrik.de/europe/great-britain/scotland.html
+ * 
+ * 
+ */
 public class FoodDeliveryApp {
 	public static void main(String[] args) {
 		//Load a problem from a file

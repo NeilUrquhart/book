@@ -6,9 +6,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Users/neilurquhart/Documents/GitHub/book/Chapter9/libs/graphhopper-web-0.10-20170626.100319-67-with-dep.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter8"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapter2"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Chapter1"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter7"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapter9"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
