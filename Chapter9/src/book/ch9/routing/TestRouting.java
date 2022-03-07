@@ -10,8 +10,13 @@ import book.ch1.LatLon;
 public class TestRouting {
 
 	/*
-	 * A demonstration of the use of  the 
-	 * RoutingEngine class
+	 * A demonstration of the use of  the RoutingEngine class
+	 * 
+	 * Written by Neil Urquhart 2022
+	 * 
+	 * Please note! 
+	 * You must uncompress roads.osm after clonning the repo.
+	 * 
 	 */
 	public static void main(String[] args) {	
 		System.out.println("Homebrew");

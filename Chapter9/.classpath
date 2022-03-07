@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapter1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Chapter8"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry combineaccessrules="false" kind="src" path="/Chapter1"/>
+	<classpathentry kind="lib" path="/Users/neilurquhart/Documents/GitHub/book/Chapter9/libs/graphhopper-web-0.10-20170626.100319-67-with-dep.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

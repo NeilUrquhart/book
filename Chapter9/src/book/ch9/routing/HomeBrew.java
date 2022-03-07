@@ -5,13 +5,13 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import book.ch1.Visit;
-import book.ch6.algorithms.AStar;
-import book.ch6.data.Graph;
 import book.ch1.LatLon;
-import book.ch6.data.Route;
-import book.ch6.data.RouterNode;
-import book.ch9.Geocoder;
+import book.ch1.Visit;
+import book.ch8.algorithms.AStar;
+import book.ch8.data.Graph;
+import book.ch8.data.Route;
+import book.ch8.data.RouterNode;
+
 
 /*
  * Neil Urquhart 2021
